@@ -1,26 +1,78 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'VentaSimple Docs',
+			customCss: ['./src/styles/global.css'],
+			components: {
+				ThemeSelect: './src/components/AccessibilitySelect.astro',
+			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Primeros Pasos',
+					items: [{ autogenerate: { directory: 'primeros-pasos' } }],
+				},
+				{
+					label: 'Vender y Cobrar',
+					items: [{ autogenerate: { directory: 'ventas-caja' } }],
+				},
+				{
+					label: 'Inventario y Productos',
+					items: [{ autogenerate: { directory: 'inventario-productos' } }],
+				},
+				{
+					label: 'Configuración de Tienda',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{
+							label: 'Administración y Personal',
+							items: [
+								{ label: 'Perfil de Usuario', link: '/configuracion/perfil/' },
+								{ label: 'Usuarios y Roles', link: '/configuracion/usuarios/' },
+								{ label: 'Sucursales y Almacenes', link: '/configuracion/sucursales/' },
+								{ label: 'Mi Plan y Facturación', link: '/configuracion/plan/' },
+							],
+						},
+						{
+							label: 'Ajustes del POS',
+							items: [
+								{ label: 'Giro de Negocio', link: '/configuracion/giro/' },
+								{ label: 'Catálogo Público Web', link: '/configuracion/catalogo/' },
+								{ label: 'Promociones y Descuentos', link: '/configuracion/promociones/' },
+							],
+						},
+						{
+							label: 'Fidelización y Crédito',
+							items: [
+								{ label: 'Fidelidad y Visitas', link: '/configuracion/fidelidad/' },
+								{ label: 'Programa de Puntos', link: '/configuracion/puntos/' },
+								{ label: 'Fiados y Cuentas por Cobrar', link: '/configuracion/fiados/' },
+							],
+						},
+						{
+							label: 'Finanzas y Control',
+							items: [
+								{ label: 'Inteligencia Financiera', link: '/configuracion/inteligencia/' },
+								{ label: 'Egresos de Caja', link: '/configuracion/egresos/' },
+								{ label: 'Auditoría de Operaciones', link: '/configuracion/auditoria/' },
+								{ label: 'Exportación de Datos (CSV)', link: '/configuracion/exportar/' },
+							],
+						},
 					],
 				},
 				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
+					label: 'Preguntas Frecuentes',
+					items: [{ autogenerate: { directory: 'faqs' } }],
 				},
 			],
 		}),
 	],
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });
+

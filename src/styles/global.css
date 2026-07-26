@@ -1,0 +1,215 @@
+/* Definir el orden de las capas CSS */
+@layer base, starlight, theme, components, utilities;
+
+/* Importar la capa de compatibilidad de Starlight y Tailwind */
+@import '@astrojs/starlight-tailwind';
+
+@import 'tailwindcss';
+
+@theme {
+  /* VentaSimple Design Tokens */
+  --color-pitch-black: #08090a;
+  --color-graphite: #0f1011;
+  --color-deep-slate: #161718;
+  --color-charcoal-grey: #23252a;
+  --color-muted-ash: #323334;
+  --color-gunmetal: #383b3f;
+  --color-porcelain: #f7f8f8;
+  --color-light-steel: #d0d6e0;
+  --color-storm-cloud: #8a8f98;
+  --color-fog-grey: #62666d;
+  --color-alabaster: #e5e5e6;
+  --color-neon-lime: #e4f222;
+  --color-aether-blue: #5e6ad2;
+  --color-forest-green: #008d2c;
+  --color-cyan-spark: #02b8cc;
+  --color-emerald: #27a644;
+  --color-warning-red: #eb5757;
+  --color-deep-violet: #6366f1;
+  --color-amethyst: #8b5cf6;
+
+  /* Typography */
+  --font-inter-variable: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-berkeley-mono: 'Berkeley Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@layer base {
+  :root {
+    /* Multiplicador de escala de texto por defecto (actualizado por JS) */
+    --text-scale-factor: 1;
+
+    /* Escalabilidad accesible de tipografías oficiales de Starlight */
+    --sl-text-xs: calc(0.75rem * var(--text-scale-factor));
+    --sl-text-sm: calc(0.875rem * var(--text-scale-factor));
+    --sl-text-base: calc(1rem * var(--text-scale-factor));
+    --sl-text-lg: calc(1.125rem * var(--text-scale-factor));
+    --sl-text-xl: calc(1.25rem * var(--text-scale-factor));
+    --sl-text-2xl: calc(1.5rem * var(--text-scale-factor));
+    --sl-text-3xl: calc(1.875rem * var(--text-scale-factor));
+    --sl-text-4xl: calc(2.25rem * var(--text-scale-factor));
+    --sl-text-5xl: calc(3rem * var(--text-scale-factor));
+
+    /* Mapear variables del tema oscuro de VentaSimple a Starlight */
+    --sl-color-bg: var(--color-pitch-black);
+    --sl-color-bg-nav: var(--color-pitch-black);
+    --sl-color-bg-sidebar: var(--color-pitch-black);
+
+    /* Acentos y focos */
+    --sl-color-accent: var(--color-neon-lime);
+    --sl-color-accent-high: var(--color-neon-lime);
+    --sl-color-accent-low: var(--color-deep-slate);
+    --sl-color-text-accent: var(--color-neon-lime);
+
+    /* Bordes y colores con alto contraste para accesibilidad (WCAG AAA) */
+    --sl-color-border: var(--color-charcoal-grey);
+    --sl-color-hairline: var(--color-muted-ash);
+    --sl-color-gray-1: var(--color-porcelain);
+    /* Texto principal: blanco brillante */
+    --sl-color-gray-2: var(--color-light-steel);
+    /* Texto secundario: gris claro legible */
+    --sl-color-gray-3: #a4abb6;
+    /* Texto terciario mejorado para mayor contraste */
+    --sl-color-gray-4: #8a8f98;
+    /* Metadatos con contraste mejorado */
+    --sl-color-gray-5: var(--color-gunmetal);
+    /* Bordes internos */
+    --sl-color-gray-6: var(--color-graphite);
+    /* Fondos elevados */
+
+    /* Tipografías */
+    --sl-font: var(--font-inter-variable);
+    --sl-font-mono: var(--font-berkeley-mono);
+  }
+
+  /* Forzar tema oscuro por defecto en todo el portal */
+  html {
+    background-color: var(--color-pitch-black);
+    color: var(--color-porcelain);
+    color-scheme: dark;
+  }
+}
+
+/* Estilo personalizado para la barra lateral (inspirado en angular.dev) */
+@layer components {
+
+  /* Enlace activo de la navegación lateral con indicador de línea vertical y fondo */
+  .sidebar-content a[aria-current="page"] {
+    position: relative;
+    border-left: 3px solid var(--color-neon-lime) !important;
+    padding-left: 0.75rem !important;
+    color: var(--color-neon-lime) !important;
+    background-color: var(--color-graphite) !important;
+    font-weight: 590 !important;
+    border-radius: 0 4px 4px 0 !important;
+  }
+
+  /* Efecto hover suave para ítems no activos */
+  .sidebar-content a:not([aria-current="page"]):hover {
+    color: var(--color-porcelain) !important;
+    background-color: rgba(35, 37, 42, 0.5) !important;
+    border-left: 3px solid var(--color-charcoal-grey) !important;
+    padding-left: 0.75rem !important;
+    border-radius: 0 4px 4px 0 !important;
+  }
+
+  /* Asegurar tamaño táctil generoso (mínimo 48px de alto para targets) en sidebar */
+  .sidebar-content a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Animación suave para acordeones colapsables en la navegación lateral */
+  .sidebar-content details {
+    transition: all 0.25s ease-in-out;
+  }
+
+  .sidebar-content details summary {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  /* Estilizar contenedor de la tabla de contenidos "On this page" */
+  .right-sidebar a[aria-current="true"] {
+    color: var(--color-neon-lime) !important;
+    border-left-color: var(--color-neon-lime) !important;
+    font-weight: 590 !important;
+  }
+
+  /* Tarjetas del Home: Estilo Linear con micro-interacciones */
+  .card-grid .card {
+    background-color: var(--color-graphite) !important;
+    border: 1px solid var(--color-charcoal-grey) !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Efecto hover en las tarjetas de accesos rápidos */
+  .card-grid .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(228, 242, 34, 0.4) !important;
+    /* Neon Lime / 40% */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(228, 242, 34, 0.1) !important;
+  }
+
+  /* Enlaces dentro de las tarjetas con targets grandes */
+  .card-grid .card a {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-weight: 590;
+    color: var(--color-neon-lime);
+    text-decoration: none;
+    touch-action: manipulation;
+  }
+
+  /* Botones accesibles de acción primaria */
+  .action-btn-primary {
+    min-height: 52px;
+    padding: 0 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: var(--color-neon-lime);
+    color: var(--color-pitch-black);
+    font-weight: 590;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+  }
+
+  .action-btn-primary:hover {
+    background-color: #f1fc49;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(228, 242, 34, 0.25);
+  }
+
+  /* Soporte de accesibilidad para evitar animaciones (Preferencia del sistema operativo) */
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    ::before,
+    ::after {
+      animation-delay: -1ms !important;
+      animation-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+      background-attachment: initial !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+      transform: none !important;
+    }
+  }
+}

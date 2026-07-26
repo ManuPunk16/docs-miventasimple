@@ -1,40 +1,244 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Centro de Ayuda VentaSimple
+description: Tu guía rápida para gestionar tu negocio de forma fácil, rápida y sin complicaciones. Respuestas sobre cobros, inventario y fiados.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  title: "Bienvenido al Centro de Ayuda de VentaSimple"
+  tagline: Tu guía rápida para gestionar tu negocio de forma fácil, rápida y sin complicaciones.
   image:
     file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+{/* Marcado de Datos Estructurados JSON-LD (SoftwareApplication) */}
+<script type="application/ld+json" is:inline>{`
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "VentaSimple",
+    "operatingSystem": "Android, iOS, Web",
+    "applicationCategory": "BusinessApplication, POSApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "MXN",
+      "description": "Plan base gratuito de por vida sin contratos ni comisiones ocultas"
+    },
+    "description": "Punto de venta y control de inventarios fácil para pequeños comercios en México y LATAM. Funciona sin conexión a internet y permite enviar estados de cuenta y cobrar fiados por WhatsApp.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1250"
+    }
+  }
+`}</script>
 
-## Next steps
+{/* Botón de Acción Principal (Hero CTA) */}
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 my-8 px-4">
+  <a 
+    href="/primeros-pasos/inicio/" 
+    class="w-full sm:w-auto min-h-[56px] px-8 py-4 rounded-xl bg-[#e4f222] text-[#08090a] font-bold text-base hover:bg-[#f1fc49] transition-all flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(228,242,34,0.25)] touch-manipulation no-underline"
+  >
+    <span>Iniciar recorrido del sistema</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-right shrink-0">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M5 12l14 0" />
+      <path d="M13 18l6 -6" />
+      <path d="M13 6l6 6" />
+    </svg>
+  </a>
+</div>
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+{/* Buscador central destacado */}
+<div class="search-mockup-container my-8 max-w-xl mx-auto px-4">
+  <button 
+	onclick="document.querySelector('site-search dialog')?.showModal()"
+	class="w-full flex items-center justify-between bg-[#161718] border border-[#23252a] hover:border-[#e4f222]/50 text-[#8a8f98] rounded-xl px-5 py-4 text-base shadow-sm transition-all cursor-pointer hover:shadow-[0_0_15px_rgba(228,242,34,0.08)] min-h-[56px] touch-manipulation" 
+	aria-label="¿Qué necesitas aprender a hacer hoy?"
+	>
+	<span class="flex items-center gap-3">
+		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline">
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+			<circle cx="11" cy="11" r="8"/>
+			<line x1="21" y1="21" x2="16.65" y2="16.65"/>
+		</svg>
+		<span class="text-sm md:text-base font-medium">¿Qué necesitas aprender a hacer hoy?</span>
+	</span>
+	<kbd class="hidden sm:inline-block bg-[#23252a] text-[#f7f8f8] px-2.5 py-1 rounded text-xs border border-[#323334] font-mono">
+		/
+	</kbd>
+  </button>
+</div>
+
+{/* Bloque Visual Introductorio - Entendiendo VentaSimple */}
+<div class="p-8 rounded-xl bg-[#0f1011] border border-[#23252a] my-12 max-w-3xl mx-auto shadow-sm">
+  <h2 class="text-2xl font-bold text-[#f7f8f8] mb-6 border-b border-[#23252a] pb-3">Sobre VentaSimple</h2>
+  
+  <div class="space-y-6">
+    <div>
+      <h3 class="text-base font-bold text-[#e4f222] mb-1 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-check text-[#e4f222]">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M5 12l5 5l10 -10" />
+        </svg>
+        ¿Por qué nació VentaSimple?
+      </h3>
+      <p class="text-sm text-[#d0d6e0] leading-relaxed pl-7">
+        Nació para eliminar la complejidad de los puntos de venta tradicionales, ofreciendo una herramienta ágil que no requiere de equipos costosos ni de conocimientos avanzados.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-base font-bold text-[#e4f222] mb-1 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-check text-[#e4f222]">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M5 12l5 5l10 -10" />
+        </svg>
+        ¿Para qué fue diseñado?
+      </h3>
+      <p class="text-sm text-[#d0d6e0] leading-relaxed pl-7">
+        Para ser tu aliado diario detrás del mostrador: registrar ventas rápidamente, controlar el inventario de tus productos, administrar el efectivo de tu caja chica y emitir tickets desde cualquier dispositivo.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-base font-bold text-[#e4f222] mb-1 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-check text-[#e4f222]">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M5 12l5 5l10 -10" />
+        </svg>
+        ¿Quiénes pueden usarlo?
+      </h3>
+      <p class="text-sm text-[#d0d6e0] leading-relaxed pl-7">
+        Diseñado especialmente para pequeños comercios locales (como abarrotes, papelerías, tiendas de conveniencia, boutiques y estéticas). Su interfaz limpia es apta para todas las edades: desde adultos mayores hasta jóvenes que apoyan en el negocio familiar.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-base font-bold text-[#e4f222] mb-3 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-check text-[#e4f222]">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M5 12l5 5l10 -10" />
+        </svg>
+        ¿Qué problemas te resuelve?
+      </h3>
+      <ul class="space-y-3 pl-7 text-sm text-[#d0d6e0]">
+        <li class="flex items-start gap-2">
+          <span class="text-[#e4f222] font-bold">1. Cobros veloces:</span> Evita filas cobrando en efectivo o tarjeta rápidamente en el mostrador.
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-[#e4f222] font-bold">2. Inventario bajo control:</span> Mantén al día tus existencias de stock y ajusta precios de venta al instante.
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-[#e4f222] font-bold">3. Caja chica transparente:</span> Registra salidas e ingresos de cambio diarios para evitar faltantes de efectivo.
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-[#e4f222] font-bold">4. Trabajo sin interrupciones:</span> Diseñado para seguir registrando ventas de forma offline aunque falle tu señal de internet.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{/* Botones de llamada a la acción (CTA) de la Introducción */}
+<div class="my-10 max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+  <a href="/ventas-caja/caja-chica/" class="w-full sm:w-auto text-center font-bold px-8 py-4 rounded-md bg-[#e4f222] text-[#08090a] hover:bg-[#f1fc49] transition-all min-h-[52px] flex items-center justify-center shadow-md hover:shadow-[0_4px_12px_rgba(228,242,34,0.25)] touch-manipulation">
+    ¿Cómo hacer mi primera venta?
+  </a>
+  <a href="/inventario-productos/gestion/" class="w-full sm:w-auto text-center font-bold px-8 py-4 rounded-md border border-[#23252a] text-[#f7f8f8] hover:bg-[#161718] transition-all min-h-[52px] flex items-center justify-center touch-manipulation">
+    ¿Cómo agregar mis productos?
+  </a>
+</div>
+
+{/* Grid de Accesos Rápidos Generales */}
+<h2 class="text-xl font-bold text-[#f7f8f8] text-center mt-16 mb-8">Guías de Uso del Sistema</h2>
+
+<div class="not-content grid grid-cols-1 md:grid-cols-2 gap-6 my-8 items-stretch">
+  <div class="custom-card p-6 bg-[#0f1011] border border-[#23252a] rounded-xl flex flex-col justify-between h-full hover:border-[#e4f222]/40 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(228,242,34,0.08)]">
+    <div class="flex-1 flex flex-col">
+      <div class="flex items-center gap-3 mb-4 shrink-0">
+        <div class="text-[#e4f222] shrink-0 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <h3 class="text-lg font-bold text-[#f7f8f8] !m-0 !p-0 leading-none">Vender y Cobrar</h3>
+      </div>
+      <p class="text-sm text-[#8a8f98] leading-relaxed !m-0 flex-1">Registra cobros en efectivo o tarjeta sin depender de tu señal móvil. Tus datos se sincronizan solos en cuanto recuperes conexión.</p>
+    </div>
+    <div class="mt-6 pt-2 border-t border-[#23252a]/50 shrink-0">
+      <a href="/ventas-caja/caja-chica/" class="text-sm font-semibold text-[#e4f222] hover:underline flex items-center gap-1.5 min-h-[48px] touch-manipulation">
+        Aprender a cobrar tickets &rarr;
+      </a>
+    </div>
+  </div>
+  <div class="custom-card p-6 bg-[#0f1011] border border-[#23252a] rounded-xl flex flex-col justify-between h-full hover:border-[#e4f222]/40 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(228,242,34,0.08)]">
+    <div class="flex-1 flex flex-col">
+      <div class="flex items-center gap-3 mb-4 shrink-0">
+        <div class="text-[#e4f222] shrink-0 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 3l8 4.5v9L12 21L4 16.5v-9L12 3z"></path><path d="M12 12l8-4.5"></path><path d="M12 12v9"></path><path d="M12 12L4 7.5"></path></svg>
+        </div>
+        <h3 class="text-lg font-bold text-[#f7f8f8] !m-0 !p-0 leading-none">Inventario y Productos</h3>
+      </div>
+      <p class="text-sm text-[#8a8f98] leading-relaxed !m-0 flex-1">Usa la cámara de tu celular como escáner de códigos de barras. Controla tus existencias de abarrotes, papelerías o cafeterías y recibe alertas antes de que se agoten.</p>
+    </div>
+    <div class="mt-6 pt-2 border-t border-[#23252a]/50 shrink-0">
+      <a href="/inventario-productos/gestion/" class="text-sm font-semibold text-[#e4f222] hover:underline flex items-center gap-1.5 min-h-[48px] touch-manipulation">
+        Controlar mis productos &rarr;
+      </a>
+    </div>
+  </div>
+  <div class="custom-card p-6 bg-[#0f1011] border border-[#23252a] rounded-xl flex flex-col justify-between h-full hover:border-[#e4f222]/40 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(228,242,34,0.08)]">
+    <div class="flex-1 flex flex-col">
+      <div class="flex items-center gap-3 mb-4 shrink-0">
+        <div class="text-[#e4f222] shrink-0 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c.1 -.06 .2 -.115 .3 -.164a1.724 1.724 0 0 0 1.065 -2.572z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        </div>
+        <h3 class="text-lg font-bold text-[#f7f8f8] !m-0 !p-0 leading-none">Configuración de Tienda</h3>
+      </div>
+      <p class="text-sm text-[#8a8f98] leading-relaxed !m-0 flex-1">Ajusta tus sucursales, fiados, empleados y personaliza los tickets de cobro de tu tienda desde el panel de ajustes.</p>
+    </div>
+    <div class="mt-6 pt-2 border-t border-[#23252a]/50 shrink-0">
+      <a href="/configuracion/ajustes/" class="text-sm font-semibold text-[#e4f222] hover:underline flex items-center gap-1.5 min-h-[48px] touch-manipulation">
+        Configurar ajustes de tienda &rarr;
+      </a>
+    </div>
+  </div>
+  <div class="custom-card p-6 bg-[#0f1011] border border-[#23252a] rounded-xl flex flex-col justify-between h-full hover:border-[#e4f222]/40 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(228,242,34,0.08)]">
+    <div class="flex-1 flex flex-col">
+      <div class="flex items-center gap-3 mb-4 shrink-0">
+        <div class="text-[#e4f222] shrink-0 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="17" x2="12" y2="17.01"></line><path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4"></path></svg>
+        </div>
+        <h3 class="text-lg font-bold text-[#f7f8f8] !m-0 !p-0 leading-none">Preguntas Frecuentes</h3>
+      </div>
+      <p class="text-sm text-[#8a8f98] leading-relaxed !m-0 flex-1">Encuentra respuestas rápidas sobre compatibilidad de impresoras térmicas Bluetooth, modo sin conexión y recuperación de accesos.</p>
+    </div>
+    <div class="mt-6 pt-2 border-t border-[#23252a]/50 shrink-0">
+      <a href="/faqs/preguntas/" class="text-sm font-semibold text-[#e4f222] hover:underline flex items-center gap-1.5 min-h-[48px] touch-manipulation">
+        Resolver mis dudas &rarr;
+      </a>
+    </div>
+  </div>
+</div>
+
+{/* Enlaces a Registro oficial */}
+<div class="my-12 max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+  <a href="https://miventasimple.com/auth/register" target="_blank" class="w-full sm:w-auto text-center font-bold px-8 py-4 rounded-md bg-[#e4f222] text-[#08090a] hover:bg-[#f1fc49] transition-all min-h-[52px] flex items-center justify-center shadow-lg hover:shadow-[0_4px_12px_rgba(228,242,34,0.25)] touch-manipulation">
+    Registrar mi Negocio Gratis
+  </a>
+  <a href="https://miventasimple.com" target="_blank" class="w-full sm:w-auto text-center font-bold px-8 py-4 rounded-md border border-[#23252a] text-[#f7f8f8] hover:bg-[#161718] transition-all min-h-[52px] flex items-center justify-center touch-manipulation">
+    Ir a la Web Oficial
+  </a>
+</div>
+
+{/* Banner de soporte por WhatsApp y Correo */}
+<div class="p-8 rounded-xl bg-[#0f1011] border border-[#23252a] text-center my-16 max-w-2xl mx-auto shadow-sm">
+	<h3 class="text-[#f7f8f8] text-xl font-bold mb-3">¿Necesitas soporte técnico adicional?</h3>
+	<p class="text-[#8a8f98] mb-6 text-sm leading-relaxed">¿Tienes dudas con tu impresora térmica o carga de inventario? Escríbenos directamente para ayudarte de inmediato.</p>
+	<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+		<a href="https://wa.me/message/VENTASIMPLE" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-[#e4f222] text-[#08090a] px-6 py-3 rounded-md transition-colors min-h-[48px] font-bold text-sm touch-manipulation hover:bg-[#f1fc49]">
+			Contactar a Soporte por WhatsApp
+		</a>
+		<a href="mailto:soporte@miventasimple.com" class="w-full sm:w-auto inline-flex items-center justify-center bg-[#161718] border border-[#23252a] text-[#f7f8f8] hover:text-[#e4f222] hover:border-[#e4f222]/30 px-6 py-3 rounded-md transition-colors min-h-[48px] font-semibold text-sm touch-manipulation">
+			Escríbenos por Correo
+		</a>
+	</div>
+</div>

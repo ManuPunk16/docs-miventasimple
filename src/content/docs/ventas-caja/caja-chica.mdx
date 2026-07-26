@@ -1,0 +1,34 @@
+---
+title: Gestión de Ventas y Caja Chica
+description: Guía funcional sobre cómo controlar las ventas diarias y el flujo de efectivo en caja.
+sidebar:
+  order: 1
+---
+
+import Diagram from '../../../components/Diagram.astro';
+
+# ¿Cómo cobrar un ticket y gestionar tu caja chica?
+
+Registrar cada venta y movimiento de dinero te ayudará a evitar descuadres al final del día. Aquí te enseñamos cómo llevar un control exacto de tu caja chica de forma fácil.
+
+## El camino que sigue tu dinero
+
+El dinero físico de tu negocio pasa por las siguientes etapas desde que abres tu tienda hasta que cierras en la noche:
+
+<Diagram 
+  title="Circuito diario del dinero en caja" 
+  code={`
+  graph LR
+    A[Dinero inicial para cambio] --> B[Cobro de Ventas]
+    B --> C[Salidas / Compras rápidas]
+    C --> D[Corte de Caja parcial]
+    D --> E[Retiro final de ganancias]
+  `} 
+/>
+
+## Las tareas que realizas a diario en tu caja
+
+- **Iniciar Caja (Apertura):** Al iniciar tu turno, indica cuánto dinero en efectivo tienes en el cajón para poder dar cambio a tus clientes.
+- **Registrar Entradas o Salidas:** Si tomas dinero de la caja para un gasto imprevisto (como comprar artículos de limpieza o pagar a un proveedor rápido), regístralo de inmediato.
+- **Hacer Corte de Caja (Cierre):** Al finalizar tu día, cuenta el dinero físico del cajón. El sistema te dirá si coincide exactamente con las ventas registradas.
+

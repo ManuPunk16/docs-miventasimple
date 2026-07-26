@@ -1,0 +1,40 @@
+---
+interface Props {
+	/** El código del diagrama en formato Mermaid */
+	code: string;
+	/** Título o descripción del diagrama para accesibilidad */
+	title?: string;
+}
+
+const { code, title = 'Diagrama de flujo' } = Astro.props;
+---
+
+<div class="diagram-container my-6 p-5 rounded-lg bg-[#0f1011] border border-[#23252a] shadow-sm overflow-x-auto">
+	{title && (
+		<h4 class="text-[11px] text-[#8a8f98] uppercase tracking-wider mb-3 font-semibold">
+			{title}
+		</h4>
+	)}
+	<div class="mermaid flex justify-center py-2 text-[#f7f8f8]">
+		{code}
+	</div>
+</div>
+
+<script>
+	import mermaid from 'mermaid';
+	
+	// Inicializar Mermaid con colores del tema oscuro de VentaSimple
+	mermaid.initialize({
+		startOnLoad: true,
+		theme: 'dark',
+		themeVariables: {
+			background: '#0f1011',       // Graphite
+			primaryColor: '#161718',     // Deep slate
+			primaryTextColor: '#f7f8f8', // Porcelain
+			lineColor: '#8a8f98',        // Storm cloud
+			textColor: '#f7f8f8',
+			mainBkg: '#161718',
+			nodeBorder: '#23252a',       // Charcoal grey
+		}
+	});
+</script>
