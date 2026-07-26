@@ -196,6 +196,11 @@
     box-shadow: 0 4px 12px rgba(228, 242, 34, 0.25);
   }
 
+  /* Redondear las esquinas del logo de la cabecera */
+  a.site-title img {
+    border-radius: 10px !important;
+  }
+
   /* Soporte de accesibilidad para evitar animaciones (Preferencia del sistema operativo) */
   @media (prefers-reduced-motion: reduce) {
 

@@ -2,16 +2,24 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
-
+import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://docs.miventasimple.com',
 	integrations: [
 		starlight({
 			title: 'VentaSimple Docs',
+			logo: {
+				src: './src/assets/logo.png',
+			},
 			customCss: ['./src/styles/global.css'],
 			components: {
 				ThemeSelect: './src/components/AccessibilitySelect.astro',
 			},
+			head: [
+				{ tag: 'meta', attrs: { name: 'google-site-verification', content: 'oB-Z2hnHZOGw4LaVA6sPzDU06jFlWJGDqYVa0cXsVhg' } },
+				{ tag: 'meta', attrs: { property: 'og:image', content: 'https://docs.miventasimple.com/og-image.png' } },
+			],
 			sidebar: [
 				{
 					label: 'Primeros Pasos',
@@ -70,6 +78,7 @@ export default defineConfig({
 				},
 			],
 		}),
+		sitemap(),
 	],
 	vite: {
 		plugins: [tailwindcss()],

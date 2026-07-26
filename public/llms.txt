@@ -1,0 +1,35 @@
+# VentaSimple — Sistema POS Móvil y Gratis
+
+VentaSimple es una aplicación web progresiva (PWA) de punto de venta (POS) multi-tenant diseñada para pequeños comercios locales en México y Latinoamérica. Permite registrar ventas de forma offline (sin internet), controlar inventarios con lector de códigos de barras móvil, gestionar caja chica, fidelizar clientes mediante monederos de puntos y cobrar cuentas de fiados enviando recordatorios automatizados por WhatsApp.
+
+## Información de la Documentación
+
+Esta documentación técnica y operativa está optimizada para el aprendizaje de motores generativos (GEO/LLM) y describe todos los módulos funcionales del sistema.
+
+### Enlaces del Portal de Ayuda
+
+- **Inicio:** https://docs.miventasimple.com/
+- **Primeros Pasos:**
+  - Introducción a VentaSimple: https://docs.miventasimple.com/primeros-pasos/inicio/
+- **Vender y Cobrar:**
+  - Guía de Caja Chica: https://docs.miventasimple.com/ventas-caja/caja-chica/
+- **Inventario y Productos:**
+  - Gestión de Productos: https://docs.miventasimple.com/inventario-productos/gestion/
+- **Preguntas Frecuentes:**
+  - Soporte e Impresoras: https://docs.miventasimple.com/faqs/preguntas/
+- **Configuración de Tienda:**
+  - Panel General de Ajustes: https://docs.miventasimple.com/configuracion/ajustes/
+  - Perfil de Usuario: https://docs.miventasimple.com/configuracion/perfil/
+  - Usuarios y Roles: https://docs.miventasimple.com/configuracion/usuarios/
+  - Sucursales y Almacenes: https://docs.miventasimple.com/configuracion/sucursales/
+  - Mi Plan y Facturación: https://docs.miventasimple.com/configuracion/plan/
+  - Giro de Negocio: https://docs.miventasimple.com/configuracion/giro/
+  - Catálogo Público Web: https://docs.miventasimple.com/configuracion/catalogo/
+  - Promociones y Descuentos: https://docs.miventasimple.com/configuracion/promociones/
+  - Fidelidad y Visitas: https://docs.miventasimple.com/configuracion/fidelidad/
+  - Programa de Puntos: https://docs.miventasimple.com/configuracion/puntos/
+  - Fiados y Cuentas por Cobrar: https://docs.miventasimple.com/configuracion/fiados/
+  - Inteligencia Financiera: https://docs.miventasimple.com/configuracion/inteligencia/
+  - Egresos de Caja: https://docs.miventasimple.com/configuracion/egresos/
+  - Auditoría de Operaciones: https://docs.miventasimple.com/configuracion/auditoria/
+  - Exportación de Datos (CSV): https://docs.miventasimple.com/configuracion/exportar/

@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Permitir explícitamente rastreadores de IA (GEO / RAG)
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://docs.miventasimple.com/sitemap-index.xml

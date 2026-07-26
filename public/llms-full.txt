@@ -1,0 +1,594 @@
+=== SECCIÓN: Index (index.mdx) ===
+
+{/* Marcado de Datos Estructurados JSON-LD (SoftwareApplication) */}
+<script type="application/ld+json" is:inline>{`
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "VentaSimple",
+    "operatingSystem": "Android, iOS, Web",
+    "applicationCategory": "BusinessApplication, POSApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "MXN",
+      "description": "Plan base gratuito de por vida sin contratos ni comisiones ocultas"
+    },
+    "description": "Punto de venta y control de inventarios fácil para pequeños comercios en México y LATAM. Funciona sin conexión a internet y permite enviar estados de cuenta y cobrar fiados por WhatsApp.",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1250"
+    }
+  }
+`}</script>
+
+{/* Botón de Acción Principal (Hero CTA) */}
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 my-8 px-4">
+  <a 
+    href="/primeros-pasos/inicio/" 
+    class="w-full sm:w-auto min-h-[56px] px-8 py-4 rounded-xl bg-[#e4f222] text-[#08090a] font-bold text-base hover:bg-[#f1fc49] transition-all flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(228,242,34,0.25)] touch-manipulation no-underline"
+  >
+    <span>Iniciar recorrido del sistema</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-arrow-right shrink-0">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M5 12l14 0" />
+      <path d="M13 18l6 -6" />
+      <path d="M13 6l6 6" />
+    </svg>
+  </a>
+</div>
+
+{/* Buscador central destacado */}
+<div class="search-mockup-container my-8 max-w-xl mx-auto px-4">
+  <button 
+	onclick="document.querySelector('site-search dialog')?.showModal()"
+	class="w-full flex items-center justify-between bg-[#161718] border border-[#23252a] hover:border-[#e4f222]/50 text-[#8a8f98] rounded-xl px-5 py-4 text-base shadow-sm transition-all cursor-pointer hover:shadow-[0_0_15px_rgba(228,242,34,0.08)] min-h-[56px] touch-manipulation" 
+	aria-label="¿Qué necesitas aprender a hacer hoy?"
+	>
+	<span class="flex items-center gap-3">
+		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline">
+			<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+			<circle cx="11" cy="11" r="8"/>
+			<line x1="21" y1="21" x2="16.65" y2="16.65"/>
+		</svg>
+		<span class="text-sm md:text-base font-medium">¿Qué necesitas aprender a hacer hoy?</span>
+	</span>
+	<kbd class="hidden sm:inline-block bg-[#23252a] text-[#f7f8f8] px-2.5 py-1 rounded text-xs border border-[#323334] font-mono">
+		/
+	</kbd>
+  </button>
+</div>
+
+{/* Bloque Visual Introductorio - Entendiendo VentaSimple */}
+<div class="p-8 rounded-xl bg-[#0f1011] border border-[#23252a] my-12 max-w-3xl mx-auto shadow-sm">
+  <h2 class="text-2xl font-bold text-[#f7f8f8] mb-6 border-b border-[#23252a] pb-3">Sobre VentaSimple</h2>
+  
+  <div class="space-y-6">
+    <div>
+      <h3 class="text-base font-bold text-[#e4f222] mb-1 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-check text-[#e4f222]">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M5 12l5 5l10 -10" />
+        </svg>
+        ¿Por qué nació VentaSimple?
+      </h3>
+      <p class="text-sm text-[#d0d6e0] leading-relaxed pl-7">
+        Nació para eliminar la complejidad de los puntos de venta tradicionales, ofreciendo una herramienta ágil que no requiere de equipos costosos ni de conocimientos avanzados.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-base font-bold text-[#e4f222] mb-1 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-check text-[#e4f222]">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M5 12l5 5l10 -10" />
+        </svg>
+        ¿Para qué fue diseñado?
+      </h3>
+      <p class="text-sm text-[#d0d6e0] leading-relaxed pl-7">
+        Para ser tu aliado diario detrás del mostrador: registrar ventas rápidamente, controlar el inventario de tus productos, administrar el efectivo de tu caja chica y emitir tickets desde cualquier dispositivo.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-base font-bold text-[#e4f222] mb-1 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-check text-[#e4f222]">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M5 12l5 5l10 -10" />
+        </svg>
+        ¿Quiénes pueden usarlo?
+      </h3>
+      <p class="text-sm text-[#d0d6e0] leading-relaxed pl-7">
+        Diseñado especialmente para pequeños comercios locales (como abarrotes, papelerías, tiendas de conveniencia, boutiques y estéticas). Su interfaz limpia es apta para todas las edades: desde adultos mayores hasta jóvenes que apoyan en el negocio familiar.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-base font-bold text-[#e4f222] mb-3 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-check text-[#e4f222]">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M5 12l5 5l10 -10" />
+        </svg>
+        ¿Qué problemas te resuelve?
+      </h3>
+      <ul class="space-y-3 pl-7 text-sm text-[#d0d6e0]">
+        <li class="flex items-start gap-2">
+          <span class="text-[#e4f222] font-bold">1. Cobros veloces:</span> Evita filas cobrando en efectivo o tarjeta rápidamente en el mostrador.
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-[#e4f222] font-bold">2. Inventario bajo control:</span> Mantén al día tus existencias de stock y ajusta precios de venta al instante.
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-[#e4f222] font-bold">3. Caja chica transparente:</span> Registra salidas e ingresos de cambio diarios para evitar faltantes de efectivo.
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-[#e4f222] font-bold">4. Trabajo sin interrupciones:</span> Diseñado para seguir registrando ventas de forma offline aunque falle tu señal de internet.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{/* Botones de llamada a la acción (CTA) de la Introducción */}
+<div class="my-10 max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+  <a href="/ventas-caja/caja-chica/" class="w-full sm:w-auto text-center font-bold px-8 py-4 rounded-md bg-[#e4f222] text-[#08090a] hover:bg-[#f1fc49] transition-all min-h-[52px] flex items-center justify-center shadow-md hover:shadow-[0_4px_12px_rgba(228,242,34,0.25)] touch-manipulation">
+    ¿Cómo hacer mi primera venta?
+  </a>
+  <a href="/inventario-productos/gestion/" class="w-full sm:w-auto text-center font-bold px-8 py-4 rounded-md border border-[#23252a] text-[#f7f8f8] hover:bg-[#161718] transition-all min-h-[52px] flex items-center justify-center touch-manipulation">
+    ¿Cómo agregar mis productos?
+  </a>
+</div>
+
+{/* Grid de Accesos Rápidos Generales */}
+<h2 class="text-xl font-bold text-[#f7f8f8] text-center mt-16 mb-8">Guías de Uso del Sistema</h2>
+
+<div class="not-content grid grid-cols-1 md:grid-cols-2 gap-6 my-8 items-stretch">
+  <div class="custom-card p-6 bg-[#0f1011] border border-[#23252a] rounded-xl flex flex-col justify-between h-full hover:border-[#e4f222]/40 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(228,242,34,0.08)]">
+    <div class="flex-1 flex flex-col">
+      <div class="flex items-center gap-3 mb-4 shrink-0">
+        <div class="text-[#e4f222] shrink-0 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <h3 class="text-lg font-bold text-[#f7f8f8] !m-0 !p-0 leading-none">Vender y Cobrar</h3>
+      </div>
+      <p class="text-sm text-[#8a8f98] leading-relaxed !m-0 flex-1">Registra cobros en efectivo o tarjeta sin depender de tu señal móvil. Tus datos se sincronizan solos en cuanto recuperes conexión.</p>
+    </div>
+    <div class="mt-6 pt-2 border-t border-[#23252a]/50 shrink-0">
+      <a href="/ventas-caja/caja-chica/" class="text-sm font-semibold text-[#e4f222] hover:underline flex items-center gap-1.5 min-h-[48px] touch-manipulation">
+        Aprender a cobrar tickets &rarr;
+      </a>
+    </div>
+  </div>
+  <div class="custom-card p-6 bg-[#0f1011] border border-[#23252a] rounded-xl flex flex-col justify-between h-full hover:border-[#e4f222]/40 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(228,242,34,0.08)]">
+    <div class="flex-1 flex flex-col">
+      <div class="flex items-center gap-3 mb-4 shrink-0">
+        <div class="text-[#e4f222] shrink-0 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 3l8 4.5v9L12 21L4 16.5v-9L12 3z"></path><path d="M12 12l8-4.5"></path><path d="M12 12v9"></path><path d="M12 12L4 7.5"></path></svg>
+        </div>
+        <h3 class="text-lg font-bold text-[#f7f8f8] !m-0 !p-0 leading-none">Inventario y Productos</h3>
+      </div>
+      <p class="text-sm text-[#8a8f98] leading-relaxed !m-0 flex-1">Usa la cámara de tu celular como escáner de códigos de barras. Controla tus existencias de abarrotes, papelerías o cafeterías y recibe alertas antes de que se agoten.</p>
+    </div>
+    <div class="mt-6 pt-2 border-t border-[#23252a]/50 shrink-0">
+      <a href="/inventario-productos/gestion/" class="text-sm font-semibold text-[#e4f222] hover:underline flex items-center gap-1.5 min-h-[48px] touch-manipulation">
+        Controlar mis productos &rarr;
+      </a>
+    </div>
+  </div>
+  <div class="custom-card p-6 bg-[#0f1011] border border-[#23252a] rounded-xl flex flex-col justify-between h-full hover:border-[#e4f222]/40 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(228,242,34,0.08)]">
+    <div class="flex-1 flex flex-col">
+      <div class="flex items-center gap-3 mb-4 shrink-0">
+        <div class="text-[#e4f222] shrink-0 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c.1 -.06 .2 -.115 .3 -.164a1.724 1.724 0 0 0 1.065 -2.572z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+        </div>
+        <h3 class="text-lg font-bold text-[#f7f8f8] !m-0 !p-0 leading-none">Configuración de Tienda</h3>
+      </div>
+      <p class="text-sm text-[#8a8f98] leading-relaxed !m-0 flex-1">Ajusta tus sucursales, fiados, empleados y personaliza los tickets de cobro de tu tienda desde el panel de ajustes.</p>
+    </div>
+    <div class="mt-6 pt-2 border-t border-[#23252a]/50 shrink-0">
+      <a href="/configuracion/ajustes/" class="text-sm font-semibold text-[#e4f222] hover:underline flex items-center gap-1.5 min-h-[48px] touch-manipulation">
+        Configurar ajustes de tienda &rarr;
+      </a>
+    </div>
+  </div>
+  <div class="custom-card p-6 bg-[#0f1011] border border-[#23252a] rounded-xl flex flex-col justify-between h-full hover:border-[#e4f222]/40 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.5),0_0_15px_rgba(228,242,34,0.08)]">
+    <div class="flex-1 flex flex-col">
+      <div class="flex items-center gap-3 mb-4 shrink-0">
+        <div class="text-[#e4f222] shrink-0 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="17" x2="12" y2="17.01"></line><path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4"></path></svg>
+        </div>
+        <h3 class="text-lg font-bold text-[#f7f8f8] !m-0 !p-0 leading-none">Preguntas Frecuentes</h3>
+      </div>
+      <p class="text-sm text-[#8a8f98] leading-relaxed !m-0 flex-1">Encuentra respuestas rápidas sobre compatibilidad de impresoras térmicas Bluetooth, modo sin conexión y recuperación de accesos.</p>
+    </div>
+    <div class="mt-6 pt-2 border-t border-[#23252a]/50 shrink-0">
+      <a href="/faqs/preguntas/" class="text-sm font-semibold text-[#e4f222] hover:underline flex items-center gap-1.5 min-h-[48px] touch-manipulation">
+        Resolver mis dudas &rarr;
+      </a>
+    </div>
+  </div>
+</div>
+
+{/* Enlaces a Registro oficial */}
+<div class="my-12 max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 px-4">
+  <a href="https://miventasimple.com/auth/register" target="_blank" class="w-full sm:w-auto text-center font-bold px-8 py-4 rounded-md bg-[#e4f222] text-[#08090a] hover:bg-[#f1fc49] transition-all min-h-[52px] flex items-center justify-center shadow-lg hover:shadow-[0_4px_12px_rgba(228,242,34,0.25)] touch-manipulation">
+    Registrar mi Negocio Gratis
+  </a>
+  <a href="https://miventasimple.com" target="_blank" class="w-full sm:w-auto text-center font-bold px-8 py-4 rounded-md border border-[#23252a] text-[#f7f8f8] hover:bg-[#161718] transition-all min-h-[52px] flex items-center justify-center touch-manipulation">
+    Ir a la Web Oficial
+  </a>
+</div>
+
+{/* Banner de soporte por WhatsApp y Correo */}
+<div class="p-8 rounded-xl bg-[#0f1011] border border-[#23252a] text-center my-16 max-w-2xl mx-auto shadow-sm">
+	<h3 class="text-[#f7f8f8] text-xl font-bold mb-3">¿Necesitas soporte técnico adicional?</h3>
+	<p class="text-[#8a8f98] mb-6 text-sm leading-relaxed">¿Tienes dudas con tu impresora térmica o carga de inventario? Escríbenos directamente para ayudarte de inmediato.</p>
+	<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+		<a href="https://wa.me/message/VENTASIMPLE" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center bg-[#e4f222] text-[#08090a] px-6 py-3 rounded-md transition-colors min-h-[48px] font-bold text-sm touch-manipulation hover:bg-[#f1fc49]">
+			Contactar a Soporte por WhatsApp
+		</a>
+		<a href="mailto:soporte@miventasimple.com" class="w-full sm:w-auto inline-flex items-center justify-center bg-[#161718] border border-[#23252a] text-[#f7f8f8] hover:text-[#e4f222] hover:border-[#e4f222]/30 px-6 py-3 rounded-md transition-colors min-h-[48px] font-semibold text-sm touch-manipulation">
+			Escríbenos por Correo
+		</a>
+	</div>
+</div>
+
+
+=== SECCIÓN: Ajustes (configuracion/ajustes.mdx) ===
+
+{/* Marcado de Datos Estructurados JSON-LD (FAQPage) para SEO/GEO */}
+<script type="application/ld+json" is:inline>{`
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Dónde encuentro los ajustes de mi punto de venta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los ajustes del sistema están divididos en cuatro subgrupos principales dentro del menú lateral: Administración y Personal, Ajustes del POS, Fidelización y Crédito, y Finanzas y Control."
+        }
+      }
+    ]
+  }
+`}</script>
+
+# Panel de Configuración
+
+Para facilitar la administración de tu tienda, la configuración de VentaSimple se ha reorganizado en cuatro subgrupos especializados que verás en tu menú lateral:
+
+---
+
+## 1. Administración y Personal
+En esta sección administras los accesos, la seguridad y los datos clave de tu suscripción:
+- [Perfil de Usuario](/configuracion/perfil/): Escribe tus datos de contacto y actualiza tu clave de acceso.
+- [Usuarios y Roles](/configuracion/usuarios/): Asigna permisos específicos a tus cajeros para evitar pérdidas de caja.
+- [Sucursales y Almacenes](/configuracion/sucursales/): Administra el stock en diferentes locales físicos.
+- [Mi Plan y Facturación](/configuracion/plan/): Verifica los límites de tu plan contratado y descarga tus recibos.
+
+---
+
+## 2. Ajustes del POS
+Adapta la experiencia de cobro en mostrador:
+- [Giro de Negocio](/configuracion/giro/): Activa herramientas específicas para cafeterías, restaurantes o retail.
+- [Catálogo Público Web](/configuracion/catalogo/): Configura tu catálogo virtual auto-generado para compartirlo por WhatsApp.
+- [Promociones y Descuentos](/configuracion/promociones/): Configura promociones automáticas por volumen (como 2x1 o rebajas fijas).
+
+---
+
+## 3. Fidelización y Crédito
+Configura herramientas para retener clientes frecuentes y administrar deudas:
+- [Fidelidad y Visitas](/configuracion/fidelidad/): Registra visitas recurrentes de tus clientes para otorgarles regalos.
+- [Programa de Puntos](/configuracion/puntos/): Define el porcentaje de cashback acumulable en dinero electrónico.
+- [Fiados y Cuentas por Cobrar](/configuracion/fiados/): Lleva el balance exacto de lo que te deben tus clientes sin usar libretas.
+
+---
+
+## 4. Finanzas y Control
+Revisa la rentabilidad de tu negocio y audita movimientos:
+- [Inteligencia Financiera](/configuracion/inteligencia/): Revisa las utilidades netas reales de tu negocio.
+- [Egresos de Caja](/configuracion/egresos/): Registra las salidas de efectivo diarias por pago de servicios o proveedores.
+- [Auditoría de Operaciones](/configuracion/auditoria/): Supervisa cancelaciones de tickets o modificaciones de inventario por empleado.
+- [Exportación de Datos (CSV)](/configuracion/exportar/): Descarga tus transacciones del mes para tu contabilidad en Excel.
+
+
+=== SECCIÓN: Auditoria (configuracion/auditoria.mdx) ===
+
+Historial completo de auditoría para el dueño de la tienda:
+
+- **Acciones Registradas:** Monitorea cancelaciones de tickets, modificaciones de stock o cortes de caja.
+- **Usuario y Hora:** Cada evento registra el empleado responsable y la hora exacta.
+
+
+=== SECCIÓN: Catalogo (configuracion/catalogo.mdx) ===
+
+Tu catálogo web se genera en automático para que lo compartas en redes sociales:
+
+- **Enlace Único:** Comparte la URL personalizada de tu catálogo para que los clientes consulten tus productos y precios.
+- **Visualización:** Oculta o muestra productos según su disponibilidad en stock.
+
+
+=== SECCIÓN: Egresos (configuracion/egresos.mdx) ===
+
+Registra egresos no relacionados con ventas directas:
+
+- **Gastos Operativos:** Salidas de dinero para pago a proveedores rápidos, artículos de limpieza o servicios.
+- **Transparencia:** Todo egreso de efectivo debe tener una justificación escrita para evitar descuadres en el arqueo.
+
+
+=== SECCIÓN: Exportar (configuracion/exportar.mdx) ===
+
+Descarga copias de seguridad de tu información:
+
+- **Hojas de Cálculo:** Exporta tu catálogo de productos, listado de transacciones o deudas de clientes en formato CSV compatible con Excel o Google Sheets.
+- **Migración:** Úsalo para realizar análisis contables avanzados o importar a otros sistemas.
+
+
+=== SECCIÓN: Fiados (configuracion/fiados.mdx) ===
+
+Lleva las cuentas claras de lo que te deben en tu tienda:
+
+- **Límites de Crédito:** Define un monto máximo que puede deber un cliente para evitar sobregiros.
+- **WhatsApp:** Envía estados de cuenta de deudas con el saldo restante directo a su chat de WhatsApp.
+
+
+=== SECCIÓN: Fidelidad (configuracion/fidelidad.mdx) ===
+
+Premia la frecuencia con la que tus clientes compran:
+
+- **Registro de Visitas:** Acumula visitas por número de teléfono en cada compra.
+- **Recompensas:** Regala un producto o aplica un descuento cuando el cliente alcance un número específico de visitas.
+
+
+=== SECCIÓN: Giro (configuracion/giro.mdx) ===
+
+Configura módulos adaptables según tu actividad comercial:
+
+- **Restaurantes y Cafeterías:** Activa planos de mesas, comandas y recetas con ingredientes.
+- **Comercios y Retail:** Configura escáner rápido y registro simple por códigos de barra.
+
+
+=== SECCIÓN: Inteligencia (configuracion/inteligencia.mdx) ===
+
+Visualiza reportes sobre la salud económica de tu negocio:
+
+- **Reporte de Utilidad:** Visualiza el beneficio neto restando el costo de compra del precio de venta.
+- **Horas Pico:** Conoce en qué horarios registras mayor flujo de clientes.
+
+
+=== SECCIÓN: Perfil (configuracion/perfil.mdx) ===
+
+Administra la información de acceso del titular de la cuenta:
+
+- **Cambio de Contraseña:** Modifica tus credenciales de acceso de forma segura.
+- **Datos del Negocio:** Escribe los datos de facturación generales de la cuenta principal.
+
+
+=== SECCIÓN: Plan (configuracion/plan.mdx) ===
+
+Consulta el estado y límites de tu suscripción actual:
+
+- **Consumo:** Visualiza el número de productos creados, ventas procesadas y límites del plan.
+- **Facturación:** Descarga recibos de pago del servicio.
+
+
+=== SECCIÓN: Promociones (configuracion/promociones.mdx) ===
+
+Automatiza incentivos de venta:
+
+- **Descuentos Directos:** Aplica rebajas porcentuales en tickets completos.
+- **Promociones por Volumen:** Define ofertas automáticas (ej. 2x1 o precio especial por mayoreo).
+
+
+=== SECCIÓN: Puntos (configuracion/puntos.mdx) ===
+
+Configura el monedero de dinero electrónico de tu comercio:
+
+- **Dinero Electrónico:** Por cada compra, abona un porcentaje al monedero del cliente (ej. 5% de cashback).
+- **Uso en Caja:** Permite a tus clientes pagar utilizando su saldo acumulado en su monedero electrónico.
+
+
+=== SECCIÓN: Sucursales (configuracion/sucursales.mdx) ===
+
+Administra múltiples bodegas o sucursales físicas:
+
+- **Almacenes separados:** Controla las existencias en cada punto de venta de forma individual.
+- **Traspasos:** Registra el movimiento de stock entre diferentes locales.
+
+
+=== SECCIÓN: Usuarios (configuracion/usuarios.mdx) ===
+
+Configura accesos individuales para tu equipo:
+
+- **Roles Predefinidos:** Asigna perfiles de Cajero, Supervisor o Administrador.
+- **Permisos Estrictos:** Limita quién puede ver las ganancias del día, cancelar tickets o editar inventarios.
+
+
+=== SECCIÓN: Preguntas (faqs/preguntas.mdx) ===
+
+# Preguntas Frecuentes
+
+Resuelve tus dudas rápidamente con nuestra lista de preguntas frecuentes sobre el funcionamiento del sistema.
+
+### ¿Cómo cambio mi contraseña de acceso?
+Puedes cambiar tu contraseña desde tu perfil de usuario en la esquina superior derecha, seleccionando **Mi Cuenta** y luego **Seguridad**.
+
+### ¿Qué hago si la impresora de tickets no responde?
+1. Verifica que la impresora esté encendida y conectada a la misma red o puerto USB.
+2. Revisa que tenga suficiente papel térmico.
+3. Asegúrate de tener seleccionado el controlador correcto en la sección de **Configuración > Impresora**.
+
+### ¿Puedo utilizar VentaSimple sin conexión a internet?
+Sí, VentaSimple cuenta con un modo offline que te permite registrar ventas sin conexión. Estas ventas se sincronizarán automáticamente con la nube en cuanto se restablezca la conexión a internet.
+
+
+=== SECCIÓN: Example (guides/example.md) ===
+
+Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
+Writing a good guide requires thinking about what your users are trying to do.
+
+## Further reading
+
+- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+
+
+=== SECCIÓN: Gestion (inventario-productos/gestion.mdx) ===
+
+# Inventario y Productos
+
+El módulo de inventario te permite organizar tu catálogo de productos, controlar las existencias en tiempo real y recibir alertas cuando un producto esté por agotarse.
+
+## Conceptos Clave
+
+- **Código de Barras:** Identificador único para el escaneo rápido en caja.
+- **Stock Mínimo:** Umbral que define cuándo el sistema te alertará para reabastecer el producto.
+- **Categorías:** Agrupaciones lógicas (ej. Bebidas, Alimentos, Electrónicos) para facilitar las búsquedas y reportes de ventas.
+
+## Creación de un Producto
+
+1. Ve a la sección **Productos** en el menú de VentaSimple.
+2. Haz clic en **Nuevo Producto**.
+3. Rellena los datos requeridos: nombre, precio de compra, precio de venta, y existencias.
+4. Presiona **Guardar**.
+
+
+=== SECCIÓN: Inicio (primeros-pasos/inicio.mdx) ===
+
+import Diagram from '../../../components/Diagram.astro';
+
+# ¿Cómo empezar con VentaSimple?
+
+Si hoy en día usas un cuaderno de papel, una libreta de fiados o una hoja de Excel para llevar las cuentas de tu tienda, VentaSimple está hecho para ti. Está pensado para abarrotes, papelerías, ferreterías o cualquier negocio de mostrador.
+
+### Llévalo en tu celular sin bajar aplicaciones pesadas
+No necesitas buscar en Google Play o App Store. Solo entra a **[miventasimple.com](https://miventasimple.com)** desde tu celular o computadora. 
+
+:::tip[Instálalo en tu pantalla como una App en 2 pasos]
+- **En Android (Chrome):** Toca los tres puntos arriba a la derecha (⋮) y elige **"Instalar aplicación"** o **"Agregar a pantalla principal"**.
+- **En iPhone (Safari):** Toca el botón de Compartir (📤) abajo al centro y elige **"Agregar al inicio"**.
+:::
+
+---
+
+## ¿Cómo fluye el día en tu negocio con VentaSimple?
+
+La jornada diaria es simple y sigue este circuito para que nunca pierdas el control de tus ganancias ni de tu inventario:
+
+<Diagram 
+  title="Circuito diario del dinero y ventas en tu tienda" 
+  code={`
+    graph TD
+      A[1. Abrir Caja con Cambio] --> B[2. Escanear o Seleccionar Producto]
+      B --> C{3. ¿Cómo paga el cliente?}
+      C -- Efectivo / Tarjeta --> D[Cobrar e Imprimir Ticket]
+      C -- Fiado / Deuda --> E[Asociar a la libreta del Cliente]
+      D --> F[Enviar Ticket por WhatsApp]
+      E --> F
+      F --> G[4. Corte de Caja al Final del Día]
+  `} 
+/>
+
+---
+
+## Los 3 pasos para empezar a vender hoy mismo
+
+Sigue estos pasos para activar tu negocio en menos de 5 minutos:
+
+### 1. Registra tu tienda
+Entra a **[miventasimple.com](https://miventasimple.com)** y toca el botón **Crear Cuenta**. Solo necesitas tu correo y una contraseña. Sin tarjetas de crédito ni contratos forzosos.
+
+### 2. Agrega tus primeros productos
+Puedes añadir tus artículos de tres formas muy fáciles:
+* **Con la cámara de tu celular:** Activa la cámara dentro de la app para escanear el código de barras del producto, ponle precio y listo.
+* **Manual:** Escribe el nombre del producto, cuánto te costó y a cuánto lo vendes.
+* **Carga masiva desde Excel:** Si ya tienes una lista larga, nuestro equipo de soporte te ayuda a subirla en segundos.
+
+### 3. Abre tu caja chica y cobra
+Antes de atender al primer cliente del día, anota cuánto dinero en efectivo tienes en tu cajón para dar cambio (tu fondo inicial). Cada venta que hagas irá sumando automáticamente al total.
+
+---
+
+{/* Marcado de Datos Estructurados JSON-LD (FAQPage) para SEO / GEO al final del documento */}
+<script type="application/ld+json" is:inline>{`
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Necesito conexión a internet constante para usar VentaSimple?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. VentaSimple guarda los datos de forma local en tu dispositivo. Puedes cobrar y registrar fiados sin señal. Al reconectarte, los datos se sincronizan solos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo envío un recibo de cobro a un cliente por WhatsApp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Al completar una venta, selecciona 'Enviar por WhatsApp'. Ingresa el teléfono del cliente y el sistema enviará un enlace con su ticket digital."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo registro las deudas o fiados en mi negocio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En la pantalla de cobro, elige la opción 'Fiado'. Podrás asignar la venta al nombre del cliente y llevar la cuenta de sus abonos o cargos acumulados."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué impresoras térmicas puedo conectar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VentaSimple es compatible con la mayoría de impresoras térmicas de 58mm y 80mm conectadas por Bluetooth, USB o red Wi-Fi."
+        }
+      }
+    ]
+  }
+`}</script>
+
+
+=== SECCIÓN: Example (reference/example.md) ===
+
+Reference pages are ideal for outlining how things work in terse and clear terms.
+Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+
+## Further reading
+
+- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+
+
+=== SECCIÓN: Caja Chica (ventas-caja/caja-chica.mdx) ===
+
+import Diagram from '../../../components/Diagram.astro';
+
+# ¿Cómo cobrar un ticket y gestionar tu caja chica?
+
+Registrar cada venta y movimiento de dinero te ayudará a evitar descuadres al final del día. Aquí te enseñamos cómo llevar un control exacto de tu caja chica de forma fácil.
+
+## El camino que sigue tu dinero
+
+El dinero físico de tu negocio pasa por las siguientes etapas desde que abres tu tienda hasta que cierras en la noche:
+
+<Diagram 
+  title="Circuito diario del dinero en caja" 
+  code={`
+  graph LR
+    A[Dinero inicial para cambio] --> B[Cobro de Ventas]
+    B --> C[Salidas / Compras rápidas]
+    C --> D[Corte de Caja parcial]
+    D --> E[Retiro final de ganancias]
+  `} 
+/>
+
+## Las tareas que realizas a diario en tu caja
+
+- **Iniciar Caja (Apertura):** Al iniciar tu turno, indica cuánto dinero en efectivo tienes en el cajón para poder dar cambio a tus clientes.
+- **Registrar Entradas o Salidas:** Si tomas dinero de la caja para un gasto imprevisto (como comprar artículos de limpieza o pagar a un proveedor rápido), regístralo de inmediato.
+- **Hacer Corte de Caja (Cierre):** Al finalizar tu día, cuenta el dinero físico del cajón. El sistema te dirá si coincide exactamente con las ventas registradas.
+
