@@ -283,6 +283,40 @@
     }
   }
 
+  /* Table of Contents (Right Sidebar) accessibility and contrast enhancement */
+  starlight-toc h2 {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    color: var(--color-porcelain) !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  starlight-toc a {
+    font-size: 0.95rem !important;
+    font-weight: 550 !important;
+    color: #a4abb6 !important; /* High contrast secondary text */
+    padding-block: 0.35rem !important;
+    line-height: 1.4 !important;
+    display: inline-block !important;
+    transition: color 0.2s ease-in-out !important;
+  }
+
+  starlight-toc a:hover,
+  starlight-toc a:focus-visible {
+    color: var(--color-neon-lime) !important;
+    text-decoration: underline !important;
+  }
+
+  starlight-toc a[aria-current="true"] {
+    color: var(--color-neon-lime) !important;
+    font-weight: 700 !important;
+    border-left: 2px solid var(--color-neon-lime) !important;
+    padding-left: 0.5rem !important;
+    margin-left: -0.5rem !important;
+  }
+
   /* Soporte de accesibilidad para evitar animaciones (Preferencia del sistema operativo) */
   @media (prefers-reduced-motion: reduce) {
 

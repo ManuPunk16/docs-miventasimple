@@ -1,16 +1,16 @@
 # Graph Report - docs-miventasimple  (2026-07-26)
 
 ## Corpus Check
-- 39 files · ~35,433 words
+- 37 files · ~35,318 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 182 nodes · 143 edges · 49 communities (35 shown, 14 thin omitted)
+- 178 nodes · 141 edges · 47 communities (35 shown, 12 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `580fdb3c`
+- Built from commit: `141d96d7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -39,8 +39,6 @@
 - [[_COMMUNITY_Community 22|Community 22]]
 - [[_COMMUNITY_Community 23|Community 23]]
 - [[_COMMUNITY_Community 24|Community 24]]
-- [[_COMMUNITY_Community 25|Community 25]]
-- [[_COMMUNITY_Community 26|Community 26]]
 - [[_COMMUNITY_Community 27|Community 27]]
 - [[_COMMUNITY_Community 28|Community 28]]
 - [[_COMMUNITY_Community 29|Community 29]]
@@ -76,15 +74,15 @@
 ## Hyperedges (group relationships)
 - **VentaSimple User Help System** — docs_index_document, primeros_pasos_inicio_document, ventascaja_cajachica_document, inventarioproductos_gestion_document, configuracion_ajustes_document, faqs_preguntas_document [INFERRED 0.95]
 
-## Communities (49 total, 14 thin omitted)
+## Communities (47 total, 12 thin omitted)
 
 ### Community 0 - "Dependencies and Tailwind CSS"
-Cohesion: 0.12
-Nodes (16): Berkeley Mono — Monospaced font for code snippets, technical details, and certain data displays, ensuring consistent character alignment and technical clarity. · `--font-berkeley-mono`, Border Radius, Do, Do's and Don'ts, Don't, Inter Variable — Primary UI typeface for all content including headings, body text, and interactive elements. Its variable weights provide a clean, modern aesthetic with strong technical readability. · `--font-inter-variable`, Layout, Shadows (+8 more)
+Cohesion: 0.40
+Nodes (5): Border Radius, Layout, Shadows, Spacing Scale, Tokens — Spacing & Shapes
 
 ### Community 1 - "Mermaid and Diagrams"
-Cohesion: 0.12
-Nodes (17): Agent Prompt Guide, CSS Custom Properties, Do, Do's and Don'ts (Light), Don't, Elevation, Imagery, Layout (+9 more)
+Cohesion: 0.11
+Nodes (18): Agent Prompt Guide, CSS Custom Properties, Do, Do's and Don'ts (Light), Don't, Elevation, Imagery, Layout (+10 more)
 
 ### Community 2 - "User Documentation"
 Cohesion: 0.47
@@ -99,8 +97,8 @@ Cohesion: 0.21
 Nodes (11): closeMenu(), constructor(), openMenu(), toggleMenu(), virtual:starlight/components/LanguageSelect, @astrojs/starlight/props, virtual:starlight/components/Search, virtual:starlight/components/SiteTitle (+3 more)
 
 ### Community 5 - "Accessibility Controls"
-Cohesion: 0.18
-Nodes (11): Badge, Components, Default Card, Elevated Card, Ghost Navigation Button, Input Field, Navigation Item Button, Nested Card (+3 more)
+Cohesion: 0.10
+Nodes (21): Badge, Berkeley Mono — Monospaced font for code snippets, technical details, and certain data displays, ensuring consistent character alignment and technical clarity. · `--font-berkeley-mono`, Components, Default Card, Do, Do's and Don'ts, Don't, Elevated Card (+13 more)
 
 ### Community 6 - "Design System & Theme"
 Cohesion: 1.00
@@ -143,24 +141,22 @@ Cohesion: 0.50
 Nodes (3): ¿Cómo cobrar un ticket y gestionar tu caja chica?, El camino que sigue tu dinero, Las tareas que realizas a diario en tu caja
 
 ## Knowledge Gaps
-- **102 isolated node(s):** `name`, `type`, `version`, `dev`, `start` (+97 more)
+- **100 isolated node(s):** `name`, `type`, `version`, `dev`, `start` (+95 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Theme: Light — Daylight Studio Style Reference` connect `Mermaid and Diagrams` to `Dependencies and Tailwind CSS`, `Content Collections Config`?**
-  _High betweenness centrality (0.064) - this node is a cross-community bridge._
-- **Why does `Theme: Dark (Default) — Linear Style Reference` connect `Dependencies and Tailwind CSS` to `Accessibility Controls`?**
-  _High betweenness centrality (0.060) - this node is a cross-community bridge._
-- **Why does `Components` connect `Accessibility Controls` to `Dependencies and Tailwind CSS`?**
-  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+- **Why does `Theme: Light — Daylight Studio Style Reference` connect `Mermaid and Diagrams` to `Content Collections Config`?**
+  _High betweenness centrality (0.067) - this node is a cross-community bridge._
+- **Why does `Theme: Dark (Default) — Linear Style Reference` connect `Accessibility Controls` to `Dependencies and Tailwind CSS`, `Mermaid and Diagrams`?**
+  _High betweenness centrality (0.063) - this node is a cross-community bridge._
 - **What connects `name`, `type`, `version` to the rest of the system?**
-  _102 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Dependencies and Tailwind CSS` be split into smaller, more focused modules?**
-  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
+  _100 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Mermaid and Diagrams` be split into smaller, more focused modules?**
-  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
 - **Should `Astro Scripts` be split into smaller, more focused modules?**
   _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
+- **Should `Accessibility Controls` be split into smaller, more focused modules?**
+  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._

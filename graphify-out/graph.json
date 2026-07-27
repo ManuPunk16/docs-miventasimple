@@ -639,7 +639,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_design",
-      "community": 0,
+      "community": 1,
       "norm_label": "design.md"
     },
     {
@@ -649,7 +649,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_design_ventasimple_sistema_de_temas",
-      "community": 0,
+      "community": 1,
       "norm_label": "ventasimple \u2014 sistema de temas"
     },
     {
@@ -659,7 +659,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "docs_design_theme_dark_default_linear_style_reference",
-      "community": 0,
+      "community": 5,
       "norm_label": "theme: dark (default) \u2014 linear style reference"
     },
     {
@@ -669,7 +669,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "docs_design_tokens_colors",
-      "community": 0,
+      "community": 5,
       "norm_label": "tokens \u2014 colors"
     },
     {
@@ -679,7 +679,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "docs_design_tokens_typography",
-      "community": 0,
+      "community": 5,
       "norm_label": "tokens \u2014 typography"
     },
     {
@@ -689,7 +689,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "docs_design_inter_variable_primary_ui_typeface_for_all_content_including_headings_body_text_and_interactive_elements_its_variable_weights_provide_a_clean_modern_aesthetic_with_strong_technical_readability_font_inter_variable",
-      "community": 0,
+      "community": 5,
       "norm_label": "inter variable \u2014 primary ui typeface for all content including headings, body text, and interactive elements. its variable weights provide a clean, modern aesthetic with strong technical readability. \u00b7 `--font-inter-variable`"
     },
     {
@@ -699,7 +699,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "docs_design_berkeley_mono_monospaced_font_for_code_snippets_technical_details_and_certain_data_displays_ensuring_consistent_character_alignment_and_technical_clarity_font_berkeley_mono",
-      "community": 0,
+      "community": 5,
       "norm_label": "berkeley mono \u2014 monospaced font for code snippets, technical details, and certain data displays, ensuring consistent character alignment and technical clarity. \u00b7 `--font-berkeley-mono`"
     },
     {
@@ -709,7 +709,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "docs_design_type_scale",
-      "community": 0,
+      "community": 5,
       "norm_label": "type scale"
     },
     {
@@ -879,7 +879,7 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "docs_design_do_s_and_don_ts",
-      "community": 0,
+      "community": 5,
       "norm_label": "do's and don'ts"
     },
     {
@@ -889,7 +889,7 @@
       "source_location": "L187",
       "_origin": "ast",
       "id": "docs_design_do",
-      "community": 0,
+      "community": 5,
       "norm_label": "do"
     },
     {
@@ -899,7 +899,7 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "docs_design_don_t",
-      "community": 0,
+      "community": 5,
       "norm_label": "don't"
     },
     {
@@ -909,7 +909,7 @@
       "source_location": "L205",
       "_origin": "ast",
       "id": "docs_design_surfaces",
-      "community": 0,
+      "community": 5,
       "norm_label": "surfaces"
     },
     {
@@ -1443,26 +1443,6 @@
       "norm_label": "\u00bfpuedo utilizar ventasimple sin conexion a internet?"
     },
     {
-      "label": "example.md",
-      "file_type": "document",
-      "source_file": "src/content/docs/guides/example.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "guides_example",
-      "community": 25,
-      "norm_label": "example.md"
-    },
-    {
-      "label": "Further reading",
-      "file_type": "document",
-      "source_file": "src/content/docs/guides/example.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "guides_example_further_reading",
-      "community": 25,
-      "norm_label": "further reading"
-    },
-    {
       "label": "index.mdx",
       "file_type": "document",
       "source_file": "src/content/docs/index.mdx",
@@ -1591,26 +1571,6 @@
       "id": "primeros_pasos_inicio_3_abre_tu_caja_chica_y_cobra",
       "community": 16,
       "norm_label": "3. abre tu caja chica y cobra"
-    },
-    {
-      "label": "example.md",
-      "file_type": "document",
-      "source_file": "src/content/docs/reference/example.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "reference_example",
-      "community": 26,
-      "norm_label": "example.md"
-    },
-    {
-      "label": "Further reading",
-      "file_type": "document",
-      "source_file": "src/content/docs/reference/example.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "reference_example_further_reading",
-      "community": 26,
-      "norm_label": "further reading"
     },
     {
       "label": "caja-chica.mdx",
@@ -3060,16 +3020,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/guides/example.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "guides_example",
-      "target": "guides_example_further_reading"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "src/content/docs/inventario-productos/gestion.mdx",
       "source_location": "L8",
       "weight": 1.0,
@@ -3166,16 +3116,6 @@
       "confidence_score": 1.0,
       "source": "primeros_pasos_inicio_los_3_pasos_para_empezar_a_vender_hoy_mismo",
       "target": "primeros_pasos_inicio_3_abre_tu_caja_chica_y_cobra"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/reference/example.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "reference_example",
-      "target": "reference_example_further_reading"
     },
     {
       "relation": "contains",
@@ -3356,5 +3296,5 @@
       "source_file": "src/content/docs/index.mdx"
     }
   ],
-  "built_at_commit": "580fdb3c5d299f7eb2f5713a48d5f21ee25d1f6d"
+  "built_at_commit": "141d96d7fff89e12128657ac7655ed4037c02a0d"
 }

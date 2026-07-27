@@ -9,6 +9,13 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'VentaSimple Docs',
+			defaultLocale: 'root',
+			locales: {
+				root: {
+					label: 'Español',
+					lang: 'es',
+				},
+			},
 			logo: {
 				src: './src/assets/logo.png',
 			},
