@@ -25,6 +25,7 @@ export default defineConfig({
 				MobileMenuToggle: './src/components/MobileMenuToggle.astro',
 				MobileTableOfContents: './src/components/MobileTableOfContents.astro',
 				ThemeProvider: './src/components/ThemeProvider.astro',
+				Sidebar: './src/components/Sidebar.astro',
 			},
 			head: [
 				{ tag: 'meta', attrs: { name: 'google-site-verification', content: 'oB-Z2hnHZOGw4LaVA6sPzDU06jFlWJGDqYVa0cXsVhg' } },
@@ -33,67 +34,48 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Primeros Pasos',
-					collapsed: true,
-					items: [{ autogenerate: { directory: 'primeros-pasos', collapsed: true } }],
+					collapsed: false,
+					items: [{ autogenerate: { directory: 'primeros-pasos' } }],
 				},
 				{
-					label: 'Vender y Cobrar',
+					label: 'Punto de Venta (POS)',
 					collapsed: true,
-					items: [{ autogenerate: { directory: 'ventas-caja', collapsed: true } }],
+					items: [{ autogenerate: { directory: 'punto-de-venta' } }],
 				},
 				{
-					label: 'Inventario y Productos',
+					label: 'Control de Inventario',
 					collapsed: true,
-					items: [{ autogenerate: { directory: 'inventario-productos', collapsed: true } }],
+					items: [{ autogenerate: { directory: 'inventario-y-productos' } }],
 				},
 				{
-					label: 'Configuración de Tienda',
+					label: 'Clientes y Fidelidad',
 					collapsed: true,
-					items: [
-						{
-							label: 'Administración y Personal',
-							collapsed: true,
-							items: [
-								{ label: 'Perfil de Usuario', link: '/configuracion/perfil/' },
-								{ label: 'Usuarios y Roles', link: '/configuracion/usuarios/' },
-								{ label: 'Sucursales y Almacenes', link: '/configuracion/sucursales/' },
-								{ label: 'Mi Plan y Facturación', link: '/configuracion/plan/' },
-							],
-						},
-						{
-							label: 'Ajustes del POS',
-							collapsed: true,
-							items: [
-								{ label: 'Giro de Negocio', link: '/configuracion/giro/' },
-								{ label: 'Catálogo Público Web', link: '/configuracion/catalogo/' },
-								{ label: 'Promociones y Descuentos', link: '/configuracion/promociones/' },
-							],
-						},
-						{
-							label: 'Fidelización y Crédito',
-							collapsed: true,
-							items: [
-								{ label: 'Fidelidad y Visitas', link: '/configuracion/fidelidad/' },
-								{ label: 'Programa de Puntos', link: '/configuracion/puntos/' },
-								{ label: 'Fiados y Cuentas por Cobrar', link: '/configuracion/fiados/' },
-							],
-						},
-						{
-							label: 'Finanzas y Control',
-							collapsed: true,
-							items: [
-								{ label: 'Inteligencia Financiera', link: '/configuracion/inteligencia/' },
-								{ label: 'Egresos de Caja', link: '/configuracion/egresos/' },
-								{ label: 'Auditoría de Operaciones', link: '/configuracion/auditoria/' },
-								{ label: 'Exportación de Datos (CSV)', link: '/configuracion/exportar/' },
-							],
-						},
-					],
+					items: [{ autogenerate: { directory: 'clientes-y-fidelidad' } }],
 				},
 				{
-					label: 'Preguntas Frecuentes',
+					label: 'Compras y Proveedores',
 					collapsed: true,
-					items: [{ autogenerate: { directory: 'faqs', collapsed: true } }],
+					items: [{ autogenerate: { directory: 'compras-y-proveedores' } }],
+				},
+				{
+					label: 'Giros Especializados',
+					collapsed: true,
+					items: [{ autogenerate: { directory: 'giros-especializados' } }],
+				},
+				{
+					label: 'Reportes y Auditoría',
+					collapsed: true,
+					items: [{ autogenerate: { directory: 'reportes-y-auditoria' } }],
+				},
+				{
+					label: 'Facturación y Cuenta',
+					collapsed: true,
+					items: [{ autogenerate: { directory: 'facturacion-y-cuenta' } }],
+				},
+				{
+					label: 'Hardware y Periféricos',
+					collapsed: true,
+					items: [{ autogenerate: { directory: 'hardware-y-perifericos' } }],
 				},
 			],
 		}),

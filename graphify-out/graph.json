@@ -183,10 +183,20 @@
       "norm_label": "mermaid"
     },
     {
-      "label": "sharp",
+      "label": "repomix",
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L17",
+      "_origin": "ast",
+      "id": "package_dependencies_repomix",
+      "community": 11,
+      "norm_label": "repomix"
+    },
+    {
+      "label": "sharp",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "package_dependencies_sharp",
       "community": 11,
@@ -196,7 +206,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 3,
@@ -206,7 +216,7 @@
       "label": "@astrojs/starlight-tailwind",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "package_devdependencies_astrojs_starlight_tailwind",
       "community": 3,
@@ -216,7 +226,7 @@
       "label": "@tailwindcss/vite",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_vite",
       "community": 3,
@@ -226,11 +236,63 @@
       "label": "tailwindcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss",
       "community": 3,
       "norm_label": "tailwindcss"
+    },
+    {
+      "label": "./CustomSidebarSublist.astro",
+      "file_type": "code",
+      "source_file": "src/components/CustomSidebarSublist.astro",
+      "source_location": "L1",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "id": "components_customsidebarsublist",
+      "community": 4,
+      "norm_label": "./customsidebarsublist.astro"
+    },
+    {
+      "label": "flattenSidebar()",
+      "file_type": "code",
+      "source_file": "src/components/CustomSidebarSublist.astro",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "components_customsidebarsublist_flattensidebar",
+      "community": 4,
+      "norm_label": "flattensidebar()"
+    },
+    {
+      "label": "SidebarIcon.astro",
+      "file_type": "code",
+      "source_file": "src/components/SidebarIcon.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast",
+      "source_location": "L1",
+      "id": "components_sidebaricon",
+      "community": 4,
+      "norm_label": "sidebaricon.astro"
+    },
+    {
+      "label": "@astrojs/starlight/components",
+      "file_type": "code",
+      "source_file": "@astrojs/starlight/components",
+      "confidence": "EXTRACTED",
+      "_origin": "ast",
+      "id": "components",
+      "community": 4,
+      "norm_label": "@astrojs/starlight/components"
+    },
+    {
+      "label": "@astrojs/starlight/components/SidebarRestorePoint.astro",
+      "file_type": "code",
+      "source_file": "@astrojs/starlight/components/SidebarRestorePoint.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast",
+      "id": "sidebarrestorepoint_astro",
+      "community": 4,
+      "norm_label": "@astrojs/starlight/components/sidebarrestorepoint.astro"
     },
     {
       "label": "Diagram.astro",
@@ -393,6 +455,36 @@
       "norm_label": "mobiletableofcontents.astro"
     },
     {
+      "label": "Sidebar.astro",
+      "file_type": "code",
+      "source_file": "src/components/Sidebar.astro",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_sidebar",
+      "community": 4,
+      "norm_label": "sidebar.astro"
+    },
+    {
+      "label": "virtual:starlight/components/MobileMenuFooter",
+      "file_type": "code",
+      "source_file": "virtual:starlight/components/MobileMenuFooter",
+      "confidence": "EXTRACTED",
+      "_origin": "ast",
+      "id": "mobilemenufooter",
+      "community": 4,
+      "norm_label": "virtual:starlight/components/mobilemenufooter"
+    },
+    {
+      "label": "@astrojs/starlight/components/SidebarPersister.astro",
+      "file_type": "code",
+      "source_file": "@astrojs/starlight/components/SidebarPersister.astro",
+      "confidence": "EXTRACTED",
+      "_origin": "ast",
+      "id": "sidebarpersister_astro",
+      "community": 4,
+      "norm_label": "@astrojs/starlight/components/sidebarpersister.astro"
+    },
+    {
       "label": "ThemeProvider.astro",
       "file_type": "code",
       "source_file": "src/components/ThemeProvider.astro",
@@ -418,7 +510,7 @@
       "source_file": "node_modules/@astrojs/starlight/user-components/Icon.astro",
       "confidence": "EXTRACTED",
       "_origin": "ast",
-      "id": "c_users_luisa_onedrive_documentos_proyectos_docs_miventasimple_node_modules_astrojs_starlight_user_components_icon_astro",
+      "id": "c_users_consjur_946_documents_proyectos_docs_miventasimple_node_modules_astrojs_starlight_user_components_icon_astro",
       "community": 47,
       "norm_label": "../../node_modules/@astrojs/starlight/user-components/icon.astro"
     },
@@ -1193,254 +1285,334 @@
       "norm_label": "tailwind v4"
     },
     {
-      "label": "ajustes.mdx",
+      "label": "repomix-output-docs-miventasimple.md",
       "file_type": "document",
-      "source_file": "src/content/docs/configuracion/ajustes.mdx",
+      "source_file": "repomix-output-docs-miventasimple.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "configuracion_ajustes",
-      "community": 17,
-      "norm_label": "ajustes.mdx"
+      "id": "repomix_output_docs_miventasimple",
+      "community": 25,
+      "norm_label": "repomix-output-docs-miventasimple.md"
     },
     {
-      "label": "Panel de Configuraci\u00f3n",
+      "label": "File Summary",
       "file_type": "document",
-      "source_file": "src/content/docs/configuracion/ajustes.mdx",
-      "source_location": "L24",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L3",
       "_origin": "ast",
-      "id": "configuracion_ajustes_panel_de_configuraci\u00f3n",
-      "community": 17,
-      "norm_label": "panel de configuracion"
+      "id": "repomix_output_docs_miventasimple_file_summary",
+      "community": 25,
+      "norm_label": "file summary"
     },
     {
-      "label": "1. Administraci\u00f3n y Personal",
+      "label": "Purpose",
       "file_type": "document",
-      "source_file": "src/content/docs/configuracion/ajustes.mdx",
-      "source_location": "L30",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L5",
       "_origin": "ast",
-      "id": "configuracion_ajustes_1_administraci\u00f3n_y_personal",
-      "community": 17,
-      "norm_label": "1. administracion y personal"
+      "id": "repomix_output_docs_miventasimple_purpose",
+      "community": 25,
+      "norm_label": "purpose"
     },
     {
-      "label": "2. Ajustes del POS",
+      "label": "File Format",
       "file_type": "document",
-      "source_file": "src/content/docs/configuracion/ajustes.mdx",
-      "source_location": "L39",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "configuracion_ajustes_2_ajustes_del_pos",
-      "community": 17,
-      "norm_label": "2. ajustes del pos"
+      "id": "repomix_output_docs_miventasimple_file_format",
+      "community": 25,
+      "norm_label": "file format"
     },
     {
-      "label": "3. Fidelizaci\u00f3n y Cr\u00e9dito",
+      "label": "Usage Guidelines",
       "file_type": "document",
-      "source_file": "src/content/docs/configuracion/ajustes.mdx",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "configuracion_ajustes_3_fidelizaci\u00f3n_y_cr\u00e9dito",
-      "community": 17,
-      "norm_label": "3. fidelizacion y credito"
-    },
-    {
-      "label": "4. Finanzas y Control",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/ajustes.mdx",
-      "source_location": "L55",
-      "_origin": "ast",
-      "id": "configuracion_ajustes_4_finanzas_y_control",
-      "community": 17,
-      "norm_label": "4. finanzas y control"
-    },
-    {
-      "label": "auditoria.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/auditoria.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_auditoria",
-      "community": 32,
-      "norm_label": "auditoria.mdx"
-    },
-    {
-      "label": "catalogo.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/catalogo.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_catalogo",
-      "community": 33,
-      "norm_label": "catalogo.mdx"
-    },
-    {
-      "label": "egresos.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/egresos.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_egresos",
-      "community": 34,
-      "norm_label": "egresos.mdx"
-    },
-    {
-      "label": "exportar.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/exportar.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_exportar",
-      "community": 35,
-      "norm_label": "exportar.mdx"
-    },
-    {
-      "label": "fiados.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/fiados.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_fiados",
-      "community": 36,
-      "norm_label": "fiados.mdx"
-    },
-    {
-      "label": "fidelidad.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/fidelidad.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_fidelidad",
-      "community": 37,
-      "norm_label": "fidelidad.mdx"
-    },
-    {
-      "label": "giro.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/giro.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_giro",
-      "community": 38,
-      "norm_label": "giro.mdx"
-    },
-    {
-      "label": "inteligencia.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/inteligencia.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_inteligencia",
-      "community": 39,
-      "norm_label": "inteligencia.mdx"
-    },
-    {
-      "label": "perfil.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/perfil.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_perfil",
-      "community": 40,
-      "norm_label": "perfil.mdx"
-    },
-    {
-      "label": "plan.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/plan.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_plan",
-      "community": 41,
-      "norm_label": "plan.mdx"
-    },
-    {
-      "label": "promociones.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/promociones.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_promociones",
-      "community": 42,
-      "norm_label": "promociones.mdx"
-    },
-    {
-      "label": "puntos.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/puntos.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_puntos",
-      "community": 43,
-      "norm_label": "puntos.mdx"
-    },
-    {
-      "label": "sucursales.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/sucursales.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_sucursales",
-      "community": 44,
-      "norm_label": "sucursales.mdx"
-    },
-    {
-      "label": "usuarios.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/configuracion/usuarios.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "configuracion_usuarios",
-      "community": 45,
-      "norm_label": "usuarios.mdx"
-    },
-    {
-      "label": "preguntas.mdx",
-      "file_type": "document",
-      "source_file": "src/content/docs/faqs/preguntas.mdx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "faqs_preguntas",
-      "community": 18,
-      "norm_label": "preguntas.mdx"
-    },
-    {
-      "label": "Preguntas Frecuentes",
-      "file_type": "document",
-      "source_file": "src/content/docs/faqs/preguntas.mdx",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "faqs_preguntas_preguntas_frecuentes",
-      "community": 18,
-      "norm_label": "preguntas frecuentes"
-    },
-    {
-      "label": "\u00bfC\u00f3mo cambio mi contrase\u00f1a de acceso?",
-      "file_type": "document",
-      "source_file": "src/content/docs/faqs/preguntas.mdx",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "faqs_preguntas_c\u00f3mo_cambio_mi_contrase\u00f1a_de_acceso",
-      "community": 18,
-      "norm_label": "\u00bfcomo cambio mi contrasena de acceso?"
-    },
-    {
-      "label": "\u00bfQu\u00e9 hago si la impresora de tickets no responde?",
-      "file_type": "document",
-      "source_file": "src/content/docs/faqs/preguntas.mdx",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "faqs_preguntas_qu\u00e9_hago_si_la_impresora_de_tickets_no_responde",
-      "community": 18,
-      "norm_label": "\u00bfque hago si la impresora de tickets no responde?"
-    },
-    {
-      "label": "\u00bfPuedo utilizar VentaSimple sin conexi\u00f3n a internet?",
-      "file_type": "document",
-      "source_file": "src/content/docs/faqs/preguntas.mdx",
+      "source_file": "repomix-output-docs-miventasimple.md",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "faqs_preguntas_puedo_utilizar_ventasimple_sin_conexi\u00f3n_a_internet",
-      "community": 18,
-      "norm_label": "\u00bfpuedo utilizar ventasimple sin conexion a internet?"
+      "id": "repomix_output_docs_miventasimple_usage_guidelines",
+      "community": 25,
+      "norm_label": "usage guidelines"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_notes",
+      "community": 25,
+      "norm_label": "notes"
+    },
+    {
+      "label": "Directory Structure",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_directory_structure",
+      "community": 25,
+      "norm_label": "directory structure"
+    },
+    {
+      "label": "Files",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_files",
+      "community": 25,
+      "norm_label": "files"
+    },
+    {
+      "label": "File: repomix.config.json",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_file_repomix_config_json",
+      "community": 25,
+      "norm_label": "file: repomix.config.json"
+    },
+    {
+      "label": "File: docs/DESIGN.md",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_file_docs_design_md",
+      "community": 25,
+      "norm_label": "file: docs/design.md"
+    },
+    {
+      "label": "File: public/favicon.svg",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L681",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_file_public_favicon_svg",
+      "community": 25,
+      "norm_label": "file: public/favicon.svg"
+    },
+    {
+      "label": "File: public/google-site-verification.txt",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L686",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_file_public_google_site_verification_txt",
+      "community": 25,
+      "norm_label": "file: public/google-site-verification.txt"
+    },
+    {
+      "label": "File: public/googleoB-Z2hnHZOGw4LaVA6sPzDU06jFlWJGDqYVa0cXsVhg.html",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L691",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_file_public_googleob_z2hnhzogw4lava6spzdu06jflwjgdqyva0cxsvhg_html",
+      "community": 25,
+      "norm_label": "file: public/googleob-z2hnhzogw4lava6spzdu06jflwjgdqyva0cxsvhg.html"
+    },
+    {
+      "label": "File: public/llms-full.txt",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L696",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_file_public_llms_full_txt",
+      "community": 25,
+      "norm_label": "file: public/llms-full.txt"
+    },
+    {
+      "label": "File: public/llms.txt",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L1293",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_file_public_llms_txt",
+      "community": 25,
+      "norm_label": "file: public/llms.txt"
+    },
+    {
+      "label": "File: public/robots.txt",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L1332",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_file_public_robots_txt",
+      "community": 25,
+      "norm_label": "file: public/robots.txt"
+    },
+    {
+      "label": "File: tsconfig.json",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L1350",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_file_tsconfig_json",
+      "community": 25,
+      "norm_label": "file: tsconfig.json"
+    },
+    {
+      "label": "File: package.json",
+      "file_type": "document",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L1359",
+      "_origin": "ast",
+      "id": "repomix_output_docs_miventasimple_file_package_json",
+      "community": 25,
+      "norm_label": "file: package.json"
+    },
+    {
+      "label": "programas-puntos-recompensas.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/clientes-y-fidelidad/programas-puntos-recompensas.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "clientes_y_fidelidad_programas_puntos_recompensas",
+      "community": 40,
+      "norm_label": "programas-puntos-recompensas.mdx"
+    },
+    {
+      "label": "registro-clientes-membresias.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/clientes-y-fidelidad/registro-clientes-membresias.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "clientes_y_fidelidad_registro_clientes_membresias",
+      "community": 41,
+      "norm_label": "registro-clientes-membresias.mdx"
+    },
+    {
+      "label": "ordenes-compra-proveedores.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/compras-y-proveedores/ordenes-compra-proveedores.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "compras_y_proveedores_ordenes_compra_proveedores",
+      "community": 20,
+      "norm_label": "ordenes-compra-proveedores.mdx"
+    },
+    {
+      "label": "Gesti\u00f3n de Compras y Proveedores",
+      "file_type": "document",
+      "source_file": "src/content/docs/compras-y-proveedores/ordenes-compra-proveedores.mdx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "compras_y_proveedores_ordenes_compra_proveedores_gesti\u00f3n_de_compras_y_proveedores",
+      "community": 20,
+      "norm_label": "gestion de compras y proveedores"
+    },
+    {
+      "label": "metodos-pago-facturacion.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/facturacion-y-cuenta/metodos-pago-facturacion.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "facturacion_y_cuenta_metodos_pago_facturacion",
+      "community": 22,
+      "norm_label": "metodos-pago-facturacion.mdx"
+    },
+    {
+      "label": "M\u00e9todos de Pago",
+      "file_type": "document",
+      "source_file": "src/content/docs/facturacion-y-cuenta/metodos-pago-facturacion.mdx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "facturacion_y_cuenta_metodos_pago_facturacion_m\u00e9todos_de_pago",
+      "community": 22,
+      "norm_label": "metodos de pago"
+    },
+    {
+      "label": "suscripcion-planes.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/facturacion-y-cuenta/suscripcion-planes.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "facturacion_y_cuenta_suscripcion_planes",
+      "community": 42,
+      "norm_label": "suscripcion-planes.mdx"
+    },
+    {
+      "label": "agenda-citas-servicios.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros-especializados/agenda-citas-servicios.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "giros_especializados_agenda_citas_servicios",
+      "community": 26,
+      "norm_label": "agenda-citas-servicios.mdx"
+    },
+    {
+      "label": "Reservas y Control de Citas",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros-especializados/agenda-citas-servicios.mdx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "giros_especializados_agenda_citas_servicios_reservas_y_control_de_citas",
+      "community": 26,
+      "norm_label": "reservas y control de citas"
+    },
+    {
+      "label": "mesas-comandas-restaurantes.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros-especializados/mesas-comandas-restaurantes.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "giros_especializados_mesas_comandas_restaurantes",
+      "community": 32,
+      "norm_label": "mesas-comandas-restaurantes.mdx"
+    },
+    {
+      "label": "Mapeo de Mesas y Comandas",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros-especializados/mesas-comandas-restaurantes.mdx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "giros_especializados_mesas_comandas_restaurantes_mapeo_de_mesas_y_comandas",
+      "community": 32,
+      "norm_label": "mapeo de mesas y comandas"
+    },
+    {
+      "label": "impresoras-tickets.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_impresoras_tickets",
+      "community": 33,
+      "norm_label": "impresoras-tickets.mdx"
+    },
+    {
+      "label": "Impresoras T\u00e9rmicas Compatibles",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_compatibles",
+      "community": 33,
+      "norm_label": "impresoras termicas compatibles"
+    },
+    {
+      "label": "lectores-codigo-barras.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_lectores_codigo_barras",
+      "community": 34,
+      "norm_label": "lectores-codigo-barras.mdx"
+    },
+    {
+      "label": "Lectores de C\u00f3digo de Barras",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras",
+      "community": 34,
+      "norm_label": "lectores de codigo de barras"
     },
     {
       "label": "index.mdx",
@@ -1453,164 +1625,344 @@
       "norm_label": "index.mdx"
     },
     {
-      "label": "gestion.mdx",
+      "label": "alta-productos-variantes.mdx",
       "file_type": "document",
-      "source_file": "src/content/docs/inventario-productos/gestion.mdx",
+      "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "inventario_productos_gestion",
-      "community": 20,
-      "norm_label": "gestion.mdx"
+      "id": "inventario_y_productos_alta_productos_variantes",
+      "community": 17,
+      "norm_label": "alta-productos-variantes.mdx"
     },
     {
       "label": "Inventario y Productos",
       "file_type": "document",
-      "source_file": "src/content/docs/inventario-productos/gestion.mdx",
+      "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "inventario_productos_gestion_inventario_y_productos",
-      "community": 20,
+      "id": "inventario_y_productos_alta_productos_variantes_inventario_y_productos",
+      "community": 17,
       "norm_label": "inventario y productos"
     },
     {
       "label": "Conceptos Clave",
       "file_type": "document",
-      "source_file": "src/content/docs/inventario-productos/gestion.mdx",
+      "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "inventario_productos_gestion_conceptos_clave",
-      "community": 20,
+      "id": "inventario_y_productos_alta_productos_variantes_conceptos_clave",
+      "community": 17,
       "norm_label": "conceptos clave"
     },
     {
       "label": "Creaci\u00f3n de un Producto",
       "file_type": "document",
-      "source_file": "src/content/docs/inventario-productos/gestion.mdx",
+      "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "inventario_productos_gestion_creaci\u00f3n_de_un_producto",
-      "community": 20,
+      "id": "inventario_y_productos_alta_productos_variantes_creaci\u00f3n_de_un_producto",
+      "community": 17,
       "norm_label": "creacion de un producto"
     },
     {
-      "label": "inicio.mdx",
+      "label": "cortes-auditorias-inventario.mdx",
       "file_type": "document",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "primeros_pasos_inicio",
-      "community": 16,
-      "norm_label": "inicio.mdx"
+      "id": "inventario_y_productos_cortes_auditorias_inventario",
+      "community": 35,
+      "norm_label": "cortes-auditorias-inventario.mdx"
     },
     {
-      "label": "\u00bfC\u00f3mo empezar con VentaSimple?",
+      "label": "Auditor\u00edas de Stock",
       "file_type": "document",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L10",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L6",
       "_origin": "ast",
-      "id": "primeros_pasos_inicio_c\u00f3mo_empezar_con_ventasimple",
-      "community": 16,
-      "norm_label": "\u00bfcomo empezar con ventasimple?"
+      "id": "inventario_y_productos_cortes_auditorias_inventario_auditor\u00edas_de_stock",
+      "community": 35,
+      "norm_label": "auditorias de stock"
     },
     {
-      "label": "Ll\u00e9valo en tu celular sin bajar aplicaciones pesadas",
+      "label": "movimientos-stock-kardex.mdx",
       "file_type": "document",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L14",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "primeros_pasos_inicio_ll\u00e9valo_en_tu_celular_sin_bajar_aplicaciones_pesadas",
+      "id": "inventario_y_productos_movimientos_stock_kardex",
+      "community": 36,
+      "norm_label": "movimientos-stock-kardex.mdx"
+    },
+    {
+      "label": "Kardex e Historial de Movimientos",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "inventario_y_productos_movimientos_stock_kardex_kardex_e_historial_de_movimientos",
+      "community": 36,
+      "norm_label": "kardex e historial de movimientos"
+    },
+    {
+      "label": "recetas-insumos.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/recetas-insumos.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "inventario_y_productos_recetas_insumos",
+      "community": 37,
+      "norm_label": "recetas-insumos.mdx"
+    },
+    {
+      "label": "Gesti\u00f3n de Recetas e Insumos",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/recetas-insumos.mdx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "inventario_y_productos_recetas_insumos_gesti\u00f3n_de_recetas_e_insumos",
+      "community": 37,
+      "norm_label": "gestion de recetas e insumos"
+    },
+    {
+      "label": "traslados-entre-sucursales.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/traslados-entre-sucursales.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "inventario_y_productos_traslados_entre_sucursales",
+      "community": 38,
+      "norm_label": "traslados-entre-sucursales.mdx"
+    },
+    {
+      "label": "Traslados e Intercambios de Mercanc\u00eda",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/traslados-entre-sucursales.mdx",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "inventario_y_productos_traslados_entre_sucursales_traslados_e_intercambios_de_mercanc\u00eda",
+      "community": 38,
+      "norm_label": "traslados e intercambios de mercancia"
+    },
+    {
+      "label": "configuracion-cuenta-perfil.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/primeros-pasos/configuracion-cuenta-perfil.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "primeros_pasos_configuracion_cuenta_perfil",
+      "community": 43,
+      "norm_label": "configuracion-cuenta-perfil.mdx"
+    },
+    {
+      "label": "definicion-giro-negocio.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/primeros-pasos/definicion-giro-negocio.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "primeros_pasos_definicion_giro_negocio",
+      "community": 44,
+      "norm_label": "definicion-giro-negocio.mdx"
+    },
+    {
+      "label": "empleados-permisos.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/primeros-pasos/empleados-permisos.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "primeros_pasos_empleados_permisos",
+      "community": 45,
+      "norm_label": "empleados-permisos.mdx"
+    },
+    {
+      "label": "index.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "primeros_pasos_index",
       "community": 16,
-      "norm_label": "llevalo en tu celular sin bajar aplicaciones pesadas"
+      "norm_label": "index.mdx"
+    },
+    {
+      "label": "Inst\u00e1lalo en tu celular (Sin bajar aplicaciones pesadas)",
+      "file_type": "document",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "primeros_pasos_index_inst\u00e1lalo_en_tu_celular_sin_bajar_aplicaciones_pesadas",
+      "community": 16,
+      "norm_label": "instalalo en tu celular (sin bajar aplicaciones pesadas)"
     },
     {
       "label": "\u00bfC\u00f3mo fluye el d\u00eda en tu negocio con VentaSimple?",
       "file_type": "document",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L24",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L21",
       "_origin": "ast",
-      "id": "primeros_pasos_inicio_c\u00f3mo_fluye_el_d\u00eda_en_tu_negocio_con_ventasimple",
+      "id": "primeros_pasos_index_c\u00f3mo_fluye_el_d\u00eda_en_tu_negocio_con_ventasimple",
       "community": 16,
       "norm_label": "\u00bfcomo fluye el dia en tu negocio con ventasimple?"
     },
     {
-      "label": "Los 3 pasos para empezar a vender hoy mismo",
+      "label": "3 Pasos para empezar a vender hoy mismo",
       "file_type": "document",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L44",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L35",
       "_origin": "ast",
-      "id": "primeros_pasos_inicio_los_3_pasos_para_empezar_a_vender_hoy_mismo",
+      "id": "primeros_pasos_index_3_pasos_para_empezar_a_vender_hoy_mismo",
       "community": 16,
-      "norm_label": "los 3 pasos para empezar a vender hoy mismo"
+      "norm_label": "3 pasos para empezar a vender hoy mismo"
     },
     {
       "label": "1. Registra tu tienda",
       "file_type": "document",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L48",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L39",
       "_origin": "ast",
-      "id": "primeros_pasos_inicio_1_registra_tu_tienda",
+      "id": "primeros_pasos_index_1_registra_tu_tienda",
       "community": 16,
       "norm_label": "1. registra tu tienda"
     },
     {
       "label": "2. Agrega tus primeros productos",
       "file_type": "document",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L51",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L42",
       "_origin": "ast",
-      "id": "primeros_pasos_inicio_2_agrega_tus_primeros_productos",
+      "id": "primeros_pasos_index_2_agrega_tus_primeros_productos",
       "community": 16,
       "norm_label": "2. agrega tus primeros productos"
     },
     {
       "label": "3. Abre tu caja chica y cobra",
       "file_type": "document",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L57",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L48",
       "_origin": "ast",
-      "id": "primeros_pasos_inicio_3_abre_tu_caja_chica_y_cobra",
+      "id": "primeros_pasos_index_3_abre_tu_caja_chica_y_cobra",
       "community": 16,
       "norm_label": "3. abre tu caja chica y cobra"
     },
     {
-      "label": "caja-chica.mdx",
+      "label": "sucursales-almacenes.mdx",
       "file_type": "document",
-      "source_file": "src/content/docs/ventas-caja/caja-chica.mdx",
+      "source_file": "src/content/docs/primeros-pasos/sucursales-almacenes.mdx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "ventas_caja_caja_chica",
-      "community": 22,
-      "norm_label": "caja-chica.mdx"
+      "id": "primeros_pasos_sucursales_almacenes",
+      "community": 49,
+      "norm_label": "sucursales-almacenes.mdx"
+    },
+    {
+      "label": "caja-chica-aperturas-cierres.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "punto_de_venta_caja_chica_aperturas_cierres",
+      "community": 18,
+      "norm_label": "caja-chica-aperturas-cierres.mdx"
     },
     {
       "label": "\u00bfC\u00f3mo cobrar un ticket y gestionar tu caja chica?",
       "file_type": "document",
-      "source_file": "src/content/docs/ventas-caja/caja-chica.mdx",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "ventas_caja_caja_chica_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica",
-      "community": 22,
+      "id": "punto_de_venta_caja_chica_aperturas_cierres_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica",
+      "community": 18,
       "norm_label": "\u00bfcomo cobrar un ticket y gestionar tu caja chica?"
     },
     {
       "label": "El camino que sigue tu dinero",
       "file_type": "document",
-      "source_file": "src/content/docs/ventas-caja/caja-chica.mdx",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "ventas_caja_caja_chica_el_camino_que_sigue_tu_dinero",
-      "community": 22,
+      "id": "punto_de_venta_caja_chica_aperturas_cierres_el_camino_que_sigue_tu_dinero",
+      "community": 18,
       "norm_label": "el camino que sigue tu dinero"
     },
     {
       "label": "Las tareas que realizas a diario en tu caja",
       "file_type": "document",
-      "source_file": "src/content/docs/ventas-caja/caja-chica.mdx",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "ventas_caja_caja_chica_las_tareas_que_realizas_a_diario_en_tu_caja",
-      "community": 22,
+      "id": "punto_de_venta_caja_chica_aperturas_cierres_las_tareas_que_realizas_a_diario_en_tu_caja",
+      "community": 18,
       "norm_label": "las tareas que realizas a diario en tu caja"
+    },
+    {
+      "label": "como-vender-y-metodos-de-cobro.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/punto-de-venta/como-vender-y-metodos-de-cobro.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "punto_de_venta_como_vender_y_metodos_de_cobro",
+      "community": 39,
+      "norm_label": "como-vender-y-metodos-de-cobro.mdx"
+    },
+    {
+      "label": "C\u00f3mo realizar una venta",
+      "file_type": "document",
+      "source_file": "src/content/docs/punto-de-venta/como-vender-y-metodos-de-cobro.mdx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "punto_de_venta_como_vender_y_metodos_de_cobro_c\u00f3mo_realizar_una_venta",
+      "community": 39,
+      "norm_label": "como realizar una venta"
+    },
+    {
+      "label": "fiados-ventas-credito-abonos.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/punto-de-venta/fiados-ventas-credito-abonos.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "punto_de_venta_fiados_ventas_credito_abonos",
+      "community": 50,
+      "norm_label": "fiados-ventas-credito-abonos.mdx"
+    },
+    {
+      "label": "promociones-descuentos.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/punto-de-venta/promociones-descuentos.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "punto_de_venta_promociones_descuentos",
+      "community": 51,
+      "norm_label": "promociones-descuentos.mdx"
+    },
+    {
+      "label": "dashboard-utilidades-metricas.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/reportes-y-auditoria/dashboard-utilidades-metricas.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "reportes_y_auditoria_dashboard_utilidades_metricas",
+      "community": 52,
+      "norm_label": "dashboard-utilidades-metricas.mdx"
+    },
+    {
+      "label": "exportacion-informacion-excel-csv.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/reportes-y-auditoria/exportacion-informacion-excel-csv.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "reportes_y_auditoria_exportacion_informacion_excel_csv",
+      "community": 53,
+      "norm_label": "exportacion-informacion-excel-csv.mdx"
+    },
+    {
+      "label": "historial-auditoria-personal.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/reportes-y-auditoria/historial-auditoria-personal.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "reportes_y_auditoria_historial_auditoria_personal",
+      "community": 54,
+      "norm_label": "historial-auditoria-personal.mdx"
     },
     {
       "label": "Graphify Rule",
@@ -2017,6 +2369,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_repomix"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -2063,6 +2425,57 @@
       "confidence_score": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_tailwindcss_vite"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/CustomSidebarSublist.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_customsidebarsublist",
+      "target": "components"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/CustomSidebarSublist.astro",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_customsidebarsublist",
+      "target": "components_customsidebarsublist_flattensidebar"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/CustomSidebarSublist.astro",
+      "confidence_score": 1.0,
+      "source": "components_customsidebarsublist",
+      "target": "components_sidebaricon"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/CustomSidebarSublist.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_customsidebarsublist",
+      "target": "sidebarrestorepoint_astro"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Sidebar.astro",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_sidebar",
+      "target": "components_customsidebarsublist"
     },
     {
       "relation": "imports_from",
@@ -2222,10 +2635,40 @@
     {
       "relation": "imports_from",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/Sidebar.astro",
+      "confidence_score": 1.0,
+      "source": "components_sidebar",
+      "target": "props"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Sidebar.astro",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_sidebar",
+      "target": "mobilemenufooter"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Sidebar.astro",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_sidebar",
+      "target": "sidebarpersister_astro"
+    },
+    {
+      "relation": "imports_from",
+      "confidence": "EXTRACTED",
       "source_file": "src/components/ThemeProvider.astro",
       "confidence_score": 1.0,
       "source": "components_themeprovider",
-      "target": "c_users_luisa_onedrive_documentos_proyectos_docs_miventasimple_node_modules_astrojs_starlight_user_components_icon_astro"
+      "target": "c_users_consjur_946_documents_proyectos_docs_miventasimple_node_modules_astrojs_starlight_user_components_icon_astro"
     },
     {
       "relation": "contains",
@@ -2930,222 +3373,402 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/configuracion/ajustes.mdx",
-      "source_location": "L24",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L37",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "configuracion_ajustes",
-      "target": "configuracion_ajustes_panel_de_configuraci\u00f3n"
+      "source": "repomix_output_docs_miventasimple",
+      "target": "repomix_output_docs_miventasimple_directory_structure"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/configuracion/ajustes.mdx",
-      "source_location": "L30",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "configuracion_ajustes_panel_de_configuraci\u00f3n",
-      "target": "configuracion_ajustes_1_administraci\u00f3n_y_personal"
+      "source": "repomix_output_docs_miventasimple",
+      "target": "repomix_output_docs_miventasimple_file_summary"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/configuracion/ajustes.mdx",
-      "source_location": "L39",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L54",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "configuracion_ajustes_panel_de_configuraci\u00f3n",
-      "target": "configuracion_ajustes_2_ajustes_del_pos"
+      "source": "repomix_output_docs_miventasimple",
+      "target": "repomix_output_docs_miventasimple_files"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/configuracion/ajustes.mdx",
-      "source_location": "L47",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "configuracion_ajustes_panel_de_configuraci\u00f3n",
-      "target": "configuracion_ajustes_3_fidelizaci\u00f3n_y_cr\u00e9dito"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/configuracion/ajustes.mdx",
-      "source_location": "L55",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "configuracion_ajustes_panel_de_configuraci\u00f3n",
-      "target": "configuracion_ajustes_4_finanzas_y_control"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/faqs/preguntas.mdx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "faqs_preguntas",
-      "target": "faqs_preguntas_preguntas_frecuentes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/faqs/preguntas.mdx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "faqs_preguntas_preguntas_frecuentes",
-      "target": "faqs_preguntas_c\u00f3mo_cambio_mi_contrase\u00f1a_de_acceso"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/faqs/preguntas.mdx",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "faqs_preguntas_preguntas_frecuentes",
-      "target": "faqs_preguntas_puedo_utilizar_ventasimple_sin_conexi\u00f3n_a_internet"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/faqs/preguntas.mdx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "faqs_preguntas_preguntas_frecuentes",
-      "target": "faqs_preguntas_qu\u00e9_hago_si_la_impresora_de_tickets_no_responde"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/inventario-productos/gestion.mdx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_productos_gestion",
-      "target": "inventario_productos_gestion_inventario_y_productos"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/inventario-productos/gestion.mdx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_productos_gestion_inventario_y_productos",
-      "target": "inventario_productos_gestion_conceptos_clave"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/inventario-productos/gestion.mdx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "inventario_productos_gestion_inventario_y_productos",
-      "target": "inventario_productos_gestion_creaci\u00f3n_de_un_producto"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L52",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "primeros_pasos_inicio",
-      "target": "primeros_pasos_inicio_c\u00f3mo_empezar_con_ventasimple"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L60",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "primeros_pasos_inicio_c\u00f3mo_empezar_con_ventasimple",
-      "target": "primeros_pasos_inicio_c\u00f3mo_fluye_el_d\u00eda_en_tu_negocio_con_ventasimple"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "primeros_pasos_inicio_c\u00f3mo_empezar_con_ventasimple",
-      "target": "primeros_pasos_inicio_ll\u00e9valo_en_tu_celular_sin_bajar_aplicaciones_pesadas"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L44",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "primeros_pasos_inicio_c\u00f3mo_empezar_con_ventasimple",
-      "target": "primeros_pasos_inicio_los_3_pasos_para_empezar_a_vender_hoy_mismo"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L48",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "primeros_pasos_inicio_los_3_pasos_para_empezar_a_vender_hoy_mismo",
-      "target": "primeros_pasos_inicio_1_registra_tu_tienda"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L51",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "primeros_pasos_inicio_los_3_pasos_para_empezar_a_vender_hoy_mismo",
-      "target": "primeros_pasos_inicio_2_agrega_tus_primeros_productos"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/primeros-pasos/inicio.mdx",
-      "source_location": "L57",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "primeros_pasos_inicio_los_3_pasos_para_empezar_a_vender_hoy_mismo",
-      "target": "primeros_pasos_inicio_3_abre_tu_caja_chica_y_cobra"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/ventas-caja/caja-chica.mdx",
+      "source_file": "repomix-output-docs-miventasimple.md",
       "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "ventas_caja_caja_chica",
-      "target": "ventas_caja_caja_chica_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica"
+      "source": "repomix_output_docs_miventasimple_file_summary",
+      "target": "repomix_output_docs_miventasimple_file_format"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/ventas-caja/caja-chica.mdx",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_file_summary",
+      "target": "repomix_output_docs_miventasimple_notes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_file_summary",
+      "target": "repomix_output_docs_miventasimple_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_file_summary",
+      "target": "repomix_output_docs_miventasimple_usage_guidelines"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_files",
+      "target": "repomix_output_docs_miventasimple_file_docs_design_md"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L1359",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_files",
+      "target": "repomix_output_docs_miventasimple_file_package_json"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L681",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_files",
+      "target": "repomix_output_docs_miventasimple_file_public_favicon_svg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L686",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_files",
+      "target": "repomix_output_docs_miventasimple_file_public_google_site_verification_txt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L691",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_files",
+      "target": "repomix_output_docs_miventasimple_file_public_googleob_z2hnhzogw4lava6spzdu06jflwjgdqyva0cxsvhg_html"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L696",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_files",
+      "target": "repomix_output_docs_miventasimple_file_public_llms_full_txt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L1293",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_files",
+      "target": "repomix_output_docs_miventasimple_file_public_llms_txt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L1332",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_files",
+      "target": "repomix_output_docs_miventasimple_file_public_robots_txt"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_files",
+      "target": "repomix_output_docs_miventasimple_file_repomix_config_json"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "repomix-output-docs-miventasimple.md",
+      "source_location": "L1350",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repomix_output_docs_miventasimple_files",
+      "target": "repomix_output_docs_miventasimple_file_tsconfig_json"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/compras-y-proveedores/ordenes-compra-proveedores.mdx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "compras_y_proveedores_ordenes_compra_proveedores",
+      "target": "compras_y_proveedores_ordenes_compra_proveedores_gesti\u00f3n_de_compras_y_proveedores"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/facturacion-y-cuenta/metodos-pago-facturacion.mdx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "facturacion_y_cuenta_metodos_pago_facturacion",
+      "target": "facturacion_y_cuenta_metodos_pago_facturacion_m\u00e9todos_de_pago",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros-especializados/agenda-citas-servicios.mdx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_especializados_agenda_citas_servicios",
+      "target": "giros_especializados_agenda_citas_servicios_reservas_y_control_de_citas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros-especializados/mesas-comandas-restaurantes.mdx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_especializados_mesas_comandas_restaurantes",
+      "target": "giros_especializados_mesas_comandas_restaurantes_mapeo_de_mesas_y_comandas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hardware_y_perifericos_impresoras_tickets",
+      "target": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_compatibles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hardware_y_perifericos_lectores_codigo_barras",
+      "target": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_y_productos_alta_productos_variantes",
+      "target": "inventario_y_productos_alta_productos_variantes_inventario_y_productos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_y_productos_alta_productos_variantes_inventario_y_productos",
+      "target": "inventario_y_productos_alta_productos_variantes_conceptos_clave"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_y_productos_alta_productos_variantes_inventario_y_productos",
+      "target": "inventario_y_productos_alta_productos_variantes_creaci\u00f3n_de_un_producto"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_y_productos_cortes_auditorias_inventario",
+      "target": "inventario_y_productos_cortes_auditorias_inventario_auditor\u00edas_de_stock"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_y_productos_movimientos_stock_kardex",
+      "target": "inventario_y_productos_movimientos_stock_kardex_kardex_e_historial_de_movimientos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/recetas-insumos.mdx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_y_productos_recetas_insumos",
+      "target": "inventario_y_productos_recetas_insumos_gesti\u00f3n_de_recetas_e_insumos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/traslados-entre-sucursales.mdx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "inventario_y_productos_traslados_entre_sucursales",
+      "target": "inventario_y_productos_traslados_entre_sucursales_traslados_e_intercambios_de_mercanc\u00eda"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "primeros_pasos_index",
+      "target": "primeros_pasos_index_3_pasos_para_empezar_a_vender_hoy_mismo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "primeros_pasos_index",
+      "target": "primeros_pasos_index_c\u00f3mo_fluye_el_d\u00eda_en_tu_negocio_con_ventasimple"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "primeros_pasos_index",
+      "target": "primeros_pasos_index_inst\u00e1lalo_en_tu_celular_sin_bajar_aplicaciones_pesadas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "primeros_pasos_index_3_pasos_para_empezar_a_vender_hoy_mismo",
+      "target": "primeros_pasos_index_1_registra_tu_tienda"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "primeros_pasos_index_3_pasos_para_empezar_a_vender_hoy_mismo",
+      "target": "primeros_pasos_index_2_agrega_tus_primeros_productos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/primeros-pasos/index.mdx",
+      "source_location": "L48",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "primeros_pasos_index_3_pasos_para_empezar_a_vender_hoy_mismo",
+      "target": "primeros_pasos_index_3_abre_tu_caja_chica_y_cobra"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "punto_de_venta_caja_chica_aperturas_cierres",
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "ventas_caja_caja_chica_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica",
-      "target": "ventas_caja_caja_chica_el_camino_que_sigue_tu_dinero"
+      "source": "punto_de_venta_caja_chica_aperturas_cierres_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica",
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_el_camino_que_sigue_tu_dinero"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/ventas-caja/caja-chica.mdx",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L29",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "ventas_caja_caja_chica_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica",
-      "target": "ventas_caja_caja_chica_las_tareas_que_realizas_a_diario_en_tu_caja"
+      "source": "punto_de_venta_caja_chica_aperturas_cierres_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica",
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_las_tareas_que_realizas_a_diario_en_tu_caja"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/punto-de-venta/como-vender-y-metodos-de-cobro.mdx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "punto_de_venta_como_vender_y_metodos_de_cobro",
+      "target": "punto_de_venta_como_vender_y_metodos_de_cobro_c\u00f3mo_realizar_una_venta"
     },
     {
       "relation": "references",
@@ -3296,5 +3919,5 @@
       "source_file": "src/content/docs/index.mdx"
     }
   ],
-  "built_at_commit": "141d96d7fff89e12128657ac7655ed4037c02a0d"
+  "built_at_commit": "999479775c5440baf83d13dbb620284ea4e81b46"
 }
