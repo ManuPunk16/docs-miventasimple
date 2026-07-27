@@ -1,0 +1,282 @@
+{
+  ".vscode/extensions.json": {
+    "mtime": 1784729745.0,
+    "ast_hash": "3adedb22d082dbd1ebb00b75d21403aa",
+    "semantic_hash": "3adedb22d082dbd1ebb00b75d21403aa"
+  },
+  ".vscode/launch.json": {
+    "mtime": 1784729745.0,
+    "ast_hash": "60493763dcbc2d109e57da86d997602a",
+    "semantic_hash": "60493763dcbc2d109e57da86d997602a"
+  },
+  "astro.config.mjs": {
+    "mtime": 1785112475.637611,
+    "ast_hash": "7dff6d96a0d335448051a86a3947c953",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1785108758.1638622,
+    "ast_hash": "a71dca7d105bb88baf72dd171cff671b",
+    "semantic_hash": ""
+  },
+  "src/components/Diagram.astro": {
+    "mtime": 1785085802.1120343,
+    "ast_hash": "7d2dc743650bbabecb1dafac1662f4dd",
+    "semantic_hash": "7d2dc743650bbabecb1dafac1662f4dd"
+  },
+  "src/content.config.ts": {
+    "mtime": 1785087206.6210592,
+    "ast_hash": "a796835a71073dcf3578d4e9837d6553",
+    "semantic_hash": "a796835a71073dcf3578d4e9837d6553"
+  },
+  "tsconfig.json": {
+    "mtime": 1785084095.6321485,
+    "ast_hash": "0b34dc85d791e287120b6e93bbcbfccc",
+    "semantic_hash": "0b34dc85d791e287120b6e93bbcbfccc"
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1785087125.3077388,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": "a0e4d192b9e2e17256124dbfc8e24e6a"
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1785087125.3087664,
+    "ast_hash": "637776aa6f7496d069afe7520c845c8a",
+    "semantic_hash": "637776aa6f7496d069afe7520c845c8a"
+  },
+  "AGENTS.md": {
+    "mtime": 1785082608.2788792,
+    "ast_hash": "4d944a80d98bf8891d5b10081a86d3e1",
+    "semantic_hash": "4d944a80d98bf8891d5b10081a86d3e1"
+  },
+  "CLAUDE.md": {
+    "mtime": 1785082608.2788792,
+    "ast_hash": "4d944a80d98bf8891d5b10081a86d3e1",
+    "semantic_hash": "4d944a80d98bf8891d5b10081a86d3e1"
+  },
+  "README.md": {
+    "mtime": 1785082608.2788792,
+    "ast_hash": "65860a5e76b859d3697b86bcdfdacae1",
+    "semantic_hash": "65860a5e76b859d3697b86bcdfdacae1"
+  },
+  "docs/DESIGN.md": {
+    "mtime": 1782358815.2571023,
+    "ast_hash": "09d7b1a7094c5bd72627f2f10a0cac3e",
+    "semantic_hash": "09d7b1a7094c5bd72627f2f10a0cac3e"
+  },
+  "src/content/docs/configuracion/ajustes.mdx": {
+    "mtime": 1785091337.674948,
+    "ast_hash": "6ce168db2cefd65e474d1fbe7f3af79a",
+    "semantic_hash": ""
+  },
+  "src/content/docs/faqs/preguntas.mdx": {
+    "mtime": 1785084518.852815,
+    "ast_hash": "019bbdc91f84df680a31c8b93b46946c",
+    "semantic_hash": "019bbdc91f84df680a31c8b93b46946c"
+  },
+  "src/content/docs/guides/example.md": {
+    "mtime": 1784729745.0,
+    "ast_hash": "77dbc8c865af128e448d093eb04c3e55",
+    "semantic_hash": "77dbc8c865af128e448d093eb04c3e55"
+  },
+  "src/content/docs/index.mdx": {
+    "mtime": 1785105625.4814787,
+    "ast_hash": "28400db8c5043a1629ab43c18af72ece",
+    "semantic_hash": ""
+  },
+  "src/content/docs/inventario-productos/gestion.mdx": {
+    "mtime": 1785084516.0312448,
+    "ast_hash": "d83bc10ab4e4a6f578a6ac00ca8a772d",
+    "semantic_hash": "d83bc10ab4e4a6f578a6ac00ca8a772d"
+  },
+  "src/content/docs/primeros-pasos/inicio.mdx": {
+    "mtime": 1785089856.5726292,
+    "ast_hash": "bbcc9a6e851d4b15a3cea69f4e66b8f1",
+    "semantic_hash": ""
+  },
+  "src/content/docs/reference/example.md": {
+    "mtime": 1784729745.0,
+    "ast_hash": "6670d5a3de4bd8b7cf44c7a354eb5c23",
+    "semantic_hash": "6670d5a3de4bd8b7cf44c7a354eb5c23"
+  },
+  "src/content/docs/ventas-caja/caja-chica.mdx": {
+    "mtime": 1785086040.4922252,
+    "ast_hash": "baf1732af60c14777238aba08a224d8c",
+    "semantic_hash": "baf1732af60c14777238aba08a224d8c"
+  },
+  "public/favicon.svg": {
+    "mtime": 1784729745.0,
+    "ast_hash": "1883fa1409b1dd7f55f6c36aaaa1d670",
+    "semantic_hash": "1883fa1409b1dd7f55f6c36aaaa1d670"
+  },
+  "src/assets/houston.webp": {
+    "mtime": 1784729745.0,
+    "ast_hash": "ba0d492736ce0665d6e3bcd6b66f64cc",
+    "semantic_hash": "ba0d492736ce0665d6e3bcd6b66f64cc"
+  },
+  "src/content/docs/configuracion/auditoria.mdx": {
+    "mtime": 1785091578.0001297,
+    "ast_hash": "00f8007f85731286b78143b8093b54d9",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/catalogo.mdx": {
+    "mtime": 1785091578.0013802,
+    "ast_hash": "bb3825828636c98ca7df2cb896a3323a",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/egresos.mdx": {
+    "mtime": 1785091578.0013802,
+    "ast_hash": "bee0de222002013fcc694d6723e2c2e5",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/exportar.mdx": {
+    "mtime": 1785091578.0013802,
+    "ast_hash": "e735696898b3d642c19d863939478f9d",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/fiados.mdx": {
+    "mtime": 1785091578.0024295,
+    "ast_hash": "4306ed8e887ad9443defd0712a451524",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/fidelidad.mdx": {
+    "mtime": 1785091578.0024295,
+    "ast_hash": "6cae4bfd5a4211ac27ba875477ad2f19",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/giro.mdx": {
+    "mtime": 1785091578.0024295,
+    "ast_hash": "caa0b41b58464b4e8f47df0602ac6854",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/inteligencia.mdx": {
+    "mtime": 1785091578.0034342,
+    "ast_hash": "989221d8a3924dd9d8a461661f94ab21",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/perfil.mdx": {
+    "mtime": 1785091578.0034342,
+    "ast_hash": "89f216288233ee002bb0a7fe7fa17bca",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/plan.mdx": {
+    "mtime": 1785091578.004439,
+    "ast_hash": "e11b58535956e4e2ad964c4e1a0fb951",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/promociones.mdx": {
+    "mtime": 1785091578.004439,
+    "ast_hash": "5d90edd317b57430e61c414503908cca",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/puntos.mdx": {
+    "mtime": 1785091578.004439,
+    "ast_hash": "35b231e1a59c113b84e46634a99b755c",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/sucursales.mdx": {
+    "mtime": 1785091578.0054421,
+    "ast_hash": "bfd58c5c89fd6e3cf5a5ea012e872680",
+    "semantic_hash": ""
+  },
+  "src/content/docs/configuracion/usuarios.mdx": {
+    "mtime": 1785091578.0054421,
+    "ast_hash": "61e9e24378dc02775bc345144bffc2b8",
+    "semantic_hash": ""
+  },
+  ".astro/collections/docs.schema.json": {
+    "mtime": 1785105855.7965338,
+    "ast_hash": "35ad44ce27b192ca053b16c8dea32ea9",
+    "semantic_hash": ""
+  },
+  ".astro/content-assets.mjs": {
+    "mtime": 1785084857.7831573,
+    "ast_hash": "07baa0b9c53fd15ec1e66396ae842eb2",
+    "semantic_hash": ""
+  },
+  ".astro/content-modules.mjs": {
+    "mtime": 1785091212.514812,
+    "ast_hash": "d17600af5040255748b3f14ca25c0f25",
+    "semantic_hash": ""
+  },
+  ".astro/content.d.ts": {
+    "mtime": 1785105855.8275602,
+    "ast_hash": "500b4ef681fdf2113c71d894162c785f",
+    "semantic_hash": ""
+  },
+  ".astro/data-store.json": {
+    "mtime": 1785105277.3430264,
+    "ast_hash": "fda0e0b2cff8b130b918fd690e143fbd",
+    "semantic_hash": ""
+  },
+  ".astro/dev.json": {
+    "mtime": 1785105277.3891466,
+    "ast_hash": "b04df40b97851a331298499ac783b1a4",
+    "semantic_hash": ""
+  },
+  ".astro/settings.json": {
+    "mtime": 1785084902.9334881,
+    "ast_hash": "0e4a808d52720519b8cc670d036b2e8f",
+    "semantic_hash": ""
+  },
+  ".astro/types.d.ts": {
+    "mtime": 1785105855.8288317,
+    "ast_hash": "f3d48b2aa569815a445d3509aa161559",
+    "semantic_hash": ""
+  },
+  "public/robots.txt": {
+    "mtime": 1785110300.4366157,
+    "ast_hash": "7b09328025801cd8656219cb72c3f258",
+    "semantic_hash": ""
+  },
+  "public/llms-full.txt": {
+    "mtime": 1785109513.0589888,
+    "ast_hash": "86960a99c777b2d69c0d8f81266a6af5",
+    "semantic_hash": ""
+  },
+  "public/llms.txt": {
+    "mtime": 1785109502.462677,
+    "ast_hash": "af64614de196fb88bed28d5503527c15",
+    "semantic_hash": ""
+  },
+  "public/og-image.png": {
+    "mtime": 1785109795.0504825,
+    "ast_hash": "0382fc3d905c34fc32c4f656bb667db6",
+    "semantic_hash": ""
+  },
+  "src/assets/logo.png": {
+    "mtime": 1785109862.4914443,
+    "ast_hash": "a23b13df53e30e162d2a3041ffe17928",
+    "semantic_hash": ""
+  },
+  "src/components/Header.astro": {
+    "mtime": 1785112281.6826088,
+    "ast_hash": "ce18babf90be225d2fd6f69ba758d53d",
+    "semantic_hash": ""
+  },
+  "src/components/MobileMenuToggle.astro": {
+    "mtime": 1785111630.8104248,
+    "ast_hash": "d813fc745c01782ebbce7c2bf8f61d3d",
+    "semantic_hash": ""
+  },
+  "src/components/MobileTableOfContents.astro": {
+    "mtime": 1785111947.465623,
+    "ast_hash": "4d480a516c211284265ea63472e7e05b",
+    "semantic_hash": ""
+  },
+  "src/components/ThemeProvider.astro": {
+    "mtime": 1785111991.9720387,
+    "ast_hash": "616b426baa8a2cf9cedb7a33c97377c4",
+    "semantic_hash": ""
+  },
+  "src/components/Page.astro": {
+    "mtime": 1785112273.846048,
+    "ast_hash": "e9dd8551b052ac1f2bbf6cd81daf5ecb",
+    "semantic_hash": ""
+  },
+  "src/components/PageFrame.astro": {
+    "mtime": 1785112472.4628308,
+    "ast_hash": "67229d7372048f082a45eef5d6893021",
+    "semantic_hash": ""
+  }
+}

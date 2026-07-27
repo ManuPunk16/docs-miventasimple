@@ -1,12 +1,12 @@
 # Graph Report - docs-miventasimple  (2026-07-26)
 
 ## Corpus Check
-- 39 files · ~35,433 words
+- 41 files · ~35,984 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 182 nodes · 143 edges · 49 communities (35 shown, 14 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.89)
+- 211 nodes · 171 edges · 50 communities (36 shown, 14 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
@@ -45,6 +45,7 @@
 - [[_COMMUNITY_Community 28|Community 28]]
 - [[_COMMUNITY_Community 29|Community 29]]
 - [[_COMMUNITY_Community 47|Community 47]]
+- [[_COMMUNITY_Community 49|Community 49]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Theme: Light — Daylight Studio Style Reference` - 14 edges
@@ -76,7 +77,7 @@
 ## Hyperedges (group relationships)
 - **VentaSimple User Help System** — docs_index_document, primeros_pasos_inicio_document, ventascaja_cajachica_document, inventarioproductos_gestion_document, configuracion_ajustes_document, faqs_preguntas_document [INFERRED 0.95]
 
-## Communities (49 total, 14 thin omitted)
+## Communities (50 total, 14 thin omitted)
 
 ### Community 0 - "Dependencies and Tailwind CSS"
 Cohesion: 0.12
@@ -95,8 +96,8 @@ Cohesion: 0.14
 Nodes (13): devDependencies, @astrojs/starlight-tailwind, tailwindcss, @tailwindcss/vite, name, scripts, astro, build (+5 more)
 
 ### Community 4 - "TypeScript Configuration"
-Cohesion: 0.21
-Nodes (11): closeMenu(), constructor(), openMenu(), toggleMenu(), virtual:starlight/components/LanguageSelect, @astrojs/starlight/props, virtual:starlight/components/Search, virtual:starlight/components/SiteTitle (+3 more)
+Cohesion: 0.18
+Nodes (12): closeMenu(), constructor(), openMenu(), toggleMenu(), virtual:starlight/components/LanguageSelect, virtual:starlight/components/MobileMenuToggle, @astrojs/starlight/props, virtual:starlight/components/Search (+4 more)
 
 ### Community 5 - "Accessibility Controls"
 Cohesion: 0.18
@@ -142,8 +143,12 @@ Nodes (3): exclude, extends, include
 Cohesion: 0.50
 Nodes (3): ¿Cómo cobrar un ticket y gestionar tu caja chica?, El camino que sigue tu dinero, Las tareas que realizas a diario en tu caja
 
+### Community 49 - "Community 49"
+Cohesion: 0.07
+Nodes (26): virtual:starlight/components/Banner, ../../node_modules/@astrojs/starlight/style/asides.css, ../../node_modules/@astrojs/starlight/style/layers.css, ../../node_modules/@astrojs/starlight/style/print.css?url&no-inline, ../../node_modules/@astrojs/starlight/style/props.css, ../../node_modules/@astrojs/starlight/style/reset.css, ../../node_modules/@astrojs/starlight/style/util.css, htmlDataAttributes (+18 more)
+
 ## Knowledge Gaps
-- **102 isolated node(s):** `name`, `type`, `version`, `dev`, `start` (+97 more)
+- **110 isolated node(s):** `name`, `type`, `version`, `dev`, `start` (+105 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -151,13 +156,13 @@ Nodes (3): ¿Cómo cobrar un ticket y gestionar tu caja chica?, El camino que si
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Theme: Light — Daylight Studio Style Reference` connect `Mermaid and Diagrams` to `Dependencies and Tailwind CSS`, `Content Collections Config`?**
-  _High betweenness centrality (0.064) - this node is a cross-community bridge._
+  _High betweenness centrality (0.048) - this node is a cross-community bridge._
 - **Why does `Theme: Dark (Default) — Linear Style Reference` connect `Dependencies and Tailwind CSS` to `Accessibility Controls`?**
-  _High betweenness centrality (0.060) - this node is a cross-community bridge._
+  _High betweenness centrality (0.044) - this node is a cross-community bridge._
 - **Why does `Components` connect `Accessibility Controls` to `Dependencies and Tailwind CSS`?**
-  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **What connects `name`, `type`, `version` to the rest of the system?**
-  _102 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _110 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Dependencies and Tailwind CSS` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Mermaid and Diagrams` be split into smaller, more focused modules?**

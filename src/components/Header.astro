@@ -1,0 +1,185 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import config from 'virtual:starlight/user-config';
+
+import LanguageSelect from 'virtual:starlight/components/LanguageSelect';
+import Search from 'virtual:starlight/components/Search';
+import SiteTitle from 'virtual:starlight/components/SiteTitle';
+import SocialIcons from 'virtual:starlight/components/SocialIcons';
+import ThemeSelect from 'virtual:starlight/components/ThemeSelect';
+
+/**
+ * Render the `Search` component if Pagefind is enabled or the default search component has been overridden.
+ */
+const shouldRenderSearch =
+	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
+---
+
+<div class="header">
+	<div class="title-wrapper sl-flex items-center gap-2">
+		<!-- Botón hamburguesa alineado a la izquierda (visible solo en móviles) -->
+		<button
+			id="mobile-menu-toggle"
+			aria-expanded="false"
+			aria-controls="starlight__sidebar"
+			class="mobile-menu-btn md:sl-hidden"
+			aria-label="Abrir menú de navegación"
+		>
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+				<path d="M4 6l16 0" />
+				<path d="M4 12l16 0" />
+				<path d="M4 18l16 0" />
+			</svg>
+		</button>
+		<SiteTitle />
+	</div>
+	<div class="sl-flex print:hidden">
+		{shouldRenderSearch && <Search />}
+	</div>
+	<div class="sl-hidden md:sl-flex print:hidden right-group">
+		<div class="sl-flex social-icons">
+			<SocialIcons />
+		</div>
+		<ThemeSelect />
+		<LanguageSelect />
+	</div>
+</div>
+
+<!-- Overlay para cerrar el menú haciendo clic fuera -->
+<div id="mobile-menu-overlay" class="drawer-overlay md:sl-hidden"></div>
+
+<script>
+	class MobileMenuHandler {
+		toggleBtn = document.getElementById('mobile-menu-toggle');
+		overlay = document.getElementById('mobile-menu-overlay');
+
+		constructor() {
+			if (!this.toggleBtn || !this.overlay) return;
+
+			// Ensure initial state is closed
+			this.closeMenu();
+
+			this.toggleBtn.addEventListener('click', () => this.toggleMenu());
+			this.overlay.addEventListener('click', () => this.closeMenu());
+
+			// Cerrar al presionar Escape
+			document.addEventListener('keyup', (e) => {
+				if (e.key === 'Escape') {
+					this.closeMenu();
+				}
+			});
+
+			// Resetear estado al redimensionar a pantalla de escritorio
+			matchMedia('(min-width: 50rem)').addEventListener('change', () => {
+				this.closeMenu();
+			});
+		}
+
+		toggleMenu() {
+			const isExpanded = this.toggleBtn?.getAttribute('aria-expanded') === 'true';
+			if (isExpanded) {
+				this.closeMenu();
+			} else {
+				this.openMenu();
+			}
+		}
+
+		openMenu() {
+			this.toggleBtn?.setAttribute('aria-expanded', 'true');
+			document.body.setAttribute('data-mobile-menu-expanded', 'true');
+			document.body.style.overflow = 'hidden';
+		}
+
+		closeMenu() {
+			this.toggleBtn?.setAttribute('aria-expanded', 'false');
+			document.body.removeAttribute('data-mobile-menu-expanded');
+			document.body.style.overflow = '';
+		}
+	}
+
+	// Inicializar cuando el DOM esté listo o tras transiciones de navegación (si se usa view transitions)
+	document.addEventListener('DOMContentLoaded', () => new MobileMenuHandler());
+	document.addEventListener('astro:after-swap', () => new MobileMenuHandler());
+</script>
+
+<style>
+	@layer starlight.core {
+		.header {
+			display: flex;
+			gap: var(--sl-nav-gap);
+			justify-content: space-between;
+			align-items: center;
+			height: 100%;
+			width: 100%;
+		}
+
+		.title-wrapper {
+			overflow: clip;
+			padding: 0.25rem;
+			margin: -0.25rem;
+			min-width: 0;
+		}
+
+		/* Botón hamburguesa personalizado */
+		.mobile-menu-btn {
+			border: 0;
+			border-radius: 6px;
+			width: 40px;
+			height: 40px;
+			padding: 8px;
+			background-color: transparent;
+			color: var(--sl-color-gray-2);
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: background-color 0.2s, color 0.2s;
+			touch-action: manipulation;
+		}
+
+		.mobile-menu-btn:hover, .mobile-menu-btn:focus-visible {
+			background-color: var(--color-charcoal-grey);
+			color: var(--color-porcelain);
+		}
+
+		.right-group,
+		.social-icons {
+			gap: 1rem;
+			align-items: center;
+		}
+		.social-icons::after {
+			content: '';
+			height: 2rem;
+			border-inline-end: 1px solid var(--sl-color-gray-5);
+		}
+
+		@media (min-width: 50rem) {
+			:global(:root[data-has-sidebar]) {
+				--__sidebar-pad: calc(2 * var(--sl-nav-pad-x));
+			}
+			:global(:root:not([data-has-toc])) {
+				--__toc-width: 0rem;
+			}
+			.header {
+				--__sidebar-width: max(0rem, var(--sl-content-inline-start, 0rem) - var(--sl-nav-pad-x));
+				--__main-column-fr: calc(
+					(
+							100% + var(--__sidebar-pad, 0rem) - var(--__toc-width, var(--sl-sidebar-width)) -
+							(2 * var(--__toc-width, var(--sl-nav-pad-x))) - var(--sl-content-inline-start, 0rem) -
+							var(--sl-content-width)
+						) / 2
+				);
+				display: grid;
+				grid-template-columns:
+					minmax(
+						calc(var(--__sidebar-width) + max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))),
+						auto
+					)
+					1fr
+					auto;
+				align-content: center;
+			}
+		}
+	}
+</style>

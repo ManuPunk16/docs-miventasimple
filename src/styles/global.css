@@ -19,7 +19,7 @@
   --color-storm-cloud: #8a8f98;
   --color-fog-grey: #62666d;
   --color-alabaster: #e5e5e6;
-  --color-neon-lime: #e4f222;
+  --color-neon-lime: #dfd226;
   --color-aether-blue: #5e6ad2;
   --color-forest-green: #008d2c;
   --color-cyan-spark: #02b8cc;
@@ -35,20 +35,6 @@
 
 @layer base {
   :root {
-    /* Multiplicador de escala de texto por defecto (actualizado por JS) */
-    --text-scale-factor: 1;
-
-    /* Escalabilidad accesible de tipografías oficiales de Starlight */
-    --sl-text-xs: calc(0.75rem * var(--text-scale-factor));
-    --sl-text-sm: calc(0.875rem * var(--text-scale-factor));
-    --sl-text-base: calc(1rem * var(--text-scale-factor));
-    --sl-text-lg: calc(1.125rem * var(--text-scale-factor));
-    --sl-text-xl: calc(1.25rem * var(--text-scale-factor));
-    --sl-text-2xl: calc(1.5rem * var(--text-scale-factor));
-    --sl-text-3xl: calc(1.875rem * var(--text-scale-factor));
-    --sl-text-4xl: calc(2.25rem * var(--text-scale-factor));
-    --sl-text-5xl: calc(3rem * var(--text-scale-factor));
-
     /* Mapear variables del tema oscuro de VentaSimple a Starlight */
     --sl-color-bg: var(--color-pitch-black);
     --sl-color-bg-nav: var(--color-pitch-black);
@@ -191,14 +177,110 @@
   }
 
   .action-btn-primary:hover {
-    background-color: #f1fc49;
+    background-color: #eae048;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(228, 242, 34, 0.25);
+    box-shadow: 0 4px 12px rgba(223, 210, 38, 0.25);
   }
 
   /* Redondear las esquinas del logo de la cabecera */
   a.site-title img {
     border-radius: 10px !important;
+  }
+
+  /* Custom Mobile Drawer & Navigation styles */
+  @media (max-width: 50rem) {
+    /* Overlay background */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 998;
+      background-color: rgba(8, 9, 10, 0.6);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 300ms ease-in-out;
+    }
+
+    body[data-mobile-menu-expanded="true"] .drawer-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Off-canvas sidebar pane */
+    .sidebar-pane {
+      visibility: visible !important;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 290px;
+      height: 100vh;
+      z-index: 999 !important;
+      background-color: var(--color-pitch-black) !important;
+      border-right: 1px solid var(--color-charcoal-grey) !important;
+      transform: translateX(-100%);
+      transition: transform 300ms ease-in-out;
+      padding-top: var(--sl-nav-height);
+      box-shadow: 10px 0 30px rgba(0, 0, 0, 0.6);
+      display: block !important;
+    }
+
+    body[data-mobile-menu-expanded="true"] .sidebar-pane {
+      transform: translateX(0);
+    }
+
+    /* Force the nav container to be active/visible on mobile */
+    nav.sidebar {
+      display: block !important;
+      visibility: visible !important;
+    }
+
+    /* Force the content container inside the pane to be visible */
+    .sidebar-content {
+      display: flex !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    /* Ensure parent is w-full overflow-x-hidden to prevent layout breaks */
+    body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* Ensure theme select select control is cleanly visible on mobile drawer footer */
+    .mobile-preferences {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.75rem !important;
+      padding: 1.25rem 0.5rem !important;
+      border-top: 1px solid var(--color-charcoal-grey) !important;
+    }
+
+    .mobile-preferences select {
+      min-height: 48px !important;
+      width: 100% !important;
+      background-color: var(--color-graphite) !important;
+      border: 1px solid var(--color-charcoal-grey) !important;
+      color: var(--color-porcelain) !important;
+      padding: 0.5rem 1.5rem 0.5rem 2.25rem !important;
+      border-radius: 6px !important;
+    }
+
+    .mobile-preferences .social-icons {
+      padding-block: 0.5rem !important;
+    }
+  }
+
+  /* On desktop, hide the sidebar on pages with hero (like homepage) */
+  @media (min-width: 50rem) {
+    html[data-has-hero] .sidebar-pane,
+    html[data-has-hero] nav.sidebar {
+      display: none !important;
+      visibility: hidden !important;
+    }
+    html[data-has-hero] {
+      --sl-content-inline-start: 0rem !important;
+    }
   }
 
   /* Soporte de accesibilidad para evitar animaciones (Preferencia del sistema operativo) */

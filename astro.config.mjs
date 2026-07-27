@@ -14,7 +14,10 @@ export default defineConfig({
 			},
 			customCss: ['./src/styles/global.css'],
 			components: {
-				ThemeSelect: './src/components/AccessibilitySelect.astro',
+				Header: './src/components/Header.astro',
+				MobileMenuToggle: './src/components/MobileMenuToggle.astro',
+				MobileTableOfContents: './src/components/MobileTableOfContents.astro',
+				ThemeProvider: './src/components/ThemeProvider.astro',
 			},
 			head: [
 				{ tag: 'meta', attrs: { name: 'google-site-verification', content: 'oB-Z2hnHZOGw4LaVA6sPzDU06jFlWJGDqYVa0cXsVhg' } },
@@ -23,21 +26,26 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Primeros Pasos',
-					items: [{ autogenerate: { directory: 'primeros-pasos' } }],
+					collapsed: true,
+					items: [{ autogenerate: { directory: 'primeros-pasos', collapsed: true } }],
 				},
 				{
 					label: 'Vender y Cobrar',
-					items: [{ autogenerate: { directory: 'ventas-caja' } }],
+					collapsed: true,
+					items: [{ autogenerate: { directory: 'ventas-caja', collapsed: true } }],
 				},
 				{
 					label: 'Inventario y Productos',
-					items: [{ autogenerate: { directory: 'inventario-productos' } }],
+					collapsed: true,
+					items: [{ autogenerate: { directory: 'inventario-productos', collapsed: true } }],
 				},
 				{
 					label: 'Configuración de Tienda',
+					collapsed: true,
 					items: [
 						{
 							label: 'Administración y Personal',
+							collapsed: true,
 							items: [
 								{ label: 'Perfil de Usuario', link: '/configuracion/perfil/' },
 								{ label: 'Usuarios y Roles', link: '/configuracion/usuarios/' },
@@ -47,6 +55,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Ajustes del POS',
+							collapsed: true,
 							items: [
 								{ label: 'Giro de Negocio', link: '/configuracion/giro/' },
 								{ label: 'Catálogo Público Web', link: '/configuracion/catalogo/' },
@@ -55,6 +64,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Fidelización y Crédito',
+							collapsed: true,
 							items: [
 								{ label: 'Fidelidad y Visitas', link: '/configuracion/fidelidad/' },
 								{ label: 'Programa de Puntos', link: '/configuracion/puntos/' },
@@ -63,6 +73,7 @@ export default defineConfig({
 						},
 						{
 							label: 'Finanzas y Control',
+							collapsed: true,
 							items: [
 								{ label: 'Inteligencia Financiera', link: '/configuracion/inteligencia/' },
 								{ label: 'Egresos de Caja', link: '/configuracion/egresos/' },
@@ -74,7 +85,8 @@ export default defineConfig({
 				},
 				{
 					label: 'Preguntas Frecuentes',
-					items: [{ autogenerate: { directory: 'faqs' } }],
+					collapsed: true,
+					items: [{ autogenerate: { directory: 'faqs', collapsed: true } }],
 				},
 			],
 		}),
