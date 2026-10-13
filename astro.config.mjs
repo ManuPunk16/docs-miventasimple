@@ -34,17 +34,18 @@ export default defineConfig({
 					tag: 'script',
 					attrs: {
 						async: true,
-						src: 'https://www.googletagmanager.com/gtag/js?id=G-L431XKHSWY',
+						src: 'https://www.googletagmanager.com/gtag/js?id=G-482E246E42',
 					},
 				},
 				{
 					tag: 'script',
 					content: `
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-					gtag('config', 'G-L431XKHSWY');
-					`,
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-482E246E42');
+`,
 				},
 			],
 			sidebar: [
