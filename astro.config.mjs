@@ -30,6 +30,22 @@ export default defineConfig({
 			head: [
 				{ tag: 'meta', attrs: { name: 'google-site-verification', content: 'oB-Z2hnHZOGw4LaVA6sPzDU06jFlWJGDqYVa0cXsVhg' } },
 				{ tag: 'meta', attrs: { property: 'og:image', content: 'https://docs.miventasimple.com/og-image.png' } },
+				{
+					tag: 'script',
+					attrs: {
+						async: true,
+						src: 'https://www.googletagmanager.com/gtag/js?id=G-L431XKHSWY',
+					},
+				},
+				{
+					tag: 'script',
+					content: `
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-L431XKHSWY');
+					`,
+				},
 			],
 			sidebar: [
 				{
