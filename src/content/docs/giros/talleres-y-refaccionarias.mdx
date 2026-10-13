@@ -1,21 +1,117 @@
 ---
-title: Talleres y Refaccionarias
-description: Manejo integral de mano de obra y refacciones físicas en una sola orden de servicio.
+title: "Talleres Mecánicos y Refaccionarias"
+description: "Guía de operación para talleres mecánicos, de motos y refaccionarias: órdenes de trabajo mixtas con mano de obra y refacciones, búsqueda por número de parte, anticipos y liquidación en VentaSimple."
+sidebar:
+  order: 4
 ---
 
-import { Steps, Aside, Badge } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 
-# Talleres Mecánicos y Refaccionarias
+# Talleres Mecánicos, de Motocicletas y Refaccionarias
 
-Combina en una sola cuenta los servicios técnicos (mano de obra) y las refacciones físicas instaladas.
+Los talleres mecánicos y las refaccionarias combinan dos naturalezas de cobro totalmente distintas: el **servicio intangible** (mano de obra, diagnósticos, afinaciones, escaneos) y la **venta de piezas físicas** (filtros, balatas, bujías, lubricantes). **VentaSimple** permite gestionar ambos rubros en una sola orden de servicio, controlando existencias en el almacén y calculando el margen de ganancia real de cada reparación.
 
-## 1. Órdenes con Servicios y Refacciones Combinadas
+---
 
-Cuando entra un vehículo, moto o equipo a reparación:
-1. Agrega los repuestos utilizados (aceite, filtros, bujías), los cuales descuentan existencias automáticamente de tu inventario.
-2. Agrega la tarifa de mano de obra (servicio intangible sin inventario).
-3. Genera una cotización previa o procede al cobro al momento de la entrega.
+## 1. Órdenes de Trabajo Mixtas (Servicios + Refacciones Físicas)
 
-:::note[Trazabilidad de Costos]
-El desglose permite conocer el margen neto real de la reparación separando el costo de las piezas del cobro por tiempo de trabajo.
-:::
+Al recibir un vehículo o equipo en el taller, la cuenta se compone de mano de obra y refacciones:
+
+### A. Diferenciación en el Catálogo
+* **Mano de Obra y Servicios:** Registrados con `gestionarStock = false`. No requieren existencia en bodega y representan el tiempo invertido por los mecánicos o técnicos (ej. *Afinación Mayor*, *Cambio de Frenos Delanteros*, *Diagnóstico por Computadora*).
+* **Refacciones y Autopartes:** Registradas con `gestionarStock = true`. Manejan conteo estricto de existencias, stock mínimo y proveedor (ej. *Aceite Sintético 5W-30*, *Juego de Balatas*, *Filtro de Aire*).
+
+### B. Flujo de Trabajo Consolidado
+<Steps>
+1. **Apertura de la Orden / Venta:** Inicia una nueva transacción en el mostrador e ingresa los datos de identificación del cliente y vehículo (ej. *Nissan Versa 2020 - Placas ABC-123*).
+2. **Carga de Refacciones Físicas:** Escanea los códigos de barras de los repuestos o búscalos por número de parte. Se descontarán automáticamente de las existencias del inventario (Kardex).
+3. **Carga de Mano de Obra:** Agrega el concepto del servicio técnico correspondiente.
+4. **Resumen de Costos Transparente:** La orden desglosa claramente el importe de piezas versus el importe de trabajo técnico.
+</Steps>
+
+```text
+============================================================
+              TALLER MECÁNICO Y REFACCIONES SPEED           
+============================================================
+CLIENTE: Sergio Peña              VEHÍCULO: Vento 2018 (Gris)
+------------------------------------------------------------
+REFACCIONES UTILIZADAS:
+  1x FILTRO DE ACEITE FRAM PH-6607                 $  140.00
+  4x LITRO ACEITE CASTROL 5W-30 MAGNATEC           $  880.00
+  1x JUEGO DE BALATAS DELANTERAS CERÁMICAS         $  650.00
+MANO DE OBRA Y SERVICIOS:
+  1x SERVICIO DE AFINACIÓN Y CAMBIO DE FRENOS      $  750.00
+------------------------------------------------------------
+TOTAL ORDEN DE REPARACIÓN:                        $ 2,420.00
+ANTICIPO PAGADO:                                  $ 1,000.00
+SALDO PENDIENTE A LA ENTREGA:                     $ 1,420.00
+============================================================
+```
+
+---
+
+## 2. Búsqueda Ágil en Mostrador de Refacciones
+
+En refaccionarias con miles de códigos y equivalencias, localizar la pieza exacta no puede depender de recordar nombres exactos:
+
+<Tabs>
+  <TabItem label="Por Número de Parte / OEM" icon="seti:file">
+    En el buscador principal de mostrador, puedes ingresar directamente:
+    * El número de parte del fabricante (ej. `PH6607`, `D1060`, `NGK-BKR6E`).
+    * Códigos cruzados o marcas alternas (Original vs. Genérico).
+    * El sistema filtra al instante mostrando existencia disponible en bodega y precio unitario.
+  </TabItem>
+
+  <TabItem label="Por Compatibilidad / Modelo" icon="seti:info">
+    Puedes registrar en las notas o descripción del producto los vehículos compatibles:
+    * Escribe en el buscador: *"Bujía Platino Vento"* o *"Filtro Aceite Versa"*.
+    * VentaSimple localizará todos los productos asociados a ese vehículo sin necesidad de salir de la pantalla de cobro.
+  </TabItem>
+
+  <TabItem label="Por Código de Barras" icon="seti:pulse">
+    Escanea la caja de la refacción con la pistola láser o la cámara del celular para agregarla al instante sin teclear nada.
+  </TabItem>
+</Tabs>
+
+---
+
+## 3. Anticipos y Liquidación contra Entrega
+
+Es común que el cliente deba dejar un anticipo en efectivo o tarjeta para autorizar la compra de refacciones antes de iniciar el trabajo:
+
+<Tabs>
+  <TabItem label="Registro del Anticipo Inicial" icon="seti:cash">
+    <Steps>
+      1. Genera la orden con el presupuesto inicial de piezas y mano de obra.
+      2. Si el cliente deja un anticipo (ej. `$1,000.00 MXN` de un total de `$2,420.00 MXN`), registra el pago parcial.
+      3. El dinero ingresa a la caja chica del turno activo con concepto de anticipo.
+      4. El saldo restante (`$1,420.00 MXN`) queda asentado en la cuenta del cliente hasta la fecha de entrega del automóvil.
+    </Steps>
+  </TabItem>
+
+  <TabItem label="Liquidación a la Entrega" icon="seti:checkbox">
+    Cuando el cliente regresa a recoger su automóvil o motocicleta:
+    <Steps>
+      1. Busca la orden o el nombre del cliente en el módulo de ventas activas.
+      2. Presiona <Badge text="Liquidar Saldo" variant="success" size="medium" />.
+      3. Cobra el importe pendiente con el método de pago elegido (Efectivo, Tarjeta con terminal Clip o Transferencia SPEI).
+      4. La orden queda marcada como completada y liquidada.
+    </Steps>
+  </TabItem>
+</Tabs>
+
+---
+
+## 4. Emisión de Tickets con Póliza de Garantía
+
+Al finalizar el trabajo, entrega un comprobante profesional que inspire confianza en tu taller:
+
+<Steps>
+1. **Comprobante por WhatsApp en 1 Tap:** Envía el ticket digital detallado al número de celular del cliente. Incluye el desglose de piezas cambiadas, kilometraje asentado y las observaciones mecánicas.
+2. **Impresión Térmica de 80 mm:** Si utilizas impresora de mostrador, imprime una copia para el cliente y una copia interna firmada de conformidad.
+3. **Cláusula de Garantía Personalizada:** En **Ajustes > Impresión > Mensaje al Pie**, puedes configurar la garantía estándar de tu taller (ej. *"Garantía de 30 días o 1,000 km en mano de obra. Presentar este comprobante para cualquier aclaración"*).
+</Steps>
+
+<Aside type="tip" title="Control de Mermas y Devolución de Cascos">
+  Si compraste refacciones que finalmente no se instalaron en el automóvil, puedes reingresarlas al almacén cancelando la partida en la orden, devolviendo el stock físico al inventario de forma inmediata.
+</Aside>

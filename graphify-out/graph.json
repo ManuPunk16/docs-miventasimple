@@ -1405,34 +1405,84 @@
       "norm_label": "abarrotes-y-retail.mdx"
     },
     {
-      "label": "Abarrotes y Tiendas de Conveniencia",
+      "label": "Abarrotes, Minis\u00fapers y Tiendas de Conveniencia",
       "file_type": "document",
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
-      "source_location": "L8",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "giros_abarrotes_y_retail_abarrotes_y_tiendas_de_conveniencia",
+      "id": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
       "community": 55,
-      "norm_label": "abarrotes y tiendas de conveniencia"
+      "norm_label": "abarrotes, minisupers y tiendas de conveniencia"
     },
     {
-      "label": "1. Venta a Granel y Fracciones Decimales",
+      "label": "1. Cobro de Alta Velocidad para Retail",
       "file_type": "document",
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
-      "source_location": "L12",
+      "source_location": "L16",
       "_origin": "ast",
-      "id": "giros_abarrotes_y_retail_1_venta_a_granel_y_fracciones_decimales",
+      "id": "giros_abarrotes_y_retail_1_cobro_de_alta_velocidad_para_retail",
       "community": 55,
-      "norm_label": "1. venta a granel y fracciones decimales"
+      "norm_label": "1. cobro de alta velocidad para retail"
     },
     {
-      "label": "2. La Libreta Digital de Fiados",
+      "label": "2. Venta a Granel y Pesaje Decimal",
       "file_type": "document",
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
-      "source_location": "L22",
+      "source_location": "L52",
       "_origin": "ast",
-      "id": "giros_abarrotes_y_retail_2_la_libreta_digital_de_fiados",
+      "id": "giros_abarrotes_y_retail_2_venta_a_granel_y_pesaje_decimal",
       "community": 55,
-      "norm_label": "2. la libreta digital de fiados"
+      "norm_label": "2. venta a granel y pesaje decimal"
+    },
+    {
+      "label": "A. B\u00e1scula Serial en Vivo (Web Serial API)",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "giros_abarrotes_y_retail_a_b\u00e1scula_serial_en_vivo_web_serial_api",
+      "community": 55,
+      "norm_label": "a. bascula serial en vivo (web serial api)"
+    },
+    {
+      "label": "B. Descuento de Tara (Charolas y Contenedores)",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "giros_abarrotes_y_retail_b_descuento_de_tara_charolas_y_contenedores",
+      "community": 55,
+      "norm_label": "b. descuento de tara (charolas y contenedores)"
+    },
+    {
+      "label": "C. B\u00e1sculas Etiquetadoras (C\u00f3digos EAN-13 Torrey W-LABEL)",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "giros_abarrotes_y_retail_c_b\u00e1sculas_etiquetadoras_c\u00f3digos_ean_13_torrey_w_label",
+      "community": 55,
+      "norm_label": "c. basculas etiquetadoras (codigos ean-13 torrey w-label)"
+    },
+    {
+      "label": "3. Libreta Digital de Fiados con Sem\u00e1foro de Cobranza",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "giros_abarrotes_y_retail_3_libreta_digital_de_fiados_con_sem\u00e1foro_de_cobranza",
+      "community": 55,
+      "norm_label": "3. libreta digital de fiados con semaforo de cobranza"
+    },
+    {
+      "label": "4. Estado de Cuenta y Recordatorio por WhatsApp",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "giros_abarrotes_y_retail_4_estado_de_cuenta_y_recordatorio_por_whatsapp",
+      "community": 55,
+      "norm_label": "4. estado de cuenta y recordatorio por whatsapp"
     },
     {
       "label": "barberias-y-esteticas.mdx",
@@ -1445,34 +1495,94 @@
       "norm_label": "barberias-y-esteticas.mdx"
     },
     {
-      "label": "Barber\u00edas y Salones de Belleza",
+      "label": "Barber\u00edas, Salones de Belleza y Est\u00e9ticas",
       "file_type": "document",
       "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
-      "source_location": "L8",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "giros_barberias_y_esteticas_barber\u00edas_y_salones_de_belleza",
+      "id": "giros_barberias_y_esteticas_barber\u00edas_salones_de_belleza_y_est\u00e9ticas",
       "community": 56,
-      "norm_label": "barberias y salones de belleza"
+      "norm_label": "barberias, salones de belleza y esteticas"
     },
     {
-      "label": "1. Asignaci\u00f3n de Barbero en Caja",
+      "label": "1. Mostrador \u00c1gil para Servicios R\u00e1pidos (Flujo 1-Tap)",
       "file_type": "document",
       "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
-      "source_location": "L12",
+      "source_location": "L16",
       "_origin": "ast",
-      "id": "giros_barberias_y_esteticas_1_asignaci\u00f3n_de_barbero_en_caja",
+      "id": "giros_barberias_y_esteticas_1_mostrador_\u00e1gil_para_servicios_r\u00e1pidos_flujo_1_tap",
       "community": 56,
-      "norm_label": "1. asignacion de barbero en caja"
+      "norm_label": "1. mostrador agil para servicios rapidos (flujo 1-tap)"
     },
     {
-      "label": "2. Venta Cruzada de Productos para Cuidado Personal",
+      "label": "A. Chips de Servicio R\u00e1pido",
       "file_type": "document",
       "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
-      "source_location": "L23",
+      "source_location": "L20",
       "_origin": "ast",
-      "id": "giros_barberias_y_esteticas_2_venta_cruzada_de_productos_para_cuidado_personal",
+      "id": "giros_barberias_y_esteticas_a_chips_de_servicio_r\u00e1pido",
       "community": 56,
-      "norm_label": "2. venta cruzada de productos para cuidado personal"
+      "norm_label": "a. chips de servicio rapido"
+    },
+    {
+      "label": "B. Captura Ergon\u00f3mica en Menos de 3 Segundos",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "giros_barberias_y_esteticas_b_captura_ergon\u00f3mica_en_menos_de_3_segundos",
+      "community": 56,
+      "norm_label": "b. captura ergonomica en menos de 3 segundos"
+    },
+    {
+      "label": "2. Asignaci\u00f3n de Barbero/Estilista y C\u00e1lculo de Comisiones",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "giros_barberias_y_esteticas_2_asignaci\u00f3n_de_barbero_estilista_y_c\u00e1lculo_de_comisiones",
+      "community": 56,
+      "norm_label": "2. asignacion de barbero/estilista y calculo de comisiones"
+    },
+    {
+      "label": "3. Manejo de Propinas y Venta Mixta (Servicios + Productos)",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "giros_barberias_y_esteticas_3_manejo_de_propinas_y_venta_mixta_servicios_productos",
+      "community": 56,
+      "norm_label": "3. manejo de propinas y venta mixta (servicios + productos)"
+    },
+    {
+      "label": "A. Registro Inteligente de Propinas",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "giros_barberias_y_esteticas_a_registro_inteligente_de_propinas",
+      "community": 56,
+      "norm_label": "a. registro inteligente de propinas"
+    },
+    {
+      "label": "B. Venta Mixta en un Mismo Ticket",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "giros_barberias_y_esteticas_b_venta_mixta_en_un_mismo_ticket",
+      "community": 56,
+      "norm_label": "b. venta mixta en un mismo ticket"
+    },
+    {
+      "label": "4. Emisi\u00f3n de Tickets Digitales por WhatsApp",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "giros_barberias_y_esteticas_4_emisi\u00f3n_de_tickets_digitales_por_whatsapp",
+      "community": 56,
+      "norm_label": "4. emision de tickets digitales por whatsapp"
     },
     {
       "label": "gimnasios-y-fitness.mdx",
@@ -1485,24 +1595,64 @@
       "norm_label": "gimnasios-y-fitness.mdx"
     },
     {
-      "label": "Gimnasios y Centros Fitness",
+      "label": "Gimnasios, Centros Fitness y Boxes de Crossfit",
       "file_type": "document",
       "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
-      "source_location": "L8",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "giros_gimnasios_y_fitness_gimnasios_y_centros_fitness",
+      "id": "giros_gimnasios_y_fitness_gimnasios_centros_fitness_y_boxes_de_crossfit",
       "community": 57,
-      "norm_label": "gimnasios y centros fitness"
+      "norm_label": "gimnasios, centros fitness y boxes de crossfit"
     },
     {
-      "label": "1. Membres\u00edas con Vigencia (`duracionDias`)",
+      "label": "1. Configuraci\u00f3n de Membres\u00edas y Planes con Vigencia Temporal",
       "file_type": "document",
       "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
-      "source_location": "L12",
+      "source_location": "L16",
       "_origin": "ast",
-      "id": "giros_gimnasios_y_fitness_1_membres\u00edas_con_vigencia_duraciondias",
+      "id": "giros_gimnasios_y_fitness_1_configuraci\u00f3n_de_membres\u00edas_y_planes_con_vigencia_temporal",
       "community": 57,
-      "norm_label": "1. membresias con vigencia (`duraciondias`)"
+      "norm_label": "1. configuracion de membresias y planes con vigencia temporal"
+    },
+    {
+      "label": "Par\u00e1metro de Vigencia (`duracionDias`)",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "giros_gimnasios_y_fitness_par\u00e1metro_de_vigencia_duraciondias",
+      "community": 57,
+      "norm_label": "parametro de vigencia (`duraciondias`)"
+    },
+    {
+      "label": "2. Control de Socios y Cobro en Recepci\u00f3n",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "giros_gimnasios_y_fitness_2_control_de_socios_y_cobro_en_recepci\u00f3n",
+      "community": 57,
+      "norm_label": "2. control de socios y cobro en recepcion"
+    },
+    {
+      "label": "3. Venta Cruzada en Mostrador (Barra de Suplementos y Bebidas)",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "giros_gimnasios_y_fitness_3_venta_cruzada_en_mostrador_barra_de_suplementos_y_bebidas",
+      "community": 57,
+      "norm_label": "3. venta cruzada en mostrador (barra de suplementos y bebidas)"
+    },
+    {
+      "label": "4. M\u00e9todos de Pago Adaptados al Gimnasio",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "giros_gimnasios_y_fitness_4_m\u00e9todos_de_pago_adaptados_al_gimnasio",
+      "community": 57,
+      "norm_label": "4. metodos de pago adaptados al gimnasio"
     },
     {
       "label": "talleres-y-refaccionarias.mdx",
@@ -1515,24 +1665,74 @@
       "norm_label": "talleres-y-refaccionarias.mdx"
     },
     {
-      "label": "Talleres Mec\u00e1nicos y Refaccionarias",
+      "label": "Talleres Mec\u00e1nicos, de Motocicletas y Refaccionarias",
       "file_type": "document",
       "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
-      "source_location": "L8",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_y_refaccionarias",
+      "id": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias",
       "community": 58,
-      "norm_label": "talleres mecanicos y refaccionarias"
+      "norm_label": "talleres mecanicos, de motocicletas y refaccionarias"
     },
     {
-      "label": "1. \u00d3rdenes con Servicios y Refacciones Combinadas",
+      "label": "1. \u00d3rdenes de Trabajo Mixtas (Servicios + Refacciones F\u00edsicas)",
       "file_type": "document",
       "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
-      "source_location": "L12",
+      "source_location": "L16",
       "_origin": "ast",
-      "id": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_con_servicios_y_refacciones_combinadas",
+      "id": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_de_trabajo_mixtas_servicios_refacciones_f\u00edsicas",
       "community": 58,
-      "norm_label": "1. ordenes con servicios y refacciones combinadas"
+      "norm_label": "1. ordenes de trabajo mixtas (servicios + refacciones fisicas)"
+    },
+    {
+      "label": "A. Diferenciaci\u00f3n en el Cat\u00e1logo",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "giros_talleres_y_refaccionarias_a_diferenciaci\u00f3n_en_el_cat\u00e1logo",
+      "community": 58,
+      "norm_label": "a. diferenciacion en el catalogo"
+    },
+    {
+      "label": "B. Flujo de Trabajo Consolidado",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "giros_talleres_y_refaccionarias_b_flujo_de_trabajo_consolidado",
+      "community": 58,
+      "norm_label": "b. flujo de trabajo consolidado"
+    },
+    {
+      "label": "2. B\u00fasqueda \u00c1gil en Mostrador de Refacciones",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "giros_talleres_y_refaccionarias_2_b\u00fasqueda_\u00e1gil_en_mostrador_de_refacciones",
+      "community": 58,
+      "norm_label": "2. busqueda agil en mostrador de refacciones"
+    },
+    {
+      "label": "3. Anticipos y Liquidaci\u00f3n contra Entrega",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "giros_talleres_y_refaccionarias_3_anticipos_y_liquidaci\u00f3n_contra_entrega",
+      "community": 58,
+      "norm_label": "3. anticipos y liquidacion contra entrega"
+    },
+    {
+      "label": "4. Emisi\u00f3n de Tickets con P\u00f3liza de Garant\u00eda",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "giros_talleres_y_refaccionarias_4_emisi\u00f3n_de_tickets_con_p\u00f3liza_de_garant\u00eda",
+      "community": 58,
+      "norm_label": "4. emision de tickets con poliza de garantia"
     },
     {
       "label": "impresoras-tickets.mdx",
@@ -3504,101 +3704,301 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
-      "source_location": "L8",
+      "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "giros_abarrotes_y_retail",
-      "target": "giros_abarrotes_y_retail_abarrotes_y_tiendas_de_conveniencia"
+      "target": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
-      "source_location": "L12",
+      "source_location": "L16",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "giros_abarrotes_y_retail_abarrotes_y_tiendas_de_conveniencia",
-      "target": "giros_abarrotes_y_retail_1_venta_a_granel_y_fracciones_decimales"
+      "source": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
+      "target": "giros_abarrotes_y_retail_1_cobro_de_alta_velocidad_para_retail",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
-      "source_location": "L22",
+      "source_location": "L52",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "giros_abarrotes_y_retail_abarrotes_y_tiendas_de_conveniencia",
-      "target": "giros_abarrotes_y_retail_2_la_libreta_digital_de_fiados"
+      "source": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
+      "target": "giros_abarrotes_y_retail_2_venta_a_granel_y_pesaje_decimal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
+      "target": "giros_abarrotes_y_retail_3_libreta_digital_de_fiados_con_sem\u00e1foro_de_cobranza",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
+      "target": "giros_abarrotes_y_retail_4_estado_de_cuenta_y_recordatorio_por_whatsapp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "giros_abarrotes_y_retail_2_venta_a_granel_y_pesaje_decimal",
+      "target": "giros_abarrotes_y_retail_a_b\u00e1scula_serial_en_vivo_web_serial_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "giros_abarrotes_y_retail_2_venta_a_granel_y_pesaje_decimal",
+      "target": "giros_abarrotes_y_retail_b_descuento_de_tara_charolas_y_contenedores",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "giros_abarrotes_y_retail_2_venta_a_granel_y_pesaje_decimal",
+      "target": "giros_abarrotes_y_retail_c_b\u00e1sculas_etiquetadoras_c\u00f3digos_ean_13_torrey_w_label",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
-      "source_location": "L8",
+      "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "giros_barberias_y_esteticas",
-      "target": "giros_barberias_y_esteticas_barber\u00edas_y_salones_de_belleza"
+      "target": "giros_barberias_y_esteticas_barber\u00edas_salones_de_belleza_y_est\u00e9ticas"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
-      "source_location": "L12",
+      "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "giros_barberias_y_esteticas_barber\u00edas_y_salones_de_belleza",
-      "target": "giros_barberias_y_esteticas_1_asignaci\u00f3n_de_barbero_en_caja"
+      "source": "giros_barberias_y_esteticas_barber\u00edas_salones_de_belleza_y_est\u00e9ticas",
+      "target": "giros_barberias_y_esteticas_1_mostrador_\u00e1gil_para_servicios_r\u00e1pidos_flujo_1_tap"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
-      "source_location": "L23",
+      "source_location": "L36",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "giros_barberias_y_esteticas_barber\u00edas_y_salones_de_belleza",
-      "target": "giros_barberias_y_esteticas_2_venta_cruzada_de_productos_para_cuidado_personal"
+      "source": "giros_barberias_y_esteticas_barber\u00edas_salones_de_belleza_y_est\u00e9ticas",
+      "target": "giros_barberias_y_esteticas_2_asignaci\u00f3n_de_barbero_estilista_y_c\u00e1lculo_de_comisiones"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_barberias_y_esteticas_barber\u00edas_salones_de_belleza_y_est\u00e9ticas",
+      "target": "giros_barberias_y_esteticas_3_manejo_de_propinas_y_venta_mixta_servicios_productos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L105",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_barberias_y_esteticas_barber\u00edas_salones_de_belleza_y_est\u00e9ticas",
+      "target": "giros_barberias_y_esteticas_4_emisi\u00f3n_de_tickets_digitales_por_whatsapp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_barberias_y_esteticas_1_mostrador_\u00e1gil_para_servicios_r\u00e1pidos_flujo_1_tap",
+      "target": "giros_barberias_y_esteticas_a_chips_de_servicio_r\u00e1pido"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_barberias_y_esteticas_1_mostrador_\u00e1gil_para_servicios_r\u00e1pidos_flujo_1_tap",
+      "target": "giros_barberias_y_esteticas_b_captura_ergon\u00f3mica_en_menos_de_3_segundos"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_barberias_y_esteticas_3_manejo_de_propinas_y_venta_mixta_servicios_productos",
+      "target": "giros_barberias_y_esteticas_a_registro_inteligente_de_propinas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L82",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_barberias_y_esteticas_3_manejo_de_propinas_y_venta_mixta_servicios_productos",
+      "target": "giros_barberias_y_esteticas_b_venta_mixta_en_un_mismo_ticket"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
-      "source_location": "L8",
+      "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "giros_gimnasios_y_fitness",
-      "target": "giros_gimnasios_y_fitness_gimnasios_y_centros_fitness"
+      "target": "giros_gimnasios_y_fitness_gimnasios_centros_fitness_y_boxes_de_crossfit"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
-      "source_location": "L12",
+      "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "giros_gimnasios_y_fitness_gimnasios_y_centros_fitness",
-      "target": "giros_gimnasios_y_fitness_1_membres\u00edas_con_vigencia_duraciondias"
+      "source": "giros_gimnasios_y_fitness_gimnasios_centros_fitness_y_boxes_de_crossfit",
+      "target": "giros_gimnasios_y_fitness_1_configuraci\u00f3n_de_membres\u00edas_y_planes_con_vigencia_temporal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_gimnasios_y_fitness_gimnasios_centros_fitness_y_boxes_de_crossfit",
+      "target": "giros_gimnasios_y_fitness_2_control_de_socios_y_cobro_en_recepci\u00f3n"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L74",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_gimnasios_y_fitness_gimnasios_centros_fitness_y_boxes_de_crossfit",
+      "target": "giros_gimnasios_y_fitness_3_venta_cruzada_en_mostrador_barra_de_suplementos_y_bebidas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_gimnasios_y_fitness_gimnasios_centros_fitness_y_boxes_de_crossfit",
+      "target": "giros_gimnasios_y_fitness_4_m\u00e9todos_de_pago_adaptados_al_gimnasio"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_gimnasios_y_fitness_1_configuraci\u00f3n_de_membres\u00edas_y_planes_con_vigencia_temporal",
+      "target": "giros_gimnasios_y_fitness_par\u00e1metro_de_vigencia_duraciondias"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
-      "source_location": "L8",
+      "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "giros_talleres_y_refaccionarias",
-      "target": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_y_refaccionarias"
+      "target": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
-      "source_location": "L12",
+      "source_location": "L16",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_y_refaccionarias",
-      "target": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_con_servicios_y_refacciones_combinadas"
+      "source": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias",
+      "target": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_de_trabajo_mixtas_servicios_refacciones_f\u00edsicas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias",
+      "target": "giros_talleres_y_refaccionarias_2_b\u00fasqueda_\u00e1gil_en_mostrador_de_refacciones",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias",
+      "target": "giros_talleres_y_refaccionarias_3_anticipos_y_liquidaci\u00f3n_contra_entrega",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias",
+      "target": "giros_talleres_y_refaccionarias_4_emisi\u00f3n_de_tickets_con_p\u00f3liza_de_garant\u00eda",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_de_trabajo_mixtas_servicios_refacciones_f\u00edsicas",
+      "target": "giros_talleres_y_refaccionarias_a_diferenciaci\u00f3n_en_el_cat\u00e1logo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_de_trabajo_mixtas_servicios_refacciones_f\u00edsicas",
+      "target": "giros_talleres_y_refaccionarias_b_flujo_de_trabajo_consolidado",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3606,9 +4006,9 @@
       "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hardware_y_perifericos_impresoras_tickets",
-      "target": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets",
-      "confidence_score": 1.0
+      "target": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets"
     },
     {
       "relation": "contains",
@@ -3616,9 +4016,9 @@
       "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets",
-      "target": "hardware_y_perifericos_impresoras_tickets_apertura_de_caj\u00f3n_de_dinero_rj11_y_autocutter",
-      "confidence_score": 1.0
+      "target": "hardware_y_perifericos_impresoras_tickets_apertura_de_caj\u00f3n_de_dinero_rj11_y_autocutter"
     },
     {
       "relation": "contains",
@@ -3626,9 +4026,9 @@
       "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets",
-      "target": "hardware_y_perifericos_impresoras_tickets_formatos_soportados_58_mm_y_80_mm",
-      "confidence_score": 1.0
+      "target": "hardware_y_perifericos_impresoras_tickets_formatos_soportados_58_mm_y_80_mm"
     },
     {
       "relation": "contains",
@@ -3636,9 +4036,9 @@
       "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets",
-      "target": "hardware_y_perifericos_impresoras_tickets_motor_de_impresi\u00f3n_pwa_universal",
-      "confidence_score": 1.0
+      "target": "hardware_y_perifericos_impresoras_tickets_motor_de_impresi\u00f3n_pwa_universal"
     },
     {
       "relation": "contains",
@@ -3646,9 +4046,9 @@
       "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets",
-      "target": "hardware_y_perifericos_impresoras_tickets_vinculaci\u00f3n_y_conexi\u00f3n_paso_a_paso",
-      "confidence_score": 1.0
+      "target": "hardware_y_perifericos_impresoras_tickets_vinculaci\u00f3n_y_conexi\u00f3n_paso_a_paso"
     },
     {
       "relation": "contains",
@@ -3656,9 +4056,9 @@
       "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hardware_y_perifericos_lectores_codigo_barras",
-      "target": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras_y_b\u00e1sculas_de_pesaje",
-      "confidence_score": 1.0
+      "target": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras_y_b\u00e1sculas_de_pesaje"
     },
     {
       "relation": "contains",
@@ -3666,9 +4066,9 @@
       "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras_y_b\u00e1sculas_de_pesaje",
-      "target": "hardware_y_perifericos_lectores_codigo_barras_1_lectores_de_c\u00f3digos_de_barras",
-      "confidence_score": 1.0
+      "target": "hardware_y_perifericos_lectores_codigo_barras_1_lectores_de_c\u00f3digos_de_barras"
     },
     {
       "relation": "contains",
@@ -3676,9 +4076,9 @@
       "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras_y_b\u00e1sculas_de_pesaje",
-      "target": "hardware_y_perifericos_lectores_codigo_barras_2_b\u00e1sculas_y_pesaje_decimal_venta_a_granel",
-      "confidence_score": 1.0
+      "target": "hardware_y_perifericos_lectores_codigo_barras_2_b\u00e1sculas_y_pesaje_decimal_venta_a_granel"
     },
     {
       "relation": "contains",
@@ -3686,9 +4086,9 @@
       "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hardware_y_perifericos_lectores_codigo_barras_1_lectores_de_c\u00f3digos_de_barras",
-      "target": "hardware_y_perifericos_lectores_codigo_barras_a_esc\u00e1ner_f\u00edsico_usb_o_bluetooth_modo_emulaci\u00f3n_de_teclado_hid",
-      "confidence_score": 1.0
+      "target": "hardware_y_perifericos_lectores_codigo_barras_a_esc\u00e1ner_f\u00edsico_usb_o_bluetooth_modo_emulaci\u00f3n_de_teclado_hid"
     },
     {
       "relation": "contains",
@@ -3696,9 +4096,9 @@
       "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hardware_y_perifericos_lectores_codigo_barras_1_lectores_de_c\u00f3digos_de_barras",
-      "target": "hardware_y_perifericos_lectores_codigo_barras_b_esc\u00e1ner_con_c\u00e1mara_trasera_del_celular_zxing_browser",
-      "confidence_score": 1.0
+      "target": "hardware_y_perifericos_lectores_codigo_barras_b_esc\u00e1ner_con_c\u00e1mara_trasera_del_celular_zxing_browser"
     },
     {
       "relation": "contains",
@@ -3836,9 +4236,9 @@
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "punto_de_venta_caja_chica_aperturas_cierres",
-      "target": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
-      "confidence_score": 1.0
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno"
     },
     {
       "relation": "contains",
@@ -3846,9 +4246,9 @@
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
-      "target": "punto_de_venta_caja_chica_aperturas_cierres_1_apertura_de_turno_fondo_de_caja",
-      "confidence_score": 1.0
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_1_apertura_de_turno_fondo_de_caja"
     },
     {
       "relation": "contains",
@@ -3856,9 +4256,9 @@
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
-      "target": "punto_de_venta_caja_chica_aperturas_cierres_2_entradas_y_salidas_operativas_de_efectivo",
-      "confidence_score": 1.0
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_2_entradas_y_salidas_operativas_de_efectivo"
     },
     {
       "relation": "contains",
@@ -3866,9 +4266,9 @@
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
-      "target": "punto_de_venta_caja_chica_aperturas_cierres_3_cierre_y_arqueo_de_turno",
-      "confidence_score": 1.0
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_3_cierre_y_arqueo_de_turno"
     },
     {
       "relation": "contains",
@@ -3876,9 +4276,9 @@
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
-      "target": "punto_de_venta_caja_chica_aperturas_cierres_circuito_diario_del_efectivo",
-      "confidence_score": 1.0
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_circuito_diario_del_efectivo"
     },
     {
       "relation": "contains",
@@ -3886,9 +4286,9 @@
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L100",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
-      "target": "punto_de_venta_caja_chica_aperturas_cierres_impresi\u00f3n_del_ticket_de_corte_z",
-      "confidence_score": 1.0
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_impresi\u00f3n_del_ticket_de_corte_z"
     },
     {
       "relation": "contains",
@@ -3896,9 +4296,9 @@
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
-      "target": "punto_de_venta_caja_chica_aperturas_cierres_tarjeta_de_diferencia_y_sem\u00e1foro_visual",
-      "confidence_score": 1.0
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_tarjeta_de_diferencia_y_sem\u00e1foro_visual"
     },
     {
       "relation": "contains",
@@ -4069,5 +4469,5 @@
       "source_file": "src/content/docs/index.mdx"
     }
   ],
-  "built_at_commit": "ae96911ab502acc150ca0d2dcc6d1d42a6c17b43"
+  "built_at_commit": "174a1959239080ad5887c685ee8072bfd68795b4"
 }

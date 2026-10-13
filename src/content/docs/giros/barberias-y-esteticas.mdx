@@ -1,27 +1,117 @@
 ---
-title: Barberías y Salones de Belleza
-description: Control de servicios, comisiones por barbero o estilista y agenda rápida en VentaSimple.
+title: "Barberías, Salones de Belleza y Estéticas"
+description: "Guía operativa en mostrador para barberías y estéticas: cobro rápido con chips de servicio, asignación de colaboradores, liquidación de comisiones, propinas y venta cruzada en VentaSimple."
+sidebar:
+  order: 2
 ---
 
-import { Steps, Aside, Badge } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 
-# Barberías y Salones de Belleza
+# Barberías, Salones de Belleza y Estéticas
 
-Gestiona el flujo de cortes, tintes y tratamientos asignando colaboradores a cada servicio y calculando comisiones transparentes sin errores.
+En el día a día de una barbería o salón de belleza, los estilistas y recepcionistas necesitan registrar servicios con las manos ocupadas o en lapsos breves entre cliente y cliente. **VentaSimple** elimina la complejidad de inventarios innecesarios para servicios intangibles y automatiza la división de ganancias entre el local y los colaboradores.
 
-## 1. Asignación de Barbero en Caja
+---
 
-Cada vez que se atiende a un cliente en el sillón:
-1. Agrega el servicio del catálogo (ej. *Corte Clásico*, *Perfilado de Barba*).
-2. Asigna el especialista que realizó el trabajo.
-3. El sistema asocia el porcentaje o monto fijo de comisión configurado para ese empleado.
+## 1. Mostrador Ágil para Servicios Rápidos (Flujo 1-Tap)
 
-:::note[Comisiones Claras]
-Al final de la jornada o semana, el reporte de comisiones desglosa el total acumulado por barbero para liquidaciones inmediatas.
-:::
+A diferencia de los productos de catálogo tradicionales, los servicios de peluquería no requieren código de barras ni descuentan inventario físico:
 
-## 2. Venta Cruzada de Productos para Cuidado Personal
+### A. Chips de Servicio Rápido
+En la pantalla del punto de venta se configuran botones accesibles de un solo toque:
+- <Badge text="[Corte]" variant="tip" size="large" /> Corte clásico / degradado (Fade)
+- <Badge text="[Barba]" variant="tip" size="large" /> Perfilado y toalla caliente
+- <Badge text="[Corte + Barba]" variant="success" size="large" /> Paquete promocional dúo
+- <Badge text="[Servicio Libre]" variant="default" size="large" /> Tinte, peinado o tratamiento especial con precio variable
 
-Si el cliente adquiere cera, aceite para barba o shampoo:
-- Se agregan al mismo ticket de cobro.
-- Puedes configurar si los productos generan comisión o ingresan íntegros al negocio.
+### B. Captura Ergonómica en Menos de 3 Segundos
+<Steps>
+1. **Pulsar el chip del servicio:** Toca el botón rápido del corte o paquete realizado.
+2. **Ajuste de precio en tiempo real (opcional):** Si el trabajo requirió un diseño o tiempo adicional, modifica el importe con el teclado numérico de un solo toque.
+3. **El servicio entra al carrito:** Sin fricción de búsqueda, listo para asociar al estilista y cobrar.
+</Steps>
+
+---
+
+## 2. Asignación de Barbero/Estilista y Cálculo de Comisiones
+
+El mayor dolor administrativo de una estética es el cuadre de comisiones a final de semana. VentaSimple calcula la participación de cada colaborador de forma automática en el momento exacto del cobro.
+
+<Tabs>
+  <TabItem label="Asignación en Caja" icon="seti:account">
+    <Steps>
+      1. **Seleccionar el ítem en el carrito:** Al agregar el servicio, aparece el selector de **Colaborador**.
+      2. **Elegir al barbero responsable:** Toca sobre el avatar o nombre del estilista (ej. *Carlos*, *Kevin*, *Mariana*).
+      3. **Múltiples especialistas en el mismo ticket:** Si en una misma visita el cliente se cortó el cabello con un barbero y se realizó manicura o barba con otro, cada línea del ticket se asigna individualmente a su respectivo colaborador.
+    </Steps>
+  </TabItem>
+
+  <TabItem label="Esquemas de Comisión" icon="seti:pipeline">
+    El sistema soporta dos modalidades de remuneración por colaborador:
+    
+    * **Comisión Porcentual (%):** Muy común en barberías modernas (ej. `50% / 50%` o `60% / 40%` sobre el valor neto del servicio).
+    * **Monto Fijo por Servicio ($):** Cantidad fija pactada por cada trabajo realizado (ej. `$80 MXN` por cada corte ejecutado, sin importar promociones aplicadas).
+    
+    :::tip[Transparencia Total]
+    El colaborador puede consultar en su propio perfil o en el corte del turno cuántos servicios realizó durante el día y el total acumulado a cobrar.
+    :::
+  </TabItem>
+
+  <TabItem label="Reporte de Liquidación" icon="seti:dashboard">
+    Al realizar el **Corte de Caja** o auditoría semanal:
+    * Se genera el **Desglose de Liquidación por Colaborador**:
+      * Total de servicios prestados por barbero.
+      * Subtotal generado para el negocio.
+      * Total de comisiones devengadas por el colaborador.
+      * Propinas correspondientes a entregar.
+    * Permite pagar a los barberos al final del turno con firma digital o comprobante impreso.
+  </TabItem>
+</Tabs>
+
+---
+
+## 3. Manejo de Propinas y Venta Mixta (Servicios + Productos)
+
+Una de las ventajas clave en VentaSimple es la separación contable entre las ventas de la tienda, las propinas y el inventario de mostrador:
+
+### A. Registro Inteligente de Propinas
+Al momento de procesar el pago (sea en efectivo o tarjeta/Clip):
+* **Propinas en Efectivo:** Se registran para auditoría interna y no influyen en el balance de ventas gravables del negocio.
+* **Propinas con Tarjeta:** El cliente puede agregar propina en la terminal bancaria. VentaSimple registra este excedente contable para que el dueño liquide el dinero al barbero al final de la jornada.
+
+### B. Venta Mixta en un Mismo Ticket
+No abras dos cuentas distintas si el cliente se atiende y además compra un producto para peinarse:
+* **Línea de Servicio (Intangible):** Genera comisión al barbero, no descuenta stock (`gestionarStock = false`).
+* **Línea de Producto Físico (Retail):** Cera estilizadora, aceite para barba, pomada o minoxidil. Se descuenta automáticamente del inventario físico y, por defecto, entra íntegro a las ganancias de la tienda (a menos que configures comisión por venta de mostrador).
+
+```text
+========================================
+           BARBERÍA LA CENTRAL          
+========================================
+1x CORTE CLÁSICO              $ 200.00
+   [Barbero: Carlos] (50% Com.)
+1x CERA MATE EXTRA FUERTE     $ 180.00
+   [Producto físico - Stock -1]
+----------------------------------------
+SUBTOTAL:                     $ 380.00
+PROPINA:                      $  40.00
+TOTAL A PAGAR:                $ 420.00
+MÉTODO: EFECTIVO (Recibió: $500, Cambio: $80)
+========================================
+```
+
+---
+
+## 4. Emisión de Tickets Digitales por WhatsApp
+
+En barberías y estéticas, los clientes prefieren no guardar recibos de papel térmico arrugados en sus bolsillos.
+
+<Steps>
+1. Una vez confirmado el cobro, pulsa el botón verde <Badge text="WhatsApp" variant="success" size="medium" /> en pantalla.
+2. Ingresa el número de teléfono del cliente (o selecciónalo si ya está registrado en tu catálogo de clientes frecuentes).
+3. Se abre WhatsApp Web o la app en tu celular con un mensaje prediseñado que incluye el desglose de su visita, el estilista que lo atendió y un enlace directo a su ticket digital interactivo.
+</Steps>
+
+<Aside type="tip" title="Fidelización y Re-agendado">
+  Aprovecha el contacto por WhatsApp para agradecer la visita del cliente e invitarlo a agendar su próximo corte en 2 o 3 semanas, manteniendo la recurrencia activa de tu barbería sin costo adicional en SMS.
+</Aside>

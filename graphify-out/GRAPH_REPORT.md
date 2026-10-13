@@ -1,16 +1,16 @@
 # Graph Report - docs-miventasimple  (2026-10-13)
 
 ## Corpus Check
-- 52 files · ~39,934 words
+- 52 files · ~43,071 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 222 nodes · 174 edges · 59 communities (36 shown, 23 thin omitted)
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.89)
+- 242 nodes · 194 edges · 59 communities (38 shown, 21 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.89)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ae96911a`
+- Built from commit: `174a1959`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -67,8 +67,8 @@
 6. `scripts` - 6 edges
 7. `./CustomSidebarSublist.astro` - 5 edges
 8. `Tokens — Spacing & Shapes` - 5 edges
-9. `Impresoras Térmicas y Emisión de Tickets` - 5 edges
-10. `Starlight Starter Kit: Basics` - 4 edges
+9. `Abarrotes, Minisúpers y Tiendas de Conveniencia` - 5 edges
+10. `Barberías, Salones de Belleza y Estéticas` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `AGENTS Development Guide` --semantically_similar_to--> `CLAUDE Development Guide`  [INFERRED] [semantically similar]
@@ -88,7 +88,7 @@
 ## Hyperedges (group relationships)
 - **VentaSimple User Help System** — docs_index_document, primeros_pasos_inicio_document, ventascaja_cajachica_document, inventarioproductos_gestion_document, configuracion_ajustes_document, faqs_preguntas_document [INFERRED 0.95]
 
-## Communities (59 total, 23 thin omitted)
+## Communities (59 total, 21 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.12
@@ -159,29 +159,37 @@ Cohesion: 0.33
 Nodes (5): 1. Lectores de Códigos de Barras, 2. Básculas y Pesaje Decimal (Venta a Granel), A. Escáner Físico USB o Bluetooth (Modo Emulación de Teclado / HID), B. Escáner con Cámara Trasera del Celular (`@zxing/browser`), Lectores de Código de Barras y Básculas de Pesaje
 
 ### Community 55 - "Community 55"
-Cohesion: 0.50
-Nodes (3): 1. Venta a Granel y Fracciones Decimales, 2. La Libreta Digital de Fiados, Abarrotes y Tiendas de Conveniencia
+Cohesion: 0.22
+Nodes (8): 1. Cobro de Alta Velocidad para Retail, 2. Venta a Granel y Pesaje Decimal, 3. Libreta Digital de Fiados con Semáforo de Cobranza, 4. Estado de Cuenta y Recordatorio por WhatsApp, A. Báscula Serial en Vivo (Web Serial API), Abarrotes, Minisúpers y Tiendas de Conveniencia, B. Descuento de Tara (Charolas y Contenedores), C. Básculas Etiquetadoras (Códigos EAN-13 Torrey W-LABEL)
 
 ### Community 56 - "Community 56"
-Cohesion: 0.50
-Nodes (3): 1. Asignación de Barbero en Caja, 2. Venta Cruzada de Productos para Cuidado Personal, Barberías y Salones de Belleza
+Cohesion: 0.20
+Nodes (9): 1. Mostrador Ágil para Servicios Rápidos (Flujo 1-Tap), 2. Asignación de Barbero/Estilista y Cálculo de Comisiones, 3. Manejo de Propinas y Venta Mixta (Servicios + Productos), 4. Emisión de Tickets Digitales por WhatsApp, A. Chips de Servicio Rápido, A. Registro Inteligente de Propinas, B. Captura Ergonómica en Menos de 3 Segundos, B. Venta Mixta en un Mismo Ticket (+1 more)
+
+### Community 57 - "Community 57"
+Cohesion: 0.29
+Nodes (6): 1. Configuración de Membresías y Planes con Vigencia Temporal, 2. Control de Socios y Cobro en Recepción, 3. Venta Cruzada en Mostrador (Barra de Suplementos y Bebidas), 4. Métodos de Pago Adaptados al Gimnasio, Gimnasios, Centros Fitness y Boxes de Crossfit, Parámetro de Vigencia (`duracionDias`)
+
+### Community 58 - "Community 58"
+Cohesion: 0.25
+Nodes (7): 1. Órdenes de Trabajo Mixtas (Servicios + Refacciones Físicas), 2. Búsqueda Ágil en Mostrador de Refacciones, 3. Anticipos y Liquidación contra Entrega, 4. Emisión de Tickets con Póliza de Garantía, A. Diferenciación en el Catálogo, B. Flujo de Trabajo Consolidado, Talleres Mecánicos, de Motocicletas y Refaccionarias
 
 ## Knowledge Gaps
-- **122 isolated node(s):** `name`, `type`, `version`, `dev`, `start` (+117 more)
+- **137 isolated node(s):** `name`, `type`, `version`, `dev`, `start` (+132 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Theme: Light — Daylight Studio Style Reference` connect `Community 1` to `Community 0`, `Community 10`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **Why does `Theme: Dark (Default) — Linear Style Reference` connect `Community 0` to `Community 5`?**
-  _High betweenness centrality (0.040) - this node is a cross-community bridge._
+  _High betweenness centrality (0.034) - this node is a cross-community bridge._
 - **Why does `Components` connect `Community 5` to `Community 0`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **What connects `name`, `type`, `version` to the rest of the system?**
-  _122 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _137 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

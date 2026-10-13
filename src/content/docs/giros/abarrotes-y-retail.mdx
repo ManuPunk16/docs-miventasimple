@@ -1,28 +1,133 @@
 ---
-title: Abarrotes y Tiendas de Conveniencia
-description: Guía de operación en mostrador para tiendas de abarrotes, pesaje a granel y libreta de fiados.
+title: "Abarrotes, Minisúpers y Retail"
+description: "Guía operativa de mostrador para tiendas de abarrotes: escaneo continuo a alta velocidad, pesaje decimal a granel, tara y libreta de fiados con semáforo de cobranza en VentaSimple."
+sidebar:
+  order: 1
 ---
 
-import { Steps, Aside, Badge } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 
-# Abarrotes y Tiendas de Conveniencia
+# Abarrotes, Minisúpers y Tiendas de Conveniencia
 
-VentaSimple está optimizado para la velocidad en el mostrador de abarrotes, minimercados y misceláneas, donde cada segundo cuenta ante una fila de clientes.
+En el mostrador de abarrotes, misceláneas y carnicerías, la velocidad de cobro define el éxito del negocio. Durante las horas de mayor afluencia, los cajeros necesitan registrar artículos en décimas de segundo, pesar frutas o embutidos sin equivocaciones y llevar una libreta de fiados blindada que no pierda cuentas por cobrar.
 
-## 1. Venta a Granel y Fracciones Decimales
+---
 
-Para productos como jamón, queso, huevo o frutas y verduras que se venden por kilogramo:
-- Puedes ingresar cantidades decimales como `0.250` (un cuarto de kilo) o `1.500`.
-- El sistema calcula el importe multiplicando el precio por kilo al instante.
+## 1. Cobro de Alta Velocidad para Retail
 
-:::tip[Pesaje Rápido]
-Si cuentas con báscula con salida USB o Bluetooth compatible, el peso puede capturarse automáticamente o ingresarse con el teclado numérico en 1 segundo.
-:::
+VentaSimple está diseñado para mantener el foco en la venta continua, reduciendo al mínimo la interacción con el ratón o menús innecesarios.
 
-## 2. La Libreta Digital de Fiados
+<Tabs>
+  <TabItem label="Pistola Láser USB / Bluetooth" icon="seti:pulse">
+    ### Escaneo Continuo en Ráfaga (`<= 60ms`)
+    
+    * **Foco Global:** No es necesario hacer clic en la barra de búsqueda para empezar a registrar. Escanea cualquier artículo directamente y entrará al carrito.
+    * **Detección Automática por Intervalo:** El motor de VentaSimple identifica las pulsaciones ultrarrápidas emitidas por lectores de código de barras (intervalos menores o iguales a 60 milisegundos).
+    * **Multiplicador por Cantidad:** Si un cliente lleva múltiples piezas de un mismo artículo (ej. 6 latas de atún o 12 refrescos), presiona la tecla `*` o el botón de cantidad, ingresa el número de piezas y escanea el producto una sola vez.
+  </TabItem>
 
-No pierdas dinero en libretas de papel desgastadas:
-1. Al cobrar, elige el método **Fiado / Crédito**.
-2. Selecciona al cliente frecuente de tu catálogo.
-3. El saldo se acumula automáticamente en su cuenta con semáforo de puntualidad de pago.
-4. Puedes enviar el recordatorio del estado de cuenta por WhatsApp con un solo toque.
+  <TabItem label="Cámara Móvil / Tablet" icon="seti:video">
+    ### Escáner Óptico Portátil (`@zxing/browser`)
+    
+    Para pequeños comercios sin terminal de escritorio o pistola láser:
+    
+    <Steps>
+      1. Toca el ícono del **Escáner** en la esquina superior derecha del mostrador.
+      2. Se activará la cámara trasera del dispositivo con reconocimiento en tiempo real de códigos **EAN-13**, **UPC-A** y **Code 128**.
+      3. Puedes activar la linterna integrada mediante el botón de luz para pasillos oscuros o cajas con baja iluminación.
+    </Steps>
+  </TabItem>
+
+  <TabItem label="Favoritos de Botón Rápido" icon="seti:heart">
+    ### Artículos Sin Código de Barras
+    
+    Para mercancía suelta como pan dulce, hielo, bolsas de plástico o garrafones de agua:
+    * Agrega los productos a la cuadrícula de **Accesos Rápidos**.
+    * Se muestran como botones táctiles grandes con colores representativos para agregarlos en un solo toque.
+  </TabItem>
+</Tabs>
+
+---
+
+## 2. Venta a Granel y Pesaje Decimal
+
+Para alimentos perecederos, carnes, lácteos, semillas y verduras, VentaSimple calcula importes exactos utilizando tres decimales de precisión (`0.001 kg`).
+
+### A. Báscula Serial en Vivo (Web Serial API)
+Si cuentas con una báscula electrónica conectada por cable USB o convertidor RS232 a tu computadora:
+- Conéctala a **9600 baudios** (`9600 8-N-1`). Marcas compatibles: **Torrey (L-EQ / MFQ)**, **Rhino (BAR-8)**, **Dibal** y **Systel**.
+- Al colocar el producto sobre el plato de la báscula, VentaSimple lee el peso instantáneamente y lo coloca en el campo de cantidad.
+
+### B. Descuento de Tara (Charolas y Contenedores)
+Al vender jamón, queso rebanado o comida preparada en recipientes plásticos:
+<Steps>
+1. Coloca el plato o envase vacío sobre la báscula y presiona el botón **Tara** en la interfaz (o ingresa el valor de tara en gramos, ej. `25 g`).
+2. Coloca el producto dentro del recipiente.
+3. El sistema restará el peso del envase calculando el cobro estrictamente sobre el **Peso Neto**:
+   - `Importe Total = (Peso Bruto - Tara) × Precio por Kilo`
+</Steps>
+
+### C. Básculas Etiquetadoras (Códigos EAN-13 Torrey W-LABEL)
+Si tu carnicería o cremería utiliza básculas impresoras de sellos con código de barras:
+* El escáner decodifica códigos iniciados con prefijos **`20`**, **`21`**, **`22`** o **`02`**.
+* El sistema extrae automáticamente el código **PLU** del producto y desglosa los gramos a kilogramos sin requerir que el cajero digite nada manualmente.
+
+---
+
+## 3. Libreta Digital de Fiados con Semáforo de Cobranza
+
+En el comercio de barrio, el fiado fomenta la lealtad de los vecinos, pero las libretas de papel causan pérdidas por cuentas olvidadas o discusiones sobre saldos.
+
+```text
++-------------------------------------------------------------+
+| CLIENTE: Don Ricardo Martínez     CEL: 55-4123-8900          |
+| LÍMITE DE CRÉDITO: $ 1,500.00 MXN                           |
+| DEUDA ACTUAL:     $   840.50 MXN   ESTATUS: [AL CORRIENTE]   |
++-------------------------------------------------------------+
+```
+
+<Tabs>
+  <TabItem label="Asignación de Fiado" icon="seti:folder">
+    <Steps>
+      1. Agrega los artículos del mandado al carrito de mostrador.
+      2. En métodos de pago, selecciona <Badge text="Fiado / Crédito" variant="caution" size="medium" />.
+      3. Selecciona al vecino de la lista de clientes o búscalo por su apodo/teléfono.
+      4. VentaSimple verifica que la nueva compra no supere el **Límite de Endeudamiento** asignado al cliente.
+      5. Se registra la venta, se descuenta la mercancía del inventario y el saldo se suma a su libreta digital.
+    </Steps>
+  </TabItem>
+
+  <TabItem label="Semáforo de Cobranza" icon="seti:bell">
+    Cada cliente cuenta con un indicador visual automático según la antigüedad de su deuda:
+    
+    * <Badge text="VERDE (Al Corriente)" variant="success" /> El cliente tiene compras fiadas recientes y realiza abonos puntuales dentro de los días pactados.
+    * <Badge text="AMARILLO (Por Vencer)" variant="caution" /> La deuda se encuentra a 1 o 2 días de cumplir el plazo acordado de pago.
+    * <Badge text="ROJO (Saldo Vencido)" variant="danger" /> El crédito excedió el plazo máximo o superó el límite de dinero permitido. El mostrador bloquea nuevos fiados hasta que realice un abono parcial.
+  </TabItem>
+
+  <TabItem label="Cobro y Abonos Parciales" icon="seti:cash">
+    Cuando el cliente llega a abonar dinero:
+    <Steps>
+      1. Abre la ficha del cliente en **Clientes > Libreta de Fiados**.
+      2. Presiona **Registrar Abono**.
+      3. Ingresa la cantidad entregada (ej. `$200.00 MXN`) y el método (efectivo o transferencia).
+      4. El dinero ingresa a tu caja chica activa y el saldo deudor del cliente disminuye automáticamente.
+    </Steps>
+  </TabItem>
+</Tabs>
+
+---
+
+## 4. Estado de Cuenta y Recordatorio por WhatsApp
+
+Mantén una relación cordial y transparente con tus clientes enviando comprobantes claros sin fricciones:
+
+<Steps>
+1. Desde la ficha de fiado del cliente, pulsa el botón <Badge text="Enviar Estado de Cuenta" variant="success" />.
+2. Se genera un mensaje estructurado y amigable para WhatsApp con el detalle de las compras realizadas, los abonos aplicados y el saldo pendiente.
+3. Se adjunta el enlace a su recibo digital para que el cliente revise exactamente qué llevó y cuándo lo llevó.
+</Steps>
+
+<Aside type="tip" title="Respaldo Total Ante Cortes de Luz">
+  En zonas comerciales donde la luz o el internet fallan con frecuencia, la base de datos local (IndexedDB) de VentaSimple te permite seguir escaneando productos y registrando fiados en tu celular o tablet sin interrupciones. Todo se sincroniza en cuanto vuelve la señal.
+</Aside>

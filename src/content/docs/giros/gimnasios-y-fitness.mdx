@@ -1,25 +1,104 @@
 ---
-title: Gimnasios y Centros Fitness
-description: Control de membresías con vigencia, pases diarios y cobro recurrente en gimnasios.
+title: "Gimnasios, Centros Fitness y Crossfit"
+description: "Guía de operación para recepción de gimnasios: planes y membresías temporales con duracionDias, cobro de visitas, control de socios activos y venta cruzada en VentaSimple."
+sidebar:
+  order: 3
 ---
 
-import { Steps, Aside, Badge } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 
-# Gimnasios y Centros Fitness
+# Gimnasios, Centros Fitness y Boxes de Crossfit
 
-Administra planes mensuales, trimestrales y pases por día manteniendo control exacto de la vigencia de tus socios.
+La recepción de un gimnasio requiere agilidad extrema: dar la bienvenida a socios en horas pico, validar quién está al corriente con su cuota, registrar visitas esporádicas y vender hidratación en el mostrador sin generar filas. **VentaSimple** centraliza todo este flujo en una sola interfaz táctil.
 
-## 1. Membresías con Vigencia (`duracionDias`)
+---
 
-En tu catálogo de servicios puedes crear planes configurando el parámetro de duración en días:
-- **Pase Diario:** 1 día de vigencia.
-- **Mensualidad Estándar:** 30 días de vigencia.
-- **Trimestre / Anualidad:** 90 o 365 días.
+## 1. Configuración de Membresías y Planes con Vigencia Temporal
 
-Al registrar el cobro al socio:
-1. El sistema calcula la fecha de vencimiento sumando los días a partir de la fecha actual o al término de su plan activo.
-2. La credencial o perfil del socio refleja inmediatamente el estado de vigencia (Activo / Vencido).
+A diferencia de un producto empaquetado, una membresía es un servicio que otorga derecho de acceso durante un periodo determinado.
 
-:::tip[Cobro de Bebidas y Suplementos]
-Combina el cobro de la membresía con venta de agua, energizantes o proteína en el mismo mostrador de recepción.
+### Parámetro de Vigencia (`duracionDias`)
+Al dar de alta planes en **Catálogo > Productos / Servicios**:
+1. Desactiva la casilla **Controlar Inventario** (`gestionarStock = false`).
+2. Activa el atributo **Membresía / Servicio con Vigencia**.
+3. Define el parámetro **`duracionDias`** utilizando los selectores rápidos:
+
+| Chip de Duración Rápida | Días Calculados | Caso de Uso Típico |
+| :--- | :---: | :--- |
+| <Badge text="[1 Día]" variant="default" /> | `1 día` | Pase diario / Visita para usuarios no inscritos |
+| <Badge text="[15 Días]" variant="default" /> | `15 días` | Quincena para trabajadores con pago quincenal |
+| <Badge text="[1 Mes]" variant="success" /> | `30 días` | Mensualidad estándar de gimnasio o box |
+| <Badge text="[3 Meses]" variant="tip" /> | `90 días` | Trimestre promocional de acondicionamiento |
+| <Badge text="[1 Año]" variant="tip" /> | `365 días` | Anualidad con descuento por pago anticipado |
+
+:::note[Cálculo Inteligente de Vencimiento]
+Si el socio ya cuenta con días activos y renueva antes de expirar, el sistema **suma los nuevos días a partir de su fecha de vencimiento actual**, garantizando que no pierda los días que ya había pagado.
 :::
+
+---
+
+## 2. Control de Socios y Cobro en Recepción
+
+El mostrador de recepción permite atender a socios inscritos y a usuarios de paso con total rapidez:
+
+<Tabs>
+  <TabItem label="Búsqueda de Socio" icon="seti:search">
+    <Steps>
+      1. **Búsqueda inmediata en pantalla:** Escribe las primeras letras del nombre, apellidos o número celular en el buscador del mostrador.
+      2. **Escaneo de Código / Credencial:** Si entregas credenciales físicas con código de barras o código QR a tus socios, puedes escanearlas directamente con la pistola láser o la cámara del celular.
+      3. **Semáforo de Estatus:**
+         - <Badge text="ACTIVO" variant="success" /> El socio está al corriente; muestra la fecha exacta de expiración y días restantes.
+         - <Badge text="VENCIDO" variant="danger" /> Membresía expirada; el sistema sugiere en un botón la renovación inmediata de su plan habitual.
+    </Steps>
+  </TabItem>
+
+  <TabItem label="Cobro de Visitas / Pases Sueltos" icon="seti:ticket">
+    Para personas que asisten solo por una sesión (turistas, invitados o usuarios esporádicos):
+    
+    <Steps>
+      1. Pulsa el botón rápido <Badge text="[Visita / Pase de Día]" variant="default" size="large" /> en la cuadrícula de favoritos.
+      2. No es obligatorio registrar sus datos completos de socio si hay prisa en el mostrador: puedes cobrarlo como *Cliente General*.
+      3. Cobra en efectivo o tarjeta en un solo tap y dale acceso al área de entrenamiento.
+    </Steps>
+  </TabItem>
+
+  <TabItem label="Alertas y Monitoreo" icon="seti:bell">
+    En la vista de **Clientes y Socios**, puedes filtrar por:
+    * **Socios por vencer en los próximos 3 días:** Para enviarles un recordatorio cordial de renovación por WhatsApp.
+    * **Socios inactivos / vencidos:** Para lanzar campañas de reactivación física con promociones especiales.
+  </TabItem>
+</Tabs>
+
+---
+
+## 3. Venta Cruzada en Mostrador (Barra de Suplementos y Bebidas)
+
+El mostrador de un gimnasio suele generar una importante fuente de ingresos extra a través de la venta de hidratación y suplementación deportiva. En VentaSimple combinas estos artículos en la misma transacción:
+
+* **Cobro Híbrido en 1 Solo Ticket:**
+  - `1x Mensualidad Crossfit ($ 800.00)` $\rightarrow$ *Extiende la vigencia del socio en +30 días*.
+  - `1x Bebida Isotónica 600ml ($ 35.00)` $\rightarrow$ *Resta 1 unidad de la nevera en el inventario*.
+  - `1x Scoop de Proteína Whey ($ 45.00)` $\rightarrow$ *Resta 1 porción del frasco de insumo*.
+* **Todo en una sola cuenta:** El socio puede pagar el total con su tarjeta, efectivo o transferir por SPEI de una sola vez.
+
+---
+
+## 4. Métodos de Pago Adaptados al Gimnasio
+
+<Tabs>
+  <TabItem label="Efectivo" icon="seti:cash">
+    Ingresa el dinero entregado. VentaSimple calcula el cambio exacto para no retrasar el ingreso de otros socios al área de pesas.
+  </TabItem>
+
+  <TabItem label="Tarjeta / Terminal Clip" icon="seti:credit-card">
+    Cobra mensualidades altas o anualidades en tu terminal bancaria o agregador móvil (Clip, Mercado Pago Point). Selecciona **Tarjeta** en el sistema para asentar la venta sin comisiones extra de la plataforma.
+  </TabItem>
+
+  <TabItem label="Transferencia / SPEI" icon="seti:graphql">
+    Muchos socios prefieren transferir su mensualidad desde su app móvil bancaria. Muestra tu código QR SPEI / CoDi en el mostrador; una vez verificada la notificación, pulsa **Transferencia** para autorizar el acceso y emitir el recibo digital.
+  </TabItem>
+</Tabs>
+
+<Aside type="tip" title="Comprobante Digital Directo a WhatsApp">
+  Al confirmar la renovación, envía el recibo al WhatsApp del socio con el detalle de su pago y la fecha de término de su membresía. De esta forma, el socio siempre tiene a la mano la vigencia de su plan en su teléfono.
+</Aside>
