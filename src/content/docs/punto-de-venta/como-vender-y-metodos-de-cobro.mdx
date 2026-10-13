@@ -1,14 +1,82 @@
 ---
-title: Métodos de Cobro y Venta
-description: Aprende cómo cobrar tus ventas con efectivo, tarjeta o fiado en VentaSimple.
+title: Métodos de Cobro y Venta en Mostrador
+description: Guía operativa paso a paso para seleccionar artículos, cobrar en efectivo, tarjeta, transferencia o fiado y emitir comprobantes en VentaSimple.
 sidebar:
   order: 1
 ---
 
-## Cómo realizar una venta
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 
-Para realizar una venta en VentaSimple:
-1. Agrega productos al carrito mediante el buscador o escaneando su código de barras.
-2. Toca el botón **Cobrar**.
-3. Elige el método de pago (Efectivo, Tarjeta, o Fiado).
-4. Confirma la operación y genera el ticket.
+# Cómo Cobrar una Venta en Mostrador
+
+El proceso de venta en **VentaSimple** está diseñado para realizar transacciones en menos de 5 segundos, garantizando agilidad frente a filas de clientes y sincronización instantánea de tu caja e inventario.
+
+---
+
+## Flujo Operativo en 3 Pasos
+
+<Steps>
+1. **Selección y Carga de Artículos al Carrito**
+
+   Tienes 3 formas inmediatas de agregar productos al mostrador:
+   - **Lector de Códigos de Barras / Pistola Láser:** Escanea el código del producto y se añadirá de inmediato al carrito.
+   - **Cámara del Teléfono o Tablet:** Presiona el ícono del escáner en la barra superior para usar la cámara como lector óptico de alta velocidad.
+   - **Buscador Predictivo o Cuadrícula de Favoritos:** Escribe el nombre o categoría del producto, o pulsa sobre su botón rápido en pantalla.
+
+   :::tip[Pesaje o Venta por Fracción]
+   Para productos a granel (jamón, frutas, tornillería), pulsa sobre la cantidad e ingresa el peso exacto en decimales (ejemplo: `0.450` kg). El total se calcula automáticamente.
+   :::
+
+2. **Procesar el Pago según el Método del Cliente**
+
+   Presiona el botón principal <Badge text="Cobrar" variant="success" size="medium" /> y elige la forma de pago correspondiente:
+
+   <Tabs>
+     <TabItem label="Efectivo" icon="seti:cash">
+       ### Pago en Efectivo y Cambio Sugerido
+       
+       1. Ingresa la cantidad de dinero que te entrega el cliente o selecciona los billetes rápidos sugeridos en pantalla ($50, $100, $200, $500).
+       2. El sistema muestra en números grandes y claros el **Cambio a Entregar** para evitar equivocaciones del cajero.
+       3. Al confirmar, el sistema registra el ingreso en tu **Caja Chica** y activa la señal de apertura de tu cajón de dinero (si está conectado a tu impresora térmica).
+     </TabItem>
+
+     <TabItem label="Tarjeta" icon="seti:credit-card">
+       ### Terminales Bancarias y Agregadores (Clip, Mercado Pago, etc.)
+       
+       VentaSimple **no cobra comisiones extra** por pagos con tarjeta:
+       1. Cobra el monto total en tu terminal física independiente (Clip, Mercado Pago Point, Ualá o terminal bancaria).
+       2. Una vez aprobada la transacción en la terminal, presiona **Tarjeta** (Débito o Crédito) en VentaSimple.
+       3. Opcionalmente, puedes ingresar los últimos 4 dígitos o número de autorización para auditorías en tu corte de caja.
+     </TabItem>
+
+     <TabItem label="Transferencia / SPEI" icon="seti:graphql">
+       ### Cobros por Transferencia o SPEI Rápido
+       
+       1. Muestra tu código QR de cobro SPEI / CoDi o proporciona la CLABE de tu negocio.
+       2. Valida la notificación en la app de tu banco.
+       3. En VentaSimple selecciona **Transferencia** para registrar la venta sin alterar el saldo de efectivo físico en tu cajón de caja.
+     </TabItem>
+
+     <TabItem label="Fiado / Crédito" icon="seti:folder">
+       ### Venta a Cuenta (Libreta Digital de Fiados)
+       
+       1. Toca la opción **Fiado / Crédito**.
+       2. Selecciona al cliente registrado en tu catálogo. Si no está dado de alta, puedes agregarlo al instante con su nombre y WhatsApp.
+       3. VentaSimple revisará si el cliente cuenta con límite de crédito disponible y su semáforo de pagos.
+       4. El importe se cargará a su saldo deudor sin requerir desembolso inmediato.
+     </TabItem>
+   </Tabs>
+
+3. **Emisión y Entrega del Comprobante**
+
+   Una vez confirmado el cobro, decide cómo entregar el comprobante a tu cliente:
+   - **Ticket Digital por WhatsApp (Recomendado):** Pulsa **Enviar por WhatsApp**. Se abrirá un enlace directo para compartir el ticket digital con un solo tap, ahorrando papel y rollos térmicos.
+   - **Impresión Térmica Bluetooth o USB:** Si tienes una impresora de 58mm o 80mm vinculada, el ticket se imprime automáticamente con los datos de tu negocio, fecha, desglose de artículos y mensaje de agradecimiento.
+   - **Venta sin Comprobante:** Puedes pulsar **Siguiente Venta** para volver al mostrador en blanco de forma instantánea.
+</Steps>
+
+---
+
+<Aside type="tip" title="Operación Continua Sin Internet (Modo Offline)">
+  Si se corta la luz o te quedas sin conexión a internet en el local, **VentaSimple sigue funcionando al 100%**. Todas las ventas, cobros y movimientos se guardan en la base de datos local de tu navegador (IndexedDB) y se sincronizan silenciosamente en cuanto recuperes la conexión.
+</Aside>

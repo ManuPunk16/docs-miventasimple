@@ -1,0 +1,25 @@
+---
+title: Gimnasios y Centros Fitness
+description: Control de membresías con vigencia, pases diarios y cobro recurrente en gimnasios.
+---
+
+import { Steps, Aside, Badge } from '@astrojs/starlight/components';
+
+# Gimnasios y Centros Fitness
+
+Administra planes mensuales, trimestrales y pases por día manteniendo control exacto de la vigencia de tus socios.
+
+## 1. Membresías con Vigencia (`duracionDias`)
+
+En tu catálogo de servicios puedes crear planes configurando el parámetro de duración en días:
+- **Pase Diario:** 1 día de vigencia.
+- **Mensualidad Estándar:** 30 días de vigencia.
+- **Trimestre / Anualidad:** 90 o 365 días.
+
+Al registrar el cobro al socio:
+1. El sistema calcula la fecha de vencimiento sumando los días a partir de la fecha actual o al término de su plan activo.
+2. La credencial o perfil del socio refleja inmediatamente el estado de vigencia (Activo / Vencido).
+
+:::tip[Cobro de Bebidas y Suplementos]
+Combina el cobro de la membresía con venta de agua, energizantes o proteína en el mismo mostrador de recepción.
+:::

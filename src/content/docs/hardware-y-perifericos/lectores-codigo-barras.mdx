@@ -1,8 +1,90 @@
 ---
-title: Lectores de Código de Barras
-description: Vincula y utiliza lectores láser y escáneres USB/Bluetooth.
+title: Lectores de Código y Básculas
+description: Configuración de escáneres USB/Bluetooth en modo wedge, cámara trasera con ZXing, y básculas seriales Torrey/Rhino con Web Serial API y códigos EAN-13 de peso variable.
+sidebar:
+  order: 2
 ---
 
-## Lectores de Código de Barras
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 
-VentaSimple es compatible con lectores USB y Bluetooth estándar de emulación de teclado, además del escáner integrado con la cámara del celular.
+# Lectores de Código de Barras y Básculas de Pesaje
+
+VentaSimple está optimizado para el mostrador intensivo de retail y abarrotes, soportando tanto escaneo óptico veloz de códigos como pesaje decimal en tiempo real para venta a granel.
+
+---
+
+## 1. Lectores de Códigos de Barras
+
+El punto de venta soporta dos modalidades de captura para artículos empaquetados:
+
+### A. Escáner Físico USB o Bluetooth (Modo Emulación de Teclado / HID)
+Las pistolas láser y escáneres omnidireccionales operan en modo emulación de teclado (*Keyboard Wedge*):
+* **Detección por Ráfaga (`<= 60ms`):** VentaSimple detecta automáticamente secuencias rápidas de pulsaciones enviadas en intervalos menores o iguales a 60 milisegundos y finalizadas con el carácter `Enter` (`\r` o `\n`).
+* **Foco Global:** No es necesario hacer clic manualmente en la barra de búsqueda para escanear; el sistema intercepta el código de barras desde cualquier parte de la pantalla y agrega el producto directamente al carrito de compra.
+
+:::tip[Configuración del Escáner]
+Asegúrate de que tu lector tenga configurado el sufijo **ENTER (CR/LF)** por defecto. Puedes escanear el código de barras de configuración *Add Enter Suffix* que viene en el manual impreso de tu lector.
+:::
+
+### B. Escáner con Cámara Trasera del Celular (`@zxing/browser`)
+Si no cuentas con una pistola láser externa, puedes utilizar la cámara de tu smartphone o tableta:
+* Se carga de forma diferida (*lazy loading*) mediante la librería `@zxing/browser` para mantener la aplicación ligera.
+* Detecta códigos de barras tradicionales (**EAN-13**, **UPC-A**, **Code 128**) y códigos bidimensionales (**QR**).
+* Cuenta con botón de encendido de linterna / flash para escanear en condiciones de poca iluminación.
+
+---
+
+## 2. Básculas y Pesaje Decimal (Venta a Granel)
+
+Para negocios que comercializan alimentos, frutas, carnes, granos o ferretería por gramo o kilogramo, VentaSimple ofrece tres modalidades de captura:
+
+<Tabs>
+  <TabItem label="Báscula Serial (USB / RS232)" icon="seti:c">
+    ### Conexión Directa por Web Serial API
+    
+    En navegadores modernos basados en Chromium (Google Chrome, Microsoft Edge y Opera) sobre Windows, Linux o macOS:
+    
+    <Steps>
+      1. **Conexión:** Conecta la báscula al puerto USB o serial de tu equipo (básculas compatibles: **Torrey L-EQ / MFQ**, **Rhino BAR-8**, **Dibal**, **Systel**).
+      2. **Velocidad de Transmisión:** Configura la báscula a **9600 baudios**, 8 bits de datos, sin paridad y 1 bit de parada (`9600 8-N-1`).
+      3. **Vincular Puerto:** En VentaSimple ve a **Ajustes > Báscula**, presiona <Badge text="Conectar Báscula Serial" variant="tip" /> y autoriza el puerto `COM` en la ventana del navegador.
+      4. **Lectura Continua:** Al colocar jamón, queso o frutas sobre el plato, el peso decimal se transferirá de inmediato al campo de cantidad de la venta activa.
+    </Steps>
+  </TabItem>
+
+  <TabItem label="Báscula Etiquetadora (EAN-13)" icon="seti:markdown">
+    ### Códigos de Barras de Peso Variable (Torrey W-LABEL)
+    
+    En carnicerías, cremerías o autoservicios con básculas etiquetadoras que imprimen sellos con código de barras:
+    
+    * **Prefijos Reconocidos:** Códigos estándar iniciados con **`20`**, **`21`**, **`22`** o **`02`**.
+    * **Estructura del Código EAN-13:**
+      ```text
+      [PP][CCCCC][GGGGG][D]
+      PP    = Prefijo de peso variable (ej. 20)
+      CCCCC = Código PLU del producto (ej. 00145 para "Pechuga de Pavo")
+      GGGGG = Peso en gramos (ej. 00750 = 750 gramos = 0.750 kg)
+      D     = Dígito verificador
+      ```
+    * **Desglose Instantáneo:** Al escanear el ticket de la etiqueta con la pistola láser, VentaSimple localiza el producto con PLU `145` y asigna automáticamente la cantidad de `0.750 kg`.
+  </TabItem>
+
+  <TabItem label="Pesaje Manual y Tara" icon="seti:gear">
+    ### Ingreso Manual con Precisión Milimétrica
+    
+    Si utilizas una báscula convencional sin salida de datos:
+    
+    <Steps>
+      1. **Selección del Artículo:** Pulsa sobre el producto por kilo (ej. *Huevo Blanco*, *Tomate Saladet*).
+      2. **Captura Decimal:** Ingresa el peso bruto con precisión de tres decimales (ejemplo: `1.285` kg con paso de `0.001 kg`).
+      3. **Descuento de Tara:** Si el producto se pesa en contenedor, charola o bolsa plástica, activa el botón **Tara** e indica los gramos a descontar (ej. `-20 g`).
+      4. **Cálculo Neto:** VentaSimple multiplicará únicamente el peso neto real por el precio unitario del catálogo.
+    </Steps>
+  </TabItem>
+</Tabs>
+
+---
+
+<Aside type="note" title="Márgenes y Redondeo Financiero">
+  El motor matemático de VentaSimple utiliza redondeo aritmético estándar a dos decimales para el cobro final, garantizando que el desglose de centavos en tickets y facturas coincida exactamente con las regulaciones fiscales.
+</Aside>

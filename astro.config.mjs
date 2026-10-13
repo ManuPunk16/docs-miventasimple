@@ -35,47 +35,59 @@ export default defineConfig({
 				{
 					label: 'Primeros Pasos',
 					collapsed: false,
-					items: [{ autogenerate: { directory: 'primeros-pasos' } }],
+					items: [
+						{ label: 'Guía Rápida de Inicio', slug: 'primeros-pasos' },
+						{ label: 'Perfil de Negocio', slug: 'primeros-pasos/configuracion-cuenta-perfil' },
+						{ label: 'Usuarios y Roles', slug: 'primeros-pasos/empleados-permisos' },
+					],
 				},
 				{
-					label: 'Punto de Venta (POS)',
-					collapsed: true,
-					items: [{ autogenerate: { directory: 'punto-de-venta' } }],
+					label: 'El Mostrador (Caja y Ventas)',
+					collapsed: false,
+					items: [
+						{ label: 'Cobro Rápido y Métodos de Pago', slug: 'punto-de-venta/como-vender-y-metodos-de-cobro' },
+						{ label: 'Caja Chica y Cortes de Caja', slug: 'punto-de-venta/caja-chica-aperturas-cierres' },
+						{ label: 'Libreta de Fiados y Créditos', slug: 'punto-de-venta/fiados-ventas-credito-abonos' },
+						{ label: 'Promociones y Descuentos', slug: 'punto-de-venta/promociones-descuentos' },
+					],
 				},
 				{
-					label: 'Control de Inventario',
+					label: 'Inventario y Catálogo',
 					collapsed: true,
-					items: [{ autogenerate: { directory: 'inventario-y-productos' } }],
-				},
-				{
-					label: 'Clientes y Fidelidad',
-					collapsed: true,
-					items: [{ autogenerate: { directory: 'clientes-y-fidelidad' } }],
-				},
-				{
-					label: 'Compras y Proveedores',
-					collapsed: true,
-					items: [{ autogenerate: { directory: 'compras-y-proveedores' } }],
+					items: [
+						{ label: 'Alta de Productos y Precios', slug: 'inventario-y-productos/alta-productos-variantes' },
+						{ label: 'Movimientos de Stock y Kardex', slug: 'inventario-y-productos/movimientos-stock-kardex' },
+						{ label: 'Recetas e Insumos', slug: 'inventario-y-productos/recetas-insumos' },
+						{ label: 'Auditorías y Conteos de Inventario', slug: 'inventario-y-productos/cortes-auditorias-inventario' },
+					],
 				},
 				{
 					label: 'Giros Especializados',
-					collapsed: true,
-					items: [{ autogenerate: { directory: 'giros-especializados' } }],
-				},
-				{
-					label: 'Reportes y Auditoría',
-					collapsed: true,
-					items: [{ autogenerate: { directory: 'reportes-y-auditoria' } }],
-				},
-				{
-					label: 'Facturación y Cuenta',
-					collapsed: true,
-					items: [{ autogenerate: { directory: 'facturacion-y-cuenta' } }],
+					badge: { text: 'Arquetipos', variant: 'tip' },
+					collapsed: false,
+					items: [
+						{ label: 'Abarrotes y Tiendas', slug: 'giros/abarrotes-y-retail' },
+						{ label: 'Barberías y Salones', slug: 'giros/barberias-y-esteticas' },
+						{ label: 'Gimnasios y Centros Fitness', slug: 'giros/gimnasios-y-fitness' },
+						{ label: 'Talleres y Refaccionarias', slug: 'giros/talleres-y-refaccionarias' },
+					],
 				},
 				{
 					label: 'Hardware y Periféricos',
 					collapsed: true,
-					items: [{ autogenerate: { directory: 'hardware-y-perifericos' } }],
+					items: [
+						{ label: 'Impresoras Térmicas Bluetooth y USB', slug: 'hardware-y-perifericos/impresoras-tickets' },
+						{ label: 'Lectores de Códigos y Básculas', slug: 'hardware-y-perifericos/lectores-codigo-barras' },
+					],
+				},
+				{
+					label: 'Reportes y Finanzas',
+					collapsed: true,
+					items: [
+						{ label: 'Dashboard Financiero y Utilidades', slug: 'reportes-y-auditoria/dashboard-utilidades-metricas' },
+						{ label: 'Exportación a Excel / CSV', slug: 'reportes-y-auditoria/exportacion-informacion-excel-csv' },
+						{ label: 'Historial de Auditoría', slug: 'reportes-y-auditoria/historial-auditoria-personal' },
+					],
 				},
 			],
 		}),

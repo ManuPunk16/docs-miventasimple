@@ -1,34 +1,104 @@
 ---
-title: Gestión de Ventas y Caja Chica
-description: Guía funcional sobre cómo controlar las ventas diarias y el flujo de efectivo en caja.
+title: Caja Chica, Aperturas y Cierre de Turno
+description: Guía paso a paso para apertura de turno, registro de entradas y salidas operativas, arqueo ciego para cajeros y corte Z de administrador con semáforo de diferencias en VentaSimple.
 sidebar:
-  order: 1
+  order: 2
 ---
 
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 import Diagram from '../../../components/Diagram.astro';
 
-# ¿Cómo cobrar un ticket y gestionar tu caja chica?
+# Gestión de Ventas, Caja Chica y Cierre de Turno
 
-Registrar cada venta y movimiento de dinero te ayudará a evitar descuadres al final del día. Aquí te enseñamos cómo llevar un control exacto de tu caja chica de forma fácil.
+El control de efectivo es el pilar de la rentabilidad en cualquier mostrador. VentaSimple proporciona un circuito blindado para registrar cada movimiento de dinero desde la apertura matutina hasta el arqueo final.
 
-## El camino que sigue tu dinero
+---
 
-El dinero físico de tu negocio pasa por las siguientes etapas desde que abres tu tienda hasta que cierras en la noche:
+## Circuito Diario del Efectivo
 
 <Diagram 
-  title="Circuito diario del dinero en caja" 
+  title="Flujo Integral del Efectivo en Turno" 
   code={`
   graph LR
-    A[Dinero inicial para cambio] --> B[Cobro de Ventas]
-    B --> C[Salidas / Compras rápidas]
-    C --> D[Corte de Caja parcial]
-    D --> E[Retiro final de ganancias]
+    A[1. Fondo Inicial / Apertura] --> B[2. Cobro de Ventas]
+    B --> C[3. Entradas / Salidas Operativas]
+    C --> D[4. Arqueo Físico]
+    D --> E[5. Corte Z & Retiro de Utilidad]
   `} 
 />
 
-## Las tareas que realizas a diario en tu caja
+---
 
-- **Iniciar Caja (Apertura):** Al iniciar tu turno, indica cuánto dinero en efectivo tienes en el cajón para poder dar cambio a tus clientes.
-- **Registrar Entradas o Salidas:** Si tomas dinero de la caja para un gasto imprevisto (como comprar artículos de limpieza o pagar a un proveedor rápido), regístralo de inmediato.
-- **Hacer Corte de Caja (Cierre):** Al finalizar tu día, cuenta el dinero físico del cajón. El sistema te dirá si coincide exactamente con las ventas registradas.
+## 1. Apertura de Turno (Fondo de Caja)
 
+Al iniciar el día o cambio de cajero:
+
+<Steps>
+1. Abre el menú **Caja** y pulsa en <Badge text="Abrir Caja" variant="success" />.
+2. Ingresa el **Fondo Inicial**: la cantidad de efectivo en monedas y billetes pequeños disponible en el cajón para dar cambio a los primeros clientes.
+3. El sistema bloquea el mostrador de ventas hasta que este saldo inicial sea validado y registrado con marca de tiempo y usuario responsable.
+</Steps>
+
+---
+
+## 2. Entradas y Salidas Operativas de Efectivo
+
+Durante la jornada es común realizar pagos imprevistos o recibir ingresos ajenos a las ventas:
+
+* **Salida / Retiro de Dinero:** Si tomas efectivo de la caja para pagar a un proveedor de paso (ej. panadero, refrescos) o comprar insumos de limpieza:
+  1. Presiona **Movimiento de Caja > Registrar Salida**.
+  2. Indica el importe exacto y selecciona el concepto (ej. *Pago a Proveedor*, *Gasto Operativo*, *Retiro Parcial*).
+  3. El monto se descuenta del efectivo esperado sin generar faltantes falsos.
+* **Entrada de Dinero:** Si ingresas cambio adicional durante el turno o realizas una aportación de capital, regístralo como **Entrada** para que sume al efectivo esperado del cajón.
+
+---
+
+## 3. Cierre y Arqueo de Turno
+
+Al finalizar la jornada laboral o cambio de turno, se realiza el corte de caja:
+
+<Tabs>
+  <TabItem label="Arqueo Ciego (Modo Cajero)" icon="seti:lock">
+    ### Prevención de Fugas y Robos Hormiga
+    
+    Para evitar que los colaboradores cuadren artificialmente el dinero o sustraigan sobrantes:
+    
+    * **Ocultamiento de Saldos:** La pantalla del cajero **no muestra** cuánto dinero se vendió ni cuánto efectivo debería haber en el cajón.
+    * **Conteo Físico Obligatorio (`monto-final`):** El cajero debe contar físicamente todas las monedas y billetes del cajón e ingresar los totales por denominación o el monto total acumulado.
+    * **Confirmación y Cierre:** Una vez capturado el monto físico, el turno se cierra definitivamente y no puede ser editado.
+  </TabItem>
+
+  <TabItem label="Corte Administrador" icon="seti:dashboard">
+    ### Desglose Multimétodo en Tiempo Real
+    
+    Los usuarios con rol Administrador o Dueño tienen acceso al desglose consolidado de la auditoría:
+    
+    | Concepto Financiero | Descripción |
+    | :--- | :--- |
+    | **Fondo Inicial** | Efectivo base con el que inició el turno |
+    | **Ventas en Efectivo** | Dinero cobrado de ventas directas |
+    | **Abonos de Fiados** | Pagos recibidos de clientes que liquidan deudas |
+    | **Entradas / Salidas** | Ajustes y pagos operativos registrados |
+    | **Efectivo Teórico Esperado** | `= Fondo + Ventas Efectivo + Abonos + Entradas - Salidas` |
+    | **Cobros Digitales** | Ventas procesadas por **Tarjeta** y transferencias **SPEI** (auditoría externa) |
+    | **Fiados Otorgados** | Mercancía entregada a crédito (no afecta efectivo) |
+  </TabItem>
+</Tabs>
+
+---
+
+## Tarjeta de Diferencia y Semáforo Visual
+
+Al comparar el **Efectivo Contado** contra el **Efectivo Teórico Esperado**, VentaSimple genera un balance automático con código de color:
+
+* <Badge text="Diferencia: $0.00 (Cuadre Exacto)" variant="success" size="large" /> **Caja Cuadrada:** Todo el dinero físico en el cajón coincide al centavo con el registro del sistema.
+* <Badge text="Sobrante en Caja" variant="caution" size="large" /> **Dinero de Más:** Existe más efectivo del registrado (suele ocurrir si se omitió registrar una venta o se dio cambio de menos a un cliente).
+* <Badge text="Faltante en Caja" variant="danger" size="large" /> **Descuadre / Faltante:** Hay menos dinero en el cajón físico que el esperado por el sistema. Requiere justificación del cajero en el campo de notas.
+
+---
+
+## Impresión del Ticket de Corte Z
+
+Al confirmar el cierre:
+1. Se genera un comprobante de auditoría térmica (Corte Z) que incluye el desglose por tipo de pago, total de ventas, transacciones canceladas y la firma del cajero y supervisor.
+2. Si está configurado, se envía un resumen ejecutivo automático por WhatsApp o correo electrónico al dueño del negocio.

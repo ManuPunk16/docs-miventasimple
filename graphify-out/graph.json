@@ -250,7 +250,7 @@
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "id": "components_customsidebarsublist",
-      "community": 4,
+      "community": 25,
       "norm_label": "./customsidebarsublist.astro"
     },
     {
@@ -260,7 +260,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "components_customsidebarsublist_flattensidebar",
-      "community": 4,
+      "community": 25,
       "norm_label": "flattensidebar()"
     },
     {
@@ -271,7 +271,7 @@
       "_origin": "ast",
       "source_location": "L1",
       "id": "components_sidebaricon",
-      "community": 4,
+      "community": 25,
       "norm_label": "sidebaricon.astro"
     },
     {
@@ -281,7 +281,7 @@
       "confidence": "EXTRACTED",
       "_origin": "ast",
       "id": "components",
-      "community": 4,
+      "community": 25,
       "norm_label": "@astrojs/starlight/components"
     },
     {
@@ -291,7 +291,7 @@
       "confidence": "EXTRACTED",
       "_origin": "ast",
       "id": "sidebarrestorepoint_astro",
-      "community": 4,
+      "community": 25,
       "norm_label": "@astrojs/starlight/components/sidebarrestorepoint.astro"
     },
     {
@@ -371,7 +371,7 @@
       "confidence": "EXTRACTED",
       "_origin": "ast",
       "id": "props",
-      "community": 4,
+      "community": 25,
       "norm_label": "@astrojs/starlight/props"
     },
     {
@@ -461,7 +461,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_sidebar",
-      "community": 4,
+      "community": 25,
       "norm_label": "sidebar.astro"
     },
     {
@@ -471,7 +471,7 @@
       "confidence": "EXTRACTED",
       "_origin": "ast",
       "id": "mobilemenufooter",
-      "community": 4,
+      "community": 25,
       "norm_label": "virtual:starlight/components/mobilemenufooter"
     },
     {
@@ -481,7 +481,7 @@
       "confidence": "EXTRACTED",
       "_origin": "ast",
       "id": "sidebarpersister_astro",
-      "community": 4,
+      "community": 25,
       "norm_label": "@astrojs/starlight/components/sidebarpersister.astro"
     },
     {
@@ -731,7 +731,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_design",
-      "community": 1,
+      "community": 0,
       "norm_label": "design.md"
     },
     {
@@ -741,7 +741,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_design_ventasimple_sistema_de_temas",
-      "community": 1,
+      "community": 0,
       "norm_label": "ventasimple \u2014 sistema de temas"
     },
     {
@@ -751,7 +751,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "docs_design_theme_dark_default_linear_style_reference",
-      "community": 5,
+      "community": 0,
       "norm_label": "theme: dark (default) \u2014 linear style reference"
     },
     {
@@ -761,7 +761,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "docs_design_tokens_colors",
-      "community": 5,
+      "community": 0,
       "norm_label": "tokens \u2014 colors"
     },
     {
@@ -771,7 +771,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "docs_design_tokens_typography",
-      "community": 5,
+      "community": 0,
       "norm_label": "tokens \u2014 typography"
     },
     {
@@ -781,7 +781,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "docs_design_inter_variable_primary_ui_typeface_for_all_content_including_headings_body_text_and_interactive_elements_its_variable_weights_provide_a_clean_modern_aesthetic_with_strong_technical_readability_font_inter_variable",
-      "community": 5,
+      "community": 0,
       "norm_label": "inter variable \u2014 primary ui typeface for all content including headings, body text, and interactive elements. its variable weights provide a clean, modern aesthetic with strong technical readability. \u00b7 `--font-inter-variable`"
     },
     {
@@ -791,7 +791,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "docs_design_berkeley_mono_monospaced_font_for_code_snippets_technical_details_and_certain_data_displays_ensuring_consistent_character_alignment_and_technical_clarity_font_berkeley_mono",
-      "community": 5,
+      "community": 0,
       "norm_label": "berkeley mono \u2014 monospaced font for code snippets, technical details, and certain data displays, ensuring consistent character alignment and technical clarity. \u00b7 `--font-berkeley-mono`"
     },
     {
@@ -801,7 +801,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "docs_design_type_scale",
-      "community": 5,
+      "community": 0,
       "norm_label": "type scale"
     },
     {
@@ -971,7 +971,7 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "docs_design_do_s_and_don_ts",
-      "community": 5,
+      "community": 0,
       "norm_label": "do's and don'ts"
     },
     {
@@ -981,7 +981,7 @@
       "source_location": "L187",
       "_origin": "ast",
       "id": "docs_design_do",
-      "community": 5,
+      "community": 0,
       "norm_label": "do"
     },
     {
@@ -991,7 +991,7 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "docs_design_don_t",
-      "community": 5,
+      "community": 0,
       "norm_label": "don't"
     },
     {
@@ -1001,7 +1001,7 @@
       "source_location": "L205",
       "_origin": "ast",
       "id": "docs_design_surfaces",
-      "community": 5,
+      "community": 0,
       "norm_label": "surfaces"
     },
     {
@@ -1285,186 +1285,6 @@
       "norm_label": "tailwind v4"
     },
     {
-      "label": "repomix-output-docs-miventasimple.md",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple",
-      "community": 25,
-      "norm_label": "repomix-output-docs-miventasimple.md"
-    },
-    {
-      "label": "File Summary",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_summary",
-      "community": 25,
-      "norm_label": "file summary"
-    },
-    {
-      "label": "Purpose",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_purpose",
-      "community": 25,
-      "norm_label": "purpose"
-    },
-    {
-      "label": "File Format",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_format",
-      "community": 25,
-      "norm_label": "file format"
-    },
-    {
-      "label": "Usage Guidelines",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_usage_guidelines",
-      "community": 25,
-      "norm_label": "usage guidelines"
-    },
-    {
-      "label": "Notes",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_notes",
-      "community": 25,
-      "norm_label": "notes"
-    },
-    {
-      "label": "Directory Structure",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_directory_structure",
-      "community": 25,
-      "norm_label": "directory structure"
-    },
-    {
-      "label": "Files",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L54",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_files",
-      "community": 25,
-      "norm_label": "files"
-    },
-    {
-      "label": "File: repomix.config.json",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L56",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_repomix_config_json",
-      "community": 25,
-      "norm_label": "file: repomix.config.json"
-    },
-    {
-      "label": "File: docs/DESIGN.md",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L90",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_docs_design_md",
-      "community": 25,
-      "norm_label": "file: docs/design.md"
-    },
-    {
-      "label": "File: public/favicon.svg",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L681",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_public_favicon_svg",
-      "community": 25,
-      "norm_label": "file: public/favicon.svg"
-    },
-    {
-      "label": "File: public/google-site-verification.txt",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L686",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_public_google_site_verification_txt",
-      "community": 25,
-      "norm_label": "file: public/google-site-verification.txt"
-    },
-    {
-      "label": "File: public/googleoB-Z2hnHZOGw4LaVA6sPzDU06jFlWJGDqYVa0cXsVhg.html",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L691",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_public_googleob_z2hnhzogw4lava6spzdu06jflwjgdqyva0cxsvhg_html",
-      "community": 25,
-      "norm_label": "file: public/googleob-z2hnhzogw4lava6spzdu06jflwjgdqyva0cxsvhg.html"
-    },
-    {
-      "label": "File: public/llms-full.txt",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L696",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_public_llms_full_txt",
-      "community": 25,
-      "norm_label": "file: public/llms-full.txt"
-    },
-    {
-      "label": "File: public/llms.txt",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L1293",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_public_llms_txt",
-      "community": 25,
-      "norm_label": "file: public/llms.txt"
-    },
-    {
-      "label": "File: public/robots.txt",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L1332",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_public_robots_txt",
-      "community": 25,
-      "norm_label": "file: public/robots.txt"
-    },
-    {
-      "label": "File: tsconfig.json",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L1350",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_tsconfig_json",
-      "community": 25,
-      "norm_label": "file: tsconfig.json"
-    },
-    {
-      "label": "File: package.json",
-      "file_type": "document",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L1359",
-      "_origin": "ast",
-      "id": "repomix_output_docs_miventasimple_file_package_json",
-      "community": 25,
-      "norm_label": "file: package.json"
-    },
-    {
       "label": "programas-puntos-recompensas.mdx",
       "file_type": "document",
       "source_file": "src/content/docs/clientes-y-fidelidad/programas-puntos-recompensas.mdx",
@@ -1575,6 +1395,146 @@
       "norm_label": "mapeo de mesas y comandas"
     },
     {
+      "label": "abarrotes-y-retail.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "giros_abarrotes_y_retail",
+      "community": 55,
+      "norm_label": "abarrotes-y-retail.mdx"
+    },
+    {
+      "label": "Abarrotes y Tiendas de Conveniencia",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "giros_abarrotes_y_retail_abarrotes_y_tiendas_de_conveniencia",
+      "community": 55,
+      "norm_label": "abarrotes y tiendas de conveniencia"
+    },
+    {
+      "label": "1. Venta a Granel y Fracciones Decimales",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "giros_abarrotes_y_retail_1_venta_a_granel_y_fracciones_decimales",
+      "community": 55,
+      "norm_label": "1. venta a granel y fracciones decimales"
+    },
+    {
+      "label": "2. La Libreta Digital de Fiados",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "giros_abarrotes_y_retail_2_la_libreta_digital_de_fiados",
+      "community": 55,
+      "norm_label": "2. la libreta digital de fiados"
+    },
+    {
+      "label": "barberias-y-esteticas.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "giros_barberias_y_esteticas",
+      "community": 56,
+      "norm_label": "barberias-y-esteticas.mdx"
+    },
+    {
+      "label": "Barber\u00edas y Salones de Belleza",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "giros_barberias_y_esteticas_barber\u00edas_y_salones_de_belleza",
+      "community": 56,
+      "norm_label": "barberias y salones de belleza"
+    },
+    {
+      "label": "1. Asignaci\u00f3n de Barbero en Caja",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "giros_barberias_y_esteticas_1_asignaci\u00f3n_de_barbero_en_caja",
+      "community": 56,
+      "norm_label": "1. asignacion de barbero en caja"
+    },
+    {
+      "label": "2. Venta Cruzada de Productos para Cuidado Personal",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "giros_barberias_y_esteticas_2_venta_cruzada_de_productos_para_cuidado_personal",
+      "community": 56,
+      "norm_label": "2. venta cruzada de productos para cuidado personal"
+    },
+    {
+      "label": "gimnasios-y-fitness.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "giros_gimnasios_y_fitness",
+      "community": 57,
+      "norm_label": "gimnasios-y-fitness.mdx"
+    },
+    {
+      "label": "Gimnasios y Centros Fitness",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "giros_gimnasios_y_fitness_gimnasios_y_centros_fitness",
+      "community": 57,
+      "norm_label": "gimnasios y centros fitness"
+    },
+    {
+      "label": "1. Membres\u00edas con Vigencia (`duracionDias`)",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "giros_gimnasios_y_fitness_1_membres\u00edas_con_vigencia_duraciondias",
+      "community": 57,
+      "norm_label": "1. membresias con vigencia (`duraciondias`)"
+    },
+    {
+      "label": "talleres-y-refaccionarias.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "giros_talleres_y_refaccionarias",
+      "community": 58,
+      "norm_label": "talleres-y-refaccionarias.mdx"
+    },
+    {
+      "label": "Talleres Mec\u00e1nicos y Refaccionarias",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_y_refaccionarias",
+      "community": 58,
+      "norm_label": "talleres mecanicos y refaccionarias"
+    },
+    {
+      "label": "1. \u00d3rdenes con Servicios y Refacciones Combinadas",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_con_servicios_y_refacciones_combinadas",
+      "community": 58,
+      "norm_label": "1. ordenes con servicios y refacciones combinadas"
+    },
+    {
       "label": "impresoras-tickets.mdx",
       "file_type": "document",
       "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
@@ -1585,14 +1545,54 @@
       "norm_label": "impresoras-tickets.mdx"
     },
     {
-      "label": "Impresoras T\u00e9rmicas Compatibles",
+      "label": "Impresoras T\u00e9rmicas y Emisi\u00f3n de Tickets",
       "file_type": "document",
       "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
-      "source_location": "L6",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_compatibles",
+      "id": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets",
       "community": 33,
-      "norm_label": "impresoras termicas compatibles"
+      "norm_label": "impresoras termicas y emision de tickets"
+    },
+    {
+      "label": "Motor de Impresi\u00f3n PWA Universal",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_impresoras_tickets_motor_de_impresi\u00f3n_pwa_universal",
+      "community": 33,
+      "norm_label": "motor de impresion pwa universal"
+    },
+    {
+      "label": "Formatos Soportados: 58 mm y 80 mm",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_impresoras_tickets_formatos_soportados_58_mm_y_80_mm",
+      "community": 33,
+      "norm_label": "formatos soportados: 58 mm y 80 mm"
+    },
+    {
+      "label": "Vinculaci\u00f3n y Conexi\u00f3n Paso a Paso",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_impresoras_tickets_vinculaci\u00f3n_y_conexi\u00f3n_paso_a_paso",
+      "community": 33,
+      "norm_label": "vinculacion y conexion paso a paso"
+    },
+    {
+      "label": "Apertura de Caj\u00f3n de Dinero (RJ11) y Autocutter",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_impresoras_tickets_apertura_de_caj\u00f3n_de_dinero_rj11_y_autocutter",
+      "community": 33,
+      "norm_label": "apertura de cajon de dinero (rj11) y autocutter"
     },
     {
       "label": "lectores-codigo-barras.mdx",
@@ -1605,14 +1605,54 @@
       "norm_label": "lectores-codigo-barras.mdx"
     },
     {
-      "label": "Lectores de C\u00f3digo de Barras",
+      "label": "Lectores de C\u00f3digo de Barras y B\u00e1sculas de Pesaje",
       "file_type": "document",
       "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
-      "source_location": "L6",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras",
+      "id": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras_y_b\u00e1sculas_de_pesaje",
       "community": 34,
-      "norm_label": "lectores de codigo de barras"
+      "norm_label": "lectores de codigo de barras y basculas de pesaje"
+    },
+    {
+      "label": "1. Lectores de C\u00f3digos de Barras",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_lectores_codigo_barras_1_lectores_de_c\u00f3digos_de_barras",
+      "community": 34,
+      "norm_label": "1. lectores de codigos de barras"
+    },
+    {
+      "label": "A. Esc\u00e1ner F\u00edsico USB o Bluetooth (Modo Emulaci\u00f3n de Teclado / HID)",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_lectores_codigo_barras_a_esc\u00e1ner_f\u00edsico_usb_o_bluetooth_modo_emulaci\u00f3n_de_teclado_hid",
+      "community": 34,
+      "norm_label": "a. escaner fisico usb o bluetooth (modo emulacion de teclado / hid)"
+    },
+    {
+      "label": "B. Esc\u00e1ner con C\u00e1mara Trasera del Celular (`@zxing/browser`)",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_lectores_codigo_barras_b_esc\u00e1ner_con_c\u00e1mara_trasera_del_celular_zxing_browser",
+      "community": 34,
+      "norm_label": "b. escaner con camara trasera del celular (`@zxing/browser`)"
+    },
+    {
+      "label": "2. B\u00e1sculas y Pesaje Decimal (Venta a Granel)",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_lectores_codigo_barras_2_b\u00e1sculas_y_pesaje_decimal_venta_a_granel",
+      "community": 34,
+      "norm_label": "2. basculas y pesaje decimal (venta a granel)"
     },
     {
       "label": "index.mdx",
@@ -1865,34 +1905,74 @@
       "norm_label": "caja-chica-aperturas-cierres.mdx"
     },
     {
-      "label": "\u00bfC\u00f3mo cobrar un ticket y gestionar tu caja chica?",
+      "label": "Gesti\u00f3n de Ventas, Caja Chica y Cierre de Turno",
       "file_type": "document",
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
-      "source_location": "L10",
+      "source_location": "L11",
       "_origin": "ast",
-      "id": "punto_de_venta_caja_chica_aperturas_cierres_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica",
+      "id": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
       "community": 18,
-      "norm_label": "\u00bfcomo cobrar un ticket y gestionar tu caja chica?"
+      "norm_label": "gestion de ventas, caja chica y cierre de turno"
     },
     {
-      "label": "El camino que sigue tu dinero",
+      "label": "Circuito Diario del Efectivo",
       "file_type": "document",
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
-      "source_location": "L14",
+      "source_location": "L17",
       "_origin": "ast",
-      "id": "punto_de_venta_caja_chica_aperturas_cierres_el_camino_que_sigue_tu_dinero",
+      "id": "punto_de_venta_caja_chica_aperturas_cierres_circuito_diario_del_efectivo",
       "community": 18,
-      "norm_label": "el camino que sigue tu dinero"
+      "norm_label": "circuito diario del efectivo"
     },
     {
-      "label": "Las tareas que realizas a diario en tu caja",
+      "label": "1. Apertura de Turno (Fondo de Caja)",
       "file_type": "document",
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
-      "source_location": "L29",
+      "source_location": "L32",
       "_origin": "ast",
-      "id": "punto_de_venta_caja_chica_aperturas_cierres_las_tareas_que_realizas_a_diario_en_tu_caja",
+      "id": "punto_de_venta_caja_chica_aperturas_cierres_1_apertura_de_turno_fondo_de_caja",
       "community": 18,
-      "norm_label": "las tareas que realizas a diario en tu caja"
+      "norm_label": "1. apertura de turno (fondo de caja)"
+    },
+    {
+      "label": "2. Entradas y Salidas Operativas de Efectivo",
+      "file_type": "document",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "punto_de_venta_caja_chica_aperturas_cierres_2_entradas_y_salidas_operativas_de_efectivo",
+      "community": 18,
+      "norm_label": "2. entradas y salidas operativas de efectivo"
+    },
+    {
+      "label": "3. Cierre y Arqueo de Turno",
+      "file_type": "document",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "punto_de_venta_caja_chica_aperturas_cierres_3_cierre_y_arqueo_de_turno",
+      "community": 18,
+      "norm_label": "3. cierre y arqueo de turno"
+    },
+    {
+      "label": "Tarjeta de Diferencia y Sem\u00e1foro Visual",
+      "file_type": "document",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "punto_de_venta_caja_chica_aperturas_cierres_tarjeta_de_diferencia_y_sem\u00e1foro_visual",
+      "community": 18,
+      "norm_label": "tarjeta de diferencia y semaforo visual"
+    },
+    {
+      "label": "Impresi\u00f3n del Ticket de Corte Z",
+      "file_type": "document",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "punto_de_venta_caja_chica_aperturas_cierres_impresi\u00f3n_del_ticket_de_corte_z",
+      "community": 18,
+      "norm_label": "impresion del ticket de corte z"
     },
     {
       "label": "como-vender-y-metodos-de-cobro.mdx",
@@ -1905,14 +1985,24 @@
       "norm_label": "como-vender-y-metodos-de-cobro.mdx"
     },
     {
-      "label": "C\u00f3mo realizar una venta",
+      "label": "C\u00f3mo Cobrar una Venta en Mostrador",
       "file_type": "document",
       "source_file": "src/content/docs/punto-de-venta/como-vender-y-metodos-de-cobro.mdx",
-      "source_location": "L8",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "punto_de_venta_como_vender_y_metodos_de_cobro_c\u00f3mo_realizar_una_venta",
+      "id": "punto_de_venta_como_vender_y_metodos_de_cobro_c\u00f3mo_cobrar_una_venta_en_mostrador",
       "community": 39,
-      "norm_label": "como realizar una venta"
+      "norm_label": "como cobrar una venta en mostrador"
+    },
+    {
+      "label": "Flujo Operativo en 3 Pasos",
+      "file_type": "document",
+      "source_file": "src/content/docs/punto-de-venta/como-vender-y-metodos-de-cobro.mdx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "punto_de_venta_como_vender_y_metodos_de_cobro_flujo_operativo_en_3_pasos",
+      "community": 39,
+      "norm_label": "flujo operativo en 3 pasos"
     },
     {
       "label": "fiados-ventas-credito-abonos.mdx",
@@ -3373,176 +3463,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L37",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple",
-      "target": "repomix_output_docs_miventasimple_directory_structure"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple",
-      "target": "repomix_output_docs_miventasimple_file_summary"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L54",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple",
-      "target": "repomix_output_docs_miventasimple_files"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_file_summary",
-      "target": "repomix_output_docs_miventasimple_file_format"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_file_summary",
-      "target": "repomix_output_docs_miventasimple_notes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_file_summary",
-      "target": "repomix_output_docs_miventasimple_purpose"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_file_summary",
-      "target": "repomix_output_docs_miventasimple_usage_guidelines"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L90",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_files",
-      "target": "repomix_output_docs_miventasimple_file_docs_design_md"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L1359",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_files",
-      "target": "repomix_output_docs_miventasimple_file_package_json"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L681",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_files",
-      "target": "repomix_output_docs_miventasimple_file_public_favicon_svg"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L686",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_files",
-      "target": "repomix_output_docs_miventasimple_file_public_google_site_verification_txt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L691",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_files",
-      "target": "repomix_output_docs_miventasimple_file_public_googleob_z2hnhzogw4lava6spzdu06jflwjgdqyva0cxsvhg_html"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L696",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_files",
-      "target": "repomix_output_docs_miventasimple_file_public_llms_full_txt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L1293",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_files",
-      "target": "repomix_output_docs_miventasimple_file_public_llms_txt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L1332",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_files",
-      "target": "repomix_output_docs_miventasimple_file_public_robots_txt"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L56",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_files",
-      "target": "repomix_output_docs_miventasimple_file_repomix_config_json"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "repomix-output-docs-miventasimple.md",
-      "source_location": "L1350",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repomix_output_docs_miventasimple_files",
-      "target": "repomix_output_docs_miventasimple_file_tsconfig_json"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "src/content/docs/compras-y-proveedores/ordenes-compra-proveedores.mdx",
       "source_location": "L6",
       "weight": 1.0,
@@ -3556,9 +3476,9 @@
       "source_file": "src/content/docs/facturacion-y-cuenta/metodos-pago-facturacion.mdx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "facturacion_y_cuenta_metodos_pago_facturacion",
-      "target": "facturacion_y_cuenta_metodos_pago_facturacion_m\u00e9todos_de_pago",
-      "confidence_score": 1.0
+      "target": "facturacion_y_cuenta_metodos_pago_facturacion_m\u00e9todos_de_pago"
     },
     {
       "relation": "contains",
@@ -3583,22 +3503,202 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
-      "source_location": "L6",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
+      "source": "giros_abarrotes_y_retail",
+      "target": "giros_abarrotes_y_retail_abarrotes_y_tiendas_de_conveniencia"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_abarrotes_y_retail_abarrotes_y_tiendas_de_conveniencia",
+      "target": "giros_abarrotes_y_retail_1_venta_a_granel_y_fracciones_decimales"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_abarrotes_y_retail_abarrotes_y_tiendas_de_conveniencia",
+      "target": "giros_abarrotes_y_retail_2_la_libreta_digital_de_fiados"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_barberias_y_esteticas",
+      "target": "giros_barberias_y_esteticas_barber\u00edas_y_salones_de_belleza"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_barberias_y_esteticas_barber\u00edas_y_salones_de_belleza",
+      "target": "giros_barberias_y_esteticas_1_asignaci\u00f3n_de_barbero_en_caja"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/barberias-y-esteticas.mdx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_barberias_y_esteticas_barber\u00edas_y_salones_de_belleza",
+      "target": "giros_barberias_y_esteticas_2_venta_cruzada_de_productos_para_cuidado_personal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_gimnasios_y_fitness",
+      "target": "giros_gimnasios_y_fitness_gimnasios_y_centros_fitness"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/gimnasios-y-fitness.mdx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_gimnasios_y_fitness_gimnasios_y_centros_fitness",
+      "target": "giros_gimnasios_y_fitness_1_membres\u00edas_con_vigencia_duraciondias"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_talleres_y_refaccionarias",
+      "target": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_y_refaccionarias"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_y_refaccionarias",
+      "target": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_con_servicios_y_refacciones_combinadas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L10",
+      "weight": 1.0,
       "source": "hardware_y_perifericos_impresoras_tickets",
-      "target": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_compatibles"
+      "target": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets",
+      "target": "hardware_y_perifericos_impresoras_tickets_apertura_de_caj\u00f3n_de_dinero_rj11_y_autocutter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets",
+      "target": "hardware_y_perifericos_impresoras_tickets_formatos_soportados_58_mm_y_80_mm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets",
+      "target": "hardware_y_perifericos_impresoras_tickets_motor_de_impresi\u00f3n_pwa_universal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "hardware_y_perifericos_impresoras_tickets_impresoras_t\u00e9rmicas_y_emisi\u00f3n_de_tickets",
+      "target": "hardware_y_perifericos_impresoras_tickets_vinculaci\u00f3n_y_conexi\u00f3n_paso_a_paso",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
-      "source_location": "L6",
+      "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "hardware_y_perifericos_lectores_codigo_barras",
-      "target": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras"
+      "target": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras_y_b\u00e1sculas_de_pesaje",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras_y_b\u00e1sculas_de_pesaje",
+      "target": "hardware_y_perifericos_lectores_codigo_barras_1_lectores_de_c\u00f3digos_de_barras",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "hardware_y_perifericos_lectores_codigo_barras_lectores_de_c\u00f3digo_de_barras_y_b\u00e1sculas_de_pesaje",
+      "target": "hardware_y_perifericos_lectores_codigo_barras_2_b\u00e1sculas_y_pesaje_decimal_venta_a_granel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "hardware_y_perifericos_lectores_codigo_barras_1_lectores_de_c\u00f3digos_de_barras",
+      "target": "hardware_y_perifericos_lectores_codigo_barras_a_esc\u00e1ner_f\u00edsico_usb_o_bluetooth_modo_emulaci\u00f3n_de_teclado_hid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "hardware_y_perifericos_lectores_codigo_barras_1_lectores_de_c\u00f3digos_de_barras",
+      "target": "hardware_y_perifericos_lectores_codigo_barras_b_esc\u00e1ner_con_c\u00e1mara_trasera_del_celular_zxing_browser",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3734,41 +3834,91 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "punto_de_venta_caja_chica_aperturas_cierres",
-      "target": "punto_de_venta_caja_chica_aperturas_cierres_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica"
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
-      "source_location": "L14",
+      "source_location": "L32",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "punto_de_venta_caja_chica_aperturas_cierres_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica",
-      "target": "punto_de_venta_caja_chica_aperturas_cierres_el_camino_que_sigue_tu_dinero"
+      "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_1_apertura_de_turno_fondo_de_caja",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
-      "source_location": "L29",
+      "source_location": "L44",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "punto_de_venta_caja_chica_aperturas_cierres_c\u00f3mo_cobrar_un_ticket_y_gestionar_tu_caja_chica",
-      "target": "punto_de_venta_caja_chica_aperturas_cierres_las_tareas_que_realizas_a_diario_en_tu_caja"
+      "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_2_entradas_y_salidas_operativas_de_efectivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_3_cierre_y_arqueo_de_turno",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_circuito_diario_del_efectivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_impresi\u00f3n_del_ticket_de_corte_z",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/punto-de-venta/caja-chica-aperturas-cierres.mdx",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "punto_de_venta_caja_chica_aperturas_cierres_gesti\u00f3n_de_ventas_caja_chica_y_cierre_de_turno",
+      "target": "punto_de_venta_caja_chica_aperturas_cierres_tarjeta_de_diferencia_y_sem\u00e1foro_visual",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/punto-de-venta/como-vender-y-metodos-de-cobro.mdx",
-      "source_location": "L8",
+      "source_location": "L10",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "punto_de_venta_como_vender_y_metodos_de_cobro",
-      "target": "punto_de_venta_como_vender_y_metodos_de_cobro_c\u00f3mo_realizar_una_venta"
+      "target": "punto_de_venta_como_vender_y_metodos_de_cobro_c\u00f3mo_cobrar_una_venta_en_mostrador"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/punto-de-venta/como-vender-y-metodos-de-cobro.mdx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "punto_de_venta_como_vender_y_metodos_de_cobro_c\u00f3mo_cobrar_una_venta_en_mostrador",
+      "target": "punto_de_venta_como_vender_y_metodos_de_cobro_flujo_operativo_en_3_pasos"
     },
     {
       "relation": "references",
@@ -3919,5 +4069,5 @@
       "source_file": "src/content/docs/index.mdx"
     }
   ],
-  "built_at_commit": "999479775c5440baf83d13dbb620284ea4e81b46"
+  "built_at_commit": "ae96911ab502acc150ca0d2dcc6d1d42a6c17b43"
 }
