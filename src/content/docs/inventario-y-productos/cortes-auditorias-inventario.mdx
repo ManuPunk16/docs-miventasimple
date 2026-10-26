@@ -1,8 +1,152 @@
 ---
-title: Auditorías y Cortes de Inventario
-description: Realiza conteos físicos e identifica mermas o diferencias en stock.
+title: "Auditorías y Conteos Físicos de Inventario"
+description: "Aprende a realizar auditorías de stock, conteos físicos cíclicos y conciliación en VentaSimple utilizando escáner móvil y reportes de discrepancias."
+sidebar:
+  order: 4
 ---
 
-## Auditorías de Stock
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 
-Realiza cortes periódicos de inventario, cuenta tus productos físicamente e identifica de inmediato mermas o variaciones respecto al sistema.
+:::tip[Metodología y Plantilla de Descarga]
+Si buscas el método paso a paso para organizar tu tienda antes de contar o necesitas un formato descargable en Excel/Google Sheets, consulta nuestra guía completa: [Cómo Hacer un Inventario Físico en Tienda de Abarrotes](https://miventasimple.com/blog/como-hacer-inventario-fisico-tienda-abarrotes-formato).
+:::
+
+El conteo físico de inventario es el pilar de la salud financiera de cualquier comercio de retail, abarrotes, farmacia o ferretería. Aunque el software descuenta automáticamente cada venta y registra cada entrada por compras, en la práctica operativa diaria surgen diferencias causadas por mermas, productos caducados, errores humanos al cobrar o pérdidas no identificadas.
+
+VentaSimple integra un módulo nativo de **Auditorías y Conteos de Inventario** diseñado para agilizar la conciliación entre las existencias teóricas del sistema y las piezas reales que reposan en estantes y bodega.
+
+---
+
+## Tipos de Conteo en VentaSimple
+
+Dependiendo del tamaño de tu catálogo y la disponibilidad de personal, puedes ejecutar dos modalidades de auditoría:
+
+1. **Conteo Cíclico o Selectivo (Recomendado):** Audita periódicamente una categoría o pasillo específico (ej. lácteos los lunes, abarrotes los miércoles, licores los viernes). Permite mantener el inventario al día sin detener la operación diaria del negocio.
+2. **Conteo General a Cortina Cerrada:** Se realiza habitualmente al cierre de mes, fin de trimestre o fin de año fiscal. Implica el recuento del 100% de los artículos del negocio para el balance contable anual.
+
+---
+
+## Flujo Operativo Paso a Paso
+
+Sigue esta metodología estándar para garantizar que el conteo no interfiera con las cifras del sistema:
+
+<Steps>
+1. **Preparación y Congelamiento Operativo:**
+   Antes de iniciar el conteo, asegúrate de procesar todas las ventas pendientes y recepciones de mercancía enviadas por proveedores. Lo ideal es realizar el conteo en horarios sin atención al público o pausar temporalmente los cobros del pasillo a auditar para evitar desfases numéricos entre lo contado y lo vendido.
+
+2. **Crear una Nueva Sesión de Auditoría:**
+   Dirígete a **Inventario > Auditorías y Conteos** y pulsa el botón <Badge text="Nueva Auditoría" variant="tip" />.
+   * Asigna un nombre de referencia (ejemplo: `Auditoría Bebidas y Refrescos - Pasillo 2`).
+   * Selecciona el alcance: **Inventario Completo** o filtra por **Categoría / Marca**.
+   * El sistema capturará una "fotografía" del stock teórico actual en ese instante exacto.
+
+3. **Escaneo y Conteo Físico en Pasillos:**
+   Puedes capturar las existencias directamente frente al anaquel con dos métodos:
+   * **Cámara del Celular o Tablet:** Abre VentaSimple en tu dispositivo móvil, activa el escáner óptico integrado y lee los códigos de barras de cada producto.
+   * **Terminal con Lector USB / Bluetooth:** Utiliza una laptop o tablet con lector láser inalámbrico en modo emulación de teclado para registrar códigos a gran velocidad.
+
+4. **Registro de Cantidades Contadas:**
+   Cada escaneo suma piezas automáticamente al conteo del producto, o bien puedes digitar directamente el número total de unidades localizadas (ej. contar 2 cajas de 24 piezas y registrar 48 unidades).
+
+5. **Revisión de Discrepancias (Sobrantes y Faltantes):**
+   VentaSimple calcula la variación de existencias en tiempo real:
+   * **Diferencia de Unidades:** `Unidades Contadas - Stock en Sistema`.
+   * **Diferencia Monetaria ($):** Impacto financiero calculado sobre el **Costo Promedio de Adquisición** y el **Precio de Venta al Público**.
+
+6. **Conciliación y Aplicación del Ajuste:**
+   Al presionar <Badge text="Cerrar y Aplicar Ajuste" variant="caution" />, el sistema actualiza automáticamente el stock de cada producto a la cifra física real, generando los movimientos de Kardex correspondientes tipificados como `Ajuste por Auditoría`.
+</Steps>
+
+---
+
+## Escaneo Móvil en Estantería con Cámara Trasera
+
+Una de las grandes ventajas de VentaSimple como Progressive Web App (PWA) es que no requiere terminales industriales colectoras de datos (Handhelds) de alto costo. Cualquier teléfono inteligente con cámara puede transformarse en un escáner de inventario profesional:
+
+```text
++-------------------------------------------------------------+
+| AUDITORÍA ACTIVA: PASILLO 3 (ENLATADOS)                     |
+| [ |||||||||||||||||||| ESCÁNER ACTIVO: CÁMARA TRASERA ]    |
+|                                                             |
+| Código leído: 7501011123456 - Atún en Agua 140g            |
+| Stock Teórico: 24 pzs | Conteo Físico: [ 22 ] (-2 pzs)      |
+|                                                             |
+| [ Linterna ON/OFF ]   [ Siguiente Producto ]   [ Pausar ]   |
++-------------------------------------------------------------+
+```
+
+### Características Técnicas del Escaneo Móvil
+* **Motor `@zxing/browser`:** Algoritmo de reconocimiento óptico ultrarrápido compatible con formatos retail estándar (**EAN-13**, **UPC-A**, **Code 128** y **QR**).
+* **Botón de Linterna / Flash:** En pasillos oscuros, esquinas de bodega o estantes inferiores con baja luminosidad, pulsa el ícono de flash para iluminar los códigos de barras sin perder precisión de enfoque.
+* **Auto-incremento por Lectura:** Configura el escáner en modo ráfaga: cada lectura exitosa emitirá un pitido sonoro háptico y sumará una unidad al producto escaneado.
+
+Para detalles sobre configuración de periféricos físicos de escritorio, consulta nuestra guía de [Lectores de Códigos y Básculas](/hardware-y-perifericos/lectores-codigo-barras).
+
+---
+
+## Análisis de Discrepancias y Conciliación Financiera
+
+Al finalizar el recorrido de los estantes, la pantalla de resumen de auditoría clasifica los resultados en tres grupos:
+
+<Tabs>
+  <TabItem label="Faltantes (Merma Potencial)" icon="seti:error">
+    ### Productos con Físico Menor al Teórico
+    
+    * **Causas Frecuentes:** Productos dañados no reportados, fechas de caducidad vencidas retiradas de anaquel sin baja en el sistema, errores de captura en el mostrador o sustracciones.
+    * **Impacto Contable:** Se registra una salida de stock por ajuste negativo valorada al **costo unitario**, reflejando la pérdida neta en los balances de utilidad.
+  </TabItem>
+
+  <TabItem label="Sobrantes de Inventario" icon="seti:check">
+    ### Productos con Físico Mayor al Teórico
+    
+    * **Causas Frecuentes:** Recepciones de proveedores con mercancía excedente no registrada en la orden de compra original, o venta previa cobrada bajo una clave o código de barras erróneo.
+    * **Impacto Contable:** Se genera una entrada por ajuste positivo que reincorpora el valor de las piezas al activo circulante de la tienda.
+  </TabItem>
+
+  <TabItem label="Coincidencias Exactas" icon="seti:todo">
+    ### Productos sin Diferencias
+    
+    * El stock físico coincide al 100% con la base de datos de VentaSimple. No se generan movimientos de ajuste en el Kardex.
+  </TabItem>
+</Tabs>
+
+---
+
+## Buenas Prácticas para Reducir Errores en Auditorías
+
+:::note[Consejos de Auditoría de Retail]
+1. **Doble Verificación en Discrepancias Altas:** Si un producto de alto valor registra una diferencia superior a 3 unidades, realiza un segundo conteo físico antes de confirmar el ajuste.
+2. **Revisión de Bodega y Mostrador Simultáneo:** Verifica que no existan cajas completas almacenadas en la bodega posterior mientras el estante de exhibición se encuentra semivacío.
+3. **Consulta el Kardex de Movimientos:** Si una discrepancia no tiene sentido, inspecciona el historial de entradas y salidas en [Movimientos de Stock y Kardex](/inventario-y-productos/movimientos-stock-kardex) para identificar quién realizó el último movimiento de ese lote.
+:::
+
+<script type="application/ld+json" is:inline>{`
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo hacer una auditoría y conteo físico de inventario en VentaSimple",
+  "description": "Guía técnica para realizar conteos de stock físicos, escanear códigos de barras con el celular y conciliar diferencias de inventario en VentaSimple.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Preparar la sesión de auditoría",
+      "text": "Concluye ventas pendientes y abre una nueva sesión en Inventario > Auditorías seleccionando el área o catálogo a auditar."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Escanear productos en pasillo",
+      "text": "Utiliza la cámara del celular con VentaSimple o una pistola láser USB/Bluetooth para registrar las existencias físicas encontradas en anaquel."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Evaluar diferencias y mermas",
+      "text": "Revisa el reporte comparativo automático entre stock físico y teórico, analizando la diferencia en piezas y costo monetario."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cerrar auditoría y actualizar Kardex",
+      "text": "Aplica el ajuste final para actualizar el stock real del sistema e ingresar los movimientos correspondientes en el Kardex."
+    }
+  ]
+}
+`}</script>

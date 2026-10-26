@@ -1,8 +1,127 @@
 ---
-title: Movimientos de Stock y Kardex
-description: Visualiza el historial completo de entradas y salidas de mercancía de tu inventario.
+title: "Movimientos de Stock y Kardex"
+description: "Control de entradas, salidas, mermas tipificadas y trazabilidad histórica de inventario en VentaSimple con impacto financiero."
+sidebar:
+  order: 2
 ---
 
-## Kardex e Historial de Movimientos
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 
-El Kardex registra cada cambio en el inventario: ventas, entradas de stock, mermas o ajustes manuales de inventario.
+# Movimientos de Stock y Kardex Histórico
+
+El **Kardex** de VentaSimple es el libro contable digital que registra de manera cronológica e inmutable cada variación en las existencias de tus productos. Cada vez que una pieza entra o sale de tu negocio —ya sea por una venta en mostrador, una compra a proveedor, una merma operativa o un ajuste manual— el sistema documenta el evento garantizando total transparencia y auditoría.
+
+---
+
+## 1. Tipos de Movimientos en el Kardex
+
+VentaSimple clasifica las transacciones de inventario en dos grandes categorías operativas:
+
+### A. Movimientos Automáticos por Operación Continua
+* **Venta en Mostrador (Salida):** Se descuenta de forma inmediata al cobrar un ticket o asignar una venta a crédito/fiado. Si la venta se cancela o reembolsa, el sistema reincorpora las piezas de manera automática.
+* **Recepción de Compra (Entrada):** Incrementa las existencias al recibir un pedido de proveedor, recalculando el costo promedio ponderado del artículo.
+
+### B. Movimientos Manuales y Extraordinarios
+Son operaciones ejecutadas directamente por el administrador o usuario autorizado para conciliar el inventario físico con el sistema:
+* **Entradas Extraordinarias:** Ingreso de mercancía recuperada, donaciones, muestras de proveedores o sobrantes identificados tras un conteo.
+* **Ajustes de Inventario:** Resultado directo del cierre de una sesión de conteo físico (ver [Auditorías y Conteos Físicos de Inventario](/inventario-y-productos/cortes-auditorias-inventario)).
+* **Bajas por Merma:** Retiro justificado de mercancía que no generó un ingreso en caja.
+
+---
+
+## 2. Tipificación y Registro de Mermas
+
+En retail y abarrotes, registrar las mermas adecuadamente es indispensable para no distorsionar el costo de lo vendido ni culpar erróneamente al personal por pérdidas inevitables.
+
+```text
++-------------------------------------------------------------------------+
+| REGISTRO DE MERMA: Atún en Aceite 140g                                   |
+| Cantidad a dar de baja: [ 4 ] piezas                                    |
+|                                                                         |
+| MOTIVO / CLASIFICACIÓN:                                                 |
+| (•) Caducidad / Vencimiento     ( ) Merma Operativa (Rotura / Abolladura)|
+| ( ) Merma Natural (Deshidratación)( ) Merma Desconocida (Pérdida / Fuga)|
+|                                                                         |
+| Costo Unitario: $14.50 MXN | Pérdida Total Registrada: $58.00 MXN       |
+| Nota: "Lata golpeada durante descarga de camión proveedor".             |
++-------------------------------------------------------------------------+
+```
+
+Al registrar una salida por merma en **Inventario > Movimientos > Registrar Salida**, VentaSimple solicita clasificar el motivo:
+
+<Tabs>
+  <TabItem label="Caducidad / Vencimiento" icon="seti:clock">
+    ### Productos con Fecha Expirada
+    
+    * **Aplicación:** Alimentos perecederos, lácteos, embutidos, medicamentos y bebidas que alcanzaron su fecha de caducidad en anaquel.
+    * **Acción de Mejora:** Permite identificar fallas en la rotación de producto bajo el método **PEPS** (Primeras Entradas, Primeras Salidas) y planificar ofertas de liquidación anticipadas en [Promociones y Descuentos](/punto-de-venta/promociones-descuentos).
+  </TabItem>
+
+  <TabItem label="Merma Operativa (Daño / Rotura)" icon="seti:error">
+    ### Accidentes y Empaques Deteriorados
+    
+    * **Aplicación:** Botellas de vidrio rotas en pasillo, bolsas de arroz o frijol abiertas durante el acomodo, o latas abolladas no aptas para exhibición.
+    * **Responsabilidad:** Queda asentado el turno y usuario que reportó el incidente.
+  </TabItem>
+
+  <TabItem label="Merma Natural (Pesaje y Merma Física)" icon="seti:chart">
+    ### Pérdida de Humedad y Volumen
+    
+    * **Aplicación:** Frutas, verduras y carnes que experimentan evaporación o merma de peso natural por refrigeración y manipulación.
+    * **Tratamiento:** Se ajusta el peso neto en kilos/gramos para equilibrar el inventario a granel.
+  </TabItem>
+
+  <TabItem label="Merma Desconocida (Fuga / Sustracción)" icon="seti:lock">
+    ### Diferencias no Justificadas
+    
+    * **Aplicación:** Artículos faltantes detectados durante auditorías físicas que no cuentan con justificación de rotura o venta.
+    * **Alerta:** Tasas altas de merma desconocida indican necesidad de reforzar medidas de seguridad o cámaras de vigilancia en pasillos críticos.
+  </TabItem>
+</Tabs>
+
+---
+
+## 3. Impacto Financiero: Costo vs. Precio de Venta
+
+Un error común en la administración de pequeños negocios es cuantificar las mermas al precio de venta final. VentaSimple maneja dos cálculos contables diferenciados:
+
+1. **Impacto Contable Real (Pérdida a Costo):**
+   * Fórmula: `Pérdida = Unidades Mermadas × Costo Promedio de Compra`
+   * Este valor se deduce directamente de las utilidades operativas del negocio en el [Dashboard Financiero](/reportes-y-auditoria/dashboard-utilidades-metricas).
+2. **Costo de Oportunidad (Venta Potencial no Realizada):**
+   * Fórmula: `Venta no Realizada = Unidades Mermadas × Precio de Venta al Público`
+   * Refleja el flujo de efectivo bruto que el negocio dejó de ingresar por no haber comercializado el producto a tiempo.
+
+---
+
+## 4. Trazabilidad y Filtros en la Consulta de Kardex
+
+Para inspeccionar el comportamiento de un artículo o auditar movimientos sospechosos:
+
+<Steps>
+1. Ingresa a **Inventario > Productos** y haz clic sobre el artículo deseado.
+2. Selecciona la pestaña **Kardex / Historial de Movimientos**.
+3. Visualiza la tabla cronológica con las siguientes columnas obligatorias:
+   * **Fecha y Hora:** Timestamp exacto del registro.
+   * **Tipo de Operación:** Venta, Compra, Merma, Ajuste por Conteo o Devolución.
+   * **Cantidad (+ / -):** Unidades que entraron o salieron.
+   * **Existencia Resultante:** Stock disponible posterior a la transacción.
+   * **Usuario:** Empleado o cajero que autenticó la acción.
+   * **Referencia / Folio:** Número de ticket, orden de compra o folio de auditoría asociado.
+4. Exporta el extracto histórico en formato Excel/CSV mediante la herramienta de [Exportación de Información](/reportes-y-auditoria/exportacion-informacion-excel-csv) para revisiones contables externas.
+</Steps>
+
+:::tip[Enlace con Auditorías Físicas]
+Para conciliar periódicamente el Kardex frente a las existencias físicas de tus estanterías mediante la cámara de tu celular, consulta la guía de [Auditorías y Conteos Físicos de Inventario](/inventario-y-productos/cortes-auditorias-inventario).
+:::
+
+<script type="application/ld+json" is:inline>{`
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Control de Movimientos de Stock, Mermas y Kardex en VentaSimple",
+  "description": "Documentación técnica sobre trazabilidad de inventarios, clasificación de mermas y auditoría contable de entradas y salidas en VentaSimple.",
+  "articleSection": "Inventario y Productos",
+  "dependencies": "VentaSimple POS"
+}
+`}</script>
