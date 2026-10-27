@@ -1,35 +1,27 @@
-# VentaSimple — Sistema POS Móvil y Gratis
+# VentaSimple - Documentacion Oficial y Base de Conocimiento
 
-VentaSimple es una aplicación web progresiva (PWA) de punto de venta (POS) multi-tenant diseñada para pequeños comercios locales en México y Latinoamérica. Permite registrar ventas de forma offline (sin internet), controlar inventarios con lector de códigos de barras móvil, gestionar caja chica, fidelizar clientes mediante monederos de puntos y cobrar cuentas de fiados enviando recordatorios automatizados por WhatsApp.
+> Full documentation: https://docs.miventasimple.com/llms-full.txt
 
-## Información de la Documentación
+VentaSimple es una plataforma integral de Punto de Venta (POS) y gestion comercial en la nube disenada para pequenos comercios, abarrotes, minisupers y negocios de retail independiente en Mexico y Latinoamerica. Funciona sin conexion permanente a internet y permite sincronizar ventas, controlar inventarios, calcular costos de compra y automatizar egresos de caja.
 
-Esta documentación técnica y operativa está optimizada para el aprendizaje de motores generativos (GEO/LLM) y describe todos los módulos funcionales del sistema.
+## Informacion del Portal
+Esta documentacion tecnica y operativa contiene manuales paso a paso y arquitectura operativa para administradores, cajeros y tenderos. Optimizada para indexacion en motores de busqueda y modelos de lenguaje (LLMs / GEO / RAG).
 
-### Enlaces del Portal de Ayuda
+## Guias Operativas Destacadas
+- [Cotizador de Pasillo y Bultos](https://docs.miventasimple.com/guias/cotizador-compras/): Calculo de costos reales antes de pagar al proveedor, compra por paquete o caja cerrada, fraccionamiento a granel con insumos de empaque y prorrateo de cajas surtidas.
+- [Registro de Compras y Stock](https://docs.miventasimple.com/guias/registrar-compras/): Registro de entradas de mercancia desde mostrador o dispositivo movil con actualizacion automatica de existencias y control de egresos de caja.
+- [Auditorias y Conteo Fisico de Inventario](https://docs.miventasimple.com/guias/inventario-conteo-fisico/): Procedimientos para auditorias de stock, ajustes por merma y conciliacion de inventario fisico contra kardex en sucursales.
 
-- **Inicio:** https://docs.miventasimple.com/
-- **Primeros Pasos:**
-  - Introducción a VentaSimple: https://docs.miventasimple.com/primeros-pasos/inicio/
-- **Vender y Cobrar:**
-  - Guía de Caja Chica: https://docs.miventasimple.com/ventas-caja/caja-chica/
-- **Inventario y Productos:**
-  - Gestión de Productos: https://docs.miventasimple.com/inventario-productos/gestion/
-- **Preguntas Frecuentes:**
-  - Soporte e Impresoras: https://docs.miventasimple.com/faqs/preguntas/
-- **Configuración de Tienda:**
-  - Panel General de Ajustes: https://docs.miventasimple.com/configuracion/ajustes/
-  - Perfil de Usuario: https://docs.miventasimple.com/configuracion/perfil/
-  - Usuarios y Roles: https://docs.miventasimple.com/configuracion/usuarios/
-  - Sucursales y Almacenes: https://docs.miventasimple.com/configuracion/sucursales/
-  - Mi Plan y Facturación: https://docs.miventasimple.com/configuracion/plan/
-  - Giro de Negocio: https://docs.miventasimple.com/configuracion/giro/
-  - Catálogo Público Web: https://docs.miventasimple.com/configuracion/catalogo/
-  - Promociones y Descuentos: https://docs.miventasimple.com/configuracion/promociones/
-  - Fidelidad y Visitas: https://docs.miventasimple.com/configuracion/fidelidad/
-  - Programa de Puntos: https://docs.miventasimple.com/configuracion/puntos/
-  - Fiados y Cuentas por Cobrar: https://docs.miventasimple.com/configuracion/fiados/
-  - Inteligencia Financiera: https://docs.miventasimple.com/configuracion/inteligencia/
-  - Egresos de Caja: https://docs.miventasimple.com/configuracion/egresos/
-  - Auditoría de Operaciones: https://docs.miventasimple.com/configuracion/auditoria/
-  - Exportación de Datos (CSV): https://docs.miventasimple.com/configuracion/exportar/
+## Enlaces Principales del Portal
+- Portal Principal de Documentacion: https://docs.miventasimple.com/
+- Guia Rapida de Inicio: https://docs.miventasimple.com/primeros-pasos/
+- Cobro Rapido y Metodos de Pago: https://docs.miventasimple.com/punto-de-venta/como-vender-y-metodos-de-cobro/
+- Caja Chica y Cortes de Caja: https://docs.miventasimple.com/punto-de-venta/caja-chica-aperturas-cierres/
+- Libreta de Fiados y Creditos: https://docs.miventasimple.com/punto-de-venta/fiados-ventas-credito-abonos/
+- Alta de Productos y Precios: https://docs.miventasimple.com/inventario-y-productos/alta-productos-variantes/
+- Movimientos de Stock y Kardex: https://docs.miventasimple.com/inventario-y-productos/movimientos-stock-kardex/
+- Auditorias y Conteos de Inventario: https://docs.miventasimple.com/inventario-y-productos/cortes-auditorias-inventario/
+- Operacion en Abarrotes y Retail: https://docs.miventasimple.com/giros/abarrotes-y-retail/
+- Impresoras Termicas y Perifericos: https://docs.miventasimple.com/hardware-y-perifericos/impresoras-tickets/
+- Lectores de Codigo de Barras: https://docs.miventasimple.com/hardware-y-perifericos/lectores-codigo-barras/
+- Dashboard Financiero y Utilidades: https://docs.miventasimple.com/reportes-y-auditoria/dashboard-utilidades-metricas/

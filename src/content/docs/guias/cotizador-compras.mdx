@@ -1,0 +1,185 @@
+---
+title: 'Cómo usar el Cotizador de Pasillo y Bultos'
+description: 'Aprende a calcular tus costos reales antes de pagarle al proveedor al comprar bultos cerrados, producto a granel o cajas surtidas.'
+---
+
+import { Steps, Aside, Card } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import imgBultoSimple from '../../../assets/guias/cotizador-bulto-simple.webp';
+import imgFraccionarEmpaque from '../../../assets/guias/cotizador-fraccionar-empaque.webp';
+import imgDesempacarSurtido from '../../../assets/guias/cotizador-desempacar-surtido.webp';
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo usar el Cotizador de Pasillo y Bultos en VentaSimple",
+  "description": "Guía técnica y práctica para calcular costos unitarios reales antes de pagar a proveedores en compras de bultos cerrados, productos a granel fraccionados con empaque o cajas surtidas.",
+  "image": "https://docs.miventasimple.com" + imgBultoSimple.src,
+  "publisher": {
+    "@type": "Organization",
+    "name": "VentaSimple",
+    "url": "https://docs.miventasimple.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://docs.miventasimple.com/og-image.png"
+    }
+  },
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Acceder al simulador de compras",
+      "text": "Entra al módulo de Compras en VentaSimple y pulsa sobre la pestaña Cotizador para abrir la calculadora de pasillo."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Cotizar compra por bulto o paquete cerrado",
+      "text": "Ingresa el costo facturado del paquete y la cantidad de unidades que contiene para calcular el costo por pieza unitario y el margen contra el precio de venta.",
+      "image": "https://docs.miventasimple.com" + imgBultoSimple.src
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Fraccionar mercancía a granel y sumar insumos de empaque",
+      "text": "Activa el toggle de fraccionamiento, asigna el número de porciones obtenidas y agrega el costo de bolsitas o insumos plásticos para fijar el precio al público sin alterar la nota del proveedor.",
+      "image": "https://docs.miventasimple.com" + imgFraccionarEmpaque.src
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Desempacar cajas y contenedores surtidos",
+      "text": "Captura el costo del contenedor surtido, desglosa las piezas de cada variedad hasta equilibrar el balance y guarda plantillas para reutilizarlas en pedidos posteriores.",
+      "image": "https://docs.miventasimple.com" + imgDesempacarSurtido.src
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Transferir al registro de compra",
+      "text": "Pulsa el botón Transferir a Nueva Compra para exportar los productos, cantidades multiplicadas y costos unitarios calculados sin recapturar información."
+    }
+  ]
+})} />
+
+## ¿Por qué cotizar antes de pagar?
+
+Cuando compras mercancía para tu tienda o negocio, es muy común fijarse únicamente en el total de la nota o en el costo del paquete completo que te entrega el repartidor. Sin embargo, lo que sale de tu caja en ese instante no refleja de inmediato lo que realmente te cuesta cada pieza individual al momento de ponerla en el anaquel.
+
+Si un proveedor te ofrece una caja con descuento, pero viene con menos unidades de las habituales, o si compras un costal de cacahuates que requiere bolsas plásticas para venderse en porciones individuales, tu costo por pieza cambia. 
+
+El **Cotizador de Compras** de VentaSimple te permite simular estos escenarios en el momento exacto en que estás negociando con el repartidor o revisando una lista de precios:
+- Conoces el costo unitario real antes de desembolsar dinero de tu turno de caja.
+- Comparas tu ganancia y margen proyectado contra tu precio de venta actual.
+- Evitas vender productos a pérdida por no haber considerado mermas o costos de empaque secundario.
+
+---
+
+## Compra por paquete o caja cerrada
+
+Esta modalidad se utiliza para bultos cerrados que contienen piezas idénticas listas para vender, tales como cajas de galletas, paquetes de jugos, paquetes de papel higiénico o charolas de refrescos.
+
+<Image 
+  src={imgBultoSimple} 
+  alt="Simulador de compra de bulto o paquete individual en VentaSimple" 
+  class="rounded-lg border border-neutral-800 my-4 shadow-md"
+/>
+
+Para simular la compra de una caja cerrada, sigue estos pasos:
+
+<Steps>
+1. Entra al módulo de **Compras** desde el menú lateral y selecciona la pestaña superior **Cotizador**.
+
+2. Mantén seleccionada la opción **Bulto / Paquete Individual**.
+
+3. Busca el producto en el campo **Buscar producto o código...** o selecciónalo con el lector de códigos de barras. El sistema cargará su ficha de referencia en tienda: costo base registrado, precio de venta vigente y margen actual.
+
+4. En el panel **Simulador de Compra (Bulto / Paquete)**, ingresa el **Costo por Caja / Bulto ($)** que te está ofreciendo el proveedor.
+
+5. Define cuántos **Bultos / Cajas** estás cotizando.
+
+6. Escribe el número de **Unidades por Bulto / Caja** que contiene el empaque cerrado.
+</Steps>
+
+El cotizador calculará al instante el costo real por pieza resultante, mostrándote con claridad si el costo sube o baja respecto a tu histórico y cuál sería tu nuevo margen con tu precio de venta actual.
+
+---
+
+## Fraccionar a granel y embolsar (Gomitas, semillas, carnes)
+
+Muchos comercios compran bultos o costales al mayoreo (por ejemplo, costales de 10 kg de cacahuates, cajas de gomitas o piezas grandes de queso y embutidos) y luego los dividen en bolsitas, charolas o porciones de menor gramaje para su venta individual.
+
+En este tipo de compras existe un costo oculto fundamental: el material de empaque (bolsas de celofán, grapas, etiquetas o charolas de unicel). Si ignoras ese insumo, tu margen real se reduce en cada venta.
+
+<Image 
+  src={imgFraccionarEmpaque} 
+  alt="Simulador fraccionando producto a granel con costo de empaque en VentaSimple" 
+  class="rounded-lg border border-neutral-800 my-4 shadow-md"
+/>
+
+Para calcular el costo fraccionado con insumos:
+
+<Steps>
+1. En el **Simulador de Compra**, activa la casilla de verificación **Fraccionar / Empacar para venta**.
+
+2. En el campo **Costo por Bulto / Costal ($)**, ingresa el precio que cobra el proveedor por el bulto completo.
+
+3. Especifica cuántos bultos vas a adquirir en el campo **Bultos / Cajas**.
+
+4. En **Porciones por bulto**, anota el rendimiento total que obtienes al empaquetar (por ejemplo, 15 o 18 bolsitas por bulto).
+
+5. Asigna el **Nombre de porción** para tu control operativo (por ejemplo, `bolsitas`, `charolas` o `cuartos`).
+
+6. En **Costo empaque ($)**, escribe el costo unitario del plástico, contenedor o etiqueta (por ejemplo, `$0.28` o `$0.50`).
+</Steps>
+
+El sistema sumará automáticamente el costo proporcional del producto más el insumo de empaque, entregándote el **Costo por porción Resultante**, el nuevo margen proyectado y un **Precio de venta sugerido** para conservar tu porcentaje de ganancia deseado.
+
+<Aside type="tip">
+El costo de empaque se suma internamente al costo de la porción para calcular tu precio de venta al público y proteger tu margen, pero no infla la factura ni la cuenta por pagar al proveedor del grano o dulce, manteniendo tus cuentas claras y cuadradas con cada proveedor.
+</Aside>
+
+---
+
+## Desempacar cajas y contenedores surtidos (Galletas, botanas, kits)
+
+Una situación habitual en tiendas de abarrotes y misceláneas ocurre al comprar cajas surtidas o exhibidores promocionales (por ejemplo, una caja surtida de galletas que incluye tubos de chocolate, vainilla y nuez, o un paquete promocional de botanas mixtas). En la nota del proveedor solo aparece un concepto general con un precio global, pero en tu mostrador cada variedad se vende por separado con su propio código de barras.
+
+<Image 
+  src={imgDesempacarSurtido} 
+  alt="Herramienta para desempacar cajas y contenedores surtidos en VentaSimple" 
+  class="rounded-lg border border-neutral-800 my-4 shadow-md"
+/>
+
+Para prorratear el costo y desglosar el surtido:
+
+<Steps>
+1. En la barra superior del cotizador, cambia a la pestaña **Desempacar Contenedor / Surtido**.
+
+2. En la columna izquierda **Caja o Contenedor Surtido**, introduce el **Costo por Caja / Surtido ($)** facturado por el proveedor.
+
+3. Define cuántas **Cajas a comprar** estás recibiendo. Si compraste 1 caja, déjalo en 1; si compraste 2, 3 o más cajas idénticas, el multiplicador prorrateará el total exacto de unidades sin necesidad de hacer cuentas por fuera.
+
+4. En **Piezas por Caja (Contenido individual)**, escribe el total general de unidades que vienen dentro del contenedor (por ejemplo, 14 piezas).
+
+5. En la columna derecha **Contenido Interno del Surtido**, utiliza el buscador para agregar cada uno de los productos que componen la caja y define cuántas piezas corresponden a cada variedad.
+
+6. Verifica la barra de **Balance por Caja Base**. Cuando las piezas asignadas coincidan con el total de la caja (ejemplo: 14 / 14 pzas), la barra se marcará en color completo indicando balance perfecto.
+</Steps>
+
+### Reutilizar plantillas con un solo clic
+
+Si tus proveedores surten siempre la misma caja de galletas o el mismo paquete promocional de botanas, no necesitas volver a capturar la lista de productos en cada pedido.
+
+Haz clic en el botón **Guardar plantilla**. La próxima vez que compres ese mismo surtido, solo selecciona la plantilla guardada desde la lista superior y la estructura se llenará de forma inmediata.
+
+---
+
+## Transferir a Nueva Compra
+
+Una vez que comprobaste que los números son favorables para tu negocio, no tienes que volver a escribir los productos ni calcular costos unitarios en el registro de mercancía.
+
+Al hacer clic en el botón amarillo **Transferir a Nueva Compra** (o **Transferir Surtido a Nueva Compra**):
+- La lista completa de productos cotizados viaja automáticamente al formulario de registro de compras.
+- Las cantidades totales quedan multiplicadas según las cajas indicadas.
+- Los costos unitarios calculados se trasladan directamente a cada partida.
+- El pedido queda listo para que solo selecciones el proveedor y la forma de pago, agilizando la recepción de mercancía en el mostrador.

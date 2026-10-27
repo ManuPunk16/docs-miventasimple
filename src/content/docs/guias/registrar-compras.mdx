@@ -1,0 +1,137 @@
+---
+title: 'Cómo registrar una Nueva Compra y entrada de mercancía'
+description: 'Paso a paso para registrar los pedidos de tus proveedores desde la computadora o el celular, controlando tus egresos de caja.'
+---
+
+import { Steps, Aside, Card } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+import imgCompraDesktop from '../../../assets/guias/nueva-compra-desktop.webp';
+import imgCompraMovil from '../../../assets/guias/nueva-compra-movil.webp';
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo registrar una Nueva Compra y entrada de mercancía en VentaSimple",
+  "description": "Procedimiento paso a paso para dar entrada a pedidos de proveedores en inventario físico y registrar egresos en turno de caja desde mostrador o celular.",
+  "image": "https://docs.miventasimple.com" + imgCompraDesktop.src,
+  "publisher": {
+    "@type": "Organization",
+    "name": "VentaSimple",
+    "url": "https://docs.miventasimple.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://docs.miventasimple.com/og-image.png"
+    }
+  },
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Acceder a Nueva Compra",
+      "text": "Navega al apartado de Compras en el panel lateral y selecciona Nueva Compra o traslada las partidas generadas desde el cotizador."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Capturar productos y partidas",
+      "text": "Escanea los códigos de barras o busca por nombre para incorporar los productos al pedido, especificando cantidades y costos individuales.",
+      "image": "https://docs.miventasimple.com" + imgCompraDesktop.src
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Definir sucursal, proveedor y condición de pago",
+      "text": "Selecciona el almacén de destino, asigna el proveedor y elige entre pago de Contado (con egreso directo en caja) o Crédito (cuenta por pagar)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Verificar y ajustar precios sobre la marcha",
+      "text": "Comprueba si existen incrementos porcentuales respecto al costo previo y haz ajustes directos de unidades o mermas con el repartidor.",
+      "image": "https://docs.miventasimple.com" + imgCompraMovil.src
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Registrar compra y asentar inventario",
+      "text": "Haz clic en Registrar Compra para ingresar el stock automáticamente, recalcular el costo ponderado y asentar el movimiento financiero."
+    }
+  ]
+})} />
+
+## Registrar una compra en mostrador
+
+Registrar las compras a tus proveedores en el momento exacto en que llega la mercancía es la clave para que tus existencias físicas coincidan siempre con el sistema y tus reportes de ganancias sean precisos.
+
+En la versión de escritorio de VentaSimple, la pantalla de **Nueva compra** se divide de forma clara en dos columnas de trabajo:
+
+1. **Columna izquierda (Partidas del Pedido):** Aquí agregas los productos que recibes, ajustas las piezas entregadas por el repartidor y anotas el costo unitario facturado.
+2. **Columna derecha (Parámetros de Compra y Pago):** Aquí defines la sucursal de destino, el proveedor correspondiente, el tipo de pago y las notas del pedido (como folio de remisión o número de factura).
+
+<Image 
+  src={imgCompraDesktop} 
+  alt="Pantalla de registro de nueva compra en escritorio dentro de VentaSimple" 
+  class="rounded-lg border border-neutral-800 my-4 shadow-md"
+/>
+
+### Paso a paso para capturar la compra
+
+<Steps>
+1. Ve al menú lateral izquierdo y haz clic en **Compras**. Luego pulsa sobre **Nueva compra** o transfiere los productos directamente desde el Cotizador.
+
+2. En la barra **Agregar productos al pedido**, escribe el nombre, código de barras o escanea los artículos con tu lector láser. Cada artículo se integrará en la tabla de partidas.
+
+3. En el panel derecho **Parámetros de Compra**, selecciona la **Sucursal de Destino** donde ingresará el stock.
+
+4. Elige el **Proveedor** en la lista desplegable. Si es un proveedor nuevo que te visita por primera vez, pulsa **+ Nuevo** para darlo de alta en segundos sin abandonar la compra.
+
+5. Selecciona la **Condición de pago** adecuada:
+   * **Contado:** Si pagas la mercancía en el instante con dinero de la tienda.
+   * **Crédito:** Si el proveedor te deja la mercancía con plazo para pagar después.
+
+6. Si marcaste **Contado**, selecciona el **Método de pago** (Efectivo, Tarjeta, Transferencia, etc.).
+
+7. Opcionalmente, ingresa en **Notas u observaciones** el número de factura, folio de nota de remisión o fecha pactada de entrega.
+</Steps>
+
+<Aside type="note">
+Al elegir **Contado** con método **Efectivo**, VentaSimple registrará un egreso automático en el turno de caja abierto de tu sucursal. Esto garantiza que el efectivo al cierre de turno cuadre exactamente contra las ventas y los pagos a repartidores. Si seleccionas **Crédito**, no sale dinero de caja y el saldo se registra en tus cuentas por pagar.
+</Aside>
+
+---
+
+## Uso rápido desde el teléfono celular
+
+Cuando estás en el pasillo de la tienda, en bodega o atendiendo al repartidor en la banqueta, usar una computadora portátil no resulta práctico. VentaSimple cuenta con una vista móvil adaptada para operar con una sola mano desde tu smartphone o tableta.
+
+<Image 
+  src={imgCompraMovil} 
+  alt="Vista móvil optimizada para registrar compras frente al repartidor en VentaSimple" 
+  class="rounded-lg border border-neutral-800 my-4 shadow-md max-w-sm mx-auto"
+/>
+
+La interfaz móvil agrupa cada artículo en una tarjeta táctil con una fila compacta de tres datos esenciales:
+
+- **Cantidad:** Número de unidades que entrega el repartidor.
+- **Costo ($):** Costo pactado por pieza individual.
+- **Subtotal:** Cálculo inmediato del importe por esa partida.
+
+En la parte inferior de la pantalla dispones del botón permanente de acción rápida con el importe acumulado en tiempo real y el botón amarillo **Registrar compra**, permitiéndote confirmar el pedido antes de que el camión repartidor se retire.
+
+---
+
+## Ajustes de último momento y guardado
+
+En el comercio del día a día, los precios de los proveedores fluctúan con frecuencia o los repartidores entregan menos piezas de las que habías solicitado por falta de espacio en su furgoneta. VentaSimple permite corregir estos detalles directamente sobre la marcha:
+
+- **Edición en línea:** Puedes hacer clic o tocar directamente sobre el campo de **Cantidad** o **Costo ($)** de cualquier partida para actualizar el valor al instante.
+- **Alertas de incremento:** Si el proveedor aumentó el costo respecto a tu compra anterior, el sistema colocará una alerta informativa (por ejemplo, `Sube 42.9%`) para que decidas si ajustas de una vez tu precio al público en el catálogo.
+- **Eliminar partidas:** Si un artículo viene dañado o no llegó en el pedido, presiona el icono de papelera al costado del artículo para quitarlo de la lista.
+
+### ¿Qué sucede al presionar "Registrar compra"?
+
+Al pulsar el botón **Registrar compra**:
+
+1. **Entrada inmediata al inventario:** El stock de cada artículo aumenta de forma automática en la sucursal seleccionada.
+2. **Actualización de costo promedio:** El sistema actualiza el costo base del producto para que tus futuros reportes de utilidad reconozcan el precio real pagado.
+3. **Registro financiero en caja o pasivos:** Si fue pago de contado en efectivo, se genera un comprobante de egreso en el turno activo de la caja. Si fue a crédito, se genera una cuenta pendiente asociada al proveedor con su saldo correspondiente.

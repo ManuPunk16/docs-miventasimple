@@ -59,6 +59,14 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Compras y Proveedores',
+					collapsed: false,
+					items: [
+						{ label: 'Cotizador de Pasillo y Bultos', slug: 'guias/cotizador-compras' },
+						{ label: 'Registro de Compras y Stock', slug: 'guias/registrar-compras' },
+					],
+				},
+				{
 					label: 'El Mostrador (Caja y Ventas)',
 					collapsed: false,
 					items: [
@@ -114,4 +122,3 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 	},
 });
-

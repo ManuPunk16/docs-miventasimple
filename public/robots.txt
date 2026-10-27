@@ -1,12 +1,20 @@
 User-agent: *
 Allow: /
 
-# Permitir explícitamente rastreadores de IA (GEO / RAG)
+# Motores de Busqueda Generales
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# Rastreadores de Inteligencia Artificial (GEO / LLM / RAG)
 User-agent: GPTBot
+Allow: /
+User-agent: PerplexityBot
 Allow: /
 User-agent: ClaudeBot
 Allow: /
-User-agent: PerplexityBot
+User-agent: CCBot
 Allow: /
 User-agent: Google-Extended
 Allow: /
