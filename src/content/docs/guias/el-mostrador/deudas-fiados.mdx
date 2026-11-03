@@ -1,254 +1,104 @@
 ---
-title: Control de Fiados, Abonos y Directorio de Clientes
-description: Guía operativa para administrar cuentas por cobrar, registrar abonos con imputación FIFO, gestionar saldos a favor y enviar comprobantes por WhatsApp en VentaSimple.
+title: Cómo Controlar Fiados, Cobrar Abonos y Enviar Mensajes por WhatsApp
+description: Aprende a registrar ventas a crédito (fiados), consultar quién te debe, registrar abonos en segundos y enviar recordatorios de cobro a tus clientes desde el celular.
 sidebar:
   order: 4
 head:
   - tag: meta
     attrs:
       name: keywords
-      content: fiados ventasimple, control de cuentas por cobrar pos, abonos fifo clientes, libreta de fiados whatsapp mexico
+      content: como fiar en punto de venta, libreta de fiados digital, control de deudas clientes tienda, cobrar por whatsapp punto de venta
 ---
 
-import { Card, CardGrid, Steps, Aside, Tabs, TabItem, Badge } from '@astrojs/starlight/components';
+import { Steps, Aside, Tabs, TabItem } from '@astrojs/starlight/components';
 
-El módulo de Clientes y Cuentas por Cobrar de VentaSimple centraliza la relación comercial, el historial crediticio y la cobranza en mostrador. Diseñado específicamente para el ritmo de operación del comercio detallista, permite autorizar compras a crédito con límites definidos, consultar saldos consolidados, registrar pagos parciales o totales con liquidación cronológica y formalizar la entrega de comprobantes vía mensajería instantánea.
+Tener una libreta de papel para anotar los fiados suele causar cuentas perdidas, malentendidos con los clientes y dinero que nunca regresa a la caja. 
+
+En VentaSimple puedes llevar tu libreta digital desde el celular: asignas compras a crédito en la caja, consultas la lista de deudores en tiempo real, registras abonos y envías comprobantes directos por WhatsApp con tu cuenta bancaria.
 
 <Aside type="note">
-La funcionalidad de gestión de fiados, libretas de crédito y registro de abonos requiere contar con el **Plan Básico+** activo en la suscripción de VentaSimple. El directorio estándar de clientes se mantiene accesible en todos los planes.
-</Aside>
-
-### Autorización de Fiados desde Mostrador y Límites de Crédito
-
-Al registrar una venta en la caja del punto de venta, el comerciante puede asignar la nota a crédito seleccionando al cliente registrado en lugar de cobrar en efectivo o tarjeta:
-- **Asignación del Cliente:** Vincula la compra al perfil del cliente para registrar la deuda de forma nominativa en su historial.
-- **Límites de Crédito:** Permite definir un saldo deudor máximo autorizado por cliente, evitando sobregiros involuntarios o acumulaciones de riesgo en mostrador.
-- **Generación Automática de Deuda:** Al concluir la venta bajo modalidad fiado, el sistema crea el registro correspondiente en `DeudaModel` con estado `pendiente`, recalculando en tiempo real la cartera general.
-
----
-
-## Resumen Ejecutivo y Métricas de Pantalla
-
-La interfaz del módulo (`/configuracion/clientes`) está desarrollada bajo arquitectura Angular Standalone con Signals reactivos (`signal`, `computed`). La vista implementa principios de diseño *Mobile-First*, garantizando fluidez táctil y legibilidad integral en pantallas estrechas a partir de 360 píxeles de ancho (como terminales POS portátiles o smartphones de caja).
-
-### Segmented Control 50/50 y Distribución Táctil
-
-Para maximizar la agilidad en mostrador, el área de trabajo se segmenta en dos submódulos mutuamente excluyentes controlados por la Signal `vistaPrincipal`:
-
-```
-┌───────────────────────────────────┬───────────────────────────────────┐
-│     Directorio (84)               │     Fiados ($12,450)              │
-│     h-10 (40px)                   │     Badge reactivo rojo           │
-└───────────────────────────────────┴───────────────────────────────────┘
-```
-
-1. **Pestaña Directorio:** Administra el padrón de clientes, información de contacto (teléfono, correo electrónico), notas particulares, membresías de giros deportivos y la segmentación algorítmica (`vip`, `frecuente`, `regular`, `en_riesgo`, `inactivo`, `nuevo`). Incluye un contador con el total de registros en base de datos.
-2. **Pestaña Fiados:** Centraliza la cartera de cuentas por cobrar. Si existen saldos pendientes en el negocio (`totalDeudaAgrupada() > 0`), proyecta de forma automática un badge reactivo en rojo oscuro con el importe total consolidado formateado como moneda nacional (`$X,XXX`).
-
-Ambas pestañas mantienen una altura táctil fija de 40px (`h-10`) distribuida en una cuadrícula simétrica de dos columnas (`grid grid-cols-2 gap-1`), optimizada para evitar quiebres de línea o saltos visuales en pantallas pequeñas.
-
-<Aside type="tip">
-El contenedor raíz de la vista implementa un espaciado inferior de seguridad (`pb-24`). Esta holgura impide que botones flotantes de acción rápida (FAB) o elementos fijos del pie de pantalla cubran la última tarjeta de cliente al deslizar la lista.
+El registro básico de clientes está disponible en todos los planes. La libreta digital de fiados y cuentas por cobrar requiere contar con el **Plan Básico+** activo en tu negocio.
 </Aside>
 
 ---
 
-## Navegación y Consulta de la Cartera de Fiados
+## Cómo Fiar una Venta en Mostrador
 
-Al pulsar la pestaña **Fiados**, el sistema evalúa la Signal reactiva `deudasSvc.clientesFiado()`. Cada deudor activo se presenta en una tarjeta estructurada e independiente:
-
-```
-┌───────────────────────────────────────────────────────────────────────┐
-│ Juan Pérez Martínez                       $1,250.00                   │
-│ Saldo a favor: $50.00                     [text-red-400 font-mono]    │
-├───────────────────────────────────────────────────────────────────────┤
-│ 3 fiados pendientes                       [ Cobrar / Abonar ]         │
-│                                           (Táctil h-38px)             │
-└───────────────────────────────────────────────────────────────────────┘
-```
-
-### Anatomía de la Tarjeta de Cartera
-
-- **Nombre del Cliente:** Ubicado en la sección superior izquierda, formateado con truncado seguro (`truncate flex-1 pr-2`) para no desbordar ante nombres extensos.
-- **Monto Adeudado:** Ubicado en el extremo superior derecho, renderizado en tipografía monoespaciada de alta visibilidad sobre fondo rojo tenue (`text-sm font-bold font-mono text-red-400 bg-red-950/30 border border-red-900/40 px-2 py-0.5 rounded-md`).
-- **Saldo a Favor Previo:** Si el cliente dispone de excedentes acreditados de operaciones anteriores, el indicador se proyecta debajo del nombre en color verde esmeralda (`text-[10px] font-semibold text-emerald-400`).
-- **Resumen de Notas:** Fila inferior izquierda que detalla la cantidad de notas de venta a crédito pendientes de liquidación.
-- **Botón Ergonómico Cobrar / Abonar:** Pulsador táctil con altura mínima de 38px (`min-h-[38px]`) diseñado para activación precisa sin desvíos en pantalla táctil.
-
----
-
-## Flujo de Registro de Abonos
-
-Al presionar el botón **Cobrar / Abonar**, el sistema ejecuta `abrirPerfilDeudor(c)`, genera la vista unificada y despliega el **Customer 360 Drawer** en la pestaña de fiados (`tabDrawerActiva = 'fiados'`).
+Cuando un cliente de confianza te pida fiado al momento de cobrar:
 
 <Steps>
-1. **Seleccionar la modalidad de aplicación:**
-   - **Abono General (FIFO):** Presione el botón principal **Registrar Abono** en la cabecera del drawer. Esta modalidad inicializa el modal con el saldo global acumulado del cliente y aplica el monto recibido liquidando las notas de fiado en estricto orden cronológico ascendente (las deudas más antiguas se cubren primero).
-   - **Abono Específico:** Presione el botón **Abonar** situado al pie de una nota o ticket en particular. En este caso, el importe queda estrictamente delimitado al saldo pendiente de ese comprobante específico.
-
-2. **Ingresar el importe del abono:**
-   El campo numérico utiliza `inputmode="decimal"` y validación a nivel de pulsación (`onMontoKeydown` y `onMontoInput`), garantizando la captura ágil de valores monetarios sin caracteres no numéricos. Puede utilizar las opciones de captura rápida:
-   - **Liquidar Total:** Establece el monto exactamente al saldo total adeudado.
-   - **50%:** Aplica la mitad exacta de la deuda actual.
-   - **Montos Fijos:** Botones de acceso directo por **$100**, **$200** y **$500**.
-
-3. **Definir el método de recepción del pago:**
-   Indique la vía de cobro entre las tres opciones admitidas:
-   - `efectivo`: Dinero en moneda circulante en mostrador.
-   - `transferencia`: Pago electrónico interbancario verificado.
-   - `tarjeta`: Cobro procesado mediante terminal punto de venta bancaria.
-
-4. **Confirmar la transacción:**
-   Al hacer clic en **Confirmar Abono**, el sistema verifica que el importe sea mayor a cero y que no sobrepase el límite del ticket si es abono específico. La plataforma emite la petición (`POST /api/fiados/:id/abonar` o `POST /api/fiados/abonar-cliente`). Al completarse con éxito, se presenta el modal con el `ComprobanteAbonoDto` generado y se actualiza la información en pantalla mediante `refrescarDatosDrawer(clienteId)`.
+1. **Agrega los productos a la venta:** Escanea o selecciona los artículos que el cliente se va a llevar normalmente.
+2. **Selecciona al cliente:** En lugar de presionar directo en cobrar en efectivo, presiona en **Asignar Cliente** y busca su nombre en tu directorio.
+3. **Elige la opción Fiado:** Al seleccionar el método de pago, presiona en **Fiado / A Crédito**.
+4. **Finaliza la nota:** La venta se guardará con saldo pendiente y se sumará automáticamente a la cuenta acumulada de ese cliente.
 </Steps>
 
----
-
-## Reglas Contables y Reactividad del Sistema
-
-La integridad de las cuentas por cobrar descansa en Signals sincronizadas en el cliente y validaciones atómicas en backend.
-
-| Concepto Contable | Comportamiento Técnico en VentaSimple |
-| :--- | :--- |
-| **Imputación FIFO** | En abonos globales, el sistema recorre las notas activas ordenadas por fecha de creación ascendente (`creadoEn ASC`). Descuenta el saldo de cada una hasta agotar el importe recibido. |
-| **Eliminación Reactiva ($0)** | Al recibir un pago que iguala o supera el saldo total (`totalDeuda - monto <= 0`), `DeudasService` actualiza la Signal `clientesFiado` filtrando aquellos registros con `totalDeuda > 0`. El cliente desaparece instantáneamente de la lista sin refrescar la página. |
-| **Manejo de Excedentes (Saldo a Favor)** | En abonos generales con `permitirExceso: true`, si el cliente entrega un importe mayor a la deuda acumulada, la diferencia se acredita automáticamente como `saldoAFavor` para futuras ventas. |
-| **Recálculo Automático de Cartera** | La propiedad `totalDeudaAgrupada` opera como un `computed()` directo de `clientesFiado`. Cualquier abono o liquidación recalcula de inmediato el indicador global y el badge del menú. |
-| **Sincronización en Segundo Plano** | Tras cada transacción, `refrescarDatosDrawer()` revalida los fiados específicos del cliente (`cargarPorCliente`) y sincroniza la cartera consolidada (`cargarAgrupado(1, 100)`). |
+<Aside type="tip">
+Puedes fijar un **límite de crédito** a cada cliente. Si supera el monto permitido, el sistema te avisará en pantalla para evitar que acumule más deuda de la acordada.
+</Aside>
 
 ---
 
-## Comprobantes y Cobranza por WhatsApp
+## Cómo Consultar la Cartera de Clientes que Deben
 
-VentaSimple se comunica con la API de enlaces universales de WhatsApp (`https://wa.me/{telefono}?text={mensaje}`) sin requerir integraciones de terceros ni cobros por mensaje.
+Para ver quién te debe y cuánto dinero tienes por cobrar en la calle:
+
+1. Entra a **Configuración** y selecciona **Clientes**.
+2. En la parte superior verás dos botones: **Directorio** (tu lista de todos los contactos) y **Fiados** (con el total acumulado que te deben en un recuadro rojo).
+3. Presiona la pestaña **Fiados**:
+   - Cada cliente que tenga deuda aparecerá en su propia tarjeta.
+   - Verás su nombre completo, el total que te debe en color rojo y cuántas notas o compras tiene pendientes.
+   - Si el cliente tenía saldo a su favor de un pago anterior, se mostrará en color verde.
+
+---
+
+## Cómo Cobrar y Registrar un Abono
+
+Cuando un cliente llegue a tu mostrador a darte dinero para su cuenta:
+
+<Steps>
+1. **Localiza al cliente en la lista de Fiados:** Presiona el botón **Cobrar / Abonar** que aparece en su tarjeta.
+2. **Elige cómo aplicar el abono:**
+   - **Abono General:** Presiona el botón verde de abonar en la parte superior. Esto cubrirá automáticamente sus notas más viejas primero.
+   - **Abonar a una nota específica:** Si el cliente solo quiere pagar lo que se llevó en un día particular, busca esa compra en su lista y presiona abonar en esa nota.
+3. **Escribe la cantidad recibida:** Puedes teclear el monto exacto o usar los botones de atajo rápido (**Liquidar Todo**, **50%**, **$100**, **$200**, **$500**).
+4. **Indica cómo te pagó:** Selecciona si el cobro fue en **Efectivo**, **Transferencia** bancaria o **Tarjeta**.
+5. **Confirma el cobro:** Presiona **Confirmar Abono**. El saldo del cliente se reducirá al instante en tu pantalla.
+</Steps>
+
+### ¿Qué pasa si el cliente paga de más?
+Si un cliente te debe $180 pero te deja un billete de $200 y te pide que guardes el resto para su próxima compra, el sistema liquidará la deuda por completo ($0) y guardará los $20 ejercicios como **Saldo a Favor** para descontarlos en sus siguientes visitas.
+
+### ¿Qué pasa cuando el cliente liquida toda su cuenta?
+En cuanto la deuda llega a $0, el cliente se retira automáticamente de la lista de deudores, manteniendo tu pantalla limpia con solo las personas que tienen pagos pendientes.
+
+---
+
+## Cómo Enviar Recordatorios y Comprobantes por WhatsApp
+
+Para evitar fricciones y cobrar sin desgastarte, puedes enviar mensajes automáticos directamente al WhatsApp de tu cliente sin salir de la app:
 
 <Tabs>
-  <TabItem label="Comprobante Inmediato de Abono">
-    Emitido al finalizar un pago mediante la función `enviarWhatsAppComprobanteAbono()`. Entrega al cliente certeza inmediata del saldo que liquidó y de su balance remanente:
-
-```text
-¡Hola Juan Pérez!
-
-Te confirmamos que hemos recibido tu abono en *Abarrotes La Esquina*.
-
---- DETALLE DEL ABONO ---
-Folio: #AB-1042
-Fecha: 3 de Noviembre de 2026, 13:15 hrs
-Monto Abonado: $500.00 (efectivo)
-Saldo Anterior: $1,250.00
-*Saldo Restante Pendiente: $750.00*
-
-¡Muchas gracias por tu pago!
-```
+  <TabItem label="Comprobante al Recibir Pago">
+    Al terminar de registrar un abono, presiona **Enviar Comprobante por WhatsApp**. El sistema abrirá la conversación con un mensaje formal que incluye folio, fecha, monto recibido y cuánto le queda por pagar.
   </TabItem>
-  <TabItem label="Recordatorio de Cobranza (Resumen)">
-    Invocado desde el perfil deudor en modo resumen. Notifica de forma clara la cantidad de notas pendientes y el saldo total:
-
-```text
-¡Hola Juan Pérez!
-
-Te recordamos que tienes una cuenta pendiente en *Abarrotes La Esquina*.
-
-Total Adeudado: *$1,250.00*
-Notas activas: 3 nota(s) pendiente(s)
-
-Puedes liquidar tu saldo en tienda o mediante transferencia interbancaria.
-```
+  <TabItem label="Recordatorio Rápido de Saldo">
+    Desde el perfil del cliente, presiona la opción de cobrar por WhatsApp y elige **Resumen**. Le enviará un mensaje recordándole cuántas compras tiene pendientes y el saldo total adeudado.
   </TabItem>
-  <TabItem label="Recordatorio Detallado con Datos Bancarios">
-    Consulta los tickets en paralelo (`ventasSvc.obtener(id)`) y anexa el desglose ítem por ítem junto con los datos bancarios configurados en `configMensajeFiados`:
-
-```text
-¡Hola Juan Pérez!
-
-Detalle de tu cuenta pendiente en *Abarrotes La Esquina*:
-
-- Nota #4021 (15/10/2026):
-  • 2x Aceite Vegetal 1L ($76.00)
-  • 1x Huevo Blanco 1kg ($48.00)
-- Nota #4088 (22/10/2026):
-  • 1x Detergente Polvo 1kg ($38.00)
-
-*Total Consolidado: $162.00*
-
---- DATOS DE TRANSFERENCIA BANCARIA ---
-Banco: BBVA México
-Beneficiario: Abarrotes La Esquina S.A.
-Cuenta CLABE: 012180001234567890
-Concepto: Pago Fiado Juan Pérez
-
-Métodos aceptados en mostrador: Efectivo, Tarjeta de Débito/Crédito y Transferencia.
-```
+  <TabItem label="Cobro Detallado con Cuenta Bancaria">
+    Si el cliente te pide el desglose exacto de lo que debe o quiere hacerte una transferencia, elige **Detallado**:
+    - Incluye la lista de productos que se llevó en cada fecha.
+    - Si guardaste tu cuenta CLABE bancaria en la configuración, el mensaje incluirá el nombre del banco, titular y los 18 dígitos para que te transfiera desde su celular.
   </TabItem>
 </Tabs>
 
 ---
 
-## Especificación Técnica y Modelos
+## Cómo Administrar tu Directorio de Clientes
 
-Estructuras de datos tipadas en TypeScript utilizadas en los servicios `ClientesService` y `DeudasService`:
+En la pestaña **Directorio** puedes llevar el control general de tu clientela:
 
-```typescript
-// Estados de una cuenta por cobrar
-export type EstadoDeuda = 'pendiente' | 'pagada' | 'vencida' | 'cancelado';
-
-// Registro de cada abono individual aplicado
-export interface AbonoModel {
-  monto: number;
-  notas: string | null;
-  abonoPor: string;
-  fecha: string;
-}
-
-// Modelo de una nota de deuda específica
-export interface DeudaModel {
-  id: string;
-  clienteId: string;
-  clienteNombre: string | null;
-  ventaId: string | null;
-  sucursalId: string | null;
-  monto: number;
-  montoPagado: number;
-  saldoPendiente: number;
-  fechaLimite: string | null;
-  estado: EstadoDeuda;
-  notas: string | null;
-  creadoPor: string;
-  historialAbonos: AbonoModel[];
-  creadoEn: string;
-  actualizadoEn: string;
-}
-
-// Agrupación consolidada de cartera por cliente
-export interface ClienteFiado {
-  clienteId: string;
-  clienteNombre: string | null;
-  totalDeuda: number;
-  totalMonto: number;
-  totalPagado: number;
-  cantidadFiados: number;
-  ultimaActividad: string;
-  saldoAFavor: number;
-}
-
-// Solicitud para registrar abono general al cliente (FIFO)
-export interface AbonarClienteDto {
-  clienteId: string;
-  monto: number;
-  notas?: string | null;
-}
-
-// Comprobante emitido tras registrar un abono exitoso
-export interface ComprobanteAbonoDto {
-  folioAbono: string;
-  clienteNombre: string;
-  clienteTelefono?: string;
-  montoAbonado: number;
-  saldoAnterior: number;
-  saldoRestante: number;
-  saldoAFavorGenerado: number;
-  metodoPago: 'efectivo' | 'transferencia' | 'tarjeta';
-  fecha: string;
-  notas: string | null;
-}
-```
+- **Buscar clientes:** Escribe su nombre o número de teléfono en el buscador superior.
+- **Acceso rápido al teléfono:** Toca el número de teléfono para llamarlo directo desde tu celular.
+- **Ver Perfil Completo (360°):** Consulta el historial de todas sus compras pasadas, qué productos suele comprar con más frecuencia y cuántos puntos o visitas acumula.
+- **Editar o Dar de Baja:** Corrige sus datos de contacto o elimínalo si ya no visita tu negocio.
