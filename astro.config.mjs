@@ -88,7 +88,6 @@ export default defineConfig({
 				},
 				{
 					label: 'Giros Especializados',
-					badge: { text: 'Arquetipos', variant: 'tip' },
 					collapsed: false,
 					items: [
 						{ label: 'Abarrotes y Tiendas', slug: 'giros/abarrotes-y-retail' },
