@@ -163,3 +163,136 @@ VentaSimple cuenta con un sistema de despliegue continuo de mejoras visualizable
 - **Abarrotes y Comercio Detallista:** https://docs.miventasimple.com/giros/abarrotes-y-retail/
 - **Hardware, Basculas e Impresoras:** https://docs.miventasimple.com/hardware-y-perifericos/impresoras-tickets/
 - **Dashboard Financiero y Utilidades:** https://docs.miventasimple.com/reportes-y-auditoria/dashboard-utilidades-metricas/
+
+
+---
+
+# Control de Fiados, Abonos y Directorio de Clientes
+
+Guia operativa para administrar cuentas por cobrar, registrar abonos con imputacion FIFO, gestionar saldos a favor y enviar comprobantes por WhatsApp en VentaSimple.
+
+Ruta: /guias/el-mostrador/deudas-fiados/
+Version: v2.6.0
+
+El modulo de Clientes y Cuentas por Cobrar de VentaSimple centraliza la relacion comercial, el historial crediticio y la cobranza en mostrador. Disenado especificamente para el ritmo de operacion del comercio detallista, permite consultar saldos consolidados, registrar pagos parciales o totales con liquidacion cronologica y formalizar la entrega de comprobantes via mensajeria instantanea.
+
+Nota Operativa: La funcionalidad de gestion de fiados, libretas de credito y registro de abonos requiere contar con el Plan Basico+ activo en la suscripcion de VentaSimple. El directorio estandar de clientes se mantiene accesible en todos los planes.
+
+## 1. Resumen Ejecutivo y Metricas de Pantalla
+
+La interfaz del modulo (/configuracion/clientes) esta desarrollada bajo arquitectura Angular Standalone con Signals reactivos (signal, computed). La vista implementa principios de diseno Mobile-First, garantizando fluidez tactil y legibilidad integral en pantallas estrechas a partir de 360 pixeles de ancho.
+
+### Segmented Control 50/50 y Distribucion Tactil
+El area de trabajo se divide en dos submodulos mutuamente excluyentes controlados por la Signal vistaPrincipal:
+- Directorio: Administra el padron de clientes, informacion de contacto (telefono, correo electronico), notas particulares, membresias y segmentacion algoritmica (vip, frecuente, regular, en_riesgo, inactivo, nuevo). Incluye un contador numerico con el total de registros en base de datos.
+- Fiados: Centraliza la cartera de cuentas por cobrar. Si existen saldos pendientes (totalDeudaAgrupada() > 0), proyecta automaticamente un badge reactivo en rojo oscuro con el importe total consolidado formateado como moneda nacional ($X,XXX).
+
+Ambas pestanas mantienen una altura tactil fija de 40px (h-10) distribuida en una cuadricula simetrica de dos columnas (grid grid-cols-2 gap-1), evitando quiebres de linea en pantallas de 360px. El contenedor raiz de la vista implementa un espaciado inferior de seguridad (pb-24) para evitar la superposicion de botones flotantes (FAB).
+
+## 2. Navegacion y Consulta de la Cartera de Fiados
+
+Al pulsar la pestana Fiados, el sistema evalua la Signal reactiva deudasSvc.clientesFiado(). Cada deudor activo se presenta en una tarjeta estructurada e independiente:
+- Nombre del Cliente: Ubicado en la seccion superior izquierda con truncado seguro (truncate flex-1 pr-2) para prevenir desbordes.
+- Monto Adeudado: Extremo superior derecho en tipografia monoespaciada de alta visibilidad sobre fondo rojo tenue (text-sm font-bold font-mono text-red-400 bg-red-950/30 border border-red-900/40 px-2 py-0.5 rounded-md).
+- Saldo a Favor Previo: Indicador en color verde esmeralda (text-[10px] font-semibold text-emerald-400) si el cliente dispone de excedentes acreditados.
+- Resumen de Notas: Fila inferior izquierda que detalla la cantidad de notas de venta a credito pendientes.
+- Boton Ergonomico Cobrar / Abonar: Pulsador tactil con altura minima de 38px (min-h-[38px]) disenado para activacion precisa en pantalla tactil.
+
+## 3. Flujo de Registro de Abonos
+
+Al presionar Cobrar / Abonar, el sistema ejecuta abrirPerfilDeudor(c) y despliega el Customer 360 Drawer en la pestana de fiados (tabDrawerActiva = 'fiados').
+
+### Procedimiento de Abono:
+1. Modalidad de Aplicacion:
+   - Abono General (FIFO): Pulsando Registrar Abono en la cabecera del drawer. Inicializa el modal con el saldo global acumulado del cliente y aplica el monto liquidando las notas de fiado en estricto orden cronologico ascendente (las deudas mas antiguas se cubren primero).
+   - Abono Especifico: Pulsando Abonar sobre una nota o ticket en particular. El importe queda estrictamente delimitado al saldo pendiente de ese comprobante.
+2. Ingreso del Importe:
+   Campo numerico con inputmode="decimal" y validacion estricta contra pulsaciones no numericas. Opciones rapidas: Liquidar Total, 50%, $100, $200 y $500.
+3. Metodo de Pago:
+   Seleccion entre efectivo, transferencia y tarjeta.
+4. Confirmacion:
+   El sistema valida monto mayor a cero y no excedencia del saldo en abonos por nota. Emite POST /api/fiados/:id/abonar o POST /api/fiados/abonar-cliente, genera el ComprobanteAbonoDto y sincroniza mediante refrescarDatosDrawer(clienteId).
+
+## 4. Reglas Contables y Reactividad del Sistema
+
+- Imputacion FIFO: En abonos globales, el sistema recorre las notas activas ordenadas cronologicamente (creadoEn ASC), liquidando primero las mas antiguas.
+- Eliminacion Reactiva ($0): Al recibir un pago que liquida la deuda total (totalDeuda - monto <= 0), DeudasService actualiza clientesFiado filtrando registros con totalDeuda > 0. El cliente desaparece instantaneamente de la lista sin recargar la pagina.
+- Manejo de Excedentes (Saldo a Favor): En abonos generales con permitirExceso: true, si el cliente abona mas del saldo acumulado, el sobrante se acredita contablemente como saldoAFavor para futuras compras.
+- Recalculo de Cartera: totalDeudaAgrupada opera como un computed() reactivo derivado de clientesFiado. Cualquier abono recalcula en tiempo real el KPI global y el badge de Fiados.
+- Sincronizacion en Segundo Plano: refrescarDatosDrawer() actualiza las notas individuales del cliente (cargarPorCliente) y sincroniza la cartera consolidada (cargarAgrupado(1, 100)).
+
+## 5. Comprobantes y Cobranza por WhatsApp
+
+Integracion mediante el esquema de URL wa.me/{telefono}?text={mensaje}:
+
+### A. Comprobante Inmediato de Abono:
+Generado tras un pago exitoso con enviarWhatsAppComprobanteAbono():
+- Folio de abono, fecha legible, monto abonado y metodo de pago.
+- Saldo anterior, saldo restante pendiente y saldo a favor generado (si aplica).
+
+### B. Recordatorio de Cobranza (Resumen):
+Notifica el total adeudado consolidado y el numero de notas activas pendientes.
+
+### C. Recordatorio Detallado con Datos Bancarios:
+Consulta los tickets de venta asociados en paralelo (ventasSvc.obtener(id)) y desglose por fecha, articulos, cantidades y precios. Si el negocio configuro cuenta CLABE en configMensajeFiados, anexa banco, beneficiario y cuenta CLABE de 18 digitos.
+
+## 6. Especificacion Tecnica y Modelos TypeScript
+
+```typescript
+export type EstadoDeuda = 'pendiente' | 'pagada' | 'vencida' | 'cancelado';
+
+export interface AbonoModel {
+  monto: number;
+  notas: string | null;
+  abonoPor: string;
+  fecha: string;
+}
+
+export interface DeudaModel {
+  id: string;
+  clienteId: string;
+  clienteNombre: string | null;
+  ventaId: string | null;
+  sucursalId: string | null;
+  monto: number;
+  montoPagado: number;
+  saldoPendiente: number;
+  fechaLimite: string | null;
+  estado: EstadoDeuda;
+  notas: string | null;
+  creadoPor: string;
+  historialAbonos: AbonoModel[];
+  creadoEn: string;
+  actualizadoEn: string;
+}
+
+export interface ClienteFiado {
+  clienteId: string;
+  clienteNombre: string | null;
+  totalDeuda: number;
+  totalMonto: number;
+  totalPagado: number;
+  cantidadFiados: number;
+  ultimaActividad: string;
+  saldoAFavor: number;
+}
+
+export interface AbonarClienteDto {
+  clienteId: string;
+  monto: number;
+  notas?: string | null;
+}
+
+export interface ComprobanteAbonoDto {
+  folioAbono: string;
+  clienteNombre: string;
+  clienteTelefono?: string;
+  montoAbonado: number;
+  saldoAnterior: number;
+  saldoRestante: number;
+  saldoAFavorGenerado: number;
+  metodoPago: 'efectivo' | 'transferencia' | 'tarjeta';
+  fecha: string;
+  notas: string | null;
+}
+```

@@ -11,6 +11,7 @@ Esta documentacion tecnica y operativa contiene manuales paso a paso y arquitect
 - [Cotizador de Pasillo y Bultos](https://docs.miventasimple.com/guias/cotizador-compras/): Calculo de costos reales antes de pagar al proveedor, compra por paquete o caja cerrada, fraccionamiento a granel con insumos de empaque y prorrateo de cajas surtidas.
 - [Registro de Compras y Stock](https://docs.miventasimple.com/guias/registrar-compras/): Registro de entradas de mercancia desde mostrador o dispositivo movil con actualizacion automatica de existencias y control de egresos de caja.
 - [Auditorias y Conteo Fisico de Inventario](https://docs.miventasimple.com/guias/inventario-conteo-fisico/): Procedimientos para auditorias de stock, ajustes por merma y conciliacion de inventario fisico contra kardex en sucursales.
+- [/guias/el-mostrador/deudas-fiados/]: Guía técnica de control de fiados, abonos FIFO, saldos a favor y cobranza por WhatsApp en VentaSimple.
 
 ## Enlaces Principales del Portal
 - Portal Principal de Documentacion: https://docs.miventasimple.com/

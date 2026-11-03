@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/punto-de-venta/fiados-ventas-credito-abonos",
+      "destination": "/guias/el-mostrador/deudas-fiados",
+      "permanent": true
+    },
+    {
+      "source": "/punto-de-venta/fiados-ventas-credito-abonos/",
+      "destination": "/guias/el-mostrador/deudas-fiados/",
+      "permanent": true
+    }
+  ]
+}

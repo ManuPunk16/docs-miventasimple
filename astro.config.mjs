@@ -72,7 +72,7 @@ export default defineConfig({
 					items: [
 						{ label: 'Cobro Rápido y Métodos de Pago', slug: 'punto-de-venta/como-vender-y-metodos-de-cobro' },
 						{ label: 'Caja Chica y Cortes de Caja', slug: 'punto-de-venta/caja-chica-aperturas-cierres' },
-						{ label: 'Libreta de Fiados y Créditos', slug: 'punto-de-venta/fiados-ventas-credito-abonos' },
+						{ label: 'Control de Fiados y Abonos FIFO', slug: 'guias/el-mostrador/deudas-fiados' },
 						{ label: 'Promociones y Descuentos', slug: 'punto-de-venta/promociones-descuentos' },
 					],
 				},
