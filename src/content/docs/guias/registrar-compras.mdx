@@ -132,6 +132,31 @@ En el comercio del día a día, los precios de los proveedores fluctúan con fre
 
 Al pulsar el botón **Registrar compra**:
 
-1. **Entrada inmediata al inventario:** El stock de cada artículo aumenta de forma automática en la sucursal seleccionada.
-2. **Actualización de costo promedio:** El sistema actualiza el costo base del producto para que tus futuros reportes de utilidad reconozcan el precio real pagado.
-3. **Registro financiero en caja o pasivos:** Si fue pago de contado en efectivo, se genera un comprobante de egreso en el turno activo de la caja. Si fue a crédito, se genera una cuenta pendiente asociada al proveedor con su saldo correspondiente.
+1. **Entrada inmediata al inventario y Kardex forense:** El stock de cada artículo aumenta de forma automática en la sucursal seleccionada y se genera un movimiento oficial en el Kardex (`tipo: 'entrada'`, motivo de compra y folio de referencia) documentando el stock previo y el nuevo saldo.
+2. **Actualización de costo y precio de catálogo:** El sistema actualiza el costo base del producto y, si decidiste ajustar el precio de venta en el modal de confirmación, actualiza de inmediato el precio comercial en tu catálogo público y mostrador.
+3. **Registro financiero en caja o pasivos:** Si fue pago de contado en efectivo, se genera un comprobante de egreso en el turno activo de la caja. Si fue a crédito, se genera una cuenta por pagar asociada al proveedor con su fecha de vencimiento.
+
+---
+
+## Auditoría de compras, cancelación e impresión
+
+Al consultar cualquier adquisición desde el historial en **Compras > Historial** e ingresar al detalle del pedido (`/compras/:id`), dispones de trazabilidad completa y herramientas de control interno:
+
+### Trazabilidad "Antes y Después"
+Debajo de cada producto de la orden, VentaSimple presenta una ficha de auditoría histórica:
+- **Costo catálogo:** Muestra el costo antes de la compra y el costo pactado recibido (`$X.XX ➔ $Y.YY`).
+- **Precio venta:** Refleja la variación del precio al público si decidiste actualizarlo al recibir el pedido.
+- **Stock en sucursal:** Muestra con exactitud matemática el stock previo, las piezas ingresadas y las existencias resultantes (`0 uds ➔ 10 uds (+10)`).
+
+### Cancelación de compra con reversión automática
+Si por alguna razón la factura fue rechazada, el pedido vino en mal estado o se trató de un error de captura, los administradores pueden pulsar **Cancelar Compra**:
+- **Reversión de almacén y Kardex:** Si la mercancía ya había sido recibida, el sistema descuenta automáticamente las piezas del inventario de la sucursal e inserta un movimiento de salida forense en el Kardex tipificado como *Cancelación de compra*.
+- **Reversión contable en caja:** Si la compra había generado un egreso en tu turno de caja, el movimiento se anula inmediatamente restaurando el arqueo de efectivo.
+- **Restauración opcional de catálogo:** Puedes marcar la casilla para que el costo (y precio de venta) del producto en el catálogo vuelva automáticamente a su valor previo a la compra.
+- **Transparencia total:** La orden se marca con la insignia **Cancelada** y exhibe un recuadro de aviso inmutable con la fecha, la persona responsable y el motivo especificado.
+
+### Comprobantes térmicos (Tickets 58 mm / 80 mm)
+Al hacer clic en **Imprimir**, VentaSimple no imprime capturas de pantalla web con barras laterales ni fondos oscuros:
+- Se comunica directamente con tu motor de tickets a través de un documento aislado en segundo plano.
+- Genera un comprobante limpio en formato monoespaciado optimizado para **impresoras térmicas de 58 mm y 80 mm**.
+- Incluye el logotipo de tu negocio, folio de adquisición, desglose de piezas, trazabilidad resumida, desglose de pagos y leyenda para control interno de almacén.

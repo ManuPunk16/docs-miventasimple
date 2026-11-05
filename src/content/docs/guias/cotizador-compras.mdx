@@ -138,6 +138,13 @@ El sistema sumará automáticamente el costo proporcional del producto más el i
 El costo de empaque se suma internamente al costo de la porción para calcular tu precio de venta al público y proteger tu margen, pero no infla la factura ni la cuenta por pagar al proveedor del grano o dulce, manteniendo tus cuentas claras y cuadradas con cada proveedor.
 </Aside>
 
+<Aside type="note">
+**Tolerancia comercial y absorción de costos:**
+Para proteger tu competitividad y evitar fricción con tus clientes por variaciones mínimas de unos cuantos centavos, el algoritmo inteligente del Cotizador evalúa tu margen proyectado:
+* Si el costo sube ligeramente pero tu margen resultante sigue siendo saludable (**>= 30%** o caída menor a 3 puntos), el sistema te sugerirá **mantener tu precio actual**, indicándote exactamente cuánto centavo absorbe tu ganancia sin poner en riesgo el negocio.
+* Si el margen cae por debajo del umbral objetivo o el costo nuevo supera tu precio de venta, calculará el nuevo precio de venta objetivo redondeando comercialmente a **$0.50** (en lugar de subir brusca e innecesariamente un peso entero).
+</Aside>
+
 ---
 
 ## Desempacar cajas y contenedores surtidos (Galletas, botanas, kits)
