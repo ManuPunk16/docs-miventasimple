@@ -1,10 +1,117 @@
 ---
-title: "Inteligencia Financiera"
-description: "Consulta métricas de rentabilidad, ganancias netas y horas pico."
+title: Centro de Inteligencia y Reportes
+description: Guía completa del Hub Ejecutivo de VentaSimple y sus 6 áreas especializadas de analítica, márgenes, inventario, comisiones y cartera.
+sidebar:
+  order: 1
 ---
 
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 
-Visualiza reportes sobre la salud económica de tu negocio:
+# Centro de Inteligencia y Reportes
 
-- **Reporte de Utilidad:** Visualiza el beneficio neto restando el costo de compra del precio de venta.
-- **Horas Pico:** Conoce en qué horarios registras mayor flujo de clientes.
+El módulo de **Reportes** (`/reportes`) de VentaSimple centraliza el rendimiento financiero, operativo y de inventario de tu comercio en tiempo real. 
+
+Diseñado bajo una arquitectura modular de alto rendimiento, cuenta con un **Hub Ejecutivo** con métricas clave y **6 áreas especializadas** con navegación instantánea.
+
+---
+
+## 1. Hub Ejecutivo y Selector Global de Periodo
+
+En la vista raíz de Reportes encontrarás un encabezado de control unificado:
+
+- **Selector Global de Periodo:** Elige entre **Hoy**, **Esta semana**, **Este mes** o **Últimos 30 días**. La selección persiste al navegar entre todas las sub-rutas mediante reactividad en memoria.
+- **Filtro de Sucursal:** Permite consolidar todas las sucursales o aislar una sucursal física específica.
+- **4 KPIs Ejecutivos Superiores:**
+  1. **Ventas del periodo:** Total de operaciones concretadas y ticket promedio de compra.
+  2. **Ingresos brutos:** Dinero recaudado en el periodo y total de egresos operativos registrados.
+  3. **Utilidad neta y Margen %:** Ganancia líquida real calculada como `Ingresos - Costo de Mercancía - Egresos`.
+  4. **Alertas de Stock y Cartera:** Conteo en tiempo real de productos bajo el mínimo de existencias y saldo pendiente de cobro en cartera de fiados.
+
+---
+
+## 2. Las 6 Áreas Especializadas
+
+<Tabs>
+  <TabItem label="Ventas y Utilidad" icon="seti:chart">
+    ### Estado de Resultados y Rentabilidad Operativa (`/reportes/finanzas`)
+    
+    Analiza la salud económica del negocio comparando el periodo actual contra el periodo anterior:
+    - **Ingresos Totales vs. Costo de Ventas:** Desglose exacto del costo de adquisición frente al precio cobrado.
+    - **Utilidad Bruta y Margen Comercial:** Margen porcentual neto sobre ventas.
+    - **Egresos Operativos:** Gastos clasificados por categorías (renta, servicios, insumos, nómina).
+    - **Utilidad Operativa Neta:** Beneficio final disponible para el comercio.
+  </TabItem>
+
+  <TabItem label="Rendimiento de Productos" icon="seti:folder">
+    ### Análisis de Rotación y Márgenes por SKU (`/reportes/productos`)
+    
+    Identifica qué artículos generan el mayor flujo y cuáles aportan el mayor beneficio neto:
+    - **Top 10 Más Vendidos:** Ranking por unidades desplazadas y por volumen total de ingresos.
+    - **Buscador de Rentabilidad Unitaria:** Filtra cualquier producto para conocer su margen bruto individual, costo promedio y precio de venta.
+    - **Márgenes Saludables vs. Productos en Riesgo:** Semáforo visual para detectar artículos con margen inferior al 15%.
+  </TabItem>
+
+  <TabItem label="Inventario, ABC y Mermas" icon="seti:clock">
+    ### Control de Capital, Predicción y Pérdidas (`/reportes/inventario`)
+    
+    Gestiona la inversión de tus almacenes con 4 herramientas integradas:
+    1. **Stock Crítico y Agotados:** Lista de artículos cuyo inventario actual es inferior o igual a su stock mínimo configurado.
+    2. **Clasificación ABC de Rotación (Pareto 80/20):**
+       - **Categoría A:** Artículos de alta rotación y valor económico prioritario.
+       - **Categoría B:** Productos de rotación intermedia.
+       - **Categoría C:** Artículos de baja rotación o stock inmovilizado.
+    3. **Sugerencias Predictivas de Compra:** Estimación basada en velocidad de venta diaria y días de cobertura para sugerir cantidades óptimas de resurtido.
+    4. **Reporte de Mermas (Auditoría de Pérdidas):**
+       - Clasificación por motivo: Caducidad/Vencimiento, Merma Operativa (daño/rotura), Merma Natural o Pérdida Desconocida.
+       - Cálculo contable de pérdida real a precio de costo (`Unidades × Costo de Compra`).
+       - Trazabilidad directa vinculada al Kardex del producto con usuario y fecha.
+  </TabItem>
+
+  <TabItem label="Comisiones y Cortes" icon="seti:account">
+    ### Producción de Personal y Liquidaciones (`/reportes/comisiones-empleado`)
+    
+    Auditoría y cálculo de comisiones para barberos, estilistas y técnicos:
+    - **Desglose por Colaborador:** Total de servicios ejecutados, venta bruta generada y monto de comisión calculada (% o Monto Fijo).
+    - **Transparencia en Mostrador (`Sin asignar / Mostrador`):** Fila contable independiente para servicios cobrados sin técnico asignado, evitando inflar ventas o comisiones ajenas.
+    - **Liquidación y Cierre de Nómina:** Botón para registrar cortes de comisión pagados y generar comprobante de liquidación.
+  </TabItem>
+
+  <TabItem label="Caja y Métodos de Cobro" icon="seti:cash">
+    ### Arqueo Consolidado y Descarga Contable (`/reportes/caja`)
+    
+    - **Distribución de Ingresos:** Comparativa gráfica entre Efectivo, Tarjeta, Transferencia (SPEI) y Fiados.
+    - **Conciliación de Turnos:** Comparativa entre el efectivo esperado en cajón y el efectivo reportado en cortes ciegos.
+    - **Exportación Contable y Fiscal:** Descarga en un clic de hojas de cálculo (CSV/Excel) optimizadas para declaraciones mensuales de impuestos (SAT / RESICO).
+  </TabItem>
+
+  <TabItem label="Clientes y Cartera" icon="seti:check">
+    ### Cuentas por Cobrar y Fidelidad (`/reportes/cartera`)
+    
+    - **Antigüedad de Saldos en Fiados (CxC):** Semáforo de cobro organizado por antigüedad (Corriente, 15 a 30 días, más de 30 días).
+    - **Cuentas por Pagar a Proveedores (CxP):** Fechas de vencimiento y montos pendientes por liquidar.
+    - **Curva Pareto 80/20 de Clientes:** Identificación de clientes frecuentes y de mayor volumen de compra para campañas de fidelidad.
+  </TabItem>
+</Tabs>
+
+---
+
+## 3. Exportación y Respaldo de Información
+
+Desde la cabecera o desde cada área especializada puedes generar descargas en formato CSV compatible con Microsoft Excel, Google Sheets y sistemas contables:
+
+- **Reporte de Ventas Detalladas:** Renglón por renglón con ID de ticket, fecha, cajero, sucursal, método de pago y comisiones.
+- **Reporte de Mermas y Ajustes:** Registro para justificación de pérdidas y mermas deducibles de inventario.
+- **Reporte de Comisiones:** Resumen para pago de nómina quincenal o semanal.
+
+
+<script type="application/ld+json" is:inline>{`
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Centro de Inteligencia y Reportes Financieros en VentaSimple",
+  "description": "Guía oficial sobre el Hub Ejecutivo de reportes, análisis de utilidad neta, rendimiento por SKU, auditoría de mermas y comisiones en VentaSimple POS.",
+  "articleSection": "Reportes y Finanzas",
+  "dependencies": "VentaSimple POS",
+  "inLanguage": "es-MX"
+}
+`}</script>

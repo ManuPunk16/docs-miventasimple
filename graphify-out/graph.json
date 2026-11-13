@@ -139,7 +139,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "package_dependencies",
-      "community": 11,
+      "community": 3,
       "norm_label": "dependencies"
     },
     {
@@ -149,7 +149,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "package_dependencies_astrojs_sitemap",
-      "community": 11,
+      "community": 3,
       "norm_label": "@astrojs/sitemap"
     },
     {
@@ -159,7 +159,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "package_dependencies_astrojs_starlight",
-      "community": 11,
+      "community": 3,
       "norm_label": "@astrojs/starlight"
     },
     {
@@ -169,7 +169,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "package_dependencies_astro",
-      "community": 11,
+      "community": 3,
       "norm_label": "astro"
     },
     {
@@ -179,7 +179,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "package_dependencies_mermaid",
-      "community": 11,
+      "community": 3,
       "norm_label": "mermaid"
     },
     {
@@ -189,7 +189,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "package_dependencies_repomix",
-      "community": 11,
+      "community": 3,
       "norm_label": "repomix"
     },
     {
@@ -199,7 +199,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "package_dependencies_sharp",
-      "community": 11,
+      "community": 3,
       "norm_label": "sharp"
     },
     {
@@ -250,7 +250,7 @@
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "id": "components_customsidebarsublist",
-      "community": 25,
+      "community": 4,
       "norm_label": "./customsidebarsublist.astro"
     },
     {
@@ -260,7 +260,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "components_customsidebarsublist_flattensidebar",
-      "community": 25,
+      "community": 4,
       "norm_label": "flattensidebar()"
     },
     {
@@ -271,7 +271,7 @@
       "_origin": "ast",
       "source_location": "L1",
       "id": "components_sidebaricon",
-      "community": 25,
+      "community": 4,
       "norm_label": "sidebaricon.astro"
     },
     {
@@ -281,7 +281,7 @@
       "confidence": "EXTRACTED",
       "_origin": "ast",
       "id": "components",
-      "community": 25,
+      "community": 4,
       "norm_label": "@astrojs/starlight/components"
     },
     {
@@ -291,7 +291,7 @@
       "confidence": "EXTRACTED",
       "_origin": "ast",
       "id": "sidebarrestorepoint_astro",
-      "community": 25,
+      "community": 4,
       "norm_label": "@astrojs/starlight/components/sidebarrestorepoint.astro"
     },
     {
@@ -301,7 +301,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_diagram",
-      "community": 11,
+      "community": 3,
       "norm_label": "diagram.astro"
     },
     {
@@ -311,7 +311,7 @@
       "confidence": "EXTRACTED",
       "_origin": "ast",
       "id": "mermaid",
-      "community": 11,
+      "community": 3,
       "norm_label": "mermaid"
     },
     {
@@ -371,7 +371,7 @@
       "confidence": "EXTRACTED",
       "_origin": "ast",
       "id": "props",
-      "community": 25,
+      "community": 4,
       "norm_label": "@astrojs/starlight/props"
     },
     {
@@ -461,7 +461,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_sidebar",
-      "community": 25,
+      "community": 4,
       "norm_label": "sidebar.astro"
     },
     {
@@ -471,7 +471,7 @@
       "confidence": "EXTRACTED",
       "_origin": "ast",
       "id": "mobilemenufooter",
-      "community": 25,
+      "community": 4,
       "norm_label": "virtual:starlight/components/mobilemenufooter"
     },
     {
@@ -481,7 +481,7 @@
       "confidence": "EXTRACTED",
       "_origin": "ast",
       "id": "sidebarpersister_astro",
-      "community": 25,
+      "community": 4,
       "norm_label": "@astrojs/starlight/components/sidebarpersister.astro"
     },
     {
@@ -573,6 +573,36 @@
       "id": "tsconfig_exclude",
       "community": 21,
       "norm_label": "exclude"
+    },
+    {
+      "label": "vercel.json",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "vercel",
+      "community": 59,
+      "norm_label": "vercel.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "vercel_schema",
+      "community": 59,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "redirects",
+      "file_type": "code",
+      "source_file": "vercel.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "vercel_redirects",
+      "community": 59,
+      "norm_label": "redirects"
     },
     {
       "label": "graphify.md",
@@ -731,7 +761,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_design",
-      "community": 0,
+      "community": 1,
       "norm_label": "design.md"
     },
     {
@@ -741,7 +771,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "docs_design_ventasimple_sistema_de_temas",
-      "community": 0,
+      "community": 1,
       "norm_label": "ventasimple \u2014 sistema de temas"
     },
     {
@@ -861,7 +891,7 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "docs_design_components",
-      "community": 5,
+      "community": 0,
       "norm_label": "components"
     },
     {
@@ -871,7 +901,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "docs_design_primary_action_button",
-      "community": 5,
+      "community": 0,
       "norm_label": "primary action button"
     },
     {
@@ -881,7 +911,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "docs_design_ghost_navigation_button",
-      "community": 5,
+      "community": 0,
       "norm_label": "ghost navigation button"
     },
     {
@@ -891,7 +921,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "docs_design_subtle_link_button",
-      "community": 5,
+      "community": 0,
       "norm_label": "subtle link button"
     },
     {
@@ -901,7 +931,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "docs_design_navigation_item_button",
-      "community": 5,
+      "community": 0,
       "norm_label": "navigation item button"
     },
     {
@@ -911,7 +941,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "docs_design_default_card",
-      "community": 5,
+      "community": 0,
       "norm_label": "default card"
     },
     {
@@ -921,7 +951,7 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "docs_design_elevated_card",
-      "community": 5,
+      "community": 0,
       "norm_label": "elevated card"
     },
     {
@@ -931,7 +961,7 @@
       "source_location": "L165",
       "_origin": "ast",
       "id": "docs_design_nested_card",
-      "community": 5,
+      "community": 0,
       "norm_label": "nested card"
     },
     {
@@ -941,7 +971,7 @@
       "source_location": "L170",
       "_origin": "ast",
       "id": "docs_design_input_field",
-      "community": 5,
+      "community": 0,
       "norm_label": "input field"
     },
     {
@@ -951,7 +981,7 @@
       "source_location": "L175",
       "_origin": "ast",
       "id": "docs_design_subtle_input_field",
-      "community": 5,
+      "community": 0,
       "norm_label": "subtle input field"
     },
     {
@@ -961,7 +991,7 @@
       "source_location": "L180",
       "_origin": "ast",
       "id": "docs_design_badge",
-      "community": 5,
+      "community": 0,
       "norm_label": "badge"
     },
     {
@@ -1355,6 +1385,36 @@
       "norm_label": "suscripcion-planes.mdx"
     },
     {
+      "label": "Planes, Suscripci\u00f3n y L\u00edmites",
+      "file_type": "document",
+      "source_file": "src/content/docs/facturacion-y-cuenta/suscripcion-planes.mdx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "facturacion_y_cuenta_suscripcion_planes_planes_suscripci\u00f3n_y_l\u00edmites",
+      "community": 42,
+      "norm_label": "planes, suscripcion y limites"
+    },
+    {
+      "label": "1. Tabla Oficial de Planes Vigentes",
+      "file_type": "document",
+      "source_file": "src/content/docs/facturacion-y-cuenta/suscripcion-planes.mdx",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "facturacion_y_cuenta_suscripcion_planes_1_tabla_oficial_de_planes_vigentes",
+      "community": 42,
+      "norm_label": "1. tabla oficial de planes vigentes"
+    },
+    {
+      "label": "2. Administraci\u00f3n y Facturaci\u00f3n de la Suscripci\u00f3n",
+      "file_type": "document",
+      "source_file": "src/content/docs/facturacion-y-cuenta/suscripcion-planes.mdx",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "facturacion_y_cuenta_suscripcion_planes_2_administraci\u00f3n_y_facturaci\u00f3n_de_la_suscripci\u00f3n",
+      "community": 42,
+      "norm_label": "2. administracion y facturacion de la suscripcion"
+    },
+    {
       "label": "agenda-citas-servicios.mdx",
       "file_type": "document",
       "source_file": "src/content/docs/giros-especializados/agenda-citas-servicios.mdx",
@@ -1483,6 +1543,16 @@
       "id": "giros_abarrotes_y_retail_4_estado_de_cuenta_y_recordatorio_por_whatsapp",
       "community": 55,
       "norm_label": "4. estado de cuenta y recordatorio por whatsapp"
+    },
+    {
+      "label": "5. Control de Mercanc\u00eda, Inventario y Mermas",
+      "file_type": "document",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L131",
+      "_origin": "ast",
+      "id": "giros_abarrotes_y_retail_5_control_de_mercanc\u00eda_inventario_y_mermas",
+      "community": 55,
+      "norm_label": "5. control de mercancia, inventario y mermas"
     },
     {
       "label": "barberias-y-esteticas.mdx",
@@ -1735,6 +1805,256 @@
       "norm_label": "4. emision de tickets con poliza de garantia"
     },
     {
+      "label": "cotizador-compras.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "guias_cotizador_compras",
+      "community": 25,
+      "norm_label": "cotizador-compras.mdx"
+    },
+    {
+      "label": "\u00bfPor qu\u00e9 cotizar antes de pagar?",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "guias_cotizador_compras_por_qu\u00e9_cotizar_antes_de_pagar",
+      "community": 25,
+      "norm_label": "\u00bfpor que cotizar antes de pagar?"
+    },
+    {
+      "label": "Compra por paquete o caja cerrada",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "guias_cotizador_compras_compra_por_paquete_o_caja_cerrada",
+      "community": 25,
+      "norm_label": "compra por paquete o caja cerrada"
+    },
+    {
+      "label": "Fraccionar a granel y embolsar (Gomitas, semillas, carnes)",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "guias_cotizador_compras_fraccionar_a_granel_y_embolsar_gomitas_semillas_carnes",
+      "community": 25,
+      "norm_label": "fraccionar a granel y embolsar (gomitas, semillas, carnes)"
+    },
+    {
+      "label": "Desempacar cajas y contenedores surtidos (Galletas, botanas, kits)",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "guias_cotizador_compras_desempacar_cajas_y_contenedores_surtidos_galletas_botanas_kits",
+      "community": 25,
+      "norm_label": "desempacar cajas y contenedores surtidos (galletas, botanas, kits)"
+    },
+    {
+      "label": "Reutilizar plantillas con un solo clic",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L176",
+      "_origin": "ast",
+      "id": "guias_cotizador_compras_reutilizar_plantillas_con_un_solo_clic",
+      "community": 25,
+      "norm_label": "reutilizar plantillas con un solo clic"
+    },
+    {
+      "label": "Transferir a Nueva Compra",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L184",
+      "_origin": "ast",
+      "id": "guias_cotizador_compras_transferir_a_nueva_compra",
+      "community": 25,
+      "norm_label": "transferir a nueva compra"
+    },
+    {
+      "label": "deudas-fiados.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "el_mostrador_deudas_fiados",
+      "community": 11,
+      "norm_label": "deudas-fiados.mdx"
+    },
+    {
+      "label": "C\u00f3mo Fiar una Venta en Mostrador",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "el_mostrador_deudas_fiados_c\u00f3mo_fiar_una_venta_en_mostrador",
+      "community": 11,
+      "norm_label": "como fiar una venta en mostrador"
+    },
+    {
+      "label": "C\u00f3mo Consultar la Cartera de Clientes que Deben",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "el_mostrador_deudas_fiados_c\u00f3mo_consultar_la_cartera_de_clientes_que_deben",
+      "community": 11,
+      "norm_label": "como consultar la cartera de clientes que deben"
+    },
+    {
+      "label": "C\u00f3mo Cobrar y Registrar un Abono",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "el_mostrador_deudas_fiados_c\u00f3mo_cobrar_y_registrar_un_abono",
+      "community": 11,
+      "norm_label": "como cobrar y registrar un abono"
+    },
+    {
+      "label": "\u00bfQu\u00e9 pasa si el cliente paga de m\u00e1s?",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "el_mostrador_deudas_fiados_qu\u00e9_pasa_si_el_cliente_paga_de_m\u00e1s",
+      "community": 11,
+      "norm_label": "\u00bfque pasa si el cliente paga de mas?"
+    },
+    {
+      "label": "\u00bfQu\u00e9 pasa cuando el cliente liquida toda su cuenta?",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "el_mostrador_deudas_fiados_qu\u00e9_pasa_cuando_el_cliente_liquida_toda_su_cuenta",
+      "community": 11,
+      "norm_label": "\u00bfque pasa cuando el cliente liquida toda su cuenta?"
+    },
+    {
+      "label": "C\u00f3mo Enviar Recordatorios y Comprobantes por WhatsApp",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "el_mostrador_deudas_fiados_c\u00f3mo_enviar_recordatorios_y_comprobantes_por_whatsapp",
+      "community": 11,
+      "norm_label": "como enviar recordatorios y comprobantes por whatsapp"
+    },
+    {
+      "label": "C\u00f3mo Administrar tu Directorio de Clientes",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "el_mostrador_deudas_fiados_c\u00f3mo_administrar_tu_directorio_de_clientes",
+      "community": 11,
+      "norm_label": "como administrar tu directorio de clientes"
+    },
+    {
+      "label": "registrar-compras.mdx",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "guias_registrar_compras",
+      "community": 5,
+      "norm_label": "registrar-compras.mdx"
+    },
+    {
+      "label": "Registrar una compra en mostrador",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "guias_registrar_compras_registrar_una_compra_en_mostrador",
+      "community": 5,
+      "norm_label": "registrar una compra en mostrador"
+    },
+    {
+      "label": "Paso a paso para capturar la compra",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "guias_registrar_compras_paso_a_paso_para_capturar_la_compra",
+      "community": 5,
+      "norm_label": "paso a paso para capturar la compra"
+    },
+    {
+      "label": "Uso r\u00e1pido desde el tel\u00e9fono celular",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "guias_registrar_compras_uso_r\u00e1pido_desde_el_tel\u00e9fono_celular",
+      "community": 5,
+      "norm_label": "uso rapido desde el telefono celular"
+    },
+    {
+      "label": "Ajustes de \u00faltimo momento y guardado",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "guias_registrar_compras_ajustes_de_\u00faltimo_momento_y_guardado",
+      "community": 5,
+      "norm_label": "ajustes de ultimo momento y guardado"
+    },
+    {
+      "label": "\u00bfQu\u00e9 sucede al presionar \"Registrar compra\"?",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L131",
+      "_origin": "ast",
+      "id": "guias_registrar_compras_qu\u00e9_sucede_al_presionar_registrar_compra",
+      "community": 5,
+      "norm_label": "\u00bfque sucede al presionar \"registrar compra\"?"
+    },
+    {
+      "label": "Auditor\u00eda de compras, cancelaci\u00f3n e impresi\u00f3n",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L141",
+      "_origin": "ast",
+      "id": "guias_registrar_compras_auditor\u00eda_de_compras_cancelaci\u00f3n_e_impresi\u00f3n",
+      "community": 5,
+      "norm_label": "auditoria de compras, cancelacion e impresion"
+    },
+    {
+      "label": "Trazabilidad \"Antes y Despu\u00e9s\"",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L145",
+      "_origin": "ast",
+      "id": "guias_registrar_compras_trazabilidad_antes_y_despu\u00e9s",
+      "community": 5,
+      "norm_label": "trazabilidad \"antes y despues\""
+    },
+    {
+      "label": "Cancelaci\u00f3n de compra con reversi\u00f3n autom\u00e1tica",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "guias_registrar_compras_cancelaci\u00f3n_de_compra_con_reversi\u00f3n_autom\u00e1tica",
+      "community": 5,
+      "norm_label": "cancelacion de compra con reversion automatica"
+    },
+    {
+      "label": "Comprobantes t\u00e9rmicos (Tickets 58 mm / 80 mm)",
+      "file_type": "document",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L158",
+      "_origin": "ast",
+      "id": "guias_registrar_compras_comprobantes_t\u00e9rmicos_tickets_58_mm_80_mm",
+      "community": 5,
+      "norm_label": "comprobantes termicos (tickets 58 mm / 80 mm)"
+    },
+    {
       "label": "impresoras-tickets.mdx",
       "file_type": "document",
       "source_file": "src/content/docs/hardware-y-perifericos/impresoras-tickets.mdx",
@@ -1845,10 +2165,20 @@
       "norm_label": "b. escaner con camara trasera del celular (`@zxing/browser`)"
     },
     {
+      "label": "C. Uso del Esc\u00e1ner en Conteos y Auditor\u00edas de Stock",
+      "file_type": "document",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "hardware_y_perifericos_lectores_codigo_barras_c_uso_del_esc\u00e1ner_en_conteos_y_auditor\u00edas_de_stock",
+      "community": 34,
+      "norm_label": "c. uso del escaner en conteos y auditorias de stock"
+    },
+    {
       "label": "2. B\u00e1sculas y Pesaje Decimal (Venta a Granel)",
       "file_type": "document",
       "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
-      "source_location": "L37",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "hardware_y_perifericos_lectores_codigo_barras_2_b\u00e1sculas_y_pesaje_decimal_venta_a_granel",
       "community": 34,
@@ -1905,6 +2235,26 @@
       "norm_label": "creacion de un producto"
     },
     {
+      "label": "Importaci\u00f3n Masiva desde Excel o CSV",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "inventario_y_productos_alta_productos_variantes_importaci\u00f3n_masiva_desde_excel_o_csv",
+      "community": 17,
+      "norm_label": "importacion masiva desde excel o csv"
+    },
+    {
+      "label": "Eliminaci\u00f3n y Ajuste de Stock en 1 Clic",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "inventario_y_productos_alta_productos_variantes_eliminaci\u00f3n_y_ajuste_de_stock_en_1_clic",
+      "community": 17,
+      "norm_label": "eliminacion y ajuste de stock en 1 clic"
+    },
+    {
       "label": "cortes-auditorias-inventario.mdx",
       "file_type": "document",
       "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
@@ -1915,14 +2265,64 @@
       "norm_label": "cortes-auditorias-inventario.mdx"
     },
     {
-      "label": "Auditor\u00edas de Stock",
+      "label": "Tipos de Conteo en VentaSimple",
       "file_type": "document",
       "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
-      "source_location": "L6",
+      "source_location": "L20",
       "_origin": "ast",
-      "id": "inventario_y_productos_cortes_auditorias_inventario_auditor\u00edas_de_stock",
+      "id": "inventario_y_productos_cortes_auditorias_inventario_tipos_de_conteo_en_ventasimple",
       "community": 35,
-      "norm_label": "auditorias de stock"
+      "norm_label": "tipos de conteo en ventasimple"
+    },
+    {
+      "label": "Flujo Operativo Paso a Paso",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "inventario_y_productos_cortes_auditorias_inventario_flujo_operativo_paso_a_paso",
+      "community": 35,
+      "norm_label": "flujo operativo paso a paso"
+    },
+    {
+      "label": "Escaneo M\u00f3vil en Estanter\u00eda con C\u00e1mara Trasera",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "inventario_y_productos_cortes_auditorias_inventario_escaneo_m\u00f3vil_en_estanter\u00eda_con_c\u00e1mara_trasera",
+      "community": 35,
+      "norm_label": "escaneo movil en estanteria con camara trasera"
+    },
+    {
+      "label": "Caracter\u00edsticas T\u00e9cnicas del Escaneo M\u00f3vil",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "inventario_y_productos_cortes_auditorias_inventario_caracter\u00edsticas_t\u00e9cnicas_del_escaneo_m\u00f3vil",
+      "community": 35,
+      "norm_label": "caracteristicas tecnicas del escaneo movil"
+    },
+    {
+      "label": "An\u00e1lisis de Discrepancias y Conciliaci\u00f3n Financiera",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "inventario_y_productos_cortes_auditorias_inventario_an\u00e1lisis_de_discrepancias_y_conciliaci\u00f3n_financiera",
+      "community": 35,
+      "norm_label": "analisis de discrepancias y conciliacion financiera"
+    },
+    {
+      "label": "Buenas Pr\u00e1cticas para Reducir Errores en Auditor\u00edas",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L115",
+      "_origin": "ast",
+      "id": "inventario_y_productos_cortes_auditorias_inventario_buenas_pr\u00e1cticas_para_reducir_errores_en_auditor\u00edas",
+      "community": 35,
+      "norm_label": "buenas practicas para reducir errores en auditorias"
     },
     {
       "label": "movimientos-stock-kardex.mdx",
@@ -1935,14 +2335,74 @@
       "norm_label": "movimientos-stock-kardex.mdx"
     },
     {
-      "label": "Kardex e Historial de Movimientos",
+      "label": "Movimientos de Stock y Kardex Hist\u00f3rico",
       "file_type": "document",
       "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
-      "source_location": "L6",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "inventario_y_productos_movimientos_stock_kardex_kardex_e_historial_de_movimientos",
+      "id": "inventario_y_productos_movimientos_stock_kardex_movimientos_de_stock_y_kardex_hist\u00f3rico",
       "community": 36,
-      "norm_label": "kardex e historial de movimientos"
+      "norm_label": "movimientos de stock y kardex historico"
+    },
+    {
+      "label": "1. Tipos de Movimientos en el Kardex",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "inventario_y_productos_movimientos_stock_kardex_1_tipos_de_movimientos_en_el_kardex",
+      "community": 36,
+      "norm_label": "1. tipos de movimientos en el kardex"
+    },
+    {
+      "label": "A. Movimientos Autom\u00e1ticos por Operaci\u00f3n Continua",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "inventario_y_productos_movimientos_stock_kardex_a_movimientos_autom\u00e1ticos_por_operaci\u00f3n_continua",
+      "community": 36,
+      "norm_label": "a. movimientos automaticos por operacion continua"
+    },
+    {
+      "label": "B. Movimientos Manuales y Extraordinarios",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "inventario_y_productos_movimientos_stock_kardex_b_movimientos_manuales_y_extraordinarios",
+      "community": 36,
+      "norm_label": "b. movimientos manuales y extraordinarios"
+    },
+    {
+      "label": "2. Tipificaci\u00f3n y Registro de Mermas",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "inventario_y_productos_movimientos_stock_kardex_2_tipificaci\u00f3n_y_registro_de_mermas",
+      "community": 36,
+      "norm_label": "2. tipificacion y registro de mermas"
+    },
+    {
+      "label": "3. Impacto Financiero: Costo vs. Precio de Venta",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L84",
+      "_origin": "ast",
+      "id": "inventario_y_productos_movimientos_stock_kardex_3_impacto_financiero_costo_vs_precio_de_venta",
+      "community": 36,
+      "norm_label": "3. impacto financiero: costo vs. precio de venta"
+    },
+    {
+      "label": "4. Trazabilidad y Filtros en la Consulta de Kardex",
+      "file_type": "document",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "inventario_y_productos_movimientos_stock_kardex_4_trazabilidad_y_filtros_en_la_consulta_de_kardex",
+      "community": 36,
+      "norm_label": "4. trazabilidad y filtros en la consulta de kardex"
     },
     {
       "label": "recetas-insumos.mdx",
@@ -2233,6 +2693,46 @@
       "id": "reportes_y_auditoria_dashboard_utilidades_metricas",
       "community": 52,
       "norm_label": "dashboard-utilidades-metricas.mdx"
+    },
+    {
+      "label": "Centro de Inteligencia y Reportes",
+      "file_type": "document",
+      "source_file": "src/content/docs/reportes-y-auditoria/dashboard-utilidades-metricas.mdx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "reportes_y_auditoria_dashboard_utilidades_metricas_centro_de_inteligencia_y_reportes",
+      "community": 52,
+      "norm_label": "centro de inteligencia y reportes"
+    },
+    {
+      "label": "1. Hub Ejecutivo y Selector Global de Periodo",
+      "file_type": "document",
+      "source_file": "src/content/docs/reportes-y-auditoria/dashboard-utilidades-metricas.mdx",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "reportes_y_auditoria_dashboard_utilidades_metricas_1_hub_ejecutivo_y_selector_global_de_periodo",
+      "community": 52,
+      "norm_label": "1. hub ejecutivo y selector global de periodo"
+    },
+    {
+      "label": "2. Las 6 \u00c1reas Especializadas",
+      "file_type": "document",
+      "source_file": "src/content/docs/reportes-y-auditoria/dashboard-utilidades-metricas.mdx",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "reportes_y_auditoria_dashboard_utilidades_metricas_2_las_6_\u00e1reas_especializadas",
+      "community": 52,
+      "norm_label": "2. las 6 areas especializadas"
+    },
+    {
+      "label": "3. Exportaci\u00f3n y Respaldo de Informaci\u00f3n",
+      "file_type": "document",
+      "source_file": "src/content/docs/reportes-y-auditoria/dashboard-utilidades-metricas.mdx",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "reportes_y_auditoria_dashboard_utilidades_metricas_3_exportaci\u00f3n_y_respaldo_de_informaci\u00f3n",
+      "community": 52,
+      "norm_label": "3. exportacion y respaldo de informacion"
     },
     {
       "label": "exportacion-informacion-excel-csv.mdx",
@@ -3013,6 +3513,26 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "vercel",
+      "target": "vercel_redirects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "vercel.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "vercel",
+      "target": "vercel_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": ".agents/rules/graphify.md",
       "source_location": "L6",
       "weight": 1.0,
@@ -3683,6 +4203,36 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/facturacion-y-cuenta/suscripcion-planes.mdx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "facturacion_y_cuenta_suscripcion_planes",
+      "target": "facturacion_y_cuenta_suscripcion_planes_planes_suscripci\u00f3n_y_l\u00edmites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/facturacion-y-cuenta/suscripcion-planes.mdx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "facturacion_y_cuenta_suscripcion_planes_planes_suscripci\u00f3n_y_l\u00edmites",
+      "target": "facturacion_y_cuenta_suscripcion_planes_1_tabla_oficial_de_planes_vigentes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/facturacion-y-cuenta/suscripcion-planes.mdx",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "facturacion_y_cuenta_suscripcion_planes_planes_suscripci\u00f3n_y_l\u00edmites",
+      "target": "facturacion_y_cuenta_suscripcion_planes_2_administraci\u00f3n_y_facturaci\u00f3n_de_la_suscripci\u00f3n",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/content/docs/giros-especializados/agenda-citas-servicios.mdx",
       "source_location": "L6",
       "weight": 1.0,
@@ -3706,9 +4256,9 @@
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_abarrotes_y_retail",
-      "target": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
-      "confidence_score": 1.0
+      "target": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia"
     },
     {
       "relation": "contains",
@@ -3716,9 +4266,9 @@
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
-      "target": "giros_abarrotes_y_retail_1_cobro_de_alta_velocidad_para_retail",
-      "confidence_score": 1.0
+      "target": "giros_abarrotes_y_retail_1_cobro_de_alta_velocidad_para_retail"
     },
     {
       "relation": "contains",
@@ -3726,9 +4276,9 @@
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
-      "target": "giros_abarrotes_y_retail_2_venta_a_granel_y_pesaje_decimal",
-      "confidence_score": 1.0
+      "target": "giros_abarrotes_y_retail_2_venta_a_granel_y_pesaje_decimal"
     },
     {
       "relation": "contains",
@@ -3736,9 +4286,9 @@
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
-      "target": "giros_abarrotes_y_retail_3_libreta_digital_de_fiados_con_sem\u00e1foro_de_cobranza",
-      "confidence_score": 1.0
+      "target": "giros_abarrotes_y_retail_3_libreta_digital_de_fiados_con_sem\u00e1foro_de_cobranza"
     },
     {
       "relation": "contains",
@@ -3746,8 +4296,18 @@
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
-      "target": "giros_abarrotes_y_retail_4_estado_de_cuenta_y_recordatorio_por_whatsapp",
+      "target": "giros_abarrotes_y_retail_4_estado_de_cuenta_y_recordatorio_por_whatsapp"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "giros_abarrotes_y_retail_abarrotes_minis\u00fapers_y_tiendas_de_conveniencia",
+      "target": "giros_abarrotes_y_retail_5_control_de_mercanc\u00eda_inventario_y_mermas",
       "confidence_score": 1.0
     },
     {
@@ -3756,9 +4316,9 @@
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_abarrotes_y_retail_2_venta_a_granel_y_pesaje_decimal",
-      "target": "giros_abarrotes_y_retail_a_b\u00e1scula_serial_en_vivo_web_serial_api",
-      "confidence_score": 1.0
+      "target": "giros_abarrotes_y_retail_a_b\u00e1scula_serial_en_vivo_web_serial_api"
     },
     {
       "relation": "contains",
@@ -3766,9 +4326,9 @@
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_abarrotes_y_retail_2_venta_a_granel_y_pesaje_decimal",
-      "target": "giros_abarrotes_y_retail_b_descuento_de_tara_charolas_y_contenedores",
-      "confidence_score": 1.0
+      "target": "giros_abarrotes_y_retail_b_descuento_de_tara_charolas_y_contenedores"
     },
     {
       "relation": "contains",
@@ -3776,9 +4336,9 @@
       "source_file": "src/content/docs/giros/abarrotes-y-retail.mdx",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_abarrotes_y_retail_2_venta_a_granel_y_pesaje_decimal",
-      "target": "giros_abarrotes_y_retail_c_b\u00e1sculas_etiquetadoras_c\u00f3digos_ean_13_torrey_w_label",
-      "confidence_score": 1.0
+      "target": "giros_abarrotes_y_retail_c_b\u00e1sculas_etiquetadoras_c\u00f3digos_ean_13_torrey_w_label"
     },
     {
       "relation": "contains",
@@ -3936,9 +4496,9 @@
       "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_talleres_y_refaccionarias",
-      "target": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias",
-      "confidence_score": 1.0
+      "target": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias"
     },
     {
       "relation": "contains",
@@ -3946,9 +4506,9 @@
       "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias",
-      "target": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_de_trabajo_mixtas_servicios_refacciones_f\u00edsicas",
-      "confidence_score": 1.0
+      "target": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_de_trabajo_mixtas_servicios_refacciones_f\u00edsicas"
     },
     {
       "relation": "contains",
@@ -3956,9 +4516,9 @@
       "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias",
-      "target": "giros_talleres_y_refaccionarias_2_b\u00fasqueda_\u00e1gil_en_mostrador_de_refacciones",
-      "confidence_score": 1.0
+      "target": "giros_talleres_y_refaccionarias_2_b\u00fasqueda_\u00e1gil_en_mostrador_de_refacciones"
     },
     {
       "relation": "contains",
@@ -3966,9 +4526,9 @@
       "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias",
-      "target": "giros_talleres_y_refaccionarias_3_anticipos_y_liquidaci\u00f3n_contra_entrega",
-      "confidence_score": 1.0
+      "target": "giros_talleres_y_refaccionarias_3_anticipos_y_liquidaci\u00f3n_contra_entrega"
     },
     {
       "relation": "contains",
@@ -3976,9 +4536,9 @@
       "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_talleres_y_refaccionarias_talleres_mec\u00e1nicos_de_motocicletas_y_refaccionarias",
-      "target": "giros_talleres_y_refaccionarias_4_emisi\u00f3n_de_tickets_con_p\u00f3liza_de_garant\u00eda",
-      "confidence_score": 1.0
+      "target": "giros_talleres_y_refaccionarias_4_emisi\u00f3n_de_tickets_con_p\u00f3liza_de_garant\u00eda"
     },
     {
       "relation": "contains",
@@ -3986,9 +4546,9 @@
       "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_de_trabajo_mixtas_servicios_refacciones_f\u00edsicas",
-      "target": "giros_talleres_y_refaccionarias_a_diferenciaci\u00f3n_en_el_cat\u00e1logo",
-      "confidence_score": 1.0
+      "target": "giros_talleres_y_refaccionarias_a_diferenciaci\u00f3n_en_el_cat\u00e1logo"
     },
     {
       "relation": "contains",
@@ -3996,8 +4556,228 @@
       "source_file": "src/content/docs/giros/talleres-y-refaccionarias.mdx",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "giros_talleres_y_refaccionarias_1_\u00f3rdenes_de_trabajo_mixtas_servicios_refacciones_f\u00edsicas",
-      "target": "giros_talleres_y_refaccionarias_b_flujo_de_trabajo_consolidado",
+      "target": "giros_talleres_y_refaccionarias_b_flujo_de_trabajo_consolidado"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "guias_cotizador_compras",
+      "target": "guias_cotizador_compras_compra_por_paquete_o_caja_cerrada",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "guias_cotizador_compras",
+      "target": "guias_cotizador_compras_desempacar_cajas_y_contenedores_surtidos_galletas_botanas_kits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "guias_cotizador_compras",
+      "target": "guias_cotizador_compras_fraccionar_a_granel_y_embolsar_gomitas_semillas_carnes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "guias_cotizador_compras",
+      "target": "guias_cotizador_compras_por_qu\u00e9_cotizar_antes_de_pagar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "guias_cotizador_compras",
+      "target": "guias_cotizador_compras_transferir_a_nueva_compra",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/cotizador-compras.mdx",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "guias_cotizador_compras_desempacar_cajas_y_contenedores_surtidos_galletas_botanas_kits",
+      "target": "guias_cotizador_compras_reutilizar_plantillas_con_un_solo_clic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "el_mostrador_deudas_fiados",
+      "target": "el_mostrador_deudas_fiados_c\u00f3mo_administrar_tu_directorio_de_clientes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "el_mostrador_deudas_fiados",
+      "target": "el_mostrador_deudas_fiados_c\u00f3mo_cobrar_y_registrar_un_abono",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "el_mostrador_deudas_fiados",
+      "target": "el_mostrador_deudas_fiados_c\u00f3mo_consultar_la_cartera_de_clientes_que_deben",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "el_mostrador_deudas_fiados",
+      "target": "el_mostrador_deudas_fiados_c\u00f3mo_enviar_recordatorios_y_comprobantes_por_whatsapp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "el_mostrador_deudas_fiados",
+      "target": "el_mostrador_deudas_fiados_c\u00f3mo_fiar_una_venta_en_mostrador",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "el_mostrador_deudas_fiados_c\u00f3mo_cobrar_y_registrar_un_abono",
+      "target": "el_mostrador_deudas_fiados_qu\u00e9_pasa_cuando_el_cliente_liquida_toda_su_cuenta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/el-mostrador/deudas-fiados.mdx",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "el_mostrador_deudas_fiados_c\u00f3mo_cobrar_y_registrar_un_abono",
+      "target": "el_mostrador_deudas_fiados_qu\u00e9_pasa_si_el_cliente_paga_de_m\u00e1s",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L123",
+      "weight": 1.0,
+      "source": "guias_registrar_compras",
+      "target": "guias_registrar_compras_ajustes_de_\u00faltimo_momento_y_guardado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "guias_registrar_compras",
+      "target": "guias_registrar_compras_auditor\u00eda_de_compras_cancelaci\u00f3n_e_impresi\u00f3n",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "guias_registrar_compras",
+      "target": "guias_registrar_compras_registrar_una_compra_en_mostrador",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "guias_registrar_compras",
+      "target": "guias_registrar_compras_uso_r\u00e1pido_desde_el_tel\u00e9fono_celular",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "guias_registrar_compras_registrar_una_compra_en_mostrador",
+      "target": "guias_registrar_compras_paso_a_paso_para_capturar_la_compra",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "guias_registrar_compras_ajustes_de_\u00faltimo_momento_y_guardado",
+      "target": "guias_registrar_compras_qu\u00e9_sucede_al_presionar_registrar_compra",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "guias_registrar_compras_auditor\u00eda_de_compras_cancelaci\u00f3n_e_impresi\u00f3n",
+      "target": "guias_registrar_compras_cancelaci\u00f3n_de_compra_con_reversi\u00f3n_autom\u00e1tica",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "guias_registrar_compras_auditor\u00eda_de_compras_cancelaci\u00f3n_e_impresi\u00f3n",
+      "target": "guias_registrar_compras_comprobantes_t\u00e9rmicos_tickets_58_mm_80_mm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/guias/registrar-compras.mdx",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "guias_registrar_compras_auditor\u00eda_de_compras_cancelaci\u00f3n_e_impresi\u00f3n",
+      "target": "guias_registrar_compras_trazabilidad_antes_y_despu\u00e9s",
       "confidence_score": 1.0
     },
     {
@@ -4103,6 +4883,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/hardware-y-perifericos/lectores-codigo-barras.mdx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "hardware_y_perifericos_lectores_codigo_barras_1_lectores_de_c\u00f3digos_de_barras",
+      "target": "hardware_y_perifericos_lectores_codigo_barras_c_uso_del_esc\u00e1ner_en_conteos_y_auditor\u00edas_de_stock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
       "source_location": "L8",
       "weight": 1.0,
@@ -4133,22 +4923,152 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
-      "source_location": "L6",
+      "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
+      "source_location": "L38",
       "weight": 1.0,
-      "confidence_score": 1.0,
+      "source": "inventario_y_productos_alta_productos_variantes_inventario_y_productos",
+      "target": "inventario_y_productos_alta_productos_variantes_eliminaci\u00f3n_y_ajuste_de_stock_en_1_clic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/alta-productos-variantes.mdx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "inventario_y_productos_alta_productos_variantes_inventario_y_productos",
+      "target": "inventario_y_productos_alta_productos_variantes_importaci\u00f3n_masiva_desde_excel_o_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L87",
+      "weight": 1.0,
       "source": "inventario_y_productos_cortes_auditorias_inventario",
-      "target": "inventario_y_productos_cortes_auditorias_inventario_auditor\u00edas_de_stock"
+      "target": "inventario_y_productos_cortes_auditorias_inventario_an\u00e1lisis_de_discrepancias_y_conciliaci\u00f3n_financiera",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "inventario_y_productos_cortes_auditorias_inventario",
+      "target": "inventario_y_productos_cortes_auditorias_inventario_buenas_pr\u00e1cticas_para_reducir_errores_en_auditor\u00edas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "inventario_y_productos_cortes_auditorias_inventario",
+      "target": "inventario_y_productos_cortes_auditorias_inventario_escaneo_m\u00f3vil_en_estanter\u00eda_con_c\u00e1mara_trasera",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "inventario_y_productos_cortes_auditorias_inventario",
+      "target": "inventario_y_productos_cortes_auditorias_inventario_flujo_operativo_paso_a_paso",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "inventario_y_productos_cortes_auditorias_inventario",
+      "target": "inventario_y_productos_cortes_auditorias_inventario_tipos_de_conteo_en_ventasimple",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/cortes-auditorias-inventario.mdx",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "inventario_y_productos_cortes_auditorias_inventario_escaneo_m\u00f3vil_en_estanter\u00eda_con_c\u00e1mara_trasera",
+      "target": "inventario_y_productos_cortes_auditorias_inventario_caracter\u00edsticas_t\u00e9cnicas_del_escaneo_m\u00f3vil",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
-      "source_location": "L6",
+      "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "inventario_y_productos_movimientos_stock_kardex",
-      "target": "inventario_y_productos_movimientos_stock_kardex_kardex_e_historial_de_movimientos"
+      "target": "inventario_y_productos_movimientos_stock_kardex_movimientos_de_stock_y_kardex_hist\u00f3rico",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "inventario_y_productos_movimientos_stock_kardex_movimientos_de_stock_y_kardex_hist\u00f3rico",
+      "target": "inventario_y_productos_movimientos_stock_kardex_1_tipos_de_movimientos_en_el_kardex",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "inventario_y_productos_movimientos_stock_kardex_movimientos_de_stock_y_kardex_hist\u00f3rico",
+      "target": "inventario_y_productos_movimientos_stock_kardex_2_tipificaci\u00f3n_y_registro_de_mermas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "inventario_y_productos_movimientos_stock_kardex_movimientos_de_stock_y_kardex_hist\u00f3rico",
+      "target": "inventario_y_productos_movimientos_stock_kardex_3_impacto_financiero_costo_vs_precio_de_venta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "inventario_y_productos_movimientos_stock_kardex_movimientos_de_stock_y_kardex_hist\u00f3rico",
+      "target": "inventario_y_productos_movimientos_stock_kardex_4_trazabilidad_y_filtros_en_la_consulta_de_kardex",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "inventario_y_productos_movimientos_stock_kardex_1_tipos_de_movimientos_en_el_kardex",
+      "target": "inventario_y_productos_movimientos_stock_kardex_a_movimientos_autom\u00e1ticos_por_operaci\u00f3n_continua",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/inventario-y-productos/movimientos-stock-kardex.mdx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "inventario_y_productos_movimientos_stock_kardex_1_tipos_de_movimientos_en_el_kardex",
+      "target": "inventario_y_productos_movimientos_stock_kardex_b_movimientos_manuales_y_extraordinarios",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -4321,6 +5241,46 @@
       "target": "punto_de_venta_como_vender_y_metodos_de_cobro_flujo_operativo_en_3_pasos"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/reportes-y-auditoria/dashboard-utilidades-metricas.mdx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "reportes_y_auditoria_dashboard_utilidades_metricas",
+      "target": "reportes_y_auditoria_dashboard_utilidades_metricas_centro_de_inteligencia_y_reportes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/reportes-y-auditoria/dashboard-utilidades-metricas.mdx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "reportes_y_auditoria_dashboard_utilidades_metricas_centro_de_inteligencia_y_reportes",
+      "target": "reportes_y_auditoria_dashboard_utilidades_metricas_1_hub_ejecutivo_y_selector_global_de_periodo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/reportes-y-auditoria/dashboard-utilidades-metricas.mdx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "reportes_y_auditoria_dashboard_utilidades_metricas_centro_de_inteligencia_y_reportes",
+      "target": "reportes_y_auditoria_dashboard_utilidades_metricas_2_las_6_\u00e1reas_especializadas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/content/docs/reportes-y-auditoria/dashboard-utilidades-metricas.mdx",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "reportes_y_auditoria_dashboard_utilidades_metricas_centro_de_inteligencia_y_reportes",
+      "target": "reportes_y_auditoria_dashboard_utilidades_metricas_3_exportaci\u00f3n_y_respaldo_de_informaci\u00f3n",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -4469,5 +5429,5 @@
       "source_file": "src/content/docs/index.mdx"
     }
   ],
-  "built_at_commit": "174a1959239080ad5887c685ee8072bfd68795b4"
+  "built_at_commit": "ffa685240740c65927579e7ee1f8f37e1f8090ee"
 }

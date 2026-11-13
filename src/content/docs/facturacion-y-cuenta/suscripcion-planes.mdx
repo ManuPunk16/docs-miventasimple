@@ -1,10 +1,64 @@
 ---
-title: "Mi Plan y Facturación"
-description: "Verifica el consumo de tu plan activo de VentaSimple y descarga tus recibos."
+title: "Planes, Suscripción y Límites"
+description: "Conoce los planes vigentes de VentaSimple (Gratis, Básico, Pro y Negocio), límites operativos y administración de tu cuenta."
+sidebar:
+  order: 1
 ---
 
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
 
-Consulta el estado y límites de tu suscripción actual:
+# Planes, Suscripción y Límites
 
-- **Consumo:** Visualiza el número de productos creados, ventas procesadas y límites del plan.
-- **Facturación:** Descarga recibos de pago del servicio.
+VentaSimple ofrece esquemas de suscripción accesibles en moneda nacional (**MXN**), sin plazos forzosos y diseñados para evolucionar al ritmo de tu negocio.
+
+Puedes consultar tu plan activo, verificar el consumo de tus límites mensuales y realizar mejoras desde la ruta oficial en la plataforma: **`/configuracion/plan`** (o para actualizar: **`/configuracion/plan/upgrade`**).
+
+---
+
+## 1. Tabla Oficial de Planes Vigentes
+
+| Característica / Límite | Plan Gratis | Plan Básico | Plan Pro | Plan Negocio |
+| :--- | :--- | :--- | :--- | :--- |
+| **Precio Mensual** | **$0 MXN** | **$79 MXN / mes** | **$139 MXN / mes** | **$199 MXN / mes** |
+| **Precio Anual** | - | **$790 MXN / año** *(2 meses gratis)* | **$1,390 MXN / año** *(2 meses gratis)* | **$1,990 MXN / año** *(2 meses gratis)* |
+| **Ventas al mes** | Hasta 100 ventas/mes | Ilimitadas | Ilimitadas | Ilimitadas |
+| **Catálogo de Productos** | Hasta 50 productos | Hasta 500 productos | Ilimitados | Ilimitados |
+| **Clientes Registrados** | Hasta 20 clientes | Hasta 100 clientes | Ilimitados | Ilimitados |
+| **Cuentas de Usuarios** | 1 usuario | 2 usuarios | 5 usuarios | Ilimitados |
+| **Sucursales Físicas** | 1 sucursal | 1 sucursal | Hasta 2 sucursales | Hasta 5 sucursales |
+| **Módulos Especializados** | POS estándar | Fiados y Gastos | Agenda, Citas y Mesas | Multi-sucursal y Auditoría Pro |
+| **Inteligencia y Reportes** | Métricas básicas | Reportes mensuales | ABC, Predictivo y Mermas | P&L Consolidado Multi-sucursal |
+
+:::tip[Garantía de Continuidad]
+Si alcanzas el límite de ventas de tu plan durante el mes en curso, tu información y catálogos nunca se bloquean. Podrás continuar operando y consultando tus datos; simplemente se solicitará actualizar a un plan superior para registrar nuevas ventas.
+:::
+
+---
+
+## 2. Administración y Facturación de la Suscripción
+
+<Steps>
+1. **Acceso al Panel de Suscripción:**
+   - Dirígete a **Configuración > Mi Plan** (`/configuracion/plan`).
+   - Visualiza en tiempo real los medidores de consumo de ventas, productos dados de alta y clientes activos.
+2. **Métodos de Pago Aceptados:**
+   - Tarjetas de débito y crédito respaldadas por pasarelas de pago seguras (Mercado Pago / Stripe).
+   - Renovación automática mensual o anual según tu preferencia.
+3. **Comprobantes y Régimen Fiscal (RESICO / SAT):**
+   - VentaSimple emite notas de venta y recibos de pago digitales descargables en PDF/CSV.
+   - En cumplimiento con el marco fiscal mexicano, las notas de venta y tickets generados especifican la leyenda reglamentaria sobre comprobantes simplificados.
+   - Si tributas en el **Régimen Simplificado de Confianza (RESICO)** o actividad empresarial, puedes descargar el concentrado de ingresos y egresos en CSV desde `/reportes/caja` para conciliar con tu contador o subir a tus declaraciones mensuales del SAT.
+</Steps>
+
+
+<script type="application/ld+json" is:inline>{`
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Planes, Precios y Límites de Suscripción en VentaSimple",
+  "description": "Precios oficiales en MXN de VentaSimple POS: Gratis, Básico, Pro y Negocio, límites operativos mensuales y comprobantes fiscales RESICO.",
+  "articleSection": "Facturación y Cuenta",
+  "dependencies": "VentaSimple POS",
+  "inLanguage": "es-MX"
+}
+`}</script>

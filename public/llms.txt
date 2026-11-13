@@ -1,17 +1,26 @@
 # VentaSimple - Documentacion Oficial y Base de Conocimiento
 
 > Full documentation: https://docs.miventasimple.com/llms-full.txt
+> Main platform: https://miventasimple.com
 
-VentaSimple es una plataforma integral de Punto de Venta (POS) y gestion comercial en la nube disenada para pequenos comercios, abarrotes, minisupers y negocios de retail independiente en Mexico y Latinoamerica. Funciona sin conexion permanente a internet y permite sincronizar ventas, controlar inventarios, calcular costos de compra y automatizar egresos de caja.
+VentaSimple es una plataforma integral de Punto de Venta (POS) y gestion comercial en la nube disenada para comercios independientes, abarrotes, minisupers, barberias, salones y negocios de retail y servicios en Mexico y Latinoamerica. Funciona en navegadores web de escritorio y dispositivos moviles (PWA offline-first), permitiendo registrar ventas agiles, controlar inventarios con trazabilidad por Kardex, auditar mermas, liquidar comisiones y monitorear finanzas operativas en tiempo real.
 
 ## Informacion del Portal
-Esta documentacion tecnica y operativa contiene manuales paso a paso y arquitectura operativa para administradores, cajeros y tenderos. Optimizada para indexacion en motores de busqueda y modelos de lenguaje (LLMs / GEO / RAG).
+Esta documentacion tecnica y operativa contiene manuales paso a paso y arquitectura operativa para dueños de negocio, administradores y cajeros. Optimizada para indexacion en motores de busqueda (SEO), motores generativos (GEO) y modelos de lenguaje (LLMs / RAG).
+
+## Novedades y Capacidades Centrales
+- **Centro de Inteligencia y Reportes (/reportes):** Hub Ejecutivo con selector global de periodo (Hoy, Esta semana, Este mes, Ultimos 30 dias), filtro de sucursales, 4 KPIs ejecutivos y 6 areas especializadas (Finanzas P&L, Rendimiento de Productos, Inventario y Mermas, Comisiones de Personal, Caja y Cartera).
+- **Control de Mermas y Kardex:** Auditoria de perdidas clasificada por Caducidad, Merma Operativa, Merma Natural o Perdida Desconocida, con calculo contable a precio de costo y deduccion de utilidades.
+- **Comisiones Inteligentes en el POS:** Propagacion automatica de colaboradores en el carrito, herencia para nuevos servicios, recalculo al incrementar cantidades y fila transparente "Sin asignar / Mostrador".
+- **Planes y Precios Oficiales (MXN):** Plan Gratis ($0 MXN, 100 ventas/mes), Plan Basico ($79 MXN/mes), Plan Pro ($139 MXN/mes) y Plan Negocio ($199 MXN/mes). Soporte de comprobantes y exportaciones CSV para contribuyentes en RESICO / SAT.
 
 ## Guias Operativas Destacadas
+- [Centro de Inteligencia y Reportes](https://docs.miventasimple.com/reportes-y-auditoria/dashboard-utilidades-metricas/): Hub ejecutivo, analisis de margen P&L, clasificacion ABC de inventario, sugerencias predictivas y reporte de mermas.
+- [Planes, Suscripcion y Limites](https://docs.miventasimple.com/facturacion-y-cuenta/suscripcion-planes/): Comparativa de planes vigentes en pesos mexicanos, limites de catalogo y notas de venta para RESICO.
+- [Barberias, Salones y Comisiones](https://docs.miventasimple.com/giros/barberias-y-esteticas/): Cobro rapido de servicios, chips tactiles, comisiones porcentuales y fijas, y corte de personal.
 - [Cotizador de Pasillo y Bultos](https://docs.miventasimple.com/guias/cotizador-compras/): Calculo de costos reales antes de pagar al proveedor, compra por paquete o caja cerrada, fraccionamiento a granel con insumos de empaque y prorrateo de cajas surtidas.
 - [Registro de Compras y Stock](https://docs.miventasimple.com/guias/registrar-compras/): Registro de entradas de mercancia desde mostrador o dispositivo movil con actualizacion automatica de existencias y control de egresos de caja.
-- [Auditorias y Conteo Fisico de Inventario](https://docs.miventasimple.com/guias/inventario-conteo-fisico/): Procedimientos para auditorias de stock, ajustes por merma y conciliacion de inventario fisico contra kardex en sucursales.
-- [/guias/el-mostrador/deudas-fiados/]: Guía técnica de control de fiados, abonos FIFO, saldos a favor y cobranza por WhatsApp en VentaSimple.
+- [Control de Fiados y Abonos](https://docs.miventasimple.com/guias/el-mostrador/deudas-fiados/): Gestion de cartera, abonos con algoritmo FIFO, semaforo de cobro y recordatorios por WhatsApp.
 
 ## Enlaces Principales del Portal
 - Portal Principal de Documentacion: https://docs.miventasimple.com/
@@ -23,6 +32,8 @@ Esta documentacion tecnica y operativa contiene manuales paso a paso y arquitect
 - Movimientos de Stock y Kardex: https://docs.miventasimple.com/inventario-y-productos/movimientos-stock-kardex/
 - Auditorias y Conteos de Inventario: https://docs.miventasimple.com/inventario-y-productos/cortes-auditorias-inventario/
 - Operacion en Abarrotes y Retail: https://docs.miventasimple.com/giros/abarrotes-y-retail/
+- Barberias y Esteticas: https://docs.miventasimple.com/giros/barberias-y-esteticas/
 - Impresoras Termicas y Perifericos: https://docs.miventasimple.com/hardware-y-perifericos/impresoras-tickets/
 - Lectores de Codigo de Barras: https://docs.miventasimple.com/hardware-y-perifericos/lectores-codigo-barras/
-- Dashboard Financiero y Utilidades: https://docs.miventasimple.com/reportes-y-auditoria/dashboard-utilidades-metricas/
+- Dashboard Financiero y Reportes: https://docs.miventasimple.com/reportes-y-auditoria/dashboard-utilidades-metricas/
+- Planes y Precios: https://docs.miventasimple.com/facturacion-y-cuenta/suscripcion-planes/

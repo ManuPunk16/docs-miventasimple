@@ -296,3 +296,57 @@ export interface ComprobanteAbonoDto {
   notas: string | null;
 }
 ```
+
+
+---
+
+## 7. Centro de Inteligencia y Reportes (/reportes)
+
+El Centro de Inteligencia y Reportes centraliza las metricas clave de rendimiento financiero, rotacion de inventario, mermas operativas y liquidacion de personal bajo un Hub Ejecutivo con 6 areas especializadas:
+
+### 7.1 Hub Ejecutivo y Selector Global
+- **Selector de Periodo Compartido:** Control con estado persistente para filtrar entre `Hoy`, `Esta semana`, `Este mes` y `Ultimos 30 dias`. La seleccion se conserva al navegar entre todas las sub-rutas.
+- **Filtro de Sucursal:** Permite consolidar metricas globales o aislar una sucursal fisica especifica.
+- **4 KPIs Ejecutivos:**
+  1. `Ventas del periodo`: Conteo total de transacciones y ticket promedio.
+  2. `Ingresos brutos`: Facturacion total en dinero y egresos operativos registrados.
+  3. `Utilidad neta / Margen %`: Ganancia liquida real (`Ingresos - Costo Mercancia - Egresos`).
+  4. `Alertas de Stock y Cartera`: Conteo de productos con stock critico o agotado y saldo pendiente en cuentas por cobrar.
+
+### 7.2 Las 6 Areas Especializadas
+1. **Finanzas y P&L (/reportes/finanzas):** Estado de resultados comparativo, margen comercial bruto, desglose de egresos operativos por categoria y utilidad final.
+2. **Rendimiento de Productos (/reportes/productos):** Top 10 mas vendidos por volumen y facturacion, buscador de rentabilidad individual por SKU y semaforo de margenes en riesgo (<15%).
+3. **Salud de Inventario, ABC y Mermas (/reportes/inventario):**
+   - **Stock Critico:** Lista de articulos con existencias menores o iguales al minimo.
+   - **Clasificacion ABC:** Agrupacion Pareto 80/20 de capital inmovilizado y velocidad de venta.
+   - **Sugerencias Predictivas:** Estimacion de demanda basada en velocidad diaria de venta para optimizar ordenes de compra.
+   - **Reporte de Mermas:** Registro contable de perdidas por Caducidad, Merma Operativa (rotura), Merma Natural o Perdida Desconocida, deducido directamente a precio de costo desde el Kardex.
+4. **Comisiones y Cortes de Personal (/reportes/comisiones-empleado):** Produccion por tecnico/barbero, porcentaje o monto fijo devengado, cortes de liquidacion y fila contable independiente `"Sin asignar / Mostrador"`.
+5. **Caja, Metodos y Exportacion (/reportes/caja):** Arqueo y conciliacion contra turnos ciegos, distribucion de ingresos (Efectivo, Tarjeta, SPEI, Fiado) y descarga de reportes CSV para declaracion fiscal mensual (RESICO / SAT).
+6. **Clientes y Cartera (/reportes/cartera):** Antiguedad de saldos en fiados (CxC), cuentas por pagar (CxP) y curva de clientes frecuentes.
+
+---
+
+## 8. Esquema de Planes y Suscripcion Vigente (MXN)
+
+La administracion del plan se gestiona desde `/configuracion/plan` y las mejoras desde `/configuracion/plan/upgrade`:
+
+| Plan | Precio Mensual | Precio Anual (2 meses gratis) | Limite Ventas | Limite Catalogo | Usuarios |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Gratis** | **$0 MXN** | - | 100 ventas/mes | 50 productos | 1 usuario |
+| **Basico** | **$79 MXN/mes** | **$790 MXN/ano** | Ilimitadas | 500 productos | 2 usuarios |
+| **Pro** | **$139 MXN/mes** | **$1,390 MXN/ano** | Ilimitadas | Ilimitados | 5 usuarios |
+| **Negocio** | **$199 MXN/mes** | **$1,990 MXN/ano** | Ilimitadas | Ilimitados | Ilimitados |
+
+### 8.1 Enfoque Fiscal para Negocios en Mexico (RESICO / SAT)
+VentaSimple genera comprobantes de venta digitales en formato PDF/WhatsApp con leyendas fiscales reglamentarias. Para negocios incorporados en el **Regimen Simplificado de Confianza (RESICO)** o personas fisicas con actividad empresarial, el sistema provee exportacion en formato CSV desde `/reportes/caja` para conciliar ingresos de caja con el portal del SAT.
+
+---
+
+## 9. Comisiones Inteligentes en el Punto de Venta (/ventas/nueva)
+
+Para negocios de servicios personales (barberias, salones de belleza, esteticas, spas):
+- **Propagacion Inteligente:** Asignar un colaborador a un servicio propaga ese mismo colaborador a todos los servicios del carrito que no tengan asignacion previa.
+- **Herencia Automatica:** Al agregar un nuevo servicio con un colaborador ya presente en el ticket, hereda automaticamente dicho colaborador y calcula su comision instantaneamente.
+- **Recalculo por Cantidad:** Al aumentar la cantidad de servicios en el mismo renglon, la comision se multiplica por las unidades vendidas.
+- **Transparencia Contable:** Todo servicio vendido sin tecnico asignado se reporta bajo `"Sin asignar / Mostrador"` en `/reportes/comisiones-empleado` para no inflar la comision del cajero en turno.
