@@ -1,4 +1,4 @@
-// @ts-check
+﻿// @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
@@ -54,8 +54,9 @@ export default defineConfig({
 					collapsed: false,
 					items: [
 						{ label: 'Guía Rápida de Inicio', slug: 'primeros-pasos' },
-						{ label: 'Perfil de Negocio', slug: 'primeros-pasos/configuracion-cuenta-perfil' },
+						{ label: 'Perfil y Soberanía de Datos', slug: 'primeros-pasos/configuracion-cuenta-perfil' },
 						{ label: 'Usuarios y Roles', slug: 'primeros-pasos/empleados-permisos' },
+						{ label: 'Novedades y Actualizaciones', slug: 'novedades' },
 					],
 				},
 				{
@@ -87,6 +88,14 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Facturación y Cuenta',
+					collapsed: false,
+					items: [
+						{ label: 'Planes, Trial Pro y Suscripción', slug: 'facturacion-y-cuenta/suscripcion-planes' },
+						{ label: 'Métodos de Pago y Facturación', slug: 'facturacion-y-cuenta/metodos-pago-facturacion' },
+					],
+				},
+				{
 					label: 'Giros Especializados',
 					collapsed: false,
 					items: [
@@ -109,7 +118,7 @@ export default defineConfig({
 					collapsed: true,
 					items: [
 						{ label: 'Dashboard Financiero y Utilidades', slug: 'reportes-y-auditoria/dashboard-utilidades-metricas' },
-						{ label: 'Exportación a Excel / CSV', slug: 'reportes-y-auditoria/exportacion-informacion-excel-csv' },
+						{ label: 'Exportación a Excel / CSV y JSON', slug: 'reportes-y-auditoria/exportacion-informacion-excel-csv' },
 						{ label: 'Historial de Auditoría', slug: 'reportes-y-auditoria/historial-auditoria-personal' },
 					],
 				},

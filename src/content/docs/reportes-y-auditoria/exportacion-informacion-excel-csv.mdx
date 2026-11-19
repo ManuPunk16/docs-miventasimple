@@ -1,10 +1,33 @@
+﻿---
+title: "Exportación de Datos y Respaldos"
+description: "Descarga de forma segura toda la información de tu negocio en hojas de cálculo CSV o en archivo integral JSON para respaldo offline."
+sidebar:
+  order: 2
 ---
-title: "Exportación de Datos (CSV)"
-description: "Descarga de forma segura toda la información de tu negocio en hojas de cálculo."
+
+import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
+
+# Exportación de Datos y Respaldos
+
+VentaSimple proporciona mecanismos ágiles para extraer la información de tu comercio, tanto para análisis financiero y fiscal como para resguardo histórico y soberanía de datos.
+
 ---
 
+## 1. Exportaciones Operativas a Hojas de Cálculo (CSV / Excel)
 
-Descarga copias de seguridad de tu información:
+Desde las distintas secciones operativas puedes generar descargas tabulares listas para abrir en Microsoft Excel, Google Sheets o importar a tu software contable:
 
-- **Hojas de Cálculo:** Exporta tu catálogo de productos, listado de transacciones o deudas de clientes en formato CSV compatible con Excel o Google Sheets.
-- **Migración:** Úsalo para realizar análisis contables avanzados o importar a otros sistemas.
+- **Catálogo de Productos (`/productos`):** Exporta el inventario completo con nombres, SKU, códigos de barras, categoría, costo, precio de venta y existencias.
+- **Historial de Ventas y Tickets (`/reportes/caja` y `/reportes`):** Detalle operación por operación con fecha, cajero, sucursal, método de cobro (Efectivo, Tarjeta, Transferencia, Fiado) e impuestos. Ideal para declaraciones fiscales de RESICO o régimen general.
+- **Auditoría de Mermas y Ajustes (`/reportes/inventario`):** Bitácora de pérdidas por caducidad, merma operativa o daño con costo contable desglosado.
+- **Liquidación de Comisiones (`/reportes/comisiones-empleado`):** Resumen por colaborador para pago de nóminas o liquidación de honorarios.
+
+---
+
+## 2. Respaldo Integral de Datos en Formato JSON (Soberanía de Datos)
+
+A diferencia de un archivo CSV que divide las tablas en archivos separados, el **Respaldo Completo en 1 Clic** (`/configuracion`) empaqueta la base de datos de tu comercio en un formato estándar JSON:
+
+<Aside type="tip">
+Para conocer el procedimiento paso a paso de descarga y las políticas de destrucción permanente en la Zona de Peligro, consulta la guía de **[Perfil, Seguridad y Soberanía de Datos](/primeros-pasos/configuracion-cuenta-perfil)** y **[Planes y Suscripción](/facturacion-y-cuenta/suscripcion-planes)**.
+</Aside>

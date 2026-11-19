@@ -1,10 +1,20 @@
----
+﻿---
 title: "Fiados y Cuentas por Cobrar"
-description: "Controla los créditos y saldos deudores de tus clientes recurrentes."
+description: "Guía de referencia rápida sobre ventas a crédito, límites y cuentas por cobrar en mostrador."
 ---
 
+import { Aside } from '@astrojs/starlight/components';
 
-Lleva las cuentas claras de lo que te deben en tu tienda:
+VentaSimple centraliza el control de créditos a clientes habituales directamente desde el mostrador y en la libreta digital de cuentas por cobrar.
 
-- **Límites de Crédito:** Define un monto máximo que puede deber un cliente para evitar sobregiros.
-- **WhatsApp:** Envía estados de cuenta de deudas con el saldo restante directo a su chat de WhatsApp.
+Para consultar la guía operativa paso a paso, consulta el documento oficial:
+👉 **[Guía Completa de Control de Fiados, Anticipos y Abonos FIFO](/guias/el-mostrador/deudas-fiados)**
+
+---
+
+## Capacidades Principales
+
+- **Registro en Mostrador (`/ventas/nueva`):** Asigna ventas a crédito seleccionando el método **Fiado** con soporte para anticipos parciales en efectivo y alta inmediata de clientes sin perder el carrito.
+- **Límites de Crédito:** Configura desde el directorio un tope máximo de endeudamiento por cliente para prevenir sobregiros.
+- **Liquidación Automática (FIFO):** Los abonos generales saldan automáticamente las notas más antiguas primero.
+- **Comprobantes por WhatsApp:** Comparte comprobantes de abono y estados de cuenta detallados con cuenta CLABE bancaria.

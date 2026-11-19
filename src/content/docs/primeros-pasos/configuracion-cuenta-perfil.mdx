@@ -1,10 +1,49 @@
+﻿---
+title: "Perfil, Seguridad y Soberanía de Datos"
+description: "Configura tus datos de acceso, contraseña, respaldo integral de información en 1 clic y políticas de soberanía de datos en VentaSimple."
+sidebar:
+  order: 2
 ---
-title: "Perfil de Usuario"
-description: "Configura tus datos de acceso, contraseña y preferencias personales en VentaSimple."
+
+import { Steps, Aside } from '@astrojs/starlight/components';
+
+# Perfil, Seguridad y Soberanía de Datos
+
+Desde el módulo de **Configuración** (`/configuracion`) el titular de la cuenta puede gestionar sus credenciales de acceso, la identidad de su comercio y ejercer control total sobre los datos almacenados.
+
 ---
 
+## 1. Datos del Negocio y Acceso
 
-Administra la información de acceso del titular de la cuenta:
+- **Nombre comercial y giro:** Ajusta el nombre público que aparece en el encabezado de los tickets de venta y reportes contables.
+- **Cambio de Contraseña:** Modifica periódicamente las credenciales de ingreso para salvaguardar la operación de tu negocio.
+- **Cuentas bancarias para transferencias (SPEI):** Define el banco y los 18 dígitos de tu cuenta CLABE para que se adjunten automáticamente al enviar estados de cuenta y comprobantes por WhatsApp.
 
-- **Cambio de Contraseña:** Modifica tus credenciales de acceso de forma segura.
-- **Datos del Negocio:** Escribe los datos de facturación generales de la cuenta principal.
+---
+
+## 2. Soberanía de Datos: Respaldo Integral en 1 Clic
+
+En VentaSimple consideramos que la información comercial es propiedad exclusiva del comerciante. Puedes obtener una copia exacta de tu negocio en cualquier momento:
+
+<Steps>
+1. Ingresa a **Configuración** (`/configuracion`).
+2. Desplázate a la sección **Soberanía y Respaldo de Datos**.
+3. Pulsa el botón **Descargar respaldo completo (JSON)**.
+4. El sistema empaquetará de forma segura tu catálogo de productos con precios y costos, clientes, existencias por sucursal, ventas históricas y cortes de caja en un único archivo estándar.
+</Steps>
+
+<Aside type="tip">
+Recomendamos descargar un respaldo de datos al cierre de cada mes para mantener un archivo histórico offline de respaldo o para facilitar conciliaciones contables.
+</Aside>
+
+---
+
+## 3. Zona de Peligro: Eliminación Permanente de Cuenta
+
+Si decides dejar de utilizar la plataforma, no existen bloqueos ni procesos burocráticos. VentaSimple ofrece un mecanismo de auto-servicio para la destrucción segura de la cuenta bajo tres barreras de protección:
+
+1. **Restricción por Rol:** Únicamente el usuario con rol de **Propietario** (`OWNER`) tiene visibilidad de este control.
+2. **Reautenticación de Seguridad:** Se solicita verificar la contraseña actual de acceso para evitar que terceros manipulen la sesión.
+3. **Confirmación Textual:** Debes escribir exactamente el nombre de tu comercio para confirmar la baja definitiva.
+
+Una vez confirmada la acción, el sistema borra de forma irreversible todos los registros del comercio en la base de datos, cancela suscripciones vinculadas y redirige a la pantalla de bienvenida.

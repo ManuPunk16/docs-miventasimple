@@ -1,104 +1,149 @@
----
-title: Cómo Controlar Fiados, Cobrar Abonos y Enviar Mensajes por WhatsApp
-description: Aprende a registrar ventas a crédito (fiados), consultar quién te debe, registrar abonos en segundos y enviar recordatorios de cobro a tus clientes desde el celular.
+﻿---
+title: Control de Fiados, Anticipos y Cuentas por Cobrar
+description: Guía operativa completa para fiar en mostrador, registrar clientes rápidos sin salir del carrito, calcular anticipos parciales y cobrar abonos con liquidación FIFO.
 sidebar:
   order: 4
 head:
   - tag: meta
     attrs:
       name: keywords
-      content: como fiar en punto de venta, libreta de fiados digital, control de deudas clientes tienda, cobrar por whatsapp punto de venta
+      content: como fiar en punto de venta, libreta de fiados digital, anticipo fiado, abonos clientes tienda, cuentas por cobrar punto de venta
 ---
 
 import { Steps, Aside, Tabs, TabItem } from '@astrojs/starlight/components';
 
-Tener una libreta de papel para anotar los fiados suele causar cuentas perdidas, malentendidos con los clientes y dinero que nunca regresa a la caja. 
+Tener una libreta de papel para anotar los fiados suele causar cuentas perdidas, malentendidos con los clientes y dinero que nunca regresa a la caja.
 
-En VentaSimple puedes llevar tu libreta digital desde el celular: asignas compras a crédito en la caja, consultas la lista de deudores en tiempo real, registras abonos y envías comprobantes directos por WhatsApp con tu cuenta bancaria.
+En VentaSimple puedes llevar tu libreta digital en tiempo real: asignas compras a crédito directamente en el mostrador, registras anticipos parciales en el acto, das de alta clientes nuevos sin perder la venta y aplicas abonos con liquidación automática de notas antiguas (método FIFO).
+
+```mermaid
+flowchart TD
+    A["Cliente en Mostrador"] --> B["Cargar productos al Carrito"]
+    B --> C["Seleccionar método de pago: Fiado"]
+    C --> D{"¿Cliente registrado?"}
+    D -- "Sí" --> E["Buscar y seleccionar de la lista"]
+    D -- "No" --> F["Clic en '+ Nuevo cliente' (Registro inline)"]
+    F --> E
+    E --> G{"¿Paga anticipo hoy?"}
+    G -- "Sí (Monto parcial)" --> H["Ingresar anticipo: Caja recibe efectivo y saldo se descuenta"]
+    G -- "No ($0.00)" --> I["Saldo total pasa a deuda en Cartera"]
+    H --> J["Confirmar Fiado: Ticket con desglose transparente"]
+    I --> J
+    J --> K["Libreta de Fiados / Recordatorio por WhatsApp"]
+```
 
 <Aside type="note">
-El registro básico de clientes está disponible en todos los planes. La libreta digital de fiados y cuentas por cobrar requiere contar con el **Plan Básico+** activo en tu negocio.
+El registro básico de clientes está disponible en todos los planes. La libreta digital de fiados y cuentas por cobrar con límite de crédito requiere contar con el **Plan Básico+** activo en tu negocio.
 </Aside>
 
 ---
 
-## Cómo Fiar una Venta en Mostrador
+## Cómo Fiar una Venta en Mostrador (`/ventas/nueva`)
 
-Cuando un cliente de confianza te pida fiado al momento de cobrar:
+Cuando un cliente de confianza solicita fiado al momento de cobrar, no necesitas cancelar la venta ni salirte de la pantalla:
 
 <Steps>
-1. **Agrega los productos a la venta:** Escanea o selecciona los artículos que el cliente se va a llevar normalmente.
-2. **Selecciona al cliente:** En lugar de presionar directo en cobrar en efectivo, presiona en **Asignar Cliente** y busca su nombre en tu directorio.
-3. **Elige la opción Fiado:** Al seleccionar el método de pago, presiona en **Fiado / A Crédito**.
-4. **Finaliza la nota:** La venta se guardará con saldo pendiente y se sumará automáticamente a la cuenta acumulada de ese cliente.
+1. **Agrega los productos al carrito:**
+   Escanea o selecciona los artículos que el cliente se llevará normalmente.
+
+2. **Selecciona el método Fiado:**
+   En el bloque de **Método de Pago** en el panel lateral derecho del carrito, pulsa el botón **Fiado**.
+   - Si deseas registrar un anticipo previo, puedes teclearlo en el campo **Anticipo (opcional)** del carrito.
+
+3. **Confirma en el modal "¿A quién se le fía?":**
+   El sistema desplegará un modal optimizado para mostrador y dispositivos móviles:
+   - **Desglose financiero transparente:** Visualiza en grande el monto exacto de **Queda a deber (Fiado)**, junto con el **Total de la venta** y el **Abona hoy (Anticipo)**.
+   - **Preselección inteligente:** Si ya habías seleccionado al cliente en el carrito, vendrá precargado automáticamente.
+   - **Búsqueda inmediata:** Teclea el nombre o teléfono; la lista de resultados coincidentes se despliega al instante con diseño accesible.
+
+4. **Alta rápida sin perder la venta (`+ Nuevo cliente`):**
+   Si la persona aún no está registrada en tu directorio, pulsa el botón **Nuevo cliente** dentro del mismo modal.
+   - Introduce únicamente su **Nombre completo** (obligatorio) y su **Teléfono de WhatsApp** (opcional para recordatorios).
+   - Pulsa **Guardar y seleccionar**. El cliente queda registrado en tu base de datos y asignado a la venta en curso sin reiniciar el mostrador.
+
+5. **Confirmar fiado:**
+   Presiona **Confirmar fiado**. El inventario se descuenta de inmediato, el anticipo entra a la caja del día (si se registró alguno) y el resto queda archivado en la cuenta por cobrar del cliente.
 </Steps>
 
 <Aside type="tip">
-Puedes fijar un **límite de crédito** a cada cliente. Si supera el monto permitido, el sistema te avisará en pantalla para evitar que acumule más deuda de la acordada.
+Puedes fijar un **límite de crédito** a cada cliente desde su perfil en el directorio. Si el monto fiado supera el saldo permitido, el sistema te advertirá en pantalla para evitar sobreendeudamientos.
 </Aside>
 
 ---
 
-## Cómo Consultar la Cartera de Clientes que Deben
+## Desglose de Anticipos Parciales
 
-Para ver quién te debe y cuánto dinero tienes por cobrar en la calle:
+VentaSimple permite dividir la operación de forma transparente cuando el cliente no lleva el dinero completo pero desea abonar una parte de inmediato:
 
-1. Entra a **Configuración** y selecciona **Clientes**.
-2. En la parte superior verás dos botones: **Directorio** (tu lista de todos los contactos) y **Fiados** (con el total acumulado que te deben en un recuadro rojo).
-3. Presiona la pestaña **Fiados**:
-   - Cada cliente que tenga deuda aparecerá en su propia tarjeta.
-   - Verás su nombre completo, el total que te debe en color rojo y cuántas notas o compras tiene pendientes.
-   - Si el cliente tenía saldo a su favor de un pago anterior, se mostrará en color verde.
+| Concepto | Ejemplo Numérico | Impacto Operativo |
+| :--- | :--- | :--- |
+| **Total de la Venta** | **$150.00** | Descuenta la totalidad del inventario vendido. |
+| **Abona Hoy (Anticipo)** | **$50.00** | Ingresa a la Caja Chica en efectivo/tarjeta del turno actual. |
+| **Queda a Deber (Fiado)** | **$100.00** | Se añade al saldo deudor del cliente en Cartera de Fiados. |
+
+El ticket emitido (impreso o enviado por WhatsApp) desglosa con total claridad el total, el anticipo entregado y el saldo remanente para evitar confusiones futuras.
 
 ---
 
-## Cómo Cobrar y Registrar un Abono
+## Cómo Consultar la Cartera de Clientes que Deben (`/clientes`)
 
-Cuando un cliente llegue a tu mostrador a darte dinero para su cuenta:
+Para auditar quién te debe y cuánto dinero tienes pendiente de cobro:
+
+1. Entra al menú **Clientes y Fiados** (`/clientes`).
+2. En la cabecera encontrarás dos pestañas principales:
+   - **Directorio:** Catálogo completo de contactos, historial y membresías.
+   - **Fiados:** Vista financiera que muestra el monto total acumulado por cobrar en tu comercio.
+3. En la pestaña **Fiados**:
+   - Cada cliente deudor cuenta con una tarjeta independiente.
+   - Se muestra su nombre completo, teléfono, monto total adeudado y cantidad de notas pendientes.
+   - Si el cliente cuenta con saldo a favor de cobros anteriores, se resalta en verde.
+
+---
+
+## Cómo Cobrar y Registrar un Abono (Liquidación FIFO)
+
+Cuando un cliente acude a abonar dinero a su cuenta pendiente:
 
 <Steps>
-1. **Localiza al cliente en la lista de Fiados:** Presiona el botón **Cobrar / Abonar** que aparece en su tarjeta.
-2. **Elige cómo aplicar el abono:**
-   - **Abono General:** Presiona el botón verde de abonar en la parte superior. Esto cubrirá automáticamente sus notas más viejas primero.
-   - **Abonar a una nota específica:** Si el cliente solo quiere pagar lo que se llevó en un día particular, busca esa compra en su lista y presiona abonar en esa nota.
-3. **Escribe la cantidad recibida:** Puedes teclear el monto exacto o usar los botones de atajo rápido (**Liquidar Todo**, **50%**, **$100**, **$200**, **$500**).
-4. **Indica cómo te pagó:** Selecciona si el cobro fue en **Efectivo**, **Transferencia** bancaria o **Tarjeta**.
-5. **Confirma el cobro:** Presiona **Confirmar Abono**. El saldo del cliente se reducirá al instante en tu pantalla.
+1. **Localiza al cliente en la pestaña Fiados:**
+   Pulsa el botón **Cobrar / Abonar** en su tarjeta.
+
+2. **Elige la modalidad de abono:**
+   - **Abono General (Método FIFO - First In, First Out):** Al registrar un abono global, el sistema liquida primero las notas de venta más antiguas y distribuye el remanente a las más recientes.
+   - **Abonar a nota específica:** Si el cliente desea saldar una compra en particular, despliega su historial y pulsa abonar sobre esa nota específica.
+
+3. **Captura el importe recibido:**
+   Escribe el monto en el teclado o usa los atajos rápidos (**Liquidar Todo**, **50%**, **$100**, **$200**, **$500**).
+
+4. **Selecciona la vía de cobro:**
+   Elige si el abono se realizó en **Efectivo**, **Transferencia bancaria** o **Tarjeta**.
+
+5. **Confirma el abono:**
+   Pulsa **Confirmar Abono**. El saldo del cliente se actualiza de inmediato.
 </Steps>
 
-### ¿Qué pasa si el cliente paga de más?
-Si un cliente te debe $180 pero te deja un billete de $200 y te pide que guardes el resto para su próxima compra, el sistema liquidará la deuda por completo ($0) y guardará los $20 ejercicios como **Saldo a Favor** para descontarlos en sus siguientes visitas.
+### Saldo a favor por pago excedente
+Si un cliente debe $180 pero paga con $200 y solicita dejar el resto a cuenta, la deuda actual queda saldada en $0.00 y los $20 excedentes se conservan como **Saldo a Favor** para aplicarse automáticamente en su próxima compra.
 
-### ¿Qué pasa cuando el cliente liquida toda su cuenta?
-En cuanto la deuda llega a $0, el cliente se retira automáticamente de la lista de deudores, manteniendo tu pantalla limpia con solo las personas que tienen pagos pendientes.
+### Retiro automático de la lista de deudores
+En cuanto un cliente liquida el 100% de su saldo pendiente, su tarjeta se retira automáticamente de la pestaña de Fiados, manteniendo la vista limpia con solo las personas que tienen adeudos activos.
 
 ---
 
-## Cómo Enviar Recordatorios y Comprobantes por WhatsApp
+## Envío de Comprobantes y Recordatorios por WhatsApp
 
-Para evitar fricciones y cobrar sin desgastarte, puedes enviar mensajes automáticos directamente al WhatsApp de tu cliente sin salir de la app:
+Para agilizar la cobranza con cordialidad y sin fricciones, puedes enviar recordatorios desde la aplicación:
 
 <Tabs>
-  <TabItem label="Comprobante al Recibir Pago">
-    Al terminar de registrar un abono, presiona **Enviar Comprobante por WhatsApp**. El sistema abrirá la conversación con un mensaje formal que incluye folio, fecha, monto recibido y cuánto le queda por pagar.
+  <TabItem label="Comprobante de Abono">
+    Al finalizar un abono, pulsa **Enviar Comprobante por WhatsApp**. Se abrirá una conversación preconfigurada con folio, fecha, importe abonado y saldo restante actualizado.
   </TabItem>
-  <TabItem label="Recordatorio Rápido de Saldo">
-    Desde el perfil del cliente, presiona la opción de cobrar por WhatsApp y elige **Resumen**. Le enviará un mensaje recordándole cuántas compras tiene pendientes y el saldo total adeudado.
+  <TabItem label="Recordatorio Resumido">
+    Desde el perfil del deudor, pulsa la opción de WhatsApp y selecciona **Resumen**. Genera un mensaje cordial con el total de notas pendientes y saldo total acumulado.
   </TabItem>
-  <TabItem label="Cobro Detallado con Cuenta Bancaria">
-    Si el cliente te pide el desglose exacto de lo que debe o quiere hacerte una transferencia, elige **Detallado**:
-    - Incluye la lista de productos que se llevó en cada fecha.
-    - Si guardaste tu cuenta CLABE bancaria en la configuración, el mensaje incluirá el nombre del banco, titular y los 18 dígitos para que te transfiera desde su celular.
+  <TabItem label="Estado de Cuenta Detallado con CLABE">
+    Si el cliente solicita el desglose para transferir por banca móvil, elige **Detallado**:
+    - Incluye el detalle de artículos adquiridos en cada fecha.
+    - Si configuraste tu cuenta bancaria en el sistema, adjunta automáticamente el banco, beneficiario y los 18 dígitos de tu cuenta CLABE.
   </TabItem>
 </Tabs>
-
----
-
-## Cómo Administrar tu Directorio de Clientes
-
-En la pestaña **Directorio** puedes llevar el control general de tu clientela:
-
-- **Buscar clientes:** Escribe su nombre o número de teléfono en el buscador superior.
-- **Acceso rápido al teléfono:** Toca el número de teléfono para llamarlo directo desde tu celular.
-- **Ver Perfil Completo (360°):** Consulta el historial de todas sus compras pasadas, qué productos suele comprar con más frecuencia y cuántos puntos o visitas acumula.
-- **Editar o Dar de Baja:** Corrige sus datos de contacto o elimínalo si ya no visita tu negocio.
