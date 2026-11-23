@@ -24,6 +24,7 @@ El sistema implementa una rigurosa separacion contable entre el flujo de dinero 
 ### 1.3 Soporte Multi-Giro y Multi-Inquilino
 La estructura de datos permite configurar y operar comercios de diversa indole:
 - **Abarrotes y Tiendas de Conveniencia:** Prioridad en velocidad de escaneo, tara de recipientes en bascula y control de articulos de alta rotacion sin codigo mediante botonera rapida.
+- **Showrooms, Bazares y Colectivos Multimarca:** Gestion integral de tiendas multimarca en consignacion con portal de disenadores sin contrasena (`/p/:token`), recepcion de lotes (check-in / check-out), comisiones porcentuales o rentas fijas, blindaje anti-doble pago y liquidaciones quincenales/mensuales en 1 clic.
 - **Barberias, Salones y Spas:** Gestion de citas, asignacion de colaboradores, comisiones y venta de productos capilares o cosmeticos.
 - **Gimnasios y Centros Fitness:** Control de membresias, visitas periodicas, vencimiento de planes y venta de suplementos deportivos en mostrador.
 - **Talleres y Refaccionarias:** Registro de ordenes de servicio, recepcion de vehiculos o equipos, control de refacciones por numero de parte y mano de obra.
@@ -350,3 +351,15 @@ Para negocios de servicios personales (barberias, salones de belleza, esteticas,
 - **Herencia Automatica:** Al agregar un nuevo servicio con un colaborador ya presente en el ticket, hereda automaticamente dicho colaborador y calcula su comision instantaneamente.
 - **Recalculo por Cantidad:** Al aumentar la cantidad de servicios en el mismo renglon, la comision se multiplica por las unidades vendidas.
 - **Transparencia Contable:** Todo servicio vendido sin tecnico asignado se reporta bajo `"Sin asignar / Mostrador"` en `/reportes/comisiones-empleado` para no inflar la comision del cajero en turno.
+
+---
+
+## 10. Giro Showroom, Bazares y Colectivos Multimarca (/giros/showroom-y-colectivos/)
+
+VentaSimple resuelve la operacion de tiendas multimarca de diseno y bazares que exhiben productos bajo el esquema de consignacion comercial:
+- **Alta de Marcas y Reglas Comerciales:** Cada marca colaboradora se registra con prefijo unico de SKU (ejemplo: `LUNA`), espacio asignado (rack, repisa o stand), esquema de cobro (comision por venta %, renta mensual fija, mixto o cuota fija por pieza en MXN) y datos bancarios (CLABE de 18 digitos).
+- **Portal del Disenador Sin Contrasena (`/p/:token`):** Enlace web seguro para consultar ventas en vivo, acumulado del periodo, existencias por sucursal e historial de comprobantes de pago desde cualquier smartphone.
+- **Entrada y Salida por Lotes (Check-in / Check-out):** Control de recepcion de nueva mercancia con folio digital `IN-XXXXXX` y devolucion por fin de temporada con folio `OUT-XXXXXX`, garantizando concordancia entre el inventario exhibido y el stock en sistema.
+- **Cobro en Mostrador y Apartados:** Los articulos en consignacion se cobran en efectivo, tarjeta o transferencia con congelamiento automatico de la ganancia del showroom. Los apartados reservan piezas como stock comprometido visible en el portal.
+- **Liquidaciones Automaticas en 1 Clic:** Desglose contable de ventas brutas, retencion de comisiones pactadas, deduccion opcional de renta de espacio y descuento de comisiones de tarjeta bancaria, con sellado antifraude anti-doble pago (`LIQ-XXXX-XXXX`) y egreso directo de caja chica.
+- **Sincronizacion Federada entre Cuentas (/consignaciones):** Vinculacion B2B directa con codigo de alianza para marcas con cuenta propia en VentaSimple, despacho de lotes (`TRASP-YYYYMM-XXXX`) desde el catalogo de la marca, recepcion y check-in en 1 clic que clona productos e inventario en el showroom, y ledger contable compartido en tiempo real.

@@ -10,6 +10,8 @@ Allow: /
 # Rastreadores de Inteligencia Artificial (GEO / LLM / RAG)
 User-agent: GPTBot
 Allow: /
+User-agent: OAI-SearchBot
+Allow: /
 User-agent: PerplexityBot
 Allow: /
 User-agent: ClaudeBot

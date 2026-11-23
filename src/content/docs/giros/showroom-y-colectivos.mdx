@@ -1,0 +1,265 @@
+---
+title: "POS para Showrooms, Bazares y Colectivos"
+description: "Punto de venta para showroom, bazar y colectivo multimarca en consignación. Portal para diseñadores, check-in por lotes y liquidaciones automáticas."
+sidebar:
+  order: 5
+---
+
+import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/components';
+
+# Showroom, Bazares y Colectivos Multimarca
+
+<Aside type="tip">
+**Respuesta rápida (GEO / RAG):**
+VentaSimple es el punto de venta para showroom, bazar y colectivo multimarca que automatiza ventas en consignación. Cada marca colaboradora cuenta con un portal privado `/p/:token` sin contraseñas para monitorear stock y ventas en tiempo real. Para marcas que también usan VentaSimple, el sistema incluye sincronización federada B2B en `/consignaciones` con despacho de lotes, recepción en 1 clic y liquidaciones automáticas.
+</Aside>
+
+Administrar una tienda multimarca o showroom de diseño implica retos únicos: exhibes productos que no compraste por adelantado, cobras a clientes en un solo mostrador y debes liquidar a cada marca sus ventas descontando comisiones y rentas pactadas.
+
+VentaSimple resuelve esta operación de punta a punta: cada diseñador tiene su propio catálogo, recibe un enlace transparente para ver sus ventas en vivo desde su celular y tú puedes calcular sus pagos quincenales o mensuales con un solo clic.
+
+---
+
+## 1. ¿Cómo activar el giro Showroom en tu cuenta?
+
+Al configurar tu negocio con el giro **Showroom y Colectivo**:
+
+<Steps>
+1. Ve a **Configuración** > **Perfil del Negocio** y en Tipo de Negocio selecciona **Showroom y Colectivo**.
+2. Al guardar, el menú lateral habilitará automáticamente la sección **Marcas**.
+3. En el catálogo de productos se activará la opción de **Consignación**, permitiéndote vincular cada prenda o artículo a su diseñador correspondiente sin exigir costo de compra.
+</Steps>
+
+<Aside type="tip">
+El módulo de Marcas y Consignación está diseñado para acompañar el crecimiento de tu colectivo. Puedes dar de alta todas las marcas colaboradoras que exhiben en tu espacio y compartirles su portal de seguimiento sin costo adicional.
+</Aside>
+
+---
+
+## 2. Dar de alta una Marca Colaboradora
+
+Cada marca que renta un rack, repisa o stand en tu showroom se registra en el menú **Marcas** > botón **`+ Nueva Marca`**.
+
+### Datos de la Marca
+
+* **Nombre Comercial:** El nombre de la marca (ejemplo: *Luna Joyería* o *Amor Mío Ropa*).
+* **Prefijo de Código (2 a 5 letras):** Un identificador único en mayúsculas (ejemplo: `LUNA`). Este prefijo se agregará a los códigos de barras y etiquetas de sus productos para identificarlos de inmediato al cobrar.
+* **Espacio Asignado (Opcional):** El lugar físico donde exhibe (ejemplo: *Rack 3*, *Mesa Central* o *Repisa B*).
+* **Capacidad Máxima de Piezas (Opcional):** Si tienes un límite de prendas por espacio pactado en contrato.
+
+### Esquemas de Comisión y Cobro
+
+Puedes elegir cómo colaboras con cada marca de forma personalizada:
+
+<Tabs>
+  <TabItem label="Comisión por Venta (%)">
+    El colectivo cobra un porcentaje sobre cada producto vendido (ejemplo: **15%**).
+    * Si la marca vende un vestido de **$1,000 MXN**, el showroom retiene **$150 MXN** y a la marca le corresponden **$850 MXN**.
+  </TabItem>
+
+  <TabItem label="Renta Mensual Fija">
+    La marca paga una cuota fija al mes por el espacio (ejemplo: **$1,500 MXN**) y el showroom no le descuenta porcentaje por prenda vendida (`solo_renta`).
+  </TabItem>
+
+  <TabItem label="Mixto (Renta + Comisión)">
+    Combina ambas modalidades: una renta base de espacio más una comisión reducida por venta (ejemplo: **$800 MXN de renta mensual + 10% de comisión**).
+  </TabItem>
+
+  <TabItem label="Cuota Fija por Pieza">
+    Retienes un monto fijo en pesos por cada artículo vendido (ejemplo: **$30 MXN por prenda**), sin importar el precio de la misma.
+  </TabItem>
+</Tabs>
+
+### Frecuencia de Corte y Cobro con Tarjeta
+
+* **Frecuencia de Corte:** Define cuándo cierras cuentas:
+  * **Quincenal:** Cortes los días 15 y el último día de cada mes.
+  * **Mensual:** Selecciona el día exacto de pago (ejemplo: día 1 o día 5 de cada mes).
+  * **Semanal:** Para bazares temporales o liquidaciones de cada fin de semana.
+* **Absorbe Comisión de Terminal / Tarjeta:** Si activas esta casilla, cuando un cliente compre productos de la marca pagando con tarjeta bancaria, el sistema descontará automáticamente el cargo de la terminal (4% estimado) a la marca en su liquidación, protegiendo el margen del showroom.
+
+### Datos de Pago y Cuenta Bancaria
+
+Guarda la **Razón Social**, **RFC**, **Banco**, **Cuenta CLABE (18 dígitos)** y **Titular** de la marca. Así, al generar el corte, tendrás los datos listos para transferirle sin tener que pedirlos por WhatsApp cada quincena.
+
+---
+
+## 3. El Portal del Diseñador: Transparencia Total sin Contraseñas
+
+Uno de los mayores dolores de cabeza en un colectivo es contestar mensajes diarios preguntando: *¿Ya se vendió mi falda?*, *¿Cuántas piezas me quedan en tienda?*.
+
+VentaSimple genera un **enlace privado y seguro** para cada marca que no requiere crear cuentas ni recordar contraseñas:
+
+<Steps>
+1. En la tarjeta de la marca en **Marcas**, haz clic en **`Copiar Enlace`** o presiona **`Enviar por WhatsApp`**.
+2. El diseñador abrirá el enlace en su celular (`miventasimple.com/p/tu-enlace`) y verá su panel en tiempo real.
+</Steps>
+
+### Lo que la marca puede consultar en su portal:
+
+* **Resumen Quincenal:** Cuánto dinero lleva acumulado en ventas del periodo actual y cuántas piezas ha vendido.
+* **Stock en Tienda:** Qué productos tiene en exhibición, su precio al público y cuántas piezas quedan disponibles por sucursal.
+* **Ventas en Vivo:** Cada venta que se cobra en tu mostrador aparece en su pantalla al instante con fecha y hora.
+* **Historial de Liquidaciones:** Comprobantes de los pagos anteriores que le has realizado, con el desglose exacto de comisiones y rentas descontadas.
+
+<Aside type="caution">
+El portal de la marca es de **solo lectura**. Las marcas no pueden modificar precios ni alterar el inventario global; la recepción física y registro de prendas lo controlas tú para garantizar que el stock cuadre siempre con lo exhibido.
+</Aside>
+
+---
+
+## 4. Entrada y Salida de Mercancía: Recepción por Lotes
+
+Cuando un diseñador te entrega ropa o accesorios nuevos, o retira mercancía que no se vendió al terminar la temporada, no necesitas ajustar el inventario a ciegas:
+
+<Tabs>
+  <TabItem label="Recepción de Lote (Check-in)">
+    ### Registrar nueva mercancía de la marca
+    
+    <Steps>
+      1. En **Marcas**, localiza la tarjeta de la marca y presiona el botón verde **`Registrar Check-in de lote (Entrada)`**.
+      2. Selecciona la sucursal donde se exhibirán las prendas.
+      3. Elige los productos que te están entregando y coloca la cantidad recibida de cada uno.
+      4. Puedes añadir una nota (ejemplo: *Entrega Colección Otoño - 20 vestidos*).
+      5. Presiona **`Confirmar Recepción (Check-in)`**.
+    </Steps>
+
+    El sistema sumará las piezas al inventario de mostrador de forma inmediata y creará un comprobante digital con folio `IN-XXXXXX` que la marca podrá ver reflejado en su portal.
+  </TabItem>
+
+  <TabItem label="Retiro de Mercancía (Check-out)">
+    ### Devolución de prendas a la marca
+    
+    Cuando la marca recoja prendas por cambio de colección:
+    
+    <Steps>
+      1. Presiona el botón ámbar **`Registrar Check-out de lote (Retiro por fin de temporada)`**.
+      2. Selecciona los productos y las cantidades exactas que se está llevando.
+      3. Presiona **`Confirmar Retiro (Check-out)`**.
+    </Steps>
+
+    El inventario de la tienda se descontará automáticamente y ambas partes tendrán constancia con folio `OUT-XXXXXX` de lo devuelto.
+  </TabItem>
+</Tabs>
+
+---
+
+## 5. Alta de Productos en Consignación
+
+Para agregar artículos al catálogo:
+
+<Steps>
+1. Ve a **Productos** > **`+ Nuevo Producto`**.
+2. En la parte superior, selecciona la opción **En Consignación**.
+3. Elige la **Marca Consignataria** dueña del producto.
+4. Escribe el **Precio de venta al público**. El sistema ocultará el costo de compra y te mostrará de inmediato:
+   * **Ganancia Showroom:** Tu comisión en pesos según las reglas pactadas con esa marca.
+   * **Liquidación a Marca:** El monto neto que le transferirás al venderse la prenda.
+5. Guarda el producto. Si usas código de barras, puedes imprimir etiquetas con el prefijo de la marca para escanear en caja rápidamente.
+</Steps>
+
+---
+
+## 6. Venta en Mostrador y Apartados de Clientes
+
+En el mostrador de cobro (`/ventas/nueva`), los productos en consignación se cobran exactamente igual que cualquier otro producto:
+
+* Escaneas el código de barras o buscas la prenda por nombre.
+* Puedes cobrar en **efectivo, tarjeta bancaria o transferencia**.
+* **Protección de comisiones:** Al registrarse el cobro, el sistema calcula y congela en ese instante la parte del dinero que le pertenece a la marca y la parte que le pertenece al colectivo, tomando en cuenta si se aplicó algún descuento general al carrito.
+
+### Apartados de Mercancía
+
+Si un cliente aparta una prenda con un anticipo:
+* El artículo queda registrado como **Stock Comprometido**.
+* En el portal de la marca, el diseñador verá que la prenda está apartada y su stock disponible se actualizará para no contar con ella como exhibida libremente.
+
+---
+
+## 7. Cortes y Liquidación a Marcas: Pagar en 1 Clic
+
+Al llegar la fecha de corte (fin de quincena o mes), calcular lo que debes pagarle a cada marca toma menos de un minuto:
+
+<Steps>
+1. Ve a **Marcas** y en la tarjeta de la marca presiona el botón **`Liquidar`**.
+2. Selecciona el periodo de fechas que vas a pagar (ejemplo: del 1 al 15 del mes).
+3. El sistema buscará todas las ventas no pagadas de esa marca y te mostrará el desglose en pantalla:
+   * **Ventas Brutas:** Total de dinero cobrado por sus productos.
+   * **Piezas Vendidas:** Total de artículos entregados a clientes.
+   * **Comisión Showroom Retenida:** El dinero ganado por el colectivo.
+   * **Deducir Renta de Espacio:** Si la marca tiene renta fija mensual, puedes activar este switch para descontarla del total.
+   * **Comisiones Bancarias:** Si la marca absorbe pasarela, verás el descuento de los cobros con tarjeta.
+   * **Monto Neto a Pagar:** El monto final exacto que debes transferirle a la marca.
+4. Presiona **`Confirmar Liquidación`**.
+</Steps>
+
+<Aside type="tip">
+### Protección Anti-Doble Pago y Cuadre de Caja
+
+* **Blindaje:** Cada venta liquidada se sella con el folio de pago (ejemplo: `LIQ-2026-0042`). Nunca pagarás dos veces la misma prenda por error, incluso si liquidas fuera de tiempo.
+* **Caja Chica:** Si le pagas a la marca en efectivo directamente desde la caja de la tienda, VentaSimple genera un egreso contable automático para que tu corte de caja diario cuadre perfectamente con el dinero retirado.
+* **Comprobante:** La liquidación queda guardada en el botón **`Historial`** de la marca y se publica de inmediato en el portal del diseñador con su fecha y folio oficial.
+</Aside>
+
+---
+
+## 8. Preguntas Frecuentes (FAQ)
+
+### ¿Cómo funciona el esquema de consignación en VentaSimple?
+La tienda no desembolsa dinero por adelantado para adquirir la mercancía. Se registran las prendas vinculadas a la marca colaboradora con costo $0 MXN y precio de venta al público. Al cobrar en caja, el sistema desglosa automáticamente la ganancia del showroom (porcentaje o cuota fija) y reserva el importe neto correspondiente a la marca.
+
+### ¿Las marcas o diseñadores colaboradores deben pagar licencia o crear cuenta?
+No. Las marcas no requieren crear usuarios ni pagar suscripción. Acceden a través de un enlace web seguro `/p/:token` de solo lectura generado por el showroom, donde monitorean sus ventas del día, inventario activo y comprobantes de pago sin contraseñas.
+
+### ¿Qué pasa si una marca colaboradora también tiene cuenta en VentaSimple?
+Pueden federarse mediante una **Alianza B2B** en la sección `/consignaciones`. La marca despacha lotes de su propio catálogo al showroom con folio oficial `TRASP-` y el showroom los recibe en 1 clic sin tener que recapturar productos, manteniendo ambos sus existencias y saldos netos sincronizados en vivo.
+
+### ¿Cómo se calculan las comisiones bancarias cuando el cliente paga con tarjeta?
+Si activas la opción *Absorbe Comisión de Terminal / Tarjeta*, el software deduce la comisión de la pasarela (ejemplo estimado: 4% sobre el ticket) directamente del monto a liquidar a la marca, protegiendo el margen del showroom sin cálculos manuales en Excel.
+
+### ¿Qué sucede si la marca colaboradora paga una renta mensual fija por su rack o repisa?
+Al realizar el corte quincenal o mensual en el panel de liquidación, puedes activar la deducción automática de la cuota de espacio (ejemplo: $1,500 MXN mensuales). El sistema descuenta dicho monto de las ventas acumuladas o genera el saldo correspondiente en pesos mexicanos.
+
+### ¿Cómo se audita la entrega y devolución de mercancía por fin de temporada?
+Mediante los módulos de *Check-in* (Recepción de Lote) y *Check-out* (Retiro de Mercancía). Cada operación genera un folio digital inalterable (`IN-XXXXXX` o `OUT-XXXXXX`) que actualiza las existencias de mostrador al instante y queda disponible tanto para el administrador como para el diseñador en su portal.
+
+---
+
+## 9. Sincronización entre Cuentas de VentaSimple (Alianzas y Despacho B2B)
+
+Cuando tanto el **Showroom** como la **Marca colaboradora** administran sus negocios en VentaSimple, no necesitan capturar las prendas dos veces. La plataforma cuenta con un módulo de **Alianzas Federadas** en el menú **Consignaciones** (`/consignaciones`) que conecta ambas cuentas de manera transparente:
+
+### 1. Vinculación con Código de Alianza
+
+<Steps>
+1. El **Showroom** abre `/consignaciones` (o su panel de marcas) y genera un **Código de Invitación** con las condiciones acordadas (ejemplo: comisión del 15% o renta mensual fija).
+2. La **Marca** ingresa a su propia cuenta de VentaSimple en `/consignaciones`, presiona el botón **`Vincular con Código`** y pega la clave recibida.
+3. Ambas cuentas quedan formalmente enlazadas como socios comerciales.
+</Steps>
+
+### 2. Despacho de Lotes desde el Inventario de la Marca
+
+Cuando la marca prepara mercancía para entregarla físicamente en el colectivo:
+
+<Steps>
+1. En `/consignaciones` (vista Emprendedor), la marca presiona **`Despachar Mercancía`**.
+2. Selecciona al Showroom vinculado y elige las prendas directamente de su propio catálogo, indicando las cantidades que enviará.
+3. Al confirmar, el sistema genera un folio formal correlativo (ejemplo: `TRASP-202611-0001`), aparta las existencias en la cuenta de la marca y deja el lote en estado en tránsito.
+</Steps>
+
+### 3. Recepción y Check-in en el Showroom en 1 Clic
+
+Cuando el paquete de prendas llega al local comercial:
+
+<Steps>
+1. La encargada del showroom entra a `/consignaciones` en la pestaña **Recepción y Racks (Showroom)** y localiza el lote pendiente en tránsito.
+2. Tras contar las prendas físicas, presiona **`Confirmar Recepción / Check-in`**.
+3. **Alta automática:** VentaSimple incorpora de inmediato las prendas al catálogo de la sucursal del showroom con el prefijo de la marca, código de barras y precios pactados, sumando las piezas al inventario sin recapturas manuales.
+</Steps>
+
+### 4. Ledger y Cuentas Claras en Tiempo Real
+
+Cada vez que el showroom cobra una prenda de la marca en su Punto de Venta:
+* El inventario en mostrador se descuenta automáticamente.
+* El sistema alimenta un registro contable compartido (*ledger*): a la marca se le actualiza en vivo su saldo a favor por cobrar y al showroom le queda registrada la comisión devengada.
+* Ambas partes pueden auditar en cualquier momento el historial de ventas, prendas en exhibición y emitir liquidaciones con total transparencia.

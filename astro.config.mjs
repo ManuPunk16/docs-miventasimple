@@ -103,6 +103,7 @@ export default defineConfig({
 						{ label: 'Barberías y Salones', slug: 'giros/barberias-y-esteticas' },
 						{ label: 'Gimnasios y Centros Fitness', slug: 'giros/gimnasios-y-fitness' },
 						{ label: 'Talleres y Refaccionarias', slug: 'giros/talleres-y-refaccionarias' },
+						{ label: 'Showroom y Colectivos', slug: 'giros/showroom-y-colectivos' },
 					],
 				},
 				{

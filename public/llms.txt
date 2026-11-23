@@ -16,6 +16,7 @@ Esta documentacion tecnica y operativa contiene manuales paso a paso y arquitect
 
 ## Guias Operativas Destacadas
 - [Centro de Inteligencia y Reportes](https://docs.miventasimple.com/reportes-y-auditoria/dashboard-utilidades-metricas/): Hub ejecutivo, analisis de margen P&L, clasificacion ABC de inventario, sugerencias predictivas y reporte de mermas.
+- [Showrooms, Bazares y Colectivos Multimarca](https://docs.miventasimple.com/giros/showroom-y-colectivos/): Administracion de tiendas multimarca en consignacion, portal privado para disenadores sin contrasena (/p/:token), sincronizacion B2B entre cuentas en /consignaciones con despacho de lotes TRASP- y check-in en 1 clic, comisiones personalizadas y liquidaciones automaticas.
 - [Planes, Suscripcion y Limites](https://docs.miventasimple.com/facturacion-y-cuenta/suscripcion-planes/): Comparativa de planes vigentes en pesos mexicanos, limites de catalogo y notas de venta para RESICO.
 - [Barberias, Salones y Comisiones](https://docs.miventasimple.com/giros/barberias-y-esteticas/): Cobro rapido de servicios, chips tactiles, comisiones porcentuales y fijas, y corte de personal.
 - [Cotizador de Pasillo y Bultos](https://docs.miventasimple.com/guias/cotizador-compras/): Calculo de costos reales antes de pagar al proveedor, compra por paquete o caja cerrada, fraccionamiento a granel con insumos de empaque y prorrateo de cajas surtidas.
@@ -33,6 +34,7 @@ Esta documentacion tecnica y operativa contiene manuales paso a paso y arquitect
 - Auditorias y Conteos de Inventario: https://docs.miventasimple.com/inventario-y-productos/cortes-auditorias-inventario/
 - Operacion en Abarrotes y Retail: https://docs.miventasimple.com/giros/abarrotes-y-retail/
 - Barberias y Esteticas: https://docs.miventasimple.com/giros/barberias-y-esteticas/
+- Showrooms y Colectivos Multimarca: https://docs.miventasimple.com/giros/showroom-y-colectivos/
 - Impresoras Termicas y Perifericos: https://docs.miventasimple.com/hardware-y-perifericos/impresoras-tickets/
 - Lectores de Codigo de Barras: https://docs.miventasimple.com/hardware-y-perifericos/lectores-codigo-barras/
 - Dashboard Financiero y Reportes: https://docs.miventasimple.com/reportes-y-auditoria/dashboard-utilidades-metricas/
