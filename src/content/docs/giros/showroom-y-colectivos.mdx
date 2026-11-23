@@ -224,42 +224,62 @@ Al realizar el corte quincenal o mensual en el panel de liquidación, puedes act
 Mediante los módulos de *Check-in* (Recepción de Lote) y *Check-out* (Retiro de Mercancía). Cada operación genera un folio digital inalterable (`IN-XXXXXX` o `OUT-XXXXXX`) que actualiza las existencias de mostrador al instante y queda disponible tanto para el administrador como para el diseñador en su portal.
 
 ---
-
 ## 9. Sincronización entre Cuentas de VentaSimple (Alianzas y Despacho B2B)
 
-Cuando tanto el **Showroom** como la **Marca colaboradora** administran sus negocios en VentaSimple, no necesitan capturar las prendas dos veces. La plataforma cuenta con un módulo de **Alianzas Federadas** en el menú **Consignaciones** (`/consignaciones`) que conecta ambas cuentas de manera transparente:
+Cuando tanto el **Showroom** como la **Marca colaboradora** administran sus negocios en VentaSimple, no necesitan capturar las prendas dos veces. La plataforma cuenta con un módulo de **Alianzas Federadas** en el menú **Consignaciones** (`/consignaciones`) con vistas adaptadas por rol (**Soy Marca / Emprendedor** y **Soy Showroom / Colectivo**) que conecta ambas cuentas de manera transparente:
 
-### 1. Vinculación con Código de Alianza
+### 1. Vinculación con Código de Alianza (Sin Duplicar Marcas)
+
+El Showroom puede generar invitaciones comerciales con total flexibilidad:
 
 <Steps>
-1. El **Showroom** abre `/consignaciones` (o su panel de marcas) y genera un **Código de Invitación** con las condiciones acordadas (ejemplo: comisión del 15% o renta mensual fija).
-2. La **Marca** ingresa a su propia cuenta de VentaSimple en `/consignaciones`, presiona el botón **`Vincular con Código`** y pega la clave recibida.
-3. Ambas cuentas quedan formalmente enlazadas como socios comerciales.
+1. En la pestaña **Soy Showroom / Colectivo**, presiona el botón **`Generar Código para Marca`** (o directamente desde la tarjeta de la marca en `/marcas` con el botón *"Vincular cuenta VentaSimple"*).
+2. **Dos modos de vinculación inteligente:**
+   * **Vincular a una marca ya existente:** Si ya diste de alta a la marca en tu catálogo de `/marcas`, selecciónala en el campo *"Marca destino en tu catálogo"*. Al canjearse el código, los traspasos se integrarán directamente a ese registro sin duplicar nombres ni prefijos.
+   * **Crear marca automáticamente:** Si es una marca nueva que aún no tenías en catálogo, el sistema la creará de forma automática al momento de aceptar la invitación.
+3. **Condiciones comerciales claras:** Elige la sucursal de destino y el esquema de comisión (porcentaje sobre ventas, cuota fija por prenda o solo renta mensual). El modal incluye una **Vista Previa en Vivo** que muestra exactamente el reparto financiero y lo que verá el emprendedor antes de emitir la invitación.
+4. Presiona **`Generar Código de Invitación`**.
 </Steps>
 
-### 2. Despacho de Lotes desde el Inventario de la Marca
+### 2. Gestión de Invitaciones Pendientes y Envío por WhatsApp
+
+Una vez generado el código, el showroom dispone de control total sobre las invitaciones en curso:
+
+* **Códigos vigentes (48 horas):** En la sección *Invitaciones Pendientes por Aceptar*, el showroom visualiza los códigos emitidos con su sucursal, desglose de comisión y tiempo de vigencia restante.
+* **Copiar código y Enviar por WhatsApp:** Acciones de 1 clic para enviar un mensaje preformateado con las condiciones comerciales pactadas y el enlace directo de vinculación.
+* **Cancelar o Revocar invitación:** Si cometiste un error en la comisión o porcentaje acordado, puedes anular el código antes de que sea canjeado mediante el botón **`Cancelar / Revocar invitación`**.
+
+### 3. Aceptación en la Cuenta de la Marca
+
+<Steps>
+1. La marca entra a su cuenta de VentaSimple en `/consignaciones` dentro de la pestaña **Soy Marca / Emprendedor**.
+2. Presiona **`Tengo un código de Showroom`**, ingresa la clave de 8 caracteres recibida y consulta en pantalla las condiciones exactas antes de confirmar.
+3. Al aceptar, ambas cuentas quedan federadas de inmediato sin costos extra ni contraseñas compartidas.
+</Steps>
+
+### 4. Despacho de Lotes desde el Inventario de la Marca
 
 Cuando la marca prepara mercancía para entregarla físicamente en el colectivo:
 
 <Steps>
-1. En `/consignaciones` (vista Emprendedor), la marca presiona **`Despachar Mercancía`**.
+1. En `/consignaciones` (pestaña **Soy Marca / Emprendedor**), la marca presiona **`Despachar Mercancía`**.
 2. Selecciona al Showroom vinculado y elige las prendas directamente de su propio catálogo, indicando las cantidades que enviará.
 3. Al confirmar, el sistema genera un folio formal correlativo (ejemplo: `TRASP-202611-0001`), aparta las existencias en la cuenta de la marca y deja el lote en estado en tránsito.
 </Steps>
 
-### 3. Recepción y Check-in en el Showroom en 1 Clic
+### 5. Recepción y Check-in en el Showroom en 1 Clic
 
 Cuando el paquete de prendas llega al local comercial:
 
 <Steps>
-1. La encargada del showroom entra a `/consignaciones` en la pestaña **Recepción y Racks (Showroom)** y localiza el lote pendiente en tránsito.
+1. La encargada del showroom entra a `/consignaciones` en la pestaña **Recepción y Racks** y localiza el lote pendiente en tránsito.
 2. Tras contar las prendas físicas, presiona **`Confirmar Recepción / Check-in`**.
-3. **Alta automática:** VentaSimple incorpora de inmediato las prendas al catálogo de la sucursal del showroom con el prefijo de la marca, código de barras y precios pactados, sumando las piezas al inventario sin recapturas manuales.
+3. **Alta automática:** VentaSimple incorpora de inmediato las prendas al catálogo de la sucursal del showroom con el prefijo de la marca, código de barras y precios pactados, sumando las piezas al inventario sin recapturas manuales ni inconsistencias.
 </Steps>
 
-### 4. Ledger y Cuentas Claras en Tiempo Real
+### 6. Historial de Ventas y Comisiones en Tiempo Real
 
 Cada vez que el showroom cobra una prenda de la marca en su Punto de Venta:
 * El inventario en mostrador se descuenta automáticamente.
-* El sistema alimenta un registro contable compartido (*ledger*): a la marca se le actualiza en vivo su saldo a favor por cobrar y al showroom le queda registrada la comisión devengada.
-* Ambas partes pueden auditar en cualquier momento el historial de ventas, prendas en exhibición y emitir liquidaciones con total transparencia.
+* El sistema alimenta el **Historial de Ventas y Comisiones**: a la marca se le actualiza en vivo su saldo a favor por cobrar y al showroom le queda registrada la comisión devengada.
+* Ambas partes pueden auditar en cualquier momento el historial de movimientos, prendas en exhibición y saldos netos con total transparencia.
