@@ -1,6 +1,6 @@
 ---
-title: Impresoras Térmicas y Tickets
-description: Configuración del motor de impresión PWA universal, formatos de 58 mm y 80 mm, apertura de cajón RJ11 y vinculación Bluetooth/USB en VentaSimple.
+title: Impresoras Térmicas y Emisión de Tickets
+description: Configuración del motor de impresión ultrarrápido para tickets de 58 mm y 80 mm, logotipos nítidos con dithering térmico, apertura de cajón RJ11 y control de rollo en VentaSimple.
 sidebar:
   order: 1
 ---
@@ -9,34 +9,55 @@ import { Tabs, TabItem, Steps, Aside, Badge } from '@astrojs/starlight/component
 
 # Impresoras Térmicas y Emisión de Tickets
 
-VentaSimple integra un **motor de impresión PWA universal** diseñado para operar con máxima fiabilidad en puntos de venta reales. Permite emitir comprobantes de forma instantánea sin depender de controladores propietarios complejos ni bloqueos de permisos.
+VentaSimple integra un **motor de impresión universal de 0 ms** diseñado para operar con máxima fiabilidad y velocidad en puntos de venta físicos. Emite comprobantes instantáneos en rollos estándar de 58 mm y 80 mm sin bloqueos de red, con tipografía sanitizada y adaptación automática de logotipos.
 
 ---
 
-## Motor de Impresión PWA Universal
+## Logotipos Nítidos en Papel Térmico (Dithering de Alto Contraste)
 
-A diferencia de los sistemas tradicionales que sufren incompatibilidades con Web Bluetooth o controladores desactualizados, VentaSimple implementa una arquitectura híbrida:
+Las impresoras térmicas tradicionales no imprimen colores ni escala de grises real; funcionan mediante calor directo en papel fotosensible (píxeles encendidos o apagados). 
 
-1. **Dispositivos Móviles (Android / iOS Standalone PWA):** Renderizado optimizado para vista previa instantánea y conexión a colas de impresión nativas del sistema operativo (AirPrint, servicios de impresión de Android y pasarelas ESC/POS).
-2. **Computadoras de Escritorio (Windows / macOS / Linux):** Soporte tanto para impresión directa silenciosa mediante diálogo del navegador como para conexión directa a impresoras térmicas USB/Red.
-3. **Impresión Silenciosa en Punto de Venta:** En terminales dedicadas con Chrome/Edge en modo quiosco (`--kiosk-printing`), el ticket se emite de manera 100% desatendida al confirmar la venta en pantalla.
+Para que el logotipo de tu negocio luzca siempre profesional y legible:
+
+1. **Activación Automática por Defecto:** Al configurar el logotipo en tu cuenta, VentaSimple lo incluye automáticamente en la cabecera de tus tickets físicos.
+2. **Rescate de Tonos Pastel y Colores Claros:** El motor de imagen ajusta el contraste y la curva gamma para que tonos suaves (rosas, cremas, celestes o dorados) no se pierdan como espacios en blanco.
+3. **Dithering Floyd-Steinberg:** Convierte la imagen a un patrón monocromático nítido de alta definición que no empasta el cabezal ni genera plastas de tinta oscura.
+4. **Caché Instantáneo (0 ms de espera):** Tanto la versión original como la versión térmica optimizada se guardan en la memoria de tu dispositivo. Al pulsar **Imprimir**, el diálogo del sistema abre de inmediato sin descargas lentas.
+
+:::tip[¿Prefieres ahorrar papel o imprimir sin logo?]
+Puedes desactivar el logotipo con un solo toque desde el selector **Logo: SÍ / NO** al terminar una venta o en el historial de ventas. Tu preferencia se guardará en tu dispositivo.
+:::
 
 ---
 
 ## Formatos Soportados: 58 mm y 80 mm
 
-El sistema ajusta automáticamente la tipografía, densidad de caracteres y márgenes para que los comprobantes no se corten lateralmente:
+VentaSimple ajusta automáticamente la estructura, márgenes y ancho de columnas para garantizar que ningún dato se corte:
 
 | Característica | Formato Portátil (58 mm) | Formato Mostrador (80 mm) |
 | :--- | :--- | :--- |
 | **Ancho de línea** | 32 columnas de texto estándar | 48 columnas de texto estándar |
-| **Uso típico** | Impresoras Bluetooth de bolsillo, motocarros, entregas | Cajas fijas de abarrotes, restaurantes, refaccionarias |
-| **Detalle en ticket** | Nombre corto, cantidad y total compacto | Desglose tabular: Cantidad, Producto, P. Unitario e Importe |
+| **Uso típico** | Impresoras Bluetooth de bolsillo, terminales móviles, ferias | Cajas fijas de abarrotes, restaurantes, boutiques |
+| **Alineación de productos** | Columnas proporcionales (68% producto / 32% importe) | Desglose amplio: Cantidad, Concepto, P. Unitario e Importe |
+| **Total y pago** | Bloque de alto contraste con bordes punteados | Bloque destacado sin quemadura excesiva de cabezal |
 | **Corte de papel** | Rasgado manual mediante sierra dentada | Corte automático total o parcial (Autocutter) |
 
-:::tip[Configuración del Formato]
-En el menú de **Ajustes > Impresión** de VentaSimple, selecciona el selector de ancho (**58 mm** u **80 mm**). La plantilla del comprobante adaptará el código QR fiscal, el logotipo y las líneas divisorias al ancho exacto de tu rollo térmico.
-:::
+### Cambio de Formato en 1 Clic
+Puedes alternar entre **58mm** y **80mm** en cualquier momento:
+- **Al finalizar una venta:** Desde la barra inferior del modal de confirmación.
+- **En el Historial de Ventas:** Junto a la fila de acciones de cada venta registrada (`58mm | 80mm`).
+
+---
+
+## Sanitización Tipográfica contra Caracteres Extraños
+
+Muchos modelos de impresoras térmicas comerciales procesan únicamente texto estándar ASCII / CP437. Cuando reciben tildes, signos invertidos (`¡`, `¿`) o símbolos de multiplicación (`×`), pueden imprimir caracteres basura o ideogramas no deseados.
+
+El motor de impresión de VentaSimple **sanitiza automáticamente el texto enviado al rollo físico**:
+- Normaliza acentos (`á`, `é`, `í`, `ó`, `ú` $\rightarrow$ `a`, `e`, `i`, `o`, `u`).
+- Adapta eñes (`ñ` $\rightarrow$ `n`).
+- Sustituye multiplicaciones por `x` para garantizar que descripciones y totales se lean de forma impecable en cualquier marca de impresora (Epson, Bixolon, Xprinter, Netum, etc.).
+- **Tus tickets digitales (PNG y WhatsApp) conservan todos sus acentos y ortografía original intactos.**
 
 ---
 
@@ -45,31 +66,33 @@ En el menú de **Ajustes > Impresión** de VentaSimple, selecciona el selector d
 <Tabs>
   <TabItem label="Android (Bluetooth)" icon="seti:android">
     <Steps>
-      1. **Encender la impresora y modo visible:** Enciende tu impresora térmica portátil y asegúrate de que el LED de Bluetooth esté parpadeando o en espera.
+      1. **Encender la impresora:** Enciende tu impresora térmica portátil y verifica que el indicador de Bluetooth esté activo.
       2. **Vincular en Ajustes de Android:**
          - Ve a **Ajustes > Bluetooth** en tu teléfono o tableta.
-         - Busca el dispositivo (generalmente nombrado `MTP-2`, `POS-58`, `RPP02N` o `Printer_xxxx`).
-         - Ingresa el código PIN de fábrica (suele ser `0000` o `1234`).
-      3. **Activar el Servicio de Impresión:** Si tu fabricante provee servicio de impresión (ej. *RawBT*, *Print Service*), actívalo en los servicios del sistema para impresión con un toque.
-      4. **Prueba de Impresión:** En VentaSimple, abre una venta o ve a **Ajustes > Probar Impresora** y presiona **Imprimir Ticket de Prueba**.
+         - Selecciona el dispositivo (ej. `POS-58`, `MTP-2`, `RPP02N` o `Printer_xxxx`).
+         - Ingresa el PIN proporcionado por el fabricante (usualmente `0000` o `1234`).
+      3. **Servicio de Impresión:** Si tu fabricante utiliza un servicio como *RawBT* o servicio nativo, actívalo en los ajustes de impresión del sistema.
+      4. **Impresión desde VentaSimple:** Presiona **Imprimir** en cualquier venta. El ticket se enviará al rollo con el formato de ancho configurado.
     </Steps>
   </TabItem>
 
   <TabItem label="iOS (iPhone / iPad)" icon="apple">
     <Steps>
-      1. **Impresoras compatibles AirPrint o Red Wi-Fi:** Conecta tu impresora térmica a la misma red Wi-Fi de tu iPad o iPhone.
+      1. **Impresoras compatibles AirPrint o Red Wi-Fi:** Conecta tu impresora térmica a la misma red local que tu iPad o iPhone.
       2. **Impresión desde PWA:** Al finalizar una venta, toca el botón **Imprimir**.
-      3. **Selector Nativo de iOS:** Selecciona tu impresora en el menú emergente de iOS. La vista previa respetará el ancho configurado de 58 mm u 80 mm.
-      4. **Envío por WhatsApp como Alternativa:** En terminales móviles sin impresora fija, pulsa el botón verde **WhatsApp** para compartir el recibo digital con el cliente sin gastar papel.
+      3. **Selector Nativo de iOS:** Selecciona tu impresora en el menú emergente. La vista previa respetará el ancho continuo de 58 mm u 80 mm sin márgenes de hoja carta.
+      4. **Envío por WhatsApp como Alternativa:** Pulsa **WhatsApp** o **Copiar** para enviar el comprobante digital directo al teléfono del cliente sin gastar papel.
     </Steps>
   </TabItem>
 
   <TabItem label="Windows / PC (USB)" icon="seti:windows">
     <Steps>
-      1. **Conexión USB e Instalación de Driver:** Conecta la impresora térmica por cable USB. Instala el controlador genérico del fabricante (ej. *POS-80 Series* o *ZJ-58*).
-      2. **Definir como Impresora Predeterminada:** En **Panel de Control > Dispositivos e Impresoras**, haz clic derecho sobre la impresora y selecciona *Establecer como predeterminada*.
-      3. **Ajustar el Tamaño de Papel:** En las preferencias de impresión del controlador, selecciona `User Defined Paper Size` o `80(72.1) x 297 mm` para evitar saltos de página infinitos.
-      4. **Impresión Rápida en Navegador:** En el navegador Chrome o Edge, el diálogo de impresión recordará las preferencias de márgenes (`Ninguno`) y gráficos de fondo (`Activado`).
+      1. **Conexión USB e Instalación de Driver:** Conecta la impresora por cable USB e instala el controlador del fabricante (ej. *POS-80 Series* o *POS-58*).
+      2. **Impresora Predeterminada:** En **Configuración > Dispositivos > Impresoras**, selecciónala como impresora por defecto.
+      3. **Ajuste de Margen en Navegador:** En la ventana de impresión de Chrome o Edge, selecciona:
+         - **Márgenes:** *Ninguno* o *Mínimo*.
+         - **Tamaño de papel:** Selecciona el ancho de tu rollo (ej. `58 x 210 mm` o `80 x 297 mm`).
+      4. **Impresión Silenciosa (Modo Quiosco):** Para negocios con alto flujo, inicia el navegador con la bandera `--kiosk-printing` para que el ticket salga automáticamente al presionar Cobrar.
     </Steps>
   </TabItem>
 </Tabs>
@@ -78,18 +101,17 @@ En el menú de **Ajustes > Impresión** de VentaSimple, selecciona el selector d
 
 ## Apertura de Cajón de Dinero (RJ11) y Autocutter
 
-La mayoría de las impresoras de mostrador de 80 mm disponen de un puerto telefónico **RJ11 (24V)** en la parte posterior para disparar la apertura automática del cajón monedero:
+Las impresoras de mostrador de 80 mm incorporan un conector **RJ11 (24V)** para accionar la apertura automática del cajón monedero:
 
 <Steps>
-1. **Conexión Física:** Conecta el cable modular RJ11 que viene integrado al cajón de dinero directamente en el puerto posterior de la impresora térmica etiquetado como `DK` (*Drawer Kick-out*).
-2. **Configuración en el Driver de la Impresora:**
-   - En Windows: Abre **Propiedades de la impresora > Configuración de dispositivo**.
-   - Busca la opción **Cajón de Dinero (Cash Drawer)** y selecciona:
-     - *Open Before Printing* (Abrir antes de imprimir) o *Open After Printing* (Abrir después de imprimir).
+1. **Conexión Modular:** Conecta el cable telefónico RJ11 del cajón directamente en el puerto posterior de la impresora etiquetado como `DK` (*Drawer Kick*).
+2. **Configuración en el Controlador:**
+   - En Windows: Accede a **Propiedades de la impresora > Configuración de dispositivo**.
+   - En **Cajón de Dinero (Cash Drawer)**, elige *Open Before Printing* (abrir antes de imprimir).
 3. **Corte Automático (Autocutter):**
-   - En la misma pestaña de preferencias, activa **Feed and Cut** para que la guillotina separe el ticket al finalizar el resumen de la compra.
+   - En las opciones avanzadas del controlador, activa la opción **Feed and Cut** para separar el ticket al finalizar el cobro.
 </Steps>
 
-<Aside type="caution" title="Precaución con la Tensión del Cajón">
-  Asegúrate de que el solenoide de tu cajón coincida con la salida de la impresora (la mayoría de impresoras comerciales entregan **24V**; conectar cajones antiguos de **12V** sin regulador puede dañar el circuito de disparo).
+<Aside type="caution" title="Compatibilidad de Voltaje">
+  La gran mayoría de impresoras térmicas de mostrador entregan salida estándar de **24V**. Verifica que el solenoide de tu cajón de dinero sea compatible con este voltaje para proteger el circuito.
 </Aside>

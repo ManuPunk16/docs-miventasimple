@@ -13,10 +13,33 @@ Consulta las funcionalidades recientes y optimizaciones incorporadas en VentaSim
 
 ---
 
-## Actualización Noviembre 2026: Ventas Fiadas Ágiles, Trial Pro y Soberanía
+## Actualización Noviembre 2026 (v2.16.0): Impresión Ultrarrápida, Dithering Térmico y Formatos
+
+### 1. Logotipo Nítido en Papel Térmico con Dithering Floyd-Steinberg
+- **Impresión nítida por defecto:** VentaSimple activa la impresión de logotipos en tickets físicos mediante un motor monocromático que no satura el cabezal ni empasta las líneas.
+- **Rescate de tonos pastel y claros:** Mediante estiramiento automático de histograma y curva gamma ($1.25$), los colores claros (cremas, rosas, dorados) no se pierden en blanco y se imprimen con definición impecable.
+- **Cero retraso (0 ms de bloqueo):** Las versiones de tu logo quedan precacheadas en el dispositivo para que el diálogo de impresión abra al instante.
+- 👉 Consulta la [Guía de Impresoras Térmicas y Tickets](/hardware-y-perifericos/impresoras-tickets).
+
+### 2. Control de Rollo (58 mm / 80 mm) y Logo en Mostrador e Historial
+- **Selector rápido:** Alterna el ancho de rollo entre 58 mm y 80 mm y activa o desactiva el logo (`Logo: SÍ / NO`) tanto al finalizar un cobro como al consultar cualquier venta en el Historial.
+- **Sanitización tipográfica automática:** El motor limpia acentos y caracteres especiales en rollos físicos para evitar caracteres basura o chinos en impresoras de bajo costo, manteniendo la ortografía original en comprobantes digitales.
+
+---
+
+## Actualización Noviembre 2026 (v2.15.0): Alianzas Federadas y Showrooms Multimarca
+
+### 1. Vinculación Flexible sin Duplicar Marcas
+- **Asociación directa:** Al generar un código comercial desde *Soy Showroom / Colectivo*, el propietario puede elegir entre asociar una marca ya existente de su catálogo o registrar una nueva automáticamente cuando el aliado acepte.
+- **Gestión de invitaciones pendientes:** Visualización de códigos comerciales vigentes (48 horas) con botón de compartir por WhatsApp y opción de revocar/cancelar antes de ser canjeados.
+- 👉 Consulta la [Guía de Operación para Showrooms y Colectivos](/giros/showroom-y-colectivos).
+
+---
+
+## Actualización Noviembre 2026 (v2.14.0): Ventas Fiadas Ágiles, Trial Pro y Soberanía
 
 ### 1. Flujo Rediseñado de Ventas Fiadas y Anticipos en Mostrador
-- **Desglose financiero transparente:** Al seleccionar el método de pago **Fiado** en `/ventas/nueva`, el nuevo modal muestra con claridad el total adeudado, el anticipo recibido en efectivo y el monto que pasa a cartera.
+- **Desglose financiero transparente:** Al seleccionar el método de pago **Fiado** en `/ventas/nueva`, el modal muestra con claridad el total adeudado, el anticipo recibido en efectivo y el monto que pasa a cartera.
 - **Alta de clientes inline (`+ Nuevo cliente`):** Permite registrar y seleccionar a un cliente nuevo por su nombre y WhatsApp sin salir del carrito ni interrumpir la venta en curso.
 - **Diseño accesible y mobile-first:** Optimización ergonómica en pantallas de laptops y celulares de mostrador, con visualización directa de resultados de búsqueda.
 - 👉 Consulta la [Guía de Control de Fiados y Anticipos](/guias/el-mostrador/deudas-fiados).

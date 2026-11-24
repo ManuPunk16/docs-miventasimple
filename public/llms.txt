@@ -9,12 +9,14 @@ VentaSimple es una plataforma integral de Punto de Venta (POS) y gestion comerci
 Esta documentacion tecnica y operativa contiene manuales paso a paso y arquitectura operativa para dueños de negocio, administradores y cajeros. Optimizada para indexacion en motores de busqueda (SEO), motores generativos (GEO) y modelos de lenguaje (LLMs / RAG).
 
 ## Novedades y Capacidades Centrales
+- **Impresion de Tickets Ultra-Rapida (0 ms) y Logotipos Termicos (v2.16.0):** Motor de impresion con dithering Floyd-Steinberg para reproduccion monocromatica nitida de logotipos comerciales en papel termico (rescatando colores pastel y tonos claros), selector de rollo continuo 58 mm / 80 mm y toggle de logo accesible en modal de cobro e Historial de Ventas.
 - **Centro de Inteligencia y Reportes (/reportes):** Hub Ejecutivo con selector global de periodo (Hoy, Esta semana, Este mes, Ultimos 30 dias), filtro de sucursales, 4 KPIs ejecutivos y 6 areas especializadas (Finanzas P&L, Rendimiento de Productos, Inventario y Mermas, Comisiones de Personal, Caja y Cartera).
+- **Alianzas B2B y Showrooms Multimarca (/consignaciones):** Vinculacion flexible con marcas existentes sin duplicados, codigos comerciales con vigencia de 48h, envio por WhatsApp, opcion de cancelacion/revocacion y portal privado del disenador sin contrasena (/p/:token).
 - **Control de Mermas y Kardex:** Auditoria de perdidas clasificada por Caducidad, Merma Operativa, Merma Natural o Perdida Desconocida, con calculo contable a precio de costo y deduccion de utilidades.
-- **Comisiones Inteligentes en el POS:** Propagacion automatica de colaboradores en el carrito, herencia para nuevos servicios, recalculo al incrementar cantidades y fila transparente "Sin asignar / Mostrador".
 - **Planes y Precios Oficiales (MXN):** Plan Gratis ($0 MXN, 100 ventas/mes), Plan Basico ($79 MXN/mes), Plan Pro ($139 MXN/mes) y Plan Negocio ($199 MXN/mes). Soporte de comprobantes y exportaciones CSV para contribuyentes en RESICO / SAT.
 
 ## Guias Operativas Destacadas
+- [Impresoras Termicas y Perifericos](https://docs.miventasimple.com/hardware-y-perifericos/impresoras-tickets/): Configuracion de rollos 58 mm y 80 mm, dithering de logotipos, sanitizacion tipografica ASCII contra caracteres basura y apertura de cajon RJ11.
 - [Centro de Inteligencia y Reportes](https://docs.miventasimple.com/reportes-y-auditoria/dashboard-utilidades-metricas/): Hub ejecutivo, analisis de margen P&L, clasificacion ABC de inventario, sugerencias predictivas y reporte de mermas.
 - [Showrooms, Bazares y Colectivos Multimarca](https://docs.miventasimple.com/giros/showroom-y-colectivos/): Administracion de tiendas multimarca en consignacion, portal privado para disenadores sin contrasena (/p/:token), vinculacion flexible con marcas existentes sin duplicados, alianzas B2B en /consignaciones con invitaciones por WhatsApp, despacho de lotes TRASP-, check-in en 1 clic y liquidaciones automaticas.
 - [Planes, Suscripcion y Limites](https://docs.miventasimple.com/facturacion-y-cuenta/suscripcion-planes/): Comparativa de planes vigentes en pesos mexicanos, limites de catalogo y notas de venta para RESICO.
